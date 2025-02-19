@@ -1,0 +1,54 @@
+<div class="g-conts-area section-link">
+  <h3 class="sec-tit">정보 변경 내역</h3>
+  <!-- table list -->
+  <div class="krds-table-wrap">
+    <table class="tbl col data">
+      <caption>
+        정보 변경 내역 표로 변경일자, 변경 내용으로 구성되어있음
+      </caption>
+      <colgroup>
+        <col style="width: 30%" />
+        <col />
+        <col />
+        <col />
+      </colgroup>
+      <thead>
+        <tr>
+          <th scope="col">변경일자</th>
+          <th scope="col">피그마</th>
+          <th scope="col">HTML Component Kit</th>
+          <th scope="col">변경 내용</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        @@if (context.log) {
+        @@for (var i = log.length - 1; i >= 0; i--) {  
+        <tr>
+          <td>`+log[i].date+`</td>
+          <td>`+log[i].figma+`</td>
+          <td>`+log[i].npm+`</td>
+          <td>`+log[i].content+`</td>
+        </tr>
+        }
+        }
+        <tr>
+          <td>2024년 12월 22일</td>
+          <td>
+            <a href="https://www.figma.com/@krds" class="krds-btn medium link" title="새 창 열기" target="_blank">
+              <span class="underline">1.0.0</span> <i class="svg-icon ico-go"></i>
+            </a>
+          </td>
+          <td>
+            <a href="https://github.com/KRDS-uiux" class="krds-btn medium link" title="새 창 열기" target="_blank">
+              <span class="underline">1.0.0</span> <i class="svg-icon ico-go"></i>
+            </a>
+          </td>
+          <td>최초 등록</td>
+        </tr>
+      </tbody>
+      
+    </table>
+  </div>
+  <!-- //table list -->
+</div>

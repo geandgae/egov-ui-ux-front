@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ko">
+
+@@include("./inc/head.html", {
+	"title": "서브 - 레이아웃 - KRDS",
+})
+<body>
+	<div id="wrap">
+		@@include("./inc/skip.html", {"class": "",})
+
+		@@include("./inc/header-top.html")
+
+		<!-- 헤더 영역 -->
+		<header id="krds-header">
+			@@include("./inc/header.html")
+		</header>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container">
+			<!-- breadcrumb -->
+			@@include("./inc/page-breadcrumb.html")
+			<!-- breadcrumb -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="inner narrow">
+				<!-- 페이지 타이틀 영역 -->
+				<div class="page-title-wrap">
+					@@include("./inc/page-title.html", { "title": "평가" })
+				</div>
+				<!-- //페이지 타이틀 영역 -->
+
+				<!-- 평가1 -->
+				<div class="txt-box bg-gray">
+					<div class="assess-question-wrap">
+						<div class="assess-qu">이 페이지에 만족하시나요?</div>
+						<div class="assess-an">
+							<div class="krds-form-chip large">
+								<input type="radio" class="radio" name="rdo_chip_size1" id="rdo_chip_lg1-1">
+								<label class="krds-form-chip-outline yes" for="rdo_chip_lg1-1">네</label>
+							</div>
+							<div class="krds-form-chip large">
+								<input type="radio" class="radio" name="rdo_chip_size1" id="rdo_chip_lg1-2">
+								<label class="krds-form-chip-outline no" for="rdo_chip_lg1-2">아니오</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //평가1 -->
+
+				<!-- 평가2 -->
+				<div class="txt-box bg-gray">
+					<div class="assess-question-wrap">
+						<div class="assess-qu">이 페이지에 만족하시나요?</div>
+						<div class="assess-an">
+							<div class="krds-form-chip large">
+								<input type="radio" class="radio" name="rdo_chip_size2" id="rdo_chip_lg2-1" checked>
+								<label class="krds-form-chip-outline yes" for="rdo_chip_lg2-1">네</label>
+							</div>
+							<div class="krds-form-chip large">
+								<input type="radio" class="radio" name="rdo_chip_size2" id="rdo_chip_lg2-2">
+								<label class="krds-form-chip-outline no" for="rdo_chip_lg2-2">아니오</label>
+							</div>
+						</div>
+					</div>
+					<div class="assess-opinion-wrap">
+						<p class="assess-opinion-tit">감사합니다! 이 페이지의 개선을 위해 추가적으로 의견을 남기시겠습니까?</p>
+						<ol class="assess-opinion-list">
+							<li>
+								<p class="form-qu">이 페이지의 어떤 점에 만족하셨나요? (선택 입력)</p>
+								<div class="form-group">
+									<div class="form-conts">
+										<div class="krds-check-area chk-column">
+											<div class="krds-form-check medium">
+												<input type="checkbox" name="chk1_1" id="chk1_1">
+												<label for="chk1_1">필요한 정보를 찾음</label>
+											</div>
+											<div class="krds-form-check medium">
+												<input type="checkbox" name="chk1_1" id="chk1_2">
+												<label for=" chk1_2">내용이 마음에 듦</label>
+											</div>
+											<div class="krds-form-check medium">
+												<input type="checkbox" name="chk1_1" id="chk1_3">
+												<label for="chk1_3">내용을 이해하기 쉬움</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<p class="form-qu">기타 제안 사항이 있다면 작성해주세요. (선택 입력)</p>
+								<div class="form-group">
+									<div class="form-conts">
+										<div class="textarea-wrap">
+											<textarea name="textareaid" id="textareaid" class="krds-input" placeholder="내용을 입력해주세요." title="기타 제안 사항"></textarea>
+											<p class="textarea-count">
+												<span class="text-point-primary">22</span><span class="text-num">/100</span>
+											</p>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ol>
+						<div class="btm-btn-wrap">
+							<button type="button" class="krds-btn medium secondary">취소</button>
+							<button type="button" class="krds-btn medium primary">평가완료</button>
+						</div>
+					</div>
+				</div>
+				<!-- //평가2 -->
+
+				<!-- 평가3 -->
+				<div class="txt-box bg-gray">
+					<div class="assess-question-wrap">
+						<div class="assess-qu">이 페이지에 만족하시나요?</div>
+						<div class="assess-an">
+							<div class="krds-form-chip">
+								<input type="radio" class="radio" name="rdo_chip_size3" id="rdo_chip_lg3-1">
+								<label class="krds-form-chip-outline yes" for="rdo_chip_lg3-1">네</label>
+							</div>
+							<div class="krds-form-chip">
+								<input type="radio" class="radio" name="rdo_chip_size3" id="rdo_chip_lg3-2" checked>
+								<label class="krds-form-chip-outline no" for="rdo_chip_lg3-2">아니오</label>
+							</div>
+						</div>
+					</div>
+					<div class="assess-opinion-wrap">
+						<p class="assess-opinion-tit">감사합니다! 이 페이지의 개선을 위해 추가적으로 의견을 남기시겠습니까?</p>
+						<ol class="assess-opinion-list">
+							<li>
+								<p class="form-qu">이 페이지의 어떤 점에 만족하셨나요? (선택 입력)</p>
+								<div class="form-group">
+									<div class="form-conts">
+										<div class="krds-check-area chk-column">
+											<div class="krds-form-check medium">
+												<input type="checkbox" name="chk2_1" id="chk2_1">
+												<label for="chk2_1">원하는 정보를 찾을 수 없음</label>
+											</div>
+											<div class="krds-form-check medium">
+												<input type="checkbox" name="chk2_2" id="chk2_2">
+												<label for=" chk2_2">정보가 정확하지 않음</label>
+											</div>
+											<div class="krds-form-check medium">
+												<input type="checkbox" name="chk2_3" id="chk2_3">
+												<label for="chk2_3">내용이 마음에 들지 않음</label>
+											</div>
+											<div class="krds-form-check medium">
+												<input type="checkbox" name="chk2_4" id="chk2_4">
+												<label for="chk2_4">내용을 이해하기 어려움</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<p class="form-qu">기타 제안 사항이 있다면 작성해주세요. (선택 입력)</p>
+								<div class="form-group">
+									<div class="form-conts">
+										<div class="textarea-wrap">
+											<textarea name="textareaid2" id="textareaid2" class="krds-input" placeholder="내용을 입력해주세요." title="기타 제안 사항"></textarea>
+											<p class="textarea-count">
+												<span class="text-point-primary">22</span><span class="text-num">/100</span>
+											</p>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ol>
+						<div class="btm-btn-wrap">
+							<button type="button" class="krds-btn medium secondary">취소</button>
+							<button type="button" class="krds-btn medium primary">평가완료</button>
+						</div>
+					</div>
+				</div>
+				<!-- //평가3 -->
+
+				<!-- 평가 완메세지 -->
+				<div class="assess-end-message">
+					<p class="tit">의견을 남겨주셔서 감사합니다.</p>
+					<p class="txt">보내주신 소중한 의견은 페이지 개선에 도움이 됩니다.</p>
+				</div>
+				<!-- //평가 완메세지 -->
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+
+		<!-- 푸터 영역 -->
+		<footer id="krds-footer">
+			@@include("./inc/footer.html", {"footerType": "type1",})
+		</footer>
+		<!-- //푸터 영역 -->
+	</div>
+	
+	@@include("./inc/modal-wrap.html")
+	
+</body>
+
+</html>

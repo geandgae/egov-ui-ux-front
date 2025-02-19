@@ -1,0 +1,500 @@
+{
+  "head_gnb_ico_arr": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "head_gnb_ico_arr_on": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "head_ico_navi_login": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "head_ico_navi_sch": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "head_ico_nuri": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico-prev_24": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_all": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\component\\_header.scss"
+  ],
+  "ico_angle_disabled": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\component\\_select.scss"
+  ],
+  "ico_arr_16_down": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_arr_16_right_gray70": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\pattern\\p_content.scss"
+  ],
+  "ico_arr_20_down_blue": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_arr_20_down_white": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_arr_20_right_disabled": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_arr_expand": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_blog": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_bread_home": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\component\\_breadcrumb.scss"
+  ],
+  "ico_calendar": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_cal_dropdown": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\component\\_calendar.scss"
+  ],
+  "ico_cal_move": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\component\\_calendar.scss"
+  ],
+  "ico_checkbox_checked": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\component\\_check.scss",
+    "resources\\scss\\component\\_chip.scss"
+  ],
+  "ico_check_chip": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_check_chip_checked": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_check_chip_disabled": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_check_primary_checked": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_check_primary_disabled": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_check_rd_20": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\pattern\\p_content.scss"
+  ],
+  "ico_chip_del": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_chip_del_disabled": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_close": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_close_24": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_close_modal": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_comment_16": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_complete_fill": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\component\\_file_upload.scss"
+  ],
+  "ico_conts_expand": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\pattern\\p_content.scss"
+  ],
+  "ico_delete": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_delete_fill": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\component\\_tag.scss"
+  ],
+  "ico_download": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_ellipsis": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\component\\_breadcrumb.scss",
+    "resources\\scss\\component\\_pagination.scss"
+  ],
+  "ico_email_20": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_error_fill": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\component\\_file_upload.scss",
+    "resources\\scss\\component\\_form_layout.scss"
+  ],
+  "ico_expand": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\component\\_disclosure.scss",
+    "resources\\scss\\site\\site.scss"
+  ],
+  "ico_facebook": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_face_sad": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\pattern\\p_content.scss"
+  ],
+  "ico_face_smile": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\pattern\\p_content.scss"
+  ],
+  "ico_file": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_filter_20": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_flag": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\component\\_masthead.scss"
+  ],
+  "ico_foldable": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_global": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_go": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_go_top": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_help_24": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_hint_20": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_hint_error": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_info": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_information": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\component\\_form_layout.scss"
+  ],
+  "ico_information_fill": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\component\\_form_layout.scss",
+    "resources\\scss\\pattern\\p_common.scss",
+    "resources\\scss\\site\\site.scss"
+  ],
+  "ico_instagram": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_invalid_error_20": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_join": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\component\\_header.scss"
+  ],
+  "ico_like_20": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_login": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\component\\_header.scss"
+  ],
+  "ico_login_certify_go": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\pattern\\p_content.scss"
+  ],
+  "ico_login_certify_type_01": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\pattern\\p_content.scss"
+  ],
+  "ico_login_certify_type_02": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\pattern\\p_content.scss"
+  ],
+  "ico_login_certify_type_03": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\pattern\\p_content.scss"
+  ],
+  "ico_login_certify_type_04": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\pattern\\p_content.scss"
+  ],
+  "ico_login_certify_type_05": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\pattern\\p_content.scss"
+  ],
+  "ico_login_certify_type_06": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\pattern\\p_content.scss"
+  ],
+  "ico_logout": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_more": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_my": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\component\\_header.scss"
+  ],
+  "ico_outline": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\pattern\\p_content.scss"
+  ],
+  "ico_outline_chk": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\pattern\\p_content.scss"
+  ],
+  "ico_page_arr_left": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_page_arr_right": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_plus": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\component\\_carousel.scss",
+    "resources\\scss\\component\\_footer.scss"
+  ],
+  "ico_print_20": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_pw_visible_off": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_pw_visible_on": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_reset": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_sch1_20": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\pattern\\p_content.scss"
+  ],
+  "ico_sch_20_wh": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_scrap_20": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_select": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_select_20": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_select_lg": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_setting_20": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_share_20": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_sns_x": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_step_active": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_success_fill": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\component\\_form_layout.scss"
+  ],
+  "ico_swiper_more": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_swiper_next": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_swiper_next_gray": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_swiper_next_wh": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_swiper_play": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\component\\_carousel.scss"
+  ],
+  "ico_swiper_prev": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_swiper_prev_gray": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_swiper_prev_wh": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_swiper_stop": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\component\\_carousel.scss"
+  ],
+  "ico_tooltip_20": [
+    "resources\\scss\\common\\_icon.scss",
+    "resources\\scss\\component\\_contextual_help.scss"
+  ],
+  "ico_tool_arr": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_urgent_badge_danger": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_urgent_badge_ok": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_view_mode": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_youtube": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "lnb_ico_prev": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "main_menu_blue_ico1": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "main_menu_blue_ico2": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "main_menu_blue_ico3": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "main_menu_blue_ico4": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "main_menu_ico1": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "main_menu_ico2": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "main_menu_ico3": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "main_menu_ico4": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "main_menu_ico5": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "main_menu_ico6": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "main_menu_ico7": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "main_menu_ico8": [
+    "resources\\scss\\common\\_icon.scss"
+  ],
+  "ico_angle": [
+    "resources\\scss\\component\\_accordion.scss",
+    "resources\\scss\\component\\_breadcrumb.scss",
+    "resources\\scss\\component\\_calendar.scss",
+    "resources\\scss\\component\\_carousel.scss",
+    "resources\\scss\\component\\_help_panel.scss",
+    "resources\\scss\\component\\_main_menu.scss",
+    "resources\\scss\\component\\_pagination.scss",
+    "resources\\scss\\component\\_select.scss",
+    "resources\\scss\\component\\_side_navigation.scss",
+    "resources\\scss\\component\\_structured_list.scss",
+    "resources\\scss\\pattern\\p_content.scss",
+    "resources\\scss\\site\\main.scss",
+    "resources\\scss\\site\\site.scss"
+  ],
+  "ico_logo_krds": [
+    "resources\\scss\\component\\_footer.scss",
+    "resources\\scss\\component\\_header.scss",
+    "resources\\scss\\component\\_identifier.scss",
+    "resources\\scss\\site\\site.scss"
+  ],
+  "ico_logo_krds_high_contrast": [
+    "resources\\scss\\component\\_footer.scss",
+    "resources\\scss\\component\\_header.scss",
+    "resources\\scss\\component\\_identifier.scss",
+    "resources\\scss\\site\\site.scss"
+  ],
+  "head_logo": [
+    "resources\\scss\\component\\_header.scss",
+    "resources\\scss\\pattern\\p_common.scss"
+  ],
+  "ico_sch": [
+    "resources\\scss\\component\\_header.scss"
+  ],
+  "head_ico_font_sample": [
+    "resources\\scss\\component\\_resize.scss"
+  ],
+  "head_ico_font_sample_white": [
+    "resources\\scss\\component\\_resize.scss"
+  ],
+  "ico_angle_disabled_inverse": [
+    "resources\\scss\\component\\_select.scss"
+  ],
+  "ico_angle_inverse": [
+    "resources\\scss\\component\\_select.scss"
+  ],
+  "ico_step_done": [
+    "resources\\scss\\component\\_step_indicator.scss"
+  ],
+  "ico_switch_off": [
+    "resources\\scss\\component\\_switch.scss"
+  ],
+  "ico_switch_on": [
+    "resources\\scss\\component\\_switch.scss"
+  ],
+  "ico_helper_info": [
+    "resources\\scss\\pattern\\p_content.scss"
+  ],
+  "ico_notice_fill": [
+    "resources\\scss\\pattern\\p_content.scss"
+  ],
+  "main_ico_bag_S": [
+    "resources\\scss\\pattern\\p_content.scss"
+  ],
+  "main_ico_book_M": [
+    "resources\\scss\\pattern\\p_content.scss"
+  ],
+  "main_ico_bulb_S": [
+    "resources\\scss\\pattern\\p_content.scss"
+  ],
+  "main_ico_card_S": [
+    "resources\\scss\\pattern\\p_content.scss"
+  ],
+  "main_ico_energy_S": [
+    "resources\\scss\\pattern\\p_content.scss"
+  ],
+  "main_ico_store_S": [
+    "resources\\scss\\pattern\\p_content.scss"
+  ],
+  "ico_error": [
+    "resources\\scss\\site\\site.scss"
+  ],
+  "ico_flow_arrow": [
+    "resources\\scss\\site\\site.scss"
+  ],
+  "ico_information_fill_high_contrast": [
+    "resources\\scss\\site\\site.scss"
+  ],
+  "ico_notice_fill_blue": [
+    "resources\\scss\\site\\site.scss"
+  ],
+  "ico_notice_fill_high_contrast": [
+    "resources\\scss\\site\\site.scss"
+  ]
+}

@@ -1,0 +1,1843 @@
+<!doctype html>
+<html lang="ko">
+
+@@include("./inc/head.html", {
+	"title": "서브 - 검색결과 | 통합검색 - KRDS",
+})
+
+<body>
+	<div id="wrap">
+		@@include("./inc/skip.html", {"class": "",})
+
+		@@include("./inc/header-top.html")
+
+		<!-- 헤더 영역 -->
+		<header id="krds-header">
+			@@include("./inc/header.html")
+		</header>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container">
+			<!-- breadcrumb -->
+			@@include("./inc/page-breadcrumb.html")
+			<!-- breadcrumb -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="inner">
+				<!-- 페이지 타이틀 영역 -->
+				<div class="page-title-wrap">
+					@@include("./inc/page-title.html", { "title": "통합검색" })
+				</div>
+				<!-- //페이지 타이틀 영역 -->
+
+				<!-- 검색 상단 -->
+				<div class="total-search-top-box">
+					<div class="inner">
+						<div class="sch-form-wrap vert">
+							<div class="sch-input">
+								<input type="text" class="krds-input xlarge" placeholder="검색어 입력" value="퇴직">
+								<button type="button" class="krds-btn xlarge icon ico-search">
+									<span class="sr-only">검색</span>
+									<i class="svg-icon ico-sch"></i>
+								</button>
+							</div>
+							<div class="sch-etc">
+								<button type="button" class="krds-btn medium text"><i class="svg-icon ico-sch-plus"></i>고급검색</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //검색 상단 -->
+
+				<!-- 검색 결과 -->
+				<div class="krds-tab-area layer">
+					<!-- tab list -->
+					<div class="tab fill full">
+						<ul role="tablist">
+							<li id="totalTab01" aria-selected="true" aria-controls="totalTabpanel01" class="active">
+								<button type="button" class="btn-tab">전체(1,234)</button>
+							</li>
+							<li id="totalTab02" aria-selected="false" aria-controls="totalTabpanel02">
+								<button type="button" class="btn-tab">메뉴(12)</button>
+							</li>
+							<li id="totalTab03" aria-selected="false" aria-controls="totalTabpanel03">
+								<button type="button" class="btn-tab">뉴스･소식(234)</button>
+							</li>
+							<li id="totalTab04" aria-selected="false" aria-controls="totalTabpanel04">
+								<button type="button" class="btn-tab">정책(345)</button>
+							</li>
+							<li id="totalTab05" aria-selected="false" aria-controls="totalTabpanel05">
+								<button type="button" class="btn-tab">자주 묻는 질문(55)</button>
+							</li>
+							<li id="totalTab06" aria-selected="false" aria-controls="totalTabpanel06">
+								<button type="button" class="btn-tab">자료(9)</button>
+							</li>
+							<li id="totalTab07" aria-selected="false" aria-controls="totalTabpanel07">
+								<button type="button" class="btn-tab" disabled>직원(0)</button>
+							</li>
+						</ul>
+					</div>
+					<!-- //tab list -->
+
+					<!-- tab contents -->
+					<div class="tab-conts-wrap">
+						<section id="totalTabpanel01" role="tabpanel" aria-labelledby="totalTab01" class="tab-conts active">
+							<h3 class="sr-only">전체</h3>
+ 
+							<!-- 리스트 상단 -->
+							<div class="search-list-top border">
+								<ul class="sch-info" aria-live="polite">
+									<li>적용된 검색어‘<span class="point">퇴직</span>’</li>
+									<li>검색 결과 <span class="point">22,459</span>개</li>
+								</ul>
+								<ul class="sch-sort">
+									<li class="m-hide">
+										<strong class="sort-label"><label for="search_result_count1">목록 표시 개수</label></strong>
+										<select class="krds-form-select-sort" id="search_result_count1">
+											<option>10개</option>
+											<option>9개</option>
+										</select>
+									</li>
+									<li class="w-hide">
+										<div class="m-sort-btn">
+											<button type="button" class="krds-btn large text ico-filter open-modal" data-target="popFilterId">
+												<span class="span">필터</span>
+												<span class="krds-badge bg-primary number">122</span>
+												<i class="svg-icon ico-filter"></i>
+											</button>
+										</div>
+									</li>
+									<li>
+										<strong class="sort-label"><label for="sort1">정렬기준</label></strong>
+										<div class="w-sort-btn">
+											<button type="button" class="active">관련도순</button>
+											<button type="button">최신순</button>
+											<button type="button">인기순</button>
+										</div>
+										<div class="m-sort-btn">
+											<select class="krds-form-select-sort" id="sort1">
+												<option>관련도순</option>
+												<option>최신순</option>
+												<option>인기순</option>
+											</select>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- //리스트 상단 -->
+
+							<!-- 리스트 -->
+							<ul class="total-search-list">
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">메뉴</span>
+										<span class="i-date">2023.11.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">나의 <span class="keyword">퇴직</span>금 계산해 보기</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">나의 <span class="keyword">퇴직</span>금 계산해 보기</p>
+													<p class="txt">
+														<span class="keyword">퇴직</span>급여는 근로자가 상당한 기간을 근속하고 
+														<span class="keyword">퇴직</span>할 경우 지급되는 연금 또는 일시금입니다. 
+														나의 <span class="keyword">퇴직</span>금 계산해 보기로 본인의 
+														<span class="keyword">퇴직</span>급여를 미리 계산해 볼 수 있습니다.
+													</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<a href="https://labor.moel.go.kr/cmmt/calRtrmnt.do" target="_blank" title="새 창 열기" class="krds-btn medium link basic"><span class="underline">https://labor.moel.go.kr/cmmt/calRtrmnt.do</span> <i class="svg-icon ico-go"></i></a>
+									</div>
+								</li>
+								<!-- 241204 삭제 <li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">메뉴</span>
+										<span class="i-date">2023.11.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">건설근로자공제회</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">건설근로자공제회</p>
+													<p class="txt">
+														건설근로자공제회의 <span class="keyword">퇴직</span>공제제도는 
+														<span class="keyword">퇴직</span>공제 가입사업주가 일용·임시직 건설근로자의 
+														근로내역을 공제회로 신고하고 그에 상응하는 공제부금을 납부하면, 건설근로자가 
+														건설업에서 <span class="keyword">퇴직</span>할 때 공제회로부터 
+														"<span class="keyword">퇴직</span>공제금"을 지급받을 수 있도록 
+														마련된 제도입니다.
+													</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<a href="https://www.cw.or.kr/index.do" target="_blank" title="새 창 열기" class="krds-btn medium link basic"><span class="underline">https://www.cw.or.kr/index.do</span> <i class="svg-icon ico-go"></i></a>
+									</div>
+								</li>-->
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">메뉴</span>
+										<span class="i-date">2023.11.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">나의 <span class="keyword">퇴직</span>금 계산해 보기</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">나의 <span class="keyword">퇴직</span>금 계산해 보기</p>
+													<p class="txt">
+														<span class="keyword">퇴직</span>급여는 근로자가 상당한 기간을 근속하고 
+														<span class="keyword">퇴직</span>할 경우 지급되는 연금 또는 일시금입니다. 
+														나의 <span class="keyword">퇴직</span>금 계산해 보기로 본인의 
+														<span class="keyword">퇴직</span>급여를 미리 계산해 볼 수 있습니다.
+													</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<div class="info-btm">
+											<a href="https://labor.moel.go.kr/cmmt/calRtrmnt.do" target="_blank" title="새 창 열기" class="krds-btn medium link basic"><span class="underline">https://labor.moel.go.kr/cmmt/calRtrmnt.do</span> <i class="svg-icon ico-go"></i></a>
+										</div>
+									</div>
+								</li>
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">뉴스∙소식</span>
+										<span class="i-date">2023.11.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">고용노동부, 정부혁신과 적극행정 우수사례를 확산하고, 일하는 방식 개선을 통해 정부혁신을 속도감 있게 추진</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">고용노동부, 정부혁신과 적극행정 우수사례를 확산하고, 일하는 방식 개선을 통해 정부혁신을 속도감 있게 추진</p>
+													<p class="txt">
+														또 다른 최우수 사례로 선정된 "외국인 근로자 <span class="keyword">퇴직</span>금 
+														자동환급제"는 외국인 근로자가 최초 입국 시 사전 등록한 계좌에 
+														<span class="keyword">퇴직</span>금(출국만기보험)을 자동 지급함으로써 
+														송출국가의 열악한 금융환경 등으로 <span class="keyword">퇴직</span>금(출국만기보험)이 
+														미지급되는 문제점을 개선하여 외국인 근로자의 권리구제에
+													</p>
+												</div>
+												<span class="thum">
+													<img src="../../resources/img/pattern/sample/sample_img_total_thum1.jpg" alt="">
+												</span>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">뉴스・소식</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">뉴스소식</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">법령정보</span>
+										<span class="i-date">2023.12.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide"><span class="keyword">퇴직</span>연금복지과, <span class="keyword">퇴직</span>연금 수수료 부과에 관한 고시제정안 행정예고</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide"><span class="keyword">퇴직</span>연금복지과, <span class="keyword">퇴직</span>연금 수수료 부과에 관한 고시제정안 행정예고</p>
+													<p class="txt">
+														고용노동부 공고 제2023-453호 <span class="keyword">퇴직</span>연금 수수료 부과에 관한 
+														고시제정안을 행정예고 하는데 있어, 그 이유와 주요내용을 국민에게 미리 알려 이에 대한 의견을 
+														듣기 위하여 「행정절차법」제46조에 따라 다음과 같이 공고합니다. 2023년 9월 13일 고용노동부장관
+													</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">정보공개</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">법령정보</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">입법・행정예고</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">자주하는 질문</span>
+										<span class="i-date">2023.12.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">임금 및 <span class="keyword">퇴직</span>금 소멸시효 기산일</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">임금 및 <span class="keyword">퇴직</span>금 소멸시효 기산일</p>
+													<p class="txt">
+														<span class="keyword">퇴직</span>금 산정시 산전.후 휴가기간이 포함되는지 여부?
+													</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">민원</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">자주하는 질문</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">자료</span>
+										<span class="i-date">2023.12.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide"><span class="keyword">퇴직</span>연금복지과, 근로자<span class="keyword">퇴직</span>급여 보장법 시행령 일부개정안 설명자료.hwp</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide"><span class="keyword">퇴직</span>연금복지과, 근로자<span class="keyword">퇴직</span>급여 보장법 시행령 일부개정안 설명자료.hwp</p>
+													<p class="txt">
+														'22.4.14. 시행된 근로자<span class="keyword">퇴직</span>급여 보장법 설명자료입니다. 
+														업무에 참고하시기 바랍니다. &lt1&gt 중소기업<span class="keyword">퇴직</span>연금기금제도 &lt2&gt 
+														300인 이상 확정급여형(DB형) <span class="keyword">퇴직</span>연금 운영개편 &lt2&gt 확정급여형(DB) 
+														<span class="keyword">퇴직</span>연금 최소적립금 미적립시 과태료 부과 &lt2&gt <span class="keyword">퇴직</span>금 
+														IRP 지급 의무화 &lt5&gt <span class="keyword">퇴직</span>연금 가입자 교육 제도 개편
+													</p>
+												</div>
+												<span class="thum">
+													<img src="../../resources/img/pattern/sample/sample_img_total_thum2.jpg" alt="">
+												</span>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">정책자료</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">대상자별ㆍ분야별정책</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">HWP 다운로드 <i class="svg-icon ico-link"></i></button>
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">자료</span>
+										<span class="i-date">2023.12.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">무료법률 구조 지원.PDF</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">무료법률 구조 지원.PDF</p>
+													<p class="txt">
+														임금체불 근로자들이 사업주를 상대로 민사절차를 통해 임금채권을 확보할 수 있도록 대한법률구조공단에서 임금 및
+														<span class="keyword">퇴직</span>급여 등이 체불된 근로자에 대하여 무료로 소송 지원
+													</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">정책자료</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">대상자별ㆍ분야별정책</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">PDF 다운로드 <i class="svg-icon ico-down"></i></button>
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">뉴스∙소식</span>
+										<span class="i-date">2023.11.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">고용장관 "정년연장, 중요한 시대현안…노사정 빨리 머리 맞대야"</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">고용장관 "정년연장, 중요한 시대현안…노사정 빨리 머리 맞대야"</p>
+													<p class="txt">
+														7월 '초고령사회 계속고용 연구회'를 발족해 전문가를 중심으로 고령자 고용에 대한 
+														정책을 논의하고 있다. 다만 정부는 정년연장보다는 <span class="keyword">퇴직</span> 후 
+														재고용에 무게를 두고 있는 것으로 알려졌다.
+													</p>
+												</div>
+												<span class="thum">
+													<img src="../../resources/img/pattern/sample/sample_img_total_thum2.jpg" alt="">
+												</span>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">뉴스ㆍ소식</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">뉴스소식</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">뉴스∙소식</span>
+										<span class="i-date">2023.11.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">퇴사하기 전 꼭 봐야 할 영상!! <span class="keyword">퇴직</span>에 대한 모든 것! <span class="keyword">퇴직</span>금 계산, 사직서 작성법</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">퇴사하기 전 꼭 봐야 할 영상!! <span class="keyword">퇴직</span>에 대한 모든 것! <span class="keyword">퇴직</span>금 계산, 사직서 작성법</p>
+													<p class="txt">
+														어떤 일이든 시작도 중요하지만 마무리를 어떻게 하느냐가 진짜 중요하죠 그래서~! 
+														오늘의 랜선노동법 주제는 <span class="keyword">퇴직</span>입니다! <span class="keyword">퇴직</span>금 계산, 
+														퇴사 전 알아야 할 정보, 연차수당, 사직서, 해고예고수당 등 <span class="keyword">퇴직</span>에 대한 모든 것~!!
+													</p>
+												</div>
+												<span class="thum">
+													<img src="../../resources/img/pattern/sample/sample_img_total_thum3.jpg" alt="">
+												</span>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">뉴스ㆍ소식</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">뉴스소식</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">자주하는 질문</span>
+										<span class="i-date">2023.12.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">임금 및 <span class="keyword">퇴직</span>금 소멸시효 기산일</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">임금 및 <span class="keyword">퇴직</span>금 소멸시효 기산일</p>
+													<p class="txt">
+														<span class="keyword">퇴직</span>금 산정시 산전.후 휴가기간이 포함되는지 여부?
+													</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">민원</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">자주하는 질문</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<!-- //리스트 -->
+
+							<!-- 페이지네이션 영역 -->
+							@@include("./inc/page-pagination.html")
+							<!-- //페이지네이션 영역 -->
+						</section>
+
+						<section id="totalTabpanel02" role="tabpanel" aria-labelledby="totalTab02" class="tab-conts">
+							<h3 class="sr-only">메뉴</h3>
+
+							<!-- 리스트 상단 -->
+							<div class="search-list-top border">
+								<ul class="sch-info" aria-live="polite">
+									<li>적용된 검색어‘<span class="point">퇴직</span>’</li>
+									<li>검색 결과 <span class="point">22,459</span>개</li>
+								</ul>
+								<ul class="sch-sort">
+									<li class="m-hide">
+										<strong class="sort-label"><label for="search_result_count2">목록 표시 개수</label></strong>
+										<select class="krds-form-select-sort" id="search_result_count2">
+											<option>10개</option>
+											<option>9개</option>
+										</select>
+									</li>
+									<li class="w-hide">
+										<div class="m-sort-btn">
+											<button type="button" class="krds-btn large text ico-filter open-modal" data-target="popFilterId">
+												<span class="span">필터</span>
+												<span class="krds-badge bg-primary number">122</span>
+												<i class="svg-icon ico-filter"></i>
+											</button>
+										</div>
+									</li>
+									<li>
+										<strong class="sort-label"><label for="sort1">정렬기준</label></strong>
+										<div class="w-sort-btn">
+											<button type="button" class="active">관련도순</button>
+											<button type="button">최신순</button>
+											<button type="button">인기순</button>
+										</div>
+										<div class="m-sort-btn">
+											<select class="krds-form-select-sort" id="sort2">
+												<option>관련도순</option>
+												<option>최신순</option>
+												<option>인기순</option>
+											</select>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- //리스트 상단 -->
+
+							<!-- 리스트 -->
+							<ul class="total-search-list">
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">메뉴</span>
+										<span class="i-date">2023.11.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">나의 <span class="keyword">퇴직</span>금 계산해 보기</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">나의 <span class="keyword">퇴직</span>금 계산해 보기</p>
+													<p class="txt">
+														<span class="keyword">퇴직</span>급여는 근로자가 상당한 기간을 근속하고 
+														<span class="keyword">퇴직</span>할 경우 지급되는 연금 또는 일시금입니다. 
+														나의 <span class="keyword">퇴직</span>금 계산해 보기로 본인의 
+														<span class="keyword">퇴직</span>급여를 미리 계산해 볼 수 있습니다.
+													</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<a href="https://labor.moel.go.kr/cmmt/calRtrmnt.do" target="_blank" title="새 창 열기" class="krds-btn medium link basic"><span class="underline">https://labor.moel.go.kr/cmmt/calRtrmnt.do</span> <i class="svg-icon ico-go"></i></a>
+									</div>
+								</li>
+								<!-- 241204 삭제 <li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">메뉴</span>
+										<span class="i-date">2023.11.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">건설근로자공제회</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">건설근로자공제회</p>
+													<p class="txt">
+														건설근로자공제회의 <span class="keyword">퇴직</span>공제제도는 <span class="keyword">퇴직</span>공제 
+														가입사업주가 일용·임시직 건설근로자의 근로내역을 공제회로 신고하고 그에 상응하는 공제부금을 납부하면, 
+														건설근로자가 건설업에서 <span class="keyword">퇴직</span>할 때 공제회로부터 "<span class="keyword">퇴직</span>공제금"을 
+														지급받을 수 있도록 마련된 제도입니다.
+													</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<a href="https://www.cw.or.kr/index.do" target="_blank" title="새 창 열기" class="krds-btn medium link basic"><span class="underline">https://www.cw.or.kr/index.do</span> <i class="svg-icon ico-go"></i></a>
+									</div>
+								</li> -->
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">메뉴</span>
+										<span class="i-date">2023.11.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">나의 <span class="keyword">퇴직</span>금 계산해 보기</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">나의 <span class="keyword">퇴직</span>금 계산해 보기</p>
+													<p class="txt">
+														<span class="keyword">퇴직</span>급여는 근로자가 상당한 기간을 근속하고 <span class="keyword">퇴직</span>할 
+														경우 지급되는 연금 또는 일시금입니다. 나의 <span class="keyword">퇴직</span>금 계산해 보기로 
+														본인의 <span class="keyword">퇴직</span>급여를 미리 계산해 볼 수 있습니다.
+													</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<a href="https://labor.moel.go.kr/cmmt/calRtrmnt.do" target="_blank" title="새 창 열기" class="krds-btn medium link basic"><span class="underline">https://labor.moel.go.kr/cmmt/calRtrmnt.do</span> <i class="svg-icon ico-go"></i></a>
+									</div>
+								</li>
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">메뉴</span>
+										<span class="i-date">2023.11.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">고용노동부, 정부혁신과 적극행정 우수사례를 확산하고, 일하는 방식 개선을 통해 정부혁신을 속도감 있게 추진</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">고용노동부, 정부혁신과 적극행정 우수사례를 확산하고, 일하는 방식 개선을 통해 정부혁신을 속도감 있게 추진</p>
+													<p class="txt">
+														또 다른 최우수 사례로 선정된 "외국인 근로자 <span class="keyword">퇴직</span>금 자동환급제"는 
+														외국인 근로자가 최초 입국 시 사전 등록한 계좌에 <span class="keyword">퇴직</span>금(출국만기보험)을 
+														자동 지급함으로써 송출국가의 열악한 금융환경 등으로 <span class="keyword">퇴직</span>금(출국만기보험)이 
+														미지급되는 문제점을 개선하여 외국인 근로자의 권리구제에
+													</p>
+												</div>
+												<span class="thum">
+													<img src="../../resources/img/pattern/sample/sample_img_total_thum1.jpg" alt="">
+												</span>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">뉴스・소식</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">뉴스소식</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">메뉴</span>
+										<span class="i-date">2023.12.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide"><span class="keyword">퇴직</span>연금복지과, <span class="keyword">퇴직</span>연금 수수료 부과에 관한 고시제정안 행정예고</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide"><span class="keyword">퇴직</span>연금복지과, <span class="keyword">퇴직</span>연금 수수료 부과에 관한 고시제정안 행정예고</p>
+													<p class="txt">
+														고용노동부 공고 제2023-453호 <span class="keyword">퇴직</span>연금 수수료 부과에 관한 고시제정안을 행정예고 
+														하는데 있어, 그 이유와 주요내용을 국민에게 미리 알려 이에 대한 의견을 듣기 위하여 「행정절차법」제46조에 따라 
+														다음과 같이 공고합니다. 2023년 9월 13일 고용노동부장관
+													</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">정보공개</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">법령정보</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">입법・행정예고</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">메뉴</span>
+										<span class="i-date">2023.12.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">임금 및 <span class="keyword">퇴직</span>금 소멸시효 기산일</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">임금 및 <span class="keyword">퇴직</span>금 소멸시효 기산일</p>
+													<p class="txt"><span class="keyword">퇴직</span>금 산정시 산전.후 휴가기간이 포함되는지 여부?</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">민원</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">자주하는 질문</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">메뉴</span>
+										<span class="i-date">2023.12.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide"><span class="keyword">퇴직</span>연금복지과, 근로자<span class="keyword">퇴직</span>급여 보장법 시행령 일부개정안 설명자료.hwp</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide"><span class="keyword">퇴직</span>연금복지과, 근로자<span class="keyword">퇴직</span>급여 보장법 시행령 일부개정안 설명자료.hwp</p>
+													<p class="txt">
+														'22.4.14. 시행된 근로자<span class="keyword">퇴직</span>급여 보장법 설명자료입니다. 업무에 참고하시기 바랍니다. 
+														&lt1&gt 중소기업<span class="keyword">퇴직</span>연금기금제도 &lt2&gt 300인 이상 확정급여형(DB형) 
+														<span class="keyword">퇴직</span>연금 운영개편 &lt2&gt 확정급여형(DB) <span class="keyword">퇴직</span>연금 
+														최소적립금 미적립시 과태료 부과 &lt2&gt <span class="keyword">퇴직</span>금 IRP 지급 의무화 
+														&lt5&gt <span class="keyword">퇴직</span>연금 가입자 교육 제도 개편
+													</p>
+												</div>
+												<span class="thum">
+													<img src="../../resources/img/pattern/sample/sample_img_total_thum2.jpg" alt="">
+												</span>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">정책자료</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">대상자별ㆍ분야별정책</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">HWP 다운로드 <i class="svg-icon ico-link"></i></button>
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">자료</span>
+										<span class="i-date">2023.12.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">무료법률 구조 지원.PDF</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">무료법률 구조 지원.PDF</p>
+													<p class="txt">
+														임금체불 근로자들이 사업주를 상대로 민사절차를 통해 임금채권을 확보할 수 있도록 대한법률구조공단에서 임금 및
+														<span class="keyword">퇴직</span>급여 등이 체불된 근로자에 대하여 무료로 소송 지원
+													</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">정책자료</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">대상자별ㆍ분야별정책</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">PDF 다운로드 <i class="svg-icon ico-down"></i></button>
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">뉴스∙소식</span>
+										<span class="i-date">2023.11.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">고용장관 "정년연장, 중요한 시대현안…노사정 빨리 머리 맞대야"</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">고용장관 "정년연장, 중요한 시대현안…노사정 빨리 머리 맞대야"</p>
+													<p class="txt">
+														7월 '초고령사회 계속고용 연구회'를 발족해 전문가를 중심으로 고령자 고용에 대한 
+														정책을 논의하고 있다. 다만 정부는 정년연장보다는 <span class="keyword">퇴직</span> 후 
+														재고용에 무게를 두고 있는 것으로 알려졌다.
+													</p>
+												</div>
+												<span class="thum">
+													<img src="../../resources/img/pattern/sample/sample_img_total_thum2.jpg" alt="">
+												</span>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">뉴스・소식</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">뉴스소식</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">뉴스∙소식</span>
+										<span class="i-date">2023.11.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">퇴사하기 전 꼭 봐야 할 영상!! <span class="keyword">퇴직</span>에 대한 모든 것! <span class="keyword">퇴직</span>금 계산, 사직서 작성법</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">퇴사하기 전 꼭 봐야 할 영상!! <span class="keyword">퇴직</span>에 대한 모든 것! <span class="keyword">퇴직</span>금 계산, 사직서 작성법</p>
+													<p class="txt">
+														어떤 일이든 시작도 중요하지만 마무리를 어떻게 하느냐가 진짜 중요하죠 그래서~! 
+														오늘의 랜선노동법 주제는 <span class="keyword">퇴직</span>입니다! <span class="keyword">퇴직</span>금 계산, 
+														퇴사 전 알아야 할 정보, 연차수당, 사직서, 해고예고수당 등 <span class="keyword">퇴직</span>에 대한 모든 것~!!
+													</p>
+												</div>
+												<span class="thum">
+													<img src="../../resources/img/pattern/sample/sample_img_total_thum3.jpg" alt="">
+												</span>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">뉴스・소식</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">뉴스소식</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">자주하는 질문</span>
+										<span class="i-date">2023.12.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">임금 및 <span class="keyword">퇴직</span>금 소멸시효 기산일</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">임금 및 <span class="keyword">퇴직</span>금 소멸시효 기산일</p>
+													<p class="txt"><span class="keyword">퇴직</span>금 산정시 산전.후 휴가기간이 포함되는지 여부?</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">민원</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">자주하는 질문</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<!-- //리스트 -->
+
+							<!-- 페이지네이션 영역 -->
+							@@include("./inc/page-pagination.html")
+							<!-- //페이지네이션 영역 -->
+						</section>
+
+						<section id="totalTabpanel03" role="tabpanel" aria-labelledby="totalTab03" class="tab-conts">
+							<h3 class="sr-only">뉴스･소식</h3>
+							<!-- 리스트 상단 -->
+							<div class="search-list-top border">
+								<ul class="sch-info" aria-live="polite">
+									<li>적용된 검색어‘<span class="point">퇴직</span>’</li>
+									<li>검색 결과 <span class="point">22,459</span>개</li>
+								</ul>
+								<ul class="sch-sort">
+									<li class="m-hide">
+										<strong class="sort-label"><label for="search_result_count3">목록 표시 개수</label></strong>
+										<select class="krds-form-select-sort" id="search_result_count3">
+											<option>10개</option>
+											<option>9개</option>
+										</select>
+									</li>
+									<li class="w-hide">
+										<div class="m-sort-btn">
+											<button type="button" class="krds-btn large text ico-filter open-modal" data-target="popFilterId">
+												<span class="span">필터</span>
+												<span class="krds-badge bg-primary number">122</span>
+												<i class="svg-icon ico-filter"></i>
+											</button>
+										</div>
+									</li>
+									<li>
+										<strong class="sort-label"><label for="sort1">정렬기준</label></strong>
+										<div class="w-sort-btn">
+											<button type="button" class="active">관련도순</button>
+											<button type="button">최신순</button>
+											<button type="button">인기순</button>
+										</div>
+										<div class="m-sort-btn">
+											<select class="krds-form-select-sort" id="sort3">
+												<option>관련도순</option>
+												<option>최신순</option>
+												<option>인기순</option>
+											</select>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- //리스트 상단 -->
+
+							<!-- 리스트 -->
+							<ul class="total-search-list">
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">뉴스∙소식</span>
+										<span class="i-date">2023.11.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">고용노동부, 정부혁신과 적극행정 우수사례를 확산하고, 일하는 방식 개선을 통해 정부혁신을 속도감 있게 추진</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">고용노동부, 정부혁신과 적극행정 우수사례를 확산하고, 일하는 방식 개선을 통해 정부혁신을 속도감 있게 추진</p>
+													<p class="txt">
+														또 다른 최우수 사례로 선정된 "외국인 근로자 <span class="keyword">퇴직</span>금 자동환급제"는 
+														외국인 근로자가 최초 입국 시 사전 등록한 계좌에 <span class="keyword">퇴직</span>금(출국만기보험)을 
+														자동 지급함으로써 송출국가의 열악한 금융환경 등으로 <span class="keyword">퇴직</span>금(출국만기보험)이 
+														미지급되는 문제점을 개선하여 외국인 근로자의 권리구제에
+													</p>
+												</div>
+												<span class="thum">
+													<img src="../../resources/img/pattern/sample/sample_img_total_thum1.jpg" alt="">
+												</span>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">뉴스・소식</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">뉴스소식</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">뉴스∙소식</span>
+										<span class="i-date">2023.12.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide"><span class="keyword">퇴직</span>연금복지과, <span class="keyword">퇴직</span>연금 수수료 부과에 관한 고시제정안 행정예고</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide"><span class="keyword">퇴직</span>연금복지과, <span class="keyword">퇴직</span>연금 수수료 부과에 관한 고시제정안 행정예고</p>
+													<p class="txt">
+														고용노동부 공고 제2023-453호 <span class="keyword">퇴직</span>연금 수수료 부과에 관한 
+														고시제정안을 행정예고 하는데 있어, 그 이유와 주요내용을 국민에게 미리 알려 이에 대한 의견을 
+														듣기 위하여 「행정절차법」제46조에 따라 다음과 같이 공고합니다. 2023년 9월 13일 고용노동부장관
+													</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">정보공개</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">법령정보</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">입법・행정예고</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">뉴스∙소식</span>
+										<span class="i-date">2023.12.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">임금 및 <span class="keyword">퇴직</span>금 소멸시효 기산일</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">임금 및 <span class="keyword">퇴직</span>금 소멸시효 기산일</p>
+													<p class="txt"><span class="keyword">퇴직</span>금 산정시 산전.후 휴가기간이 포함되는지 여부?</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">민원</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">자주하는 질문</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">뉴스∙소식</span>
+										<span class="i-date">2023.12.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide"><span class="keyword">퇴직</span>연금복지과, 근로자<span class="keyword">퇴직</span>급여 보장법 시행령 일부개정안 설명자료.hwp</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide"><span class="keyword">퇴직</span>연금복지과, 근로자<span class="keyword">퇴직</span>급여 보장법 시행령 일부개정안 설명자료.hwp</p>
+													<p class="txt">
+														'22.4.14. 시행된 근로자<span class="keyword">퇴직</span>급여 보장법 설명자료입니다. 업무에 참고하시기 바랍니다. 
+														&lt1&gt 중소기업<span class="keyword">퇴직</span>연금기금제도 &lt2&gt 300인 이상 확정급여형(DB형) 
+														<span class="keyword">퇴직</span>연금 운영개편 &lt2&gt 확정급여형(DB) <span class="keyword">퇴직</span>연금 최소적립금 
+														미적립시 과태료 부과 &lt2&gt <span class="keyword">퇴직</span>금 IRP 지급 의무화 &lt5&gt 
+														<span class="keyword">퇴직</span>연금 가입자 교육 제도 개편
+													</p>
+												</div>
+												<span class="thum">
+													<img src="../../resources/img/pattern/sample/sample_img_total_thum2.jpg" alt="">
+												</span>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">정책자료</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">대상자별ㆍ분야별정책</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">HWP 다운로드 <i class="svg-icon ico-link"></i></button>
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">뉴스∙소식</span>
+										<span class="i-date">2023.12.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">무료법률 구조 지원.PDF</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">무료법률 구조 지원.PDF</p>
+													<p class="txt">
+														임금체불 근로자들이 사업주를 상대로 민사절차를 통해 임금채권을 확보할 수 있도록 대한법률구조공단에서 임금 및
+														<span class="keyword">퇴직</span>급여 등이 체불된 근로자에 대하여 무료로 소송 지원
+													</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">정책자료</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">대상자별ㆍ분야별정책</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">PDF 다운로드 <i class="svg-icon ico-down"></i></button>
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">뉴스∙소식</span>
+										<span class="i-date">2023.11.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">고용장관 "정년연장, 중요한 시대현안…노사정 빨리 머리 맞대야"</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">고용장관 "정년연장, 중요한 시대현안…노사정 빨리 머리 맞대야"</p>
+													<p class="txt">
+														7월 '초고령사회 계속고용 연구회'를 발족해 전문가를 중심으로 고령자 고용에 대한 
+														정책을 논의하고 있다. 다만 정부는 정년연장보다는 <span class="keyword">퇴직</span> 후 
+														재고용에 무게를 두고 있는 것으로 알려졌다.
+													</p>
+												</div>
+												<span class="thum">
+													<img src="../../resources/img/pattern/sample/sample_img_total_thum2.jpg" alt="">
+												</span>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">뉴스ㆍ소식</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">뉴스소식</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">뉴스∙소식</span>
+										<span class="i-date">2023.11.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">퇴사하기 전 꼭 봐야 할 영상!! <span class="keyword">퇴직</span>에 대한 모든 것! <span class="keyword">퇴직</span>금 계산, 사직서 작성법</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">퇴사하기 전 꼭 봐야 할 영상!! <span class="keyword">퇴직</span>에 대한 모든 것! <span class="keyword">퇴직</span>금 계산, 사직서 작성법</p>
+													<p class="txt">
+														어떤 일이든 시작도 중요하지만 마무리를 어떻게 하느냐가 진짜 중요하죠 그래서~! 
+														오늘의 랜선노동법 주제는 <span class="keyword">퇴직</span>입니다! <span class="keyword">퇴직</span>금 계산, 
+														퇴사 전 알아야 할 정보, 연차수당, 사직서, 해고예고수당 등 <span class="keyword">퇴직</span>에 대한 모든 것~!!
+													</p>
+												</div>
+												<span class="thum">
+													<img src="../../resources/img/pattern/sample/sample_img_total_thum3.jpg" alt="">
+												</span>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">뉴스ㆍ소식</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">뉴스소식</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">뉴스∙소식</span>
+										<span class="i-date">2023.12.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">임금 및 <span class="keyword">퇴직</span>금 소멸시효 기산일</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">임금 및 <span class="keyword">퇴직</span>금 소멸시효 기산일</p>
+													<p class="txt"><span class="keyword">퇴직</span>금 산정시 산전.후 휴가기간이 포함되는지 여부?</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">민원</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">자주하는 질문</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<!-- //리스트 -->
+
+							<!-- 페이지네이션 영역 -->
+							@@include("./inc/page-pagination.html")
+							<!-- //페이지네이션 영역 -->
+						</section>
+
+						<section id="totalTabpanel04" role="tabpanel" aria-labelledby="totalTab04" class="tab-conts">
+							<h3 class="sr-only">정책</h3>
+							<!-- 리스트 상단 -->
+							<div class="search-list-top border">
+								<ul class="sch-info" aria-live="polite">
+									<li>적용된 검색어‘<span class="point">퇴직</span>’</li>
+									<li>검색 결과 <span class="point">22,459</span>개</li>
+								</ul>
+								<ul class="sch-sort">
+									<li class="m-hide">
+										<strong class="sort-label"><label for="search_result_count4">목록 표시 개수</label></strong>
+										<select class="krds-form-select-sort" id="search_result_count4">
+											<option>10개</option>
+											<option>9개</option>
+										</select>
+									</li>
+									<li class="w-hide">
+										<div class="m-sort-btn">
+											<button type="button" class="krds-btn large text ico-filter open-modal" data-target="popFilterId">
+												<span class="span">필터</span>
+												<span class="krds-badge bg-primary number">122</span>
+												<i class="svg-icon ico-filter"></i>
+											</button>
+										</div>
+									</li>
+									<li>
+										<strong class="sort-label"><label for="sort1">정렬기준</label></strong>
+										<div class="w-sort-btn">
+											<button type="button" class="active">관련도순</button>
+											<button type="button">최신순</button>
+											<button type="button">인기순</button>
+										</div>
+										<div class="m-sort-btn">
+											<select class="krds-form-select-sort" id="sort4">
+												<option>관련도순</option>
+												<option>최신순</option>
+												<option>인기순</option>
+											</select>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- //리스트 상단 -->
+
+							<!-- 리스트 -->
+							<ul class="total-search-list">
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">정책</span>
+										<span class="i-date">2023.11.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">나의 <span class="keyword">퇴직</span>금 계산해 보기</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">나의 <span class="keyword">퇴직</span>금 계산해 보기</p>
+													<p class="txt">
+														<span class="keyword">퇴직</span>급여는 근로자가 상당한 기간을 근속하고 <span class="keyword">퇴직</span>할 경우 
+														지급되는 연금 또는 일시금입니다. 나의 <span class="keyword">퇴직</span>금 계산해 보기로 본인의 
+														<span class="keyword">퇴직</span>급여를 미리 계산해 볼 수 있습니다.
+													</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<a href="https://labor.moel.go.kr/cmmt/calRtrmnt.do" target="_blank" title="새 창 열기" class="krds-btn medium link basic"><span class="underline">https://labor.moel.go.kr/cmmt/calRtrmnt.do</span> <i class="svg-icon ico-go"></i></a>
+									</div>
+								</li>
+								<!-- 241204 삭제 <li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">정책</span>
+										<span class="i-date">2023.11.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">건설근로자공제회</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">건설근로자공제회</p>
+													<p class="txt">
+														건설근로자공제회의 <span class="keyword">퇴직</span>공제제도는 <span class="keyword">퇴직</span>공제 
+														가입사업주가 일용·임시직 건설근로자의 근로내역을 공제회로 신고하고 그에 상응하는 공제부금을 납부하면, 건설근로자가 
+														건설업에서 <span class="keyword">퇴직</span>할 때 공제회로부터 "<span class="keyword">퇴직</span>공제금"을 
+														지급받을 수 있도록 마련된 제도입니다.
+													</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<a href="https://www.cw.or.kr/index.do" target="_blank" title="새 창 열기" class="krds-btn medium link basic"><span class="underline">https://www.cw.or.kr/index.do</span> <i class="svg-icon ico-go"></i></a>
+									</div>
+								</li>-->
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">정책</span>
+										<span class="i-date">2023.11.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">나의 <span class="keyword">퇴직</span>금 계산해 보기</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">나의 <span class="keyword">퇴직</span>금 계산해 보기</p>
+													<p class="txt">
+														<span class="keyword">퇴직</span>급여는 근로자가 상당한 기간을 근속하고 <span class="keyword">퇴직</span>할 경우 
+														지급되는 연금 또는 일시금입니다. 나의 <span class="keyword">퇴직</span>금 계산해 보기로 본인의 <span class="keyword">퇴직</span>급여를 
+														미리 계산해 볼 수 있습니다.
+													</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<a href="https://labor.moel.go.kr/cmmt/calRtrmnt.do" target="_blank" title="새 창 열기" class="krds-btn medium link basic"><span class="underline">https://labor.moel.go.kr/cmmt/calRtrmnt.do</span> <i class="svg-icon ico-go"></i></a>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">바로가기 <i class="svg-icon ico-go"></i></button>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<!-- //리스트 -->
+
+							<!-- 페이지네이션 영역 -->
+							@@include("./inc/page-pagination.html")
+							<!-- //페이지네이션 영역 -->
+						</section>
+
+						<section id="totalTabpanel05" role="tabpanel" aria-labelledby="totalTab05" class="tab-conts">
+							<h3 class="sr-only">자주 묻는 질문</h3>
+							<!-- 리스트 상단 -->
+							<div class="search-list-top border">
+								<ul class="sch-info" aria-live="polite">
+									<li>적용된 검색어‘<span class="point">퇴직</span>’</li>
+									<li>검색 결과 <span class="point">22,459</span>개</li>
+								</ul>
+								<ul class="sch-sort">
+									<li class="m-hide">
+										<strong class="sort-label"><label for="search_result_count5">목록 표시 개수</label></strong>
+										<select class="krds-form-select-sort" id="search_result_count5">
+											<option>10개</option>
+											<option>9개</option>
+										</select>
+									</li>
+									<li class="w-hide">
+										<div class="m-sort-btn">
+											<button type="button" class="krds-btn large text ico-filter open-modal" data-target="popFilterId">
+												<span class="span">필터</span>
+												<span class="krds-badge bg-primary number">122</span>
+												<i class="svg-icon ico-filter"></i>
+											</button>
+										</div>
+									</li>
+									<li>
+										<strong class="sort-label"><label for="sort1">정렬기준</label></strong>
+										<div class="w-sort-btn">
+											<button type="button" class="active">관련도순</button>
+											<button type="button">최신순</button>
+											<button type="button">인기순</button>
+										</div>
+										<div class="m-sort-btn">
+											<select class="krds-form-select-sort" id="sort5">
+												<option>관련도순</option>
+												<option>최신순</option>
+												<option>인기순</option>
+											</select>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- //리스트 상단 -->
+
+							<!-- 리스트 -->
+							<ul class="total-search-list">
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">자주하는 질문</span>
+										<span class="i-date">2023.12.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">임금 및 <span class="keyword">퇴직</span>금 소멸시효 기산일</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">임금 및 <span class="keyword">퇴직</span>금 소멸시효 기산일</p>
+													<p class="txt"><span class="keyword">퇴직</span>금 산정시 산전.후 휴가기간이 포함되는지 여부?</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">민원</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">자주하는 질문</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<!-- //리스트 -->
+
+							<!-- 페이지네이션 영역 -->
+							@@include("./inc/page-pagination.html")
+							<!-- //페이지네이션 영역 -->
+						</section>
+
+						<section id="totalTabpanel06" role="tabpanel" aria-labelledby="totalTab06" class="tab-conts">
+							<h3 class="sr-only">자료</h3>
+							<!-- 리스트 상단 -->
+							<div class="search-list-top border">
+								<ul class="sch-info" aria-live="polite">
+									<li>적용된 검색어‘<span class="point">퇴직</span>’</li>
+									<li>검색 결과 <span class="point">22,459</span>개</li>
+								</ul>
+								<ul class="sch-sort">
+									<li class="m-hide">
+										<strong class="sort-label"><label for="search_result_count6">목록 표시 개수</label></strong>
+										<select class="krds-form-select-sort" id="search_result_count6">
+											<option>10개</option>
+											<option>9개</option>
+										</select>
+									</li>
+									<li class="w-hide">
+										<div class="m-sort-btn">
+											<button type="button" class="krds-btn large text ico-filter open-modal" data-target="popFilterId">
+												<span class="span">필터</span>
+												<span class="krds-badge bg-primary number">122</span>
+												<i class="svg-icon ico-filter"></i>
+											</button>
+										</div>
+									</li>
+									<li>
+										<strong class="sort-label"><label for="sort1">정렬기준</label></strong>
+										<div class="w-sort-btn">
+											<button type="button" class="active">관련도순</button>
+											<button type="button">최신순</button>
+											<button type="button">인기순</button>
+										</div>
+										<div class="m-sort-btn">
+											<select class="krds-form-select-sort" id="sort6">
+												<option>관련도순</option>
+												<option>최신순</option>
+												<option>인기순</option>
+											</select>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- //리스트 상단 -->
+
+							<!-- 리스트 -->
+							<ul class="total-search-list">
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">자료</span>
+										<span class="i-date">2023.12.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide"><span class="keyword">퇴직</span>연금복지과, 근로자<span class="keyword">퇴직</span>급여 보장법 시행령 일부개정안 설명자료.hwp</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide"><span class="keyword">퇴직</span>연금복지과, 근로자<span class="keyword">퇴직</span>급여 보장법 시행령 일부개정안 설명자료.hwp</p>
+													<p class="txt">
+														'22.4.14. 시행된 근로자<span class="keyword">퇴직</span>급여 보장법 설명자료입니다. 업무에 참고하시기 바랍니다. 
+														&lt1&gt 중소기업<span class="keyword">퇴직</span>연금기금제도 &lt2&gt 300인 이상 확정급여형(DB형) <span class="keyword">퇴직</span>연금 운영개편 &lt2&gt 
+														확정급여형(DB) <span class="keyword">퇴직</span>연금 최소적립금 미적립시 과태료 부과 &lt2&gt <span class="keyword">퇴직</span>금 IRP 지급 의무화 
+														&lt5&gt <span class="keyword">퇴직</span>연금 가입자 교육 제도 개편
+													</p>
+												</div>
+												<span class="thum">
+													<img src="../../resources/img/pattern/sample/sample_img_total_thum2.jpg" alt="">
+												</span>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">정책자료</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">대상자별ㆍ분야별정책</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">HWP 다운로드 <i class="svg-icon ico-link"></i></button>
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">자료</span>
+										<span class="i-date">2023.12.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">무료법률 구조 지원.PDF</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">무료법률 구조 지원.PDF</p>
+													<p class="txt">
+														임금체불 근로자들이 사업주를 상대로 민사절차를 통해 임금채권을 확보할 수 있도록 대한법률구조공단에서 임금 및
+														<span class="keyword">퇴직</span>급여 등이 체불된 근로자에 대하여 무료로 소송 지원
+													</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">정책자료</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">대상자별ㆍ분야별정책</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">PDF 다운로드 <i class="svg-icon ico-down"></i></button>
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">자료</span>
+										<span class="i-date">2023.12.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide"><span class="keyword">퇴직</span>연금복지과, 근로자<span class="keyword">퇴직</span>급여 보장법 시행령 일부개정안 설명자료.hwp</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide"><span class="keyword">퇴직</span>연금복지과, 근로자<span class="keyword">퇴직</span>급여 보장법 시행령 일부개정안 설명자료.hwp</p>
+													<p class="txt">
+														'22.4.14. 시행된 근로자<span class="keyword">퇴직</span>급여 보장법 설명자료입니다. 업무에 참고하시기 바랍니다. 
+														&lt1&gt 중소기업<span class="keyword">퇴직</span>연금기금제도 &lt2&gt 300인 이상 확정급여형(DB형) <span class="keyword">퇴직</span>연금 운영개편 
+														&lt2&gt 확정급여형(DB) <span class="keyword">퇴직</span>연금 최소적립금 미적립시 과태료 부과 &lt2&gt <span class="keyword">퇴직</span>금 
+														IRP 지급 의무화 &lt5&gt <span class="keyword">퇴직</span>연금 가입자 교육 제도 개편
+													</p>
+												</div>
+												<span class="thum">
+													<img src="../../resources/img/pattern/sample/sample_img_total_thum2.jpg" alt="">
+												</span>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">정책자료</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">대상자별ㆍ분야별정책</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">HWP 다운로드 <i class="svg-icon ico-link"></i></button>
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">자료</span>
+										<span class="i-date">2023.12.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">무료법률 구조 지원.PDF</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">무료법률 구조 지원.PDF</p>
+													<p class="txt">
+														임금체불 근로자들이 사업주를 상대로 민사절차를 통해 임금채권을 확보할 수 있도록 대한법률구조공단에서 임금 및
+														<span class="keyword">퇴직</span>급여 등이 체불된 근로자에 대하여 무료로 소송 지원
+													</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">정책자료</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">대상자별ㆍ분야별정책</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">PDF 다운로드 <i class="svg-icon ico-down"></i></button>
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">자료</span>
+										<span class="i-date">2023.12.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide"><span class="keyword">퇴직</span>연금복지과, 근로자<span class="keyword">퇴직</span>급여 보장법 시행령 일부개정안 설명자료.hwp</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide"><span class="keyword">퇴직</span>연금복지과, 근로자<span class="keyword">퇴직</span>급여 보장법 시행령 일부개정안 설명자료.hwp</p>
+													<p class="txt">
+														'22.4.14. 시행된 근로자<span class="keyword">퇴직</span>급여 보장법 설명자료입니다. 업무에 참고하시기 바랍니다. 
+														&lt1&gt 중소기업<span class="keyword">퇴직</span>연금기금제도 &lt2&gt 300인 이상 확정급여형(DB형) <span class="keyword">퇴직</span>연금 운영개편 
+														&lt2&gt 확정급여형(DB) <span class="keyword">퇴직</span>연금 최소적립금 미적립시 과태료 부과 &lt2&gt <span class="keyword">퇴직</span>금 
+														IRP 지급 의무화 &lt5&gt <span class="keyword">퇴직</span>연금 가입자 교육 제도 개편
+													</p>
+												</div>
+												<span class="thum">
+													<img src="../../resources/img/pattern/sample/sample_img_total_thum2.jpg" alt="">
+												</span>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">정책자료</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">대상자별ㆍ분야별정책</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">HWP 다운로드 <i class="svg-icon ico-link"></i></button>
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">자료</span>
+										<span class="i-date">2023.12.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">무료법률 구조 지원.PDF</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">무료법률 구조 지원.PDF</p>
+													<p class="txt">
+														임금체불 근로자들이 사업주를 상대로 민사절차를 통해 임금채권을 확보할 수 있도록 대한법률구조공단에서 임금 및
+														<span class="keyword">퇴직</span>급여 등이 체불된 근로자에 대하여 무료로 소송 지원
+													</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">정책자료</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">대상자별ㆍ분야별정책</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">PDF 다운로드 <i class="svg-icon ico-down"></i></button>
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">자료</span>
+										<span class="i-date">2023.12.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide"><span class="keyword">퇴직</span>연금복지과, 근로자<span class="keyword">퇴직</span>급여 보장법 시행령 일부개정안 설명자료.hwp</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide"><span class="keyword">퇴직</span>연금복지과, 근로자<span class="keyword">퇴직</span>급여 보장법 시행령 일부개정안 설명자료.hwp</p>
+													<p class="txt">
+														'22.4.14. 시행된 근로자<span class="keyword">퇴직</span>급여 보장법 설명자료입니다. 업무에 참고하시기 바랍니다. 
+														&lt1&gt 중소기업<span class="keyword">퇴직</span>연금기금제도 &lt2&gt 300인 이상 확정급여형(DB형) <span class="keyword">퇴직</span>연금 운영개편 &lt2&gt 
+														확정급여형(DB) <span class="keyword">퇴직</span>연금 최소적립금 미적립시 과태료 부과 &lt2&gt <span class="keyword">퇴직</span>금 IRP 지급 의무화 
+														&lt5&gt <span class="keyword">퇴직</span>연금 가입자 교육 제도 개편
+													</p>
+												</div>
+												<span class="thum">
+													<img src="../../resources/img/pattern/sample/sample_img_total_thum2.jpg" alt="">
+												</span>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">정책자료</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">대상자별ㆍ분야별정책</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">HWP 다운로드 <i class="svg-icon ico-link"></i></button>
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">자료</span>
+										<span class="i-date">2023.12.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">무료법률 구조 지원.PDF</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">무료법률 구조 지원.PDF</p>
+													<p class="txt">
+														임금체불 근로자들이 사업주를 상대로 민사절차를 통해 임금채권을 확보할 수 있도록 대한법률구조공단에서 임금 및
+														<span class="keyword">퇴직</span>급여 등이 체불된 근로자에 대하여 무료로 소송 지원
+													</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">정책자료</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">대상자별ㆍ분야별정책</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">PDF 다운로드 <i class="svg-icon ico-down"></i></button>
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge bg-light-primary">자료</span>
+										<span class="i-date">2023.12.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide"><span class="keyword">퇴직</span>연금복지과, 근로자<span class="keyword">퇴직</span>급여 보장법 시행령 일부개정안 설명자료.hwp</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide"><span class="keyword">퇴직</span>연금복지과, 근로자<span class="keyword">퇴직</span>급여 보장법 시행령 일부개정안 설명자료.hwp</p>
+													<p class="txt">
+														'22.4.14. 시행된 근로자<span class="keyword">퇴직</span>급여 보장법 설명자료입니다. 업무에 참고하시기 바랍니다. 
+														&lt1&gt 중소기업<span class="keyword">퇴직</span>연금기금제도 &lt2&gt 300인 이상 확정급여형(DB형) <span class="keyword">퇴직</span>연금 운영개편 &lt2&gt 
+														확정급여형(DB) <span class="keyword">퇴직</span>연금 최소적립금 미적립시 과태료 부과 &lt2&gt <span class="keyword">퇴직</span>금 IRP 지급 의무화 
+														&lt5&gt <span class="keyword">퇴직</span>연금 가입자 교육 제도 개편
+													</p>
+												</div>
+												<span class="thum">
+													<img src="../../resources/img/pattern/sample/sample_img_total_thum2.jpg" alt="">
+												</span>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<ul class="i-cate">
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">정책자료</span></a></li>
+											<li><a href="#" class="krds-btn medium link basic"><span class="underline">대상자별ㆍ분야별정책</span></a></li>
+										</ul>
+										<div class="btn-area">
+											<button type="button" class="krds-btn medium text">HWP 다운로드 <i class="svg-icon ico-link"></i></button>
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<!-- //리스트 -->
+
+							<!-- 페이지네이션 영역 -->
+							@@include("./inc/page-pagination.html")
+							<!-- //페이지네이션 영역 -->
+						</section>
+
+						<section id="totalTabpanel07" role="tabpanel" aria-labelledby="totalTab07" class="tab-conts">
+							<h3 class="sr-only">직원</h3>
+							<!-- 리스트 상단 -->
+							<div class="search-list-top border">
+								<ul class="sch-info" aria-live="polite">
+									<li>적용된 검색어‘<span class="point">퇴직</span>’</li>
+									<li>검색 결과 <span class="point">22,459</span>개</li>
+								</ul>
+								<ul class="sch-sort">
+									<li class="m-hide">
+										<strong class="sort-label"><label for="search_result_count7">목록 표시 개수</label></strong>
+										<select class="krds-form-select-sort" id="search_result_count7">
+											<option>10개</option>
+											<option>9개</option>
+										</select>
+									</li>
+									<li class="w-hide">
+										<div class="m-sort-btn">
+											<button type="button" class="krds-btn large text ico-filter open-modal" data-target="popFilterId">
+												<span class="span">필터</span>
+												<span class="krds-badge bg-primary number">122</span>
+												<i class="svg-icon ico-filter"></i>
+											</button>
+										</div>
+									</li>
+									<li>
+										<strong class="sort-label"><label for="sort1">정렬기준</label></strong>
+										<div class="w-sort-btn">
+											<button type="button" class="active">관련도순</button>
+											<button type="button">최신순</button>
+											<button type="button">인기순</button>
+										</div>
+										<div class="m-sort-btn">
+											<select class="krds-form-select-sort" id="sort7">
+												<option>관련도순</option>
+												<option>최신순</option>
+												<option>인기순</option>
+											</select>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- //리스트 상단 -->
+
+							<!-- 리스트 -->
+							<ul class="total-search-list">
+								<li class="total-search-item">
+									<p class="info-top">
+										<span class="krds-badge">직원</span>
+										<span class="i-date">2023.11.01</span>
+									</p>
+									<div class="info-body">
+										<a href="#">
+											<p class="tit w-hide">나의 <span class="keyword">퇴직</span>금 계산해 보기</p>
+											<div class="in">
+												<div class="text">
+													<p class="tit m-hide">나의 <span class="keyword">퇴직</span>금 계산해 보기</p>
+													<p class="txt">
+														<span class="keyword">퇴직</span>급여는 근로자가 상당한 기간을 근속하고 <span class="keyword">퇴직</span>할 경우 
+														지급되는 연금 또는 일시금입니다. 나의 <span class="keyword">퇴직</span>금 계산해 보기로 본인의 <span class="keyword">퇴직</span>급여를 
+														미리 계산해 볼 수 있습니다.
+													</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="info-btm">
+										<a href="https://labor.moel.go.kr/cmmt/calRtrmnt.do" target="_blank" title="새 창 열기" class="krds-btn medium link basic"><span class="underline">https://labor.moel.go.kr/cmmt/calRtrmnt.do</span> <i class="svg-icon ico-go"></i></a>
+									</div>
+								</li>
+							</ul>
+							<!-- //리스트 -->
+
+							<!-- 페이지네이션 영역 -->
+							@@include("./inc/page-pagination.html")
+							<!-- //페이지네이션 영역 -->
+						</section>
+					</div>
+					<!-- //tab contents -->
+				</div>
+				<!-- //검색 결과 -->
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+
+		<!-- 푸터 영역 -->
+		<footer id="krds-footer">
+			@@include("./inc/footer.html", {"footerType": "type1",})
+		</footer>
+		<!-- //푸터 영역 -->
+	</div>
+
+	@@include("./inc/modal-wrap.html")
+
+	<!-- 레이어 : 검색필터 -->
+	@@include("./inc/popup-filter.html", {
+		"filtered": "false",
+		"list": "all"
+	})
+	<!-- //레이어 : 검색필터 -->
+
+	<script>
+			//디자인 변경으로 인해 주석처리.
+			/* tabs : 변형되는 탭 */
+			// const $totalTab = document.querySelector("#total-tab");
+			// const $totalTabBtn = document.querySelector("#total-tab .m-tab-btn");
+			// const $totalTabMenu = document.querySelectorAll("#total-tab .tab .btn-tab");
+
+			// $totalTabMenu.forEach((e) => {
+			// 		e.addEventListener("click", (el) => {
+			// 				$totalTabBtn.innerText = el.target.firstChild.nodeValue;
+			// 				$totalTab.classList.remove("is-open");
+			// 		});
+			// });
+
+			// $totalTabBtn.addEventListener("click", () => {
+			// 		if (!$totalTab.classList.contains("is-open")) {
+			// 				$totalTab.classList.add("is-open");
+			// 		} else {
+			// 				$totalTab.classList.remove("is-open");
+			// 		}
+			// });
+
+			// document.addEventListener("click", (e) => {
+			// 		if (!e.target.closest("#total-tab")) $totalTab.classList.remove("is-open");
+			// });
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+$krds-input-size: (
+	small: (
+		size-height: var(--krds-size-height-6),
+		radius: var(--krds-radius-medium1),
+		pc-font-size: var(--krds-pc-font-size-label-small),
+		mobile-font-size: var(--krds-mobile-font-size-label-small),
+	),
+	medium: (
+		size-height: var(--krds-size-height-7),
+		radius: var(--krds-radius-medium2),
+		pc-font-size: var(--krds-pc-font-size-label-medium),
+		mobile-font-size: var(--krds-mobile-font-size-label-medium),
+	),
+	large: (
+		size-height: var(--krds-size-height-8),
+		radius: var(--krds-radius-medium3),
+		pc-font-size: var(--krds-pc-font-size-label-large),
+		mobile-font-size: var(--krds-mobile-font-size-label-large),
+	),
+	xlarge: (
+		size-height: var(--krds-size-height-11),
+		radius: var(--krds-radius-large2),
+		pc-font-size: var(--krds-pc-font-size-heading-large),
+		mobile-font-size: var(--krds-mobile-font-size-heading-large),
+	),
+) !default;
+
+@each $size, $types in $krds-input-size {
+	@each $type, $value in $types {
+		//css variable 생성
+		--krds-krds-input--#{$type}-#{$size}: #{$value};
+	}
+}

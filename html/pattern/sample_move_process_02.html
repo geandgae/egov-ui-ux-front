@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ko">
+
+@@include("./inc/head.html", {
+	"title": "서브 - 전입신고 | 신청 - KRDS",
+})
+
+<body>
+	<div id="wrap">
+		@@include("./inc/skip.html", {"class": "",})
+
+		@@include("./inc/header-top.html")
+
+		<!-- 헤더 영역 -->
+		<header id="krds-header">
+			@@include("./inc/header.html")
+		</header>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container">
+			<!-- breadcrumb -->
+			@@include("./inc/page-breadcrumb.html", { "depth": ["민원"] })
+			<!-- breadcrumb -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="inner narrow page-step help-panel-flexible">
+				<!-- 페이지 타이틀 영역 -->
+				<div class="page-title-wrap">
+					@@include("./inc/page-title.html", { "title": "전입신고" })
+				</div>
+				<!-- //페이지 타이틀 영역 -->
+
+				<!-- 스텝 영역 -->
+				<ol class="krds-step-wrap">
+					<li class="active">
+						<span>
+							<em class="sr-only">현재단계</em>
+							<i class="step">1단계</i>
+							<span class="step-tit">유의사항 확인</span>
+						</span>
+					</li>
+					<li>
+						<span>
+							<i class="step">2단계</i>
+							<span class="step-tit">신청인 정보</span>
+						</span>
+					</li>
+					<li>
+						<span>
+							<i class="step">3단계</i>
+							<span class="step-tit">이사 전 살던 곳</span>
+						</span>
+					</li>
+					<li>
+						<span>
+							<i class="step">4단계</i>
+							<span class="step-tit">이사 온 곳</span>
+						</span>
+					</li>
+					<li>
+						<span>
+							<i class="step">5단계</i>
+							<span class="step-tit">추가 신청(선택)</span>
+						</span>
+					</li>
+				</ol>
+				<!-- //스텝 영역 -->
+
+				<!-- 컨텐츠 영역 -->
+				<div class="conts-area step-type">
+					<div class="conts-wrap">
+						<div class="conts-wrap">
+							<h3 class="sec-tit">
+								<span class="step-now"><strong class="active">1단계</strong> / 5단계</span>
+								유의사항 확인
+							</h3>
+							<div class="txt-box outline">
+								<h4 class="outline-tit">시작하기 전에</h4>
+								<p class="outline-txt">
+									주민등록 관련 신고는 행정청이 수리한 때부터 신고의 효력이 발생합니다. <br>
+									근무시간(18:00) 이후나 토요일, 공휴일에 신청하는 경우 다음 근무일(세대주 확인이 필요한 경우는 세대주 확인 완료일)에 신청이 접수되어 담당자
+									확인 후 신고가 수리 또는 반려됩니다.
+								</p>
+								<div class="conts-desc-wrap">
+									<ul class="check-list">
+										<li>본인확인 필요</li>
+										<li>인증서 필요</li>
+										<li>세대주 정보(이름, 주민등록번호, 휴대전화번호) 필요</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="conts-wrap">
+								<h4 class="sec-tit">신청 완료 후 추가 민원 신청이 필요할 수 있습니다.</h4>
+								<p class="conts-desc">
+									다음 중 해당하는 사항이 있는 경우 정부24 홈페이지 또는 새로운 거주지 읍면사무소/동 주민센터에서 '세대주 확인'
+									민원 신청이 필요합니다.
+								</p>
+								<!-- table list -->
+								<div class="krds-table-wrap">
+									<table class="tbl col data">
+										<caption>
+											추가 민원 신청 여부 확인 표로 민원 신청인, 구분으로 구성되어있으며 민원 신청인인 전출지 전 세대주,새로운 세대주,전입지 세대주로 구성되어 있음
+										</caption>
+										<colgroup>
+											<col style="width: 30%;">
+											<col>
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">민원 신청인</th>
+												<th scope="col">구분</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">전출지 전 세대주</th>
+												<td>세대주가 아닌 세대원이 신청하면서 세대주(또는 미성년자)를 포함하여 이사하는 경우</td>
+											</tr>
+											<tr>
+												<th scope="row">새로운 세대주</th>
+												<td>세대주 변경이 있는 경우</td>
+											</tr>
+											<tr>
+												<th scope="row">전입지 세대주</th>
+												<td>이사온 곳에 기존에 살고 있는 세대주가 있는 경우</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- //table list -->
+							</div>
+							<div class="conts-wrap">
+								<h4 class="sec-tit">다음의 경우 정부24 누리집에서 온라인으로 민원을 신청할 수 없습니다.</h4>
+								<p class="conts-desc">다음 중 해당하는 사항이 있는 경우 관할 읍면사무소/동 주민센터에 문의 후 방문해주세요.</p>
+								<ul class="krds-info-list decimal">
+									<li>신청인이 미성년자(만 17세 미만)인 경우</li>
+									<li>기존 세대가 살고 있는 곳에 별도로 세대를 구성(2세대 이상)하는 경우</li>
+									<li>전입신고 인원에 미성년자가 포함되어 있고, 전출지 세대주가 온라인으로 ‘세대주 확인'민원을 신청할 수 없는 경우</li>
+								</ul>
+							</div>
+							<div class="agree-box">
+								<fieldset>
+									<legend>함께 신청할 수 있는 서비스 선택</legend>
+									<div class="fieldset">
+										<div class="form-group krds-check-area">
+											<div class="krds-form-check">
+												<input type="checkbox" name="save_id" id="chk_01">
+												<label for="chk_01">
+													위 유의 사항을 읽고 이해하였습니다.
+												</label>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //컨텐츠 영역 -->
+
+				@@include("./inc/help-panel.html", {
+					contents: "normal",
+				})
+
+				<!-- 페이지 버튼 영역 -->
+				<div class="page-btn-wrap both m-column">
+					<button type="button" class="krds-btn xlarge tertiary" onclick="history.back(-1); return false;">이전으로</button>
+					<div class="btn-wrap">
+						<button type="button" class="krds-btn xlarge tertiary">임시저장</button>
+						<button type="button" class="krds-btn xlarge primary" onclick="location.href='sample_move_process_03.html'">다음으로</button>
+					</div>
+				</div>
+				<!-- //페이지 버튼 영역 -->
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+
+		<!-- 푸터 영역 -->
+		<footer id="krds-footer">
+			@@include("./inc/footer.html", {"footerType": "type1",})
+		</footer>
+		<!-- //푸터 영역 -->
+	</div>
+	
+	@@include("./inc/modal-wrap.html")
+	
+</body>
+
+</html>

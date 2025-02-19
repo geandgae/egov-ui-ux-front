@@ -1,0 +1,30 @@
+{
+  "ico_logo_krds": [
+    "html\\pattern\\demo.html",
+    "html\\site\\inc\\guide-footer.html",
+    "html\\site\\inc\\guide-header.html"
+  ],
+  "main_ico_bankBook_L": [
+    "html\\pattern\\sample_main_01.html",
+    "html\\pattern\\sample_main_0102.html"
+  ],
+  "main_ico_battery_M": [
+    "html\\pattern\\sample_main_0101.html",
+    "html\\pattern\\sample_main_02.html",
+    "html\\pattern\\sample_main_0201.html",
+    "html\\pattern\\sample_main_03.html",
+    "html\\pattern\\sample_main_0301.html"
+  ],
+  "main_ico_building_L": [
+    "html\\pattern\\sample_main_0101.html"
+  ],
+  "main_ico_truck_S": [
+    "html\\pattern\\sample_main_02.html",
+    "html\\pattern\\sample_main_0201.html"
+  ],
+  "main_ico_building_M": [
+    "html\\pattern\\sample_main_0201.html",
+    "html\\pattern\\sample_main_03.html",
+    "html\\pattern\\sample_main_0301.html"
+  ]
+}

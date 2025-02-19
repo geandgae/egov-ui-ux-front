@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include("../inc/head.html", { "title": "디자인 원칙 | 시작하기 - 표준 및 원칙 - KRDS", })
+
+    <body>
+        <div id="wrap" class="g-wrap">
+            @@include("../inc/guide-header.html")
+
+            <!-- 컨테이너 영역 -->
+            <div id="container" class="krds-in-page-navigation-type">
+                <!-- 컨텐츠 영역 -->
+                <div class="inner in-between">
+                    <!-- 사이드 메뉴 -->
+                    @@include("../inc/guide-lnb.html")
+                    <!-- //사이드 메뉴 -->
+
+                    <div class="contents">
+                        <!-- breadcrumb -->
+                        @@include("../inc/page-breadcrumb.html")
+                        <!-- breadcrumb -->
+
+                        <!-- page-title -->
+                        @@include("../inc/page-title.html", { 
+							"desc" : "디지털 정부서비스 UI/UX의 방향성과 설계 기준은 모든 사용자가 쉬운 접근성과 편리함을 느낄 수 있도록 혁신을 지향하는 상위 원칙을 반영하고 있다."
+						})
+                        <!-- //page-title -->
+
+                        <div class="conts-area">
+                            <!-- quick link -->
+                            @@include("../inc/page-quick-nav.html")
+                            <!-- //quick link -->
+
+                            <!-- scroll-check -->
+                            <div class="g-description-area scroll-check">
+								<!-- 사용자 중심의 서비스 -->
+                                <div class="g-conts-area section-link">
+									<h3 class="sec-tit">사용자 중심의 서비스</h3>
+									<p class="g-desc">
+										디지털 정부 서비스에 대한 모든 의사 결정은 사용자를 중심으로 이루어져야 한다. 즉, 사용자 요구 사항을 기반으로 설계하고, 
+										사용자가 원하는 정보와 기능을 제공하며, 사용자가 목적을 달성하는 과정을 적극적으로 도와야 한다.
+									</p>
+
+									<!-- 이 원칙이 중요한 이유  -->
+									<div class="g-conts-area sp-sm">
+										<h4 class="con-tit">이 원칙이 중요한 이유</h4>
+										<p class="g-desc">서비스의 본질은 누군가가 어떤 일을 하도록 돕는 것이다. 디지털 정부도 하나의 서비스로서 사용자가 정부와 관련된 다양한 일을 할 수 있도록 도울 수 있어야 한다. 이때, 사용자는 누구이고 무엇을 하길 원하는지에 대한 공감 없이 추측에만 기반하여 서비스를 설계한다면 아무도 그 서비스를 이용하지 않을 것이다. 디지털 정부 서비스를 통해 자신이 원하는 결과를 얻거나 문제를 해결하는 사람이 많아질수록 정부가 지향하는 정책 목표에도 가까이 다가갈 수 있다. 디지털 정부 서비스를 설계하는 모든 단계에서 조직이나 개발자가 아닌 사용자를 중심으로 사고하는 방법은 의사결정 과정에서의 목표를 ‘사용자’로 집중시켜 불필요한 의사소통이나 소모적 논쟁을 줄이는 데도 도움이 된다</p>
+									</div>
+									<!-- //이 원칙이 중요한 이유  -->
+
+									<!-- 이 원칙을 따르기 위한 주요 방안  -->
+									<div class="g-conts-area sp-sm">
+										<h4 class="con-tit">이 원칙을 따르기 위한 주요 방안</h4>
+										<div class="g-desc-area">
+											<p class="g-desc">사용자 중심의 디지털 정부 서비스를 제공하기 위해 다음 사항을 고려한다.</p>
+											<div class="g-desc-body">
+												<div class="g-info-box bg-gray">
+													<ol class="num-list type-tit">
+														<li class="item">
+															<strong class="g-number">1</strong>
+															<div class="txt">
+																<p class="tit">서비스를 이용하는 사용자를 정의한다.</p>
+																<p class="desc">
+																	사용자를 정의할 때는 인구 통계학적인 접근을 넘어 서비스를 이용하는 목표와 빈도, 과업 난이도 등 
+																	사용 맥락에 따른 유형을 정의해야 실제 사용자의 다양한 요구 사항을 발견할 수 있다.
+																</p>
+															</div>
+														</li>
+														<li class="item">
+															<strong class="g-number">2</strong>
+															<div class="txt">
+																<p class="tit">사용자 여정을 고려한다.</p>
+																<p class="desc">
+																	사용자가 방문하여 원하는 것을 찾고 이해하고 수행하고 종료하는 등의 일련의 과정 중에 겪게 되는 문제를
+																	분석하고 해결하면 끊김 없는 사용자 경험을 제공할 수 있다.
+																</p>
+															</div>
+														</li>
+													</ol>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- //이 원칙을 따르기 위한 주요 방안  -->
+                                </div>
+								<!-- //사용자 중심의 서비스 -->
+
+								<!-- 모든 사용자를 포용하는 서비스 -->
+                                <div class="g-conts-area section-link">
+									<h3 class="sec-tit">모든 사용자를 포용하는 서비스</h3>
+									<p class="g-desc">
+										디지털 정부 서비스의 사용자는 장애인, 고령자, 어린이, 외국인을 포함하여 서로 다른 능력, 환경, 상황을 가진 모든 사람으로 정의해야 한다. 
+										모든 사람이 동등한 수준의 노력을 통해 서비스 이용 목적을 달성하도록 만드는 것이 포용적인 디지털 정부 서비스의 핵심이다.
+									</p>
+                                   
+									<!-- 이 원칙이 중요한 이유 -->
+									<div class="g-conts-area sp-sm">
+										<h4 class="con-tit">이 원칙이 중요한 이유</h4>
+										<p class="g-desc">
+											포용적인 디지털 서비스를 만드는 것을 어렵게 만드는 원인 중 하나는 포용적인 서비스가 특정 사용자만을 위한 것이라는 인식에 있다.
+											그러나 평균 수명의 증가, 사회와 기술의 다변화는 점점 더 소수의 사용자만 겪는 어려움을 누구나 일시적, 상황적으로 경험할 수밖에 없도록 만들고 있다. 
+											예를 들어, 흔들리는 버스에서 손잡이를 잡은 채로 모바일 디바이스를 이용하는 사람은 상황적으로 한 팔이 없는 사람과 동일한 장애를 겪게 된다. 
+											생물학적 노화는 필연적으로 사람의 감각적, 인지적 능력의 저하를 가져오므로 모든 사람은 언젠가는 영구적인 장애를 갖게 된다. <br />
+											이는 포용적인 서비스를 제공함으로써 결국 모든 서비스의 편의성이 향상될 수 있음을 의미한다.
+										</p>
+									</div>
+									<!-- //이 원칙이 중요한 이유 -->
+
+									<!-- 이 원칙을 따르기 위한 주요 방안 -->
+									<div class="g-conts-area sp-sm">
+										<h4 class="con-tit">이 원칙을 따르기 위한 주요 방안</h4>
+										<div class="g-info-box bg-gray">
+											<ol class="num-list type-tit">
+												<li class="item">
+													<strong class="g-number">1</strong> 
+													<div class="txt">
+														<p class="tit">디지털 정부 서비스 경험 설계의 첫 단계에서 정의하고 테스트한다.</p>
+														<p class="desc">
+															어떤 유형의 사용자가 어떤 상황에서 사용에 어려움을 느낄 수 있는지를 확인하고 반복적으로 개선한다. 마지막 단계에서 문제를 해결하려면 더 많은 자원을 투입할 수밖에 없음을 염두에 두어야 한다.
+														</p>
+													</div>
+												</li>
+												<li class="item">
+													<strong class="g-number">2</strong> 
+													<div class="txt">
+														<p class="tit">가장 어려워하는 사용자에 대한 문제를 먼저 제거한다.</p>
+														<p class="desc">
+															영구적인 장애 상황에서 겪을 수 있는 사용자의 문제를 해결하면 일시적으로 어려움을 겪는 상황의 문제를 자연스럽게 해결할 수 있다.
+														</p>
+													</div>
+												</li>
+												<li class="item">
+													<strong class="g-number">2</strong> 
+													<div class="txt">
+														<p class="tit">각 사용자 집단에 적합한 대안을 제공한다.</p>
+														이 원칙의 목표는 모든 사용자가 완전히 동일한 방법과 절차에 따라 서비스를 이용하도록 만드는 것이 아니다. 사용자 특성에 따라 더 편하게 접근할 수 있는 방식이 존재할 수 있으므로 모든 유형의 사용자가 동등한 수준의 노력으로 사용할 수 있는 수단을 제공하되, 이것이 차별로 느껴지지 않도록 유의한다.
+													</div>
+												</li>
+											</ol>
+										</div>
+									</div>
+									<!-- //이 원칙을 따르기 위한 주요 방안 -->
+                                </div>
+								<!-- //모든 사용자를 포용하는 서비스 -->
+
+								<!-- 공통된 경험 안에서 개별 특성을 고려한 서비스 -->
+                                <div class="g-conts-area section-link">
+									<h3 class="sec-tit">공통된 경험 안에서 개별 특성을 고려한 서비스</h3>
+									<p class="g-desc">
+										디지털 정부의 모든 서비스는 기관과 서비스 유형에 상관없이 일관성 있는 표현과 설계 방식으로 구현하여 하나의 대한민국 정부 서비스로 느껴지도록 제공해야 한다. <br />
+										일관성에 기반하여 사용자에게 디지털 정부 서비스에 대한 공통된 이용 경험을 제공한다는 것은 획일화된 디자인을 경험하게 한다는 의미가 아니다. 기관과 서비스의 역할, 
+										목표가 다르기 때문에 제공하는 정보와 대상 사용자가 완전히 동일할 수 없다. 성공적인 디지털 정부 서비스에는 서비스별 고유한 특성에 최적화된 경험과 일관성이 공존해야 한다.
+									</p>
+
+									<div class="g-conts-area sp-sm">
+										<h4 class="con-tit">이 원칙이 중요한 이유</h4>
+										<p class="g-desc">
+											디지털 서비스를 이용하는 사용자에게 가장 중요한 것은 누가 서비스를 만들었느냐가 아니라 이용 목적을 달성하는 것이다. 
+											기관에 따라, 심지어는 한 서비스 내에서 동일한 정보와 기능을 사용하는 과정이 일관성 없이 진행된다면 사용자는 혼동과 불편을 느낄 수밖에 없으며 
+											궁극적으로 디지털 정부 서비스에 대한 신뢰가 저하될 것이다. <br />
+											공통된 경험을 제공하는 것은 디지털 정부 서비스를 만들어 가는 참여자들에게도 중요하다. 일관된 경험을 제공하는 것을 목표로 서비스를 설계하게 되면 
+											의사결정에 투입되는 자원이 절약되므로 사용자 경험을 향상하기 위한 더 중요한 작업에 집중할 수 있다.
+										</p>
+									</div>
+									<div class="g-conts-area sp-sm">
+										<h4 class="con-tit">이 원칙을 따르기 위한 주요 방안</h4>
+										<div class="g-desc-area">
+											<p class="g-desc">모든 디지털 정부 서비스에 대한 일관성 있는 경험을 구현하기 위해 다음 사항을 고려한다.</p>
+											<div class="g-desc-body">
+												<div class="g-info-box bg-gray">
+													<ol class="num-list type-tit">
+														<li class="item">
+															<strong class="g-number">1</strong> 
+															<div class="txt">
+																<p class="tit">디지털 정부 서비스 설계 가이드에 따라 만든다.</p>
+																<p class="desc">
+																	설계 가이드는 반복적이고 재사용 가능한 요소로 구성되어 있으므로, 이에 기반한 설계를 통해 서비스 전체를 일관성 있게 만들 수 있다. 
+																	가이드의 반복성과 재사용성은 기존에 구축된 서비스에서 일부 화면을 개선하고자 하는 경우에도 무엇이 문제인지 확인하는 과정을 효과적으로 만든다.
+																</p>
+															</div>
+														</li>
+														<li class="item">
+															<strong class="g-number">2</strong> 
+															<div class="txt">
+																<p class="tit">서비스 특성에 적합한 가이드를 참고하여 최적의 경험을 제공한다.</p>
+																<p class="desc">
+																	설계 가이드에 안내되어 있는 유연한 규칙을 활용하여 사용자의 맥락, 서비스 특성, 프로젝트 상황에 맞는 최적의 디지털 정부 서비스를 제공한다.
+																</p>
+															</div>
+														</li>
+													</ol>
+												</div>
+											</div>
+										</div>
+									</div>
+                                </div>
+								<!-- //공통된 경험 안에서 개별 특성을 고려한 서비스 -->
+
+								<!-- 빠르고 간단한 서비스 -->
+                                <div class="g-conts-area section-link">
+									<h3 class="sec-tit">빠르고 간단한 서비스</h3>
+									<p class="g-desc">
+										디지털 정부 서비스에서 빠르고 간단한 서비스를 제공한다는 것은 이용 과정에서 필요한 의사 결정을 최소화하는 방식으로 사용자의 경험을 설계해야 함을 의미한다.
+									</p>
+                                   
+									<div class="g-conts-area sp-sm">
+										<h4 class="con-tit">이 원칙이 중요한 이유</h4>
+										<p class="g-desc">
+											서비스 이용 과정을 가장 간단한 절차로 만드는 작업은 생략되거나 간과하기 쉽다. 서비스 성격을 고려하지 않고 일반적으로 사용되는 이용 절차를 그대로 따라 설계하거나, 
+											여러 조건에 따라 이용 절차가 다르게 제공되어야 하는 사용자의 상황에 대한 이해가 부족하기 때문이다. 게다가 중요한 과업일수록 이용 도중 심각한 오류를 경험하지 않는 이상, 
+											사용자는 시간이 얼마나 걸리는지에 상관없이 목표를 완수하기 때문에 사용자의 목소리를 통해 이 문제를 확인하는 것은 쉽지 않은 일이다.
+										</p>
+									</div>
+
+									<div class="g-conts-area sp-sm">
+										<h4 class="con-tit">이 원칙을 따르기 위한 주요 방안</h4>
+										<div class="g-desc-area">
+											<p class="g-desc">사용자가 보다 빠르고 간단하게 서비스 이용 목적을 달성하도록 만들기 위해 다음 사항을 고려한다.</p>
+											<div class="g-desc-body">
+												<div class="g-info-box bg-gray">
+													<ol class="num-list type-tit">
+														<li class="item">
+															<strong class="g-number">1</strong> 
+															<div class="txt">
+																<p class="tit">이용 과정에 필요한 사용자의 의사 결정 및 행동의 수를 줄인다.</p>
+																<p class="desc">
+																	서비스 이용의 전체 과정을 고려하여 행동의 단계를 나눈다. 단계를 추가할 때는 꼭 필요한 단계인지, 축약할 때는 단계의 진행에 문제가 없는지를 신중하게 고민해야 한다.
+																</p>
+															</div>
+														</li>
+														<li class="item">
+															<strong class="g-number">2</strong> 
+															<div class="txt">
+																<p class="tit">이용 단계의 속도를 고려한다.</p>
+																<p class="desc">
+																	정확한 확인과 결정이 필요한 과업은 단계와 속도가 느릴 수 있다.과업의 성격에 상관없이 단계를 축소하는 데만 집중하게 될 경우, 
+																	중요한 항목에 대한 의사 결정을 건너뛰는 등의 문제로 부가적인 확인 절차가 추가되거나 같은 단계를 여러 번 반복하게 될 수 있다.
+																</p>
+															</div>
+														</li>
+													</ol>
+												</div>
+											</div>
+										</div>
+									</div>
+                                </div>
+								<!-- 빠르고 간단한 서비스 -->
+
+								<!-- 쉽게 이해하고 사용할 수 있는 서비스 -->
+                                <div class="g-conts-area section-link">
+									<h3 class="sec-tit">쉽게 이해하고 사용할 수 있는 서비스</h3>
+									<p class="g-desc">
+										쉽게 이해하고 사용할 수 있는 디지털 정부 서비스는 콘텐츠와 사용자 인터페이스가 친숙하면서도 간결하고 직관적인 방식으로 설계되어 있어 사용자가 도움 없이도 
+										이용할 수 있는 상태를 의미한다. 만약 사용자가 실수하더라도 실수하기 이전 상태로 돌아갈 방안을 적절한 시기에 적절한 방식으로 제공하므로 쉽게 문제를 해결할 수 있다.
+									</p>
+                                   
+									<div class="g-conts-area sp-sm">
+										<h4 class="con-tit">이 원칙이 중요한 이유</h4>
+										<p class="g-desc">
+											디지털 정부 서비스와 사용자의 상호작용은 비대면 환경에서 이루어지기 때문에 더 쉽게 사용할 수 있게 만들어야 한다. <br />
+											눈에 보이지 않는 서비스와 의사소통하는 과정에서 만나게 되는 다양한 이용 상황에는 불확실성이 존재한다. 사용자가 방문 목적을 달성하기 위해서는 인터페이스, 
+											콘텐츠를 포함하여 서비스의 여러 가지 불명확한 요소에 대해 끊임없이 해석하고 이해하는 노력을 기울여야 한다. 이때, 용어, 설명, 아이콘, 이미지, 작동 방식 등이 
+											낯설거나 이해하기 어려운 방식으로 표현된다면 사용자는 혼란스러울 수 있으며, 이로 인해 무의식적인 실수를 하거나 부정확한 해석으로 오류를 경험할 수 있다. <br />
+											보다 직관적이고 친숙하며 예측이 가능한 상호작용을 통해 사용자의 실수를 최소화하는 것이 가장 중요하며, 그럼에도 불구하고 사용자가 겪게 되는 다양한 문제에 대해서는 
+											사용자 스스로 오류를 인식하고 쉽게 수정하거나 해결 방법을 찾을 수 있도록 도움과 단서를 적극적으로 제공해야 한다.
+										</p>
+									</div>
+
+									<div class="g-conts-area sp-sm">
+										<h4 class="con-tit">이 원칙을 따르기 위한 주요 방안</h4>
+										<div class="g-desc-area">
+											<p class="g-desc">쉽게 이해하고 사용할 수 있는 서비스를 제공하기 위해 다음 사항을 고려한다.</p>
+											<div class="g-desc-body">
+												<div class="g-info-box bg-gray">
+													<ol class="num-list type-tit">
+														<li class="item">
+															<strong class="g-number">1</strong> 
+															<div class="txt">
+																<p class="tit">사용자의 기대를 실제 서비스와 일치시키기 위해서는 이미 확립된 친숙함을 기반으로 디자인하고 자연스럽고 논리적인 방식으로 정보 및 기능을 제공해야 한다.</p>
+																<p class="desc">
+																	이에 대한 의사결정이 필요한 경우에는 경험이 없는 사용자도 원하는 목적을 달성하였는지 테스트하고 그 결과를 반영할 수 있도록 해야 한다.
+																</p>
+															</div>
+														</li>
+														<li class="item">
+															<strong class="g-number">2</strong> 
+															<div class="txt">
+																<p class="tit">서비스의 사용 중에 도움이 필요한 다양한 상황에 대한 피드백을 수집하고 별도의 체크리스트로 관리한다.</p>
+																<p class="desc">
+																	웹사이트의 오류와 관련된 피드백은 우선순위로 정하고 신속한 방법으로 개선한다.
+																</p>
+															</div>
+														</li>
+													</ol>
+												</div>
+											</div>
+										</div>
+									</div>
+                                </div>
+								<!-- //쉽게 이해하고 사용할 수 있는 서비스 -->
+
+								<!-- 사용자의 다양한 상황을 고려하는 서비스 -->
+                                <div class="g-conts-area section-link">
+									<h3 class="sec-tit">사용자의 다양한 상황을 고려하는 서비스</h3>
+									<p class="g-desc">
+										디지털 정부 서비스에서 사용자의 다양한 상황을 고려한다는 것은 사용자마다 다른 이용 상황과 목적, 숙련도와 이용 빈도 등을 고려하여 사용자가 원하는 방식으로 
+										이용할 수 있게 구현하는 것을 의미한다.
+									</p>
+                                  
+									<div class="g-conts-area sp-sm">
+										<h4 class="con-tit">이 원칙이 중요한 이유</h4>
+										<p class="g-desc">
+											사용자는 누구나 자신의 목적과 상황에 맞도록 서비스를 이용할 수 있는 자율성을 필요로 한다. <br />
+											예를 들어, 숙련된 사용자는 작업의 속도를 높이거나 전문적인 이용을 위한 고급 기능을 사용하고 싶어 한다. 반면 새로운 사용자는 낯선 작업을 수행하기 위해 
+											더 많은 도움과 생략되지 않은 절차를 원한다. 모바일 환경을 더 선호하는 사용자도 있지만, PC를 더 자주 이용하는 사용자도 있으며, 이용하는 기기나 브라우저가 
+											달라지는 상황도 존재한다. <br />
+											이처럼 사용자의 상황이 다양함을 이해하고 사용자가 자유롭게 작업 방식을 선택하거나 설정을 변경할 수 있는 유연한 환경을 제공해야 하며, 
+											사용자가 여러 가지 기기로 서비스에 접근하더라도 연속된 경험을 제공받을 수 있도록 설계해야 한다.
+										</p>
+									</div>
+
+									<div class="g-conts-area sp-sm">
+										<h4 class="con-tit">이 원칙을 따르기 위한 주요 방안</h4>
+										<div class="g-desc-area">
+											<p class="g-desc">사용자가 보다 빠르고 간단하게 서비스 이용 목적을 달성하도록 만들기 위해 다음 사항을 고려한다.</p>
+											<div class="g-desc-body">
+												<div class="g-info-box bg-gray">
+													<ol class="num-list type-tit">
+														<li class="item">
+															<strong class="g-number">1</strong> 
+															<div class="txt">
+																<p class="tit">사용자마다 다른 서비스 이용 목적 및 사용 맥락을 파악하기 위해 사용자가 실제로 어떤 환경에서 서비스를 어떻게 사용하고 있는지 조사하고 관찰한다.</p>
+															</div>
+														</li>
+														<li class="item">
+															<strong class="g-number">2</strong> 
+															<div class="txt">
+																<p class="tit">사용자들이 빈번하게 사용하는 과업에 대해 선택할 수 있는 다양한 방법과 절차를 조사하고 정의한다.</p>
+																<p class="desc">
+																	전문 사용자의 상호작용 속도를 높일 수 있는 고급 기능은 사용자가 선택할 수 있도록 제공하여 경험이 없는 사용자와 숙련된 사용자 모두에게 적합한 서비스 환경을 만들 수 있다.
+																</p>
+															</div>
+														</li>
+														<li class="item">
+															<strong class="g-number">3</strong> 
+															<div class="txt">
+																<p class="tit">사용자의 사용 이력을 바탕으로 필요로 하는 시점에 적절한 정보와 기능을 제공한다.</p>
+																<p class="desc">
+																	이때, 사용자의 이용 흐름에 방해가 되거나 자율성이 저하되지 않도록 유의해야 한다.
+																</p>
+															</div>
+														</li>
+													</ol>
+												</div>
+											</div>
+										</div>										
+									</div>
+                                </div>
+								<!-- //사용자의 다양한 상황을 고려하는 서비스 -->
+
+								<!-- 신뢰할 수 있는 서비스 -->
+                                <div class="g-conts-area section-link">
+									<h3 class="sec-tit">신뢰할 수 있는 서비스</h3>
+									<p class="g-desc">
+										신뢰할 수 있는 디지털 정부 서비스 경험을 제공한다는 것은 사용자가 서비스에 방문하여 이용을 종료하기까지, 
+										매 순간 정부의 공식 서비스임을 분명하게 인지할 수 있으며, 최신의 정확한 정보에 접근할 수 있도록 만드는 것이다.
+									</p>
+                                    
+									<div class="g-conts-area sp-sm">
+										<h4 class="con-tit">이 원칙이 중요한 이유</h4>
+										<p class="g-desc">
+											디지털 서비스에 대한 신뢰는 사용자가 서비스를 이용하면서 원하는 결과를 얻고, 실망하지 않는 경험이 반복적으로 누적되는 과정을 통해 매우 천천히 구축된다. 
+											반면 단 한 번의 불만족스러운 경험만으로도 신뢰를 잃을 수 있으며, 이를 회복하려면 처음보다 더 많은 자원을 투입해야 하기 때문에 각별히 유의해야 한다.
+										</p>
+									</div>
+
+									<div class="g-conts-area sp-sm">
+										<h4 class="con-tit">이 원칙을 따르기 위한 주요 방안</h4>
+										<div class="g-desc-area">
+											<p class="g-desc">정부 서비스로서 사용자의 신뢰를 확보하기 위해 다음 사항을 고려한다.</p>
+											<div class="g-desc-body">
+												<div class="g-info-box bg-gray">
+													<ol class="num-list type-tit">
+														<li class="item">
+															<strong class="g-number">1</strong> 
+															<div class="txt">
+																<p class="tit">모든 서비스와 모든 화면에 정부 서비스의 공식 배너를 배치하고 헤더와 푸터에 적절한 방식으로 로고를 제공한다.</p>
+																<p class="desc">사용자가 정부의 공식 서비스임이 명확하지 않다고 느낀다면 서비스 이용을 주저하게 된다.</p>
+															</div>
+														</li>
+														<li class="item">
+															<strong class="g-number">2</strong> 
+															<div class="txt">
+																<p class="tit">주기적이고 빈번하게 정보의 정확성 및 최신성을 점검하여 수정한다.</p>
+																<p class="desc">
+																	정확하지 않거나 최신화되지 않은 정보로 인해 사용자는 예상치 못한 어려움을 겪게 되며, 더 이상 서비스를 믿을 수 없게 된다. 
+																	불가피하게 정보의 수정/보완에 지연이 발생한다면, 사용자에게 이러한 사실과 최종 반영 일정을 안내하는 것이 바람직하다.
+																</p>
+															</div>
+														</li>
+													</ol>
+												</div>
+											</div>
+										</div>
+									</div>
+                                </div>
+								<!-- //신뢰할 수 있는 서비스 -->
+
+								<!-- 자주 묻는 질문 -->
+								@@include("../inc/page-faq.html")
+								<!-- //자주 묻는 질문 -->
+								
+								<!-- 컨텐츠 배너 영역 -->
+								@@include("../inc/page-banner.html")
+								<!--// 컨텐츠 배너 영역 -->
+                            </div>
+                            <!-- //scroll-check -->
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- //컨텐츠 영역 -->
+            </div>
+            <!-- //컨테이너 영역 -->
+
+            <!-- 푸터 영역 -->
+            <footer id="krds-footer">@@include("../inc/guide-footer.html")</footer>
+            <!-- //푸터 영역 -->
+        </div>
+    </body>
+</html>

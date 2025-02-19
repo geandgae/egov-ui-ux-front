@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include("../inc/head.html", { "title": "문의 및 건의 문의하기 | 소식·소통 - KRDS", })
+
+    <body>
+        <div id="wrap" class="g-wrap">
+            @@include("../inc/guide-header.html")
+
+            <!-- 컨테이너 영역 -->
+            <div id="container">
+                <!-- 컨텐츠 영역 -->
+                <div class="inner in-between">
+                    <!-- 사이드 메뉴 -->
+                    @@include("../inc/guide-lnb.html")
+                    <!-- //사이드 메뉴 -->
+
+                    <div class="contents">
+                        <!-- breadcrumb -->
+                        @@include("../inc/page-breadcrumb.html")
+                        <!-- breadcrumb -->
+
+                        <div id="inquiry-form">
+                            <!-- page-title -->
+                            @@include("../inc/page-title.html", { })
+                            <!-- //page-title -->
+
+                            <div class="txt-box outline">
+                                <h4 class="outline-tit">시작하기 전에</h4>
+                                <ul class="krds-info-list decimal">
+                                    <li>글 작성 시 본문 또는 첨부파일 내에 개인정보(주민등록번호, 연락처, 이메일 등)가 포함되어 게시하지 않도록 유의하시기 바랍니다.</li>
+                                    <li class="point">개인정보가 노출되면 악용될 수 있으며, 특히 타인의 개인정보가 노출될 경우, 개인정보보호법에 의해 처벌받을 수 있습니다.</li>
+                                    <li>비공개 시 작성자와 비밀번호를 반드시 기억해주시기 바랍니다. 본인글(문의 및 답변) 확인 시 필요한 정보입니다.</li>
+                                </ul>
+                                <div class="conts-desc-wrap">
+                                  <ul class="check-list">
+                                    <li>전체 항목 필수 입력 사항입니다.</li>
+                                  </ul>
+                                </div>
+                            </div>
+
+                            <div class="txt-box bg-white g-form">
+                                <div class="g-form-inner">
+                                    <div class="fieldset inquire">
+                                        <div class="form-group">
+                                            <div class="form-tit">
+                                                <label for="writer" class="form-label">작성자</label>
+                                            </div>
+                                            <div class="form-conts">
+                                                <input type="text" id="writer" class="krds-input" placeholder="이름을 입력해 주세요">
+                                                <p class="form-hint-invalid" style="display: none">이름을 입력해 주세요.</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-tit">
+                                                <label for="type" class="form-label">문의 및 건의 유형</label>
+                                            </div>
+                                            <div class="form-conts">
+                                                <select id="type" class="krds-form-select" title="선택"></select>
+                                                <p class="form-hint-invalid" style="display: none">문의 및 건의 유형을 선택해 주세요.</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-tit">
+                                                <label for="title" class="form-label">제목</label>
+                                            </div>
+                                            <div class="form-conts">
+                                                <input type="text" id="title" class="krds-input" placeholder="제목을 입력해 주세요">
+                                                <p class="form-hint-invalid" style="display: none">제목을 입력해 주세요.</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-tit">
+                                                <label for="content" class="form-label">내용</label>
+                                            </div>
+                                            <!-- 에러메세지 노출 시 is-error 클래스 추가 -->
+                                            <div class="form-conts /*is-error*/">
+                                                <div class="textarea-wrap">
+                                                    <textarea class="krds-input" title="내용은 최대 3,000bytes(한글 1,000자) 까지 가능합니다. 문의 내용에 이름 및 연락처 등의 개인정보 입력은 지양해 주세요." placeholder="내용은 최대 3,000bytes(한글 1,000자) 까지 가능합니다. 문의 내용에 이름 및 연락처 등의 개인정보 입력은 지양해 주세요." id="content" data-max-bytes="3000"></textarea>
+                                                    <div class="textarea-bottom">
+                                                        <p class="textarea-count">
+                                                            <span class="count-now" id="byte-count">0</span><span class="count-total">/3000</span>
+                                                        </p>
+                                                        <p class="form-hint-invalid" style="display: none">개인정보가 포함되어 문의 및 건의사항이 등록되지 않았습니다. 개인정보 삭제 후 등록 바랍니다.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 공개여부  -->
+                                    <div>
+                                        <h4 class="g-form-tit">공개여부</h4>
+                                        <div class="krds-check-area chk-column">
+                                            <div class="krds-form-check large">
+                                                <input type="radio" name="public-yn" id="public-yn1" value="Y" checked>
+                                                <label for="public-yn1">공개</label>
+                                            </div>
+                                            <div class="krds-form-check large">
+                                                <input type="radio" name="public-yn" id="public-yn2" value="N">
+                                                <label for="public-yn2">비공개</label>
+                                                <div class="krds-form-check-cnt">
+                                                    <p class="krds-form-check-p">
+                                                        문의글에 대해 공개를 원치않으실 경우, 비공개를 체크하시고 비밀번호를 입력해주시기 바랍니다. 비밀번호 입력 시 연속된 숫자는 피해주세요.
+                                                    </p>
+                                                    <div class="form-group">
+                                                        <div class="form-conts">
+                                                            <input type="password" id="password" class="krds-input"  title="비밀번호 6자리 입력" placeholder="비밀번호 6자리를 입력해 주세요" maxlength="6" disabled>
+                                                            <p class="form-hint-invalid" style="display: none">비밀번호 6자리를 입력해 주세요.</p>
+                                                        </div>
+                                                    </div>
+                                               </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //공개여부  -->
+
+                                    <!-- recaptcha 영역 -->
+                                    <div class="form-group">
+                                        <div class="form-conts">
+                                            <div class="g-recaptcha" data-sitekey="6Lc7raMqAAAAAP2sH7FBDqu3pfQz7o0Gbqptn4vr" id="recaptcha"></div>
+                                            <p class="form-hint-invalid" style="display: none">로봇이 아닙니다를 체크해 주세요.</p>
+                                        </div>
+                                    </div>
+                                    <!-- recaptcha 영역 -->
+                                </div>
+                            </div>
+
+                            <!-- 페이지 버튼 영역 -->
+                            <div class="page-btn-wrap both m-column">
+                                <button type="button" class="krds-btn xlarge tertiary" id="btn-back">목록으로 돌아가기</button>
+                                <button type="button" class="krds-btn xlarge" id="btn-submit">제출하기</button>
+                            </div>
+                            <!-- //페이지 버튼 영역 -->
+
+                        </div>
+
+                        <div id="inquiry-result" style="display: none">
+                            <!-- 완료 메세지 -->
+                            <div class="comp-msg-wrap">
+                                고객님의 문의가 접수되었습니다.
+                                <p class="msg-txt">KRDS 헬프데스크에서 문의내용 확인 후 답변드리겠습니다.</p>
+                            </div>
+                            <!-- //완료 메세지 -->
+
+                            <div class="comp-info-box">
+                                <h3 class="key">문의내용</h3>
+                                <p class="value"></p>
+                            </div>
+
+                            <!-- 버튼 -->
+                            <div class="comp-btn-wrap">
+                                <button type="button" class="krds-btn xlarge tertiary" id="btn-list">목록으로 돌아가기</button>
+                            </div>
+                            <!-- //버튼 -->
+                        </div>
+                     
+                    </div>
+                </div>
+                <!-- //컨텐츠 영역 -->
+            </div>
+            <!-- //컨테이너 영역 -->
+           
+            <!-- 푸터 영역 -->
+            <footer id="krds-footer">@@include("../inc/guide-footer.html")</footer>
+            <!-- //푸터 영역 -->
+        </div>
+
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script type="module">
+            import InquiryFormControl from '/resources/js/controls/inquiry-form-control.js';
+            new InquiryFormControl('#container');
+        </script>
+    </body>
+</html>

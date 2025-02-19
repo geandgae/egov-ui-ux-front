@@ -1,0 +1,318 @@
+<section id="popFilterId" class="krds-modal fade" data-type="bottom-sheet">
+    <!-- modal-dialog -->
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- modal title -->
+            <div class="modal-header">
+                <h2 class="modal-title">검색필터</h2>
+            </div>
+            <!-- //modal title -->
+            <!-- modal contents -->
+            <div class="modal-conts">
+                <div class="pop-filter-top">
+                    @@if (filtered === "false") {
+                    <!-- 적용된 필터가 없을 경우 노출 -->
+                    <p class="filter-txt">적용된 필터가 없습니다.<br/>검색 필터를 통해 상세한 검색을 해보세요</p>
+                    
+                    <!-- //적용된 필터가 없을 경우 노출 -->
+                    } @@if (filtered === "true") {
+                    <!-- 적용된 필터가 있을 경우 노출 -->
+                    <div class="filter-tag-wrap">
+                        <button type="button" class="krds-btn large icon border">
+                            <span class="sr-only">새로고침</span>
+                            <i class="svg-icon ico-refresh"></i>
+                        </button>
+                        <div class="tag-in krds-tag-wrap medium">
+                            <span class="krds-btn-tag">
+                                장애인
+                                <button type="button" class="btn-delete">
+                                    <span class="sr-only">삭제</span>
+                                </button>
+                            </span>
+                            <span class="krds-btn-tag">
+                                직무경험
+                                <button type="button" class="btn-delete">
+                                    <span class="sr-only">삭제</span>
+                                </button>
+                            </span>
+                            <span class="krds-btn-tag">
+                                비용지급
+                                <button type="button" class="btn-delete">
+                                    <span class="sr-only">삭제</span>
+                                </button>
+                            </span>
+                        </div>
+                        <div class="tag-btn">
+							<button type="button" class="krds-btn large icon border" id="btn-toggle">
+								<span class="sr-only">열기</span>
+								<i class="svg-icon ico-angle down"></i>
+							</button>
+                        </div>
+                    </div>
+                    <!-- //적용된 필터가 있을 경우 노출 -->
+                    }
+                </div>
+                @@if (list === "normal") {
+                    <ul class="filter-list option-select is-open krds-accordion type-line" data-type="multiOpen">
+                        <li class="li accordion-item">
+                            <h3 class="accordion-header">
+                                <button type="button" class="btn-accordion">
+                                    <div class="tit"><label for="select1">생애 주기</label></div>
+                                </button>
+                            </h3>
+                            <div class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <select class="krds-form-select medium" id="select1">
+                                        <option value="">전체</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="li accordion-item">
+                            <h3 class="accordion-header">
+                                <button type="button" class="btn-accordion">
+                                    <div class="tit"><label for="select2">가구 상황</label></div>
+                                </button>
+                            </h3>
+                            <div class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <select class="krds-form-select medium" id="select2">
+                                        <option value="">전체</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="li accordion-item">
+                            <h3 class="accordion-header">
+                                <button type="button" class="btn-accordion">
+                                    <div class="tit"><label for="select3">관심 주제</label></div>
+                                </button>
+                            </h3>
+                            <div class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <select class="krds-form-select medium" id="select3">
+                                        <option value="">전체</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                } @@if (list === "quest") {
+                    <ul class="filter-list is-open krds-accordion type-line" data-type="multiOpen">
+                        <li class="li accordion-item">
+                            <h3 class="accordion-header">
+                                <button type="button" class="btn-accordion">
+                                    <div class="tit"><label for="select4">정책 분야</label></div>
+                                </button>
+                            </h3>
+                            <div class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <select class="krds-form-select medium" id="select4">
+                                        <option value="">전체</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="li accordion-item">
+                            <h3 class="accordion-header">
+                                <button type="button" class="btn-accordion">
+                                    <div class="tit"><label for="select5">대상자</label></div>
+                                </button>
+                            </h3>
+                            <div class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <select class="krds-form-select medium" id="select5">
+                                        <option value="">전체</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                } @@if (list === "all") {
+                    <ul class="filter-list is-open krds-accordion type-line" data-type="multiOpen">
+                        <li class="li accordion-item">
+                            <h3 class="accordion-header">
+                                <button type="button" class="btn-accordion">
+                                    <div class="tit">검색대상<span class="krds-badge bg-primary number">4</span></div>
+                                </button>
+                            </h3>
+                            <div class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <div class="row krds-check-area chk-column">
+                                        <div class="krds-form-check">
+                                            <input type="checkbox" id="filter-target_chk_1">
+                                            <label for="filter-target_chk_1">메뉴 (2)</label>
+                                        </div>
+                                        <div class="krds-form-check">
+                                            <input type="checkbox" id="filter-target_chk_2" checked>
+                                            <label for="filter-target_chk_2">뉴스 (2,301)</label>
+                                        </div>
+                                        <div class="krds-form-check">
+                                            <input type="checkbox" id="filter-target_chk_3" checked>
+                                            <label for="filter-target_chk_3">자주 묻는 질문 (39)</label>
+                                        </div>
+                                        <div class="krds-form-check">
+                                            <input type="checkbox" id="filter-target_chk_4" checked>
+                                            <label for="filter-target_chk_4">자료 (18,201)</label>
+                                        </div>
+                                        <div class="krds-form-check">
+                                            <input type="checkbox" id="filter-target_chk_5">
+                                            <label for="filter-target_chk_5">정책 (32)</label>
+                                        </div>
+                                        <div class="krds-form-check">
+                                            <input type="checkbox" id="filter-target_chk_6" checked>
+                                            <label for="filter-target_chk_6">법령 (392)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="li accordion-item">
+                            <h3 class="accordion-header">
+                                <button type="button" class="btn-accordion">
+                                    <div class="tit">검색 기간</div>
+                                </button>
+                            </h3>
+                            <div class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <!-- 날짜 기간 선택 -->
+                                    <div class="form-group">
+                                        <div class="chip-wrap">
+                                            <div class="krds-form-chip sm">
+                                                <input type="radio" class="radio" name="rdo_chip_date" id="rdo_chip_date1a">
+                                                <label class="krds-form-chip-outline" for="rdo_chip_date1a">1개월</label>
+                                            </div>
+                                            <div class="krds-form-chip sm">
+                                                <input type="radio" class="radio" name="rdo_chip_date" id="rdo_chip_date1b">
+                                                <label class="krds-form-chip-outline" for="rdo_chip_date1b">3개월</label>
+                                            </div>
+                                            <div class="krds-form-chip sm">
+                                                <input type="radio" class="radio" name="rdo_chip_date" id="rdo_chip_date1c">
+                                                <label class="krds-form-chip-outline" for="rdo_chip_date1c">6개월</label>
+                                            </div>
+                                            <div class="krds-form-chip sm">
+                                                <input type="radio" class="radio" name="rdo_chip_date" id="rdo_chip_date1d">
+                                                <label class="krds-form-chip-outline" for="rdo_chip_date1d">1년</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-conts calendar-conts">
+                                            <ul class="input-group range">
+                                                <li>
+                                                    <label for="datepicker1" class="form-tit">시작날짜</label>
+                                                    <input type="number" class="krds-input datepicker medium" id="datepicker1" placeholder="">
+                                                </li>
+                                                <li class="mark sm">-</li>
+                                                <li>
+                                                    <label for="datepicker2" class="form-tit">종료날짜</label>
+                                                    <input type="number" class="krds-input datepicker medium" id="datepicker2" placeholder="">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- //날짜 기간 선택 -->
+                                </div>
+                            </div>
+                        </li>
+                        <li class="li accordion-item">
+                            <h3 class="accordion-header">
+                                <button type="button" class="btn-accordion">
+                                    <div class="tit">자료 유형</div>
+                                </button>
+                            </h3>
+                            <div class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <div class="row krds-check-area chk-column">
+                                        <div class="krds-form-check">
+                                            <input type="checkbox" id="filter-data_chk_1">
+                                            <label for="filter-data_chk_1">PDF (234)</label>
+                                        </div>
+                                        <div class="krds-form-check">
+                                            <input type="checkbox" id="filter-data_chk_2">
+                                            <label for="filter-data_chk_2">HWP (220)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="li accordion-item">
+                            <h3 class="accordion-header">
+                                <button type="button" class="btn-accordion">
+                                    <div class="tit">자료 이용 장소</div>
+                                </button>
+                            </h3>
+                            <div class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <div class="row krds-check-area chk-column">
+                                        <div class="krds-form-check">
+                                            <input type="checkbox" id="filter-place_chk_1">
+                                            <label for="filter-place_chk_1">장소1</label>
+                                        </div>
+                                        <div class="krds-form-check">
+                                            <input type="checkbox" id="filter-place_chk_2">
+                                            <label for="filter-place_chk_2">장소2</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="li accordion-item">
+                            <h3 class="accordion-header">
+                                <button type="button" class="btn-accordion">
+                                    <div class="tit">자료 언어</div>
+                                </button>
+                            </h3>
+                            <div class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <div class="row krds-check-area chk-column">
+                                        <div class="krds-form-check">
+                                            <input type="checkbox" id="filter-lang_chk_1">
+                                            <label for="filter-lang_chk_1">영어</label>
+                                        </div>
+                                        <div class="krds-form-check">
+                                            <input type="checkbox" id="filter-lang_chk_2">
+                                            <label for="filter-lang_chk_2">일본어</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                }
+            </div>
+            <!-- //modal contents -->
+            <!-- modal btn -->
+            <div class="modal-btn btn-wrap">
+                <button type="button" class="krds-btn medium tertiary close-modal">초기화</button>
+                <button type="button" class="krds-btn medium primary close-modal">적용하기</button>
+            </div>
+            <!-- //modal btn -->
+            <!-- close button -->
+            <button type="button" class="krds-btn medium icon btn-close close-modal">
+                <span class="sr-only">닫기</span>
+                <i class="svg-icon ico-popup-close"></i>
+            </button>
+            <!-- //close button -->
+        </div>
+    </div>
+    <!-- //modal-dialog -->
+    <div class="modal-back"></div>
+
+    <script>
+		/* layer : 검색필터 : 태그 */
+		const $tag = document.querySelector(".pop-filter-top .tag-in");
+		const $tagBtn = document.querySelector(".pop-filter-top #btn-toggle");
+		if ($tagBtn) {
+			$tagBtn.addEventListener("click", (e) => {
+				if (!e.currentTarget.classList.contains("active")) {
+					$tag.classList.add("is-open");
+					e.currentTarget.classList.add("active");
+				} else {
+					$tag.classList.remove("is-open");
+					e.currentTarget.classList.remove("active");
+				}
+			});
+		}
+	</script>
+</section>

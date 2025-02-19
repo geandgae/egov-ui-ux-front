@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko" class="scroll-no">
+
+@@include("./inc/head.html", {
+	"title": "서브 - 통합검색 - KRDS",
+})
+
+<body>
+	<div id="wrap">
+		@@include("./inc/skip.html", {"class": "",})
+
+		@@include("./inc/header-top.html")
+
+		<!-- 헤더 영역 -->
+		<header id="krds-header">
+			@@include("./inc/header.html")
+		</header>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container">
+			<!-- breadcrumb -->
+			@@include("./inc/page-breadcrumb.html")
+			<!-- breadcrumb -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="inner">
+				컨텐츠 영역
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+
+		<!-- 푸터 영역 -->
+		<footer id="krds-footer">
+			@@include("./inc/footer.html", {"footerType": "type1",})
+		</footer>
+		<!-- //푸터 영역 -->
+	</div>
+
+	@@include("./inc/modal-wrap.html")
+	
+	<script>
+		// 팝업 자동오픈
+		document.addEventListener('DOMContentLoaded', () => {
+			krds_modal.openModal("popTotalSch");
+		});
+	</script>
+	
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+
+@@include("./inc/head.html", {
+	"title": "서브 - 전입신고 | 신청 - KRDS",
+})
+
+<body>
+	<div id="wrap">
+		@@include("./inc/skip.html", {"class": "",})
+
+		@@include("./inc/header-top.html")
+
+		<!-- 헤더 영역 -->
+		<header id="krds-header">
+			@@include("./inc/header.html")
+		</header>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container">
+			<!-- breadcrumb -->
+			@@include("./inc/page-breadcrumb.html", { "depth": ["민원"] })
+			<!-- breadcrumb -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="inner">
+				<!-- 완료 메세지 -->
+				<div class="comp-msg-wrap">
+					전입신고 민원 신청이 <br class="w-hide"><span class="point">완료</span>되었습니다.
+				</div>
+				<!-- //완료 메세지 -->
+
+				<!-- 신청 정보 -->
+				<ul class="comp-info-box">
+					<li>
+						<div class="key">신청인</div>
+						<div class="value">홍길동</div>
+					</li>
+					<li>
+						<div class="key">신청정보</div>
+						<div class="value">
+							<p class="p">신청인 정보</p>
+							<p class="p">이사 전 살던 곳</p>
+							<p class="p">이사 온 곳</p>
+							<p class="p">신고 대상자</p>
+						</div>
+					</li>
+				</ul>
+				<!-- //신청 정보 -->
+
+				<!-- 버튼 -->
+				<div class="comp-btn-wrap">
+					<button type="button" class="krds-btn xlarge tertiary">다른 민원신청하기</button>
+					<button type="button" class="krds-btn xlarge primary">신청 내역/결과보기</button>
+				</div>
+				<!-- //버튼 -->
+
+				<!-- 기타 링크 -->
+				<dl class="comp-link-box">
+					<dt>
+						<p class="tit">이런 서비스는 어떠세요?</p>
+						<p class="txt">'전입신고'를 신청하는 분들이 함께 이용한 민원입니다.</p>
+					</dt>
+					<dd>
+						<a href="#" class="krds-btn medium text">우편물 주거이전서비스 신청 <span class="svg-icon ico-link"></span></a>
+						<a href="#" class="krds-btn medium text">요금감면일괄신청 <i class="svg-icon ico-angle right"></i></a>
+						<a href="#" class="krds-btn medium text">지방세납세증명서 <i class="svg-icon ico-angle right"></i></a>
+						<a href="#" class="krds-btn medium text">모든 민원 서비스 목록 보기 <i class="svg-icon ico-angle right"></i></a>
+					</dd>
+				</dl>
+				<!-- //기타 링크 -->
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+
+		<!-- 푸터 영역 -->
+		<footer id="krds-footer">
+			@@include("./inc/footer.html", {"footerType": "type1",})
+		</footer>
+		<!-- //푸터 영역 -->
+	</div>
+	
+	@@include("./inc/modal-wrap.html")
+	
+</body>
+
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include("../inc/head.html", { "title": "개요 | 서비스 패턴 - 방문 - KRDS", })
+
+    <body>
+        <div id="wrap" class="g-wrap">
+            @@include("../inc/guide-header.html")
+
+            <!-- 컨테이너 영역 -->
+            <div id="container">
+                <!-- 컨텐츠 영역 -->
+                <div class="inner in-between">
+                    <!-- 사이드 메뉴 -->
+                    @@include("../inc/guide-lnb.html")
+                    <!-- //사이드 메뉴 -->
+
+                    <!-- contents -->
+                    <div class="contents">
+                        <!-- breadcrumb -->
+                        @@include("../inc/page-breadcrumb.html")
+                        <!-- breadcrumb -->
+
+                        <!-- page-title -->
+                        @@include("../inc/page-title.html", { 
+							"desc" : "로그인은 사용자의 신원을 확인하는 과정으로 사용자가 서비스에 접근할 수 있도록 하는 수단이다. 사용자에게 개인화된 경험을 제공하거나 사용자의 신분/신원을 인증하고자 하는 경우에 사용하기 적합하다." 
+						})
+                        <!-- //page-title -->
+
+                        <div class="conts-area">
+
+                            <!-- scroll-check -->
+                            <div class="g-description-area scroll-check">
+								<!-- 유형 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">유형</h3>
+                                    <div class="g-conts-area sp-sm">
+                                        <h4 class="con-tit">지식 기반 인증</h4>
+                                        <p class="g-desc">
+                                            사용자만이 유일하게 알고 있는 내용에 기반한 사용자 확인 방법 <br />
+                                            예&#41; 아이디/패스워드, PIN
+                                        </p>
+                                    </div>
+                                    <div class="g-conts-area">
+                                        <h4 class="con-tit">소유 기반 인증</h4>
+                                        <p class="g-desc">
+                                            사용자가 보유하고 있는 품목을 활용한 인증 방법 <br />
+                                            예&#41; 토큰, 공동인증, 간편인증, 문자 인증
+                                        </p>
+                                    </div>
+                                    <div class="g-conts-area">
+                                        <h4 class="con-tit">생체 기반 인증</h4>
+                                        <p class="g-desc">
+                                            사용자의 생체 정보, 행동에 기반한 인증 방법 <br />
+                                            예&#41; 지문 인증, 페이스 아이디
+                                        </p>
+                                    </div>
+                                    <div class="g-conts-area">
+                                        <h4 class="con-tit">다중 요소 인증</h4>
+                                        <p class="g-desc">여러 가지 인증 방식을 결합하여 제공하는 인증 방법</p>
+                                    </div>
+                                </div>
+								<!-- //유형 -->
+
+								<!-- 이용 상황별 플로 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">이용 상황별 플로(Flow)</h3>
+                                    <div class="g-img-wrap outline">
+                                        <div class="g-img-zomm"><img src="../../../resources/img/guide/contents/service/login_flow.png" alt="이용 상황별 플로(Flow) 예시" /></div>
+                                    </div>
+                                    <div class="g-flow-wrap">
+                                        <ol class="g-flow-list">
+                                            <li class="item">
+                                                <h4 class="g-flow-tit"><strong class="g-number">1</strong>로그인 방식 확인 및 선택</h4>
+                                                <ul class="g-flow-box">
+                                                    <li>
+                                                        <strong class="g-flow-stit">로그인 방식 탐색</strong>
+                                                        <p class="g-flow-dsec">2개 이상의 로그인 방식에 대해 비교하고 선택하는 과정</p>
+                                                    </li>
+                                                    <li>
+                                                        <strong class="g-flow-stit">도움말 확인</strong>
+                                                        <p class="g-flow-dsec">로그인 방식, 방법에 대한 안내를 확인하는 과정</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="item">
+                                                <h4 class="g-flow-tit"><strong class="g-number">2</strong>로그인 정보 입력</h4>
+                                                <ul class="g-flow-box">
+                                                    <li>
+                                                        <strong class="g-flow-stit">정보 입력</strong>
+                                                        <p class="g-flow-dsec">인증 방식에 따라 정보를 입력하는 과정</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="item">
+                                                <h4 class="g-flow-tit"><strong class="g-number">3</strong>로그인 완료</h4>
+                                                <ul class="g-flow-box">
+                                                    <li>
+                                                        <strong class="g-flow-stit">완료</strong>
+                                                        <p class="g-flow-dsec">로그인이 성공적으로 완료되어 화면을 벗어나는 과정</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="item">
+                                                <h4 class="g-flow-tit"><strong class="g-number">4</strong>로그아웃</h4>
+                                                <ul class="g-flow-box">
+                                                    <li>
+                                                        <strong class="g-flow-stit">로그아웃</strong>
+                                                        <p class="g-flow-dsec">인증을 해제하는 과정으로 사용자가 자발적으로 수행하거나 세션 유지 시간 만료로 인해 자동으로 해제될 수 있음</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+								<!-- //이용 상황별 플로 -->
+
+								<!-- 사용성 가이드라인 체크리스트 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">사용성 가이드라인 체크리스트</h3>
+                                    <div class="g-conts-area">
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">서비스 패턴의 사용성 가이드라인은 사용자 관점에서의 중요도와 만족도를 기준으로 하여 3개의 적용 수준으로 구분되어 있다. 핵심 서비스에 대한 사용자 경험의 향상을 위해서는 기본적으로 최하위 적용 수준인 필수 수준의 가이드라인을 준수해야 한다.</p>
+                                            <a href="./../utility/utility_01.html" class="krds-btn medium text underline">적용수준(서비스패턴) 가이드라인 확인 <i class="svg-icon ico-angle right"></i></a>
+                                        </div>
+                                    </div>
+                                  
+                                    <div class="g-conts-area sp-sm">
+                                        <div class="g-desc-box" id="apply-level-filter">
+                                            <div class="g-tit-wrap">
+                                                <h4 class="g-tit">적용 수준 필터</h4>
+                                                <div class="krds-check-area">
+                                                    <div class="krds-form-check">
+                                                        <input type="checkbox" name="chk_1" id="required" />
+                                                        <label for="required">필수</label>
+                                                    </div>
+                                                    <div class="krds-form-check">
+                                                        <input type="checkbox" name="chk_1" id="advised" />
+                                                        <label for="advised">권장</label>
+                                                    </div>
+                                                    <div class="krds-form-check">
+                                                        <input type="checkbox" name="chk_1" id="excellent" />
+                                                        <label for="excellent">우수</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="g-filter">
+                                                <div class="g-filter-item">
+                                                    <div class="g-filter-tit">
+                                                        <a href="./service_03_02.html" class="krds-btn medium link">
+                                                            <span class="underline">로그인 기능 찾기</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="g-filter-cont">
+                                                        <ul class="g-filter-list">
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>로그인 링크는 모든 화면에서 일관된 위치에 주목도 있게 배치한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>헤더에서 제공되는 로그인 링크는 사용자 아이콘과 레이블로 구성한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>로그인 링크는 항상 ‘로그인’ 화면으로 연결되어야 한다.</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="g-filter-item">
+                                                    <div class="g-filter-tit">
+                                                        <a href="./service_03_03.html" class="krds-btn medium link">
+                                                            <span class="underline">로그인 안내</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="g-filter-cont">
+                                                        <ul class="g-filter-list">
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>로그인에 대한 안내는 모달로 제공하여 사용자의 과업 맥락이 유지될 수 있도록 한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>로그인은 꼭 필요한 상황에서 유도한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-information" data-type="excellent">우수</span>
+                                                                <span>로그인을 제안하는 경우 모달 본문에서 로그인을 통해 얻을 수 있는 이점에 대해 명확한 설명을 제공해야 한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-information" data-type="excellent">우수</span>
+                                                                <span>사용자가 이용 절차를 단축할 수 있는 로그인 방식을 추천한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>로그인 안내 모달에는 ‘로그인 안 함’ 옵션을 제공하여 원하지 않는 이동 동작이 발생하지 않도록 한다.</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="g-filter-item">
+                                                    <div class="g-filter-tit">
+                                                        <a href="./service_03_04.html" class="krds-btn medium link">
+                                                            <span class="underline">로그인 방식 확인/선택</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="g-filter-cont">
+                                                        <ul class="g-filter-list">
+                                                            <li>
+                                                                <span class="krds-badge bg-information" data-type="excellent">우수</span>
+                                                                <span>빈번하게 사용되는 로그인 방식에 우선적으로 접근할 수 있는 수단을 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>동일한 수준의 로그인 방식을 탭으로 구분하여 선택하게 하지 않는다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>다양한 로그인 방식에 대한 분류 체계에 사용자의 관점과 언어를 반영한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>로그인 방식에 따라 서비스 이용 절차가 달라지는 경우, 사전에 안내를 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>로그인 방식과 입력 항목에 대한 직관적인 안내를 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>도움말 정보, 매뉴얼 링크를 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>도움말 정보는 사용자의 다양한 이용 환경을 고려하여 작성한다.</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="g-filter-item">
+                                                    <div class="g-filter-tit">
+                                                        <a href="./service_03_05.html" class="krds-btn medium link">
+                                                            <span class="underline">로그인 정보 입력</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="g-filter-cont">
+                                                        <ul class="g-filter-list">
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>아이디 형식에 대한 단서를 사전에 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>비밀번호를 표시할 수 있는 옵션을 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>복사/붙여넣기를 제한하지 않는다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-information" data-type="excellent">우수</span>
+                                                                <span>로그인 정보를 저장할 수 있는 옵션을 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>아이디/비밀번호 찾기 링크를 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>오류 메시지는 명확하고 간결하게 제공한다.</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="g-filter-item">
+                                                    <div class="g-filter-tit">
+                                                        <a href="./service_03_06.html" class="krds-btn medium link">
+                                                            <span class="underline">로그인 완료</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="g-filter-cont">
+                                                        <ul class="g-filter-list">
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>로그인이 완료된 후, 로그인 상황에 적합한 화면으로 이동해야 한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>로그인 상태로 전환되었음을 명확하게 표현한다.</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="g-filter-item">
+                                                    <div class="g-filter-tit">
+                                                        <a href="./service_03_07.html" class="krds-btn medium link">
+                                                            <span class="underline">서비스 이용</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="g-filter-cont">
+                                                        <ul class="g-filter-list">
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>사용자에게 로그인 세션이 만료되기 전에 유지 시간에 제한이 있음을 안내한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>로그인 세션 시간 만료에 대한 안내는 모달로 제공하여 사용자의 과업 맥락이 유지될 수 있도록 한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>로그인 세션 시간 만료에 대한 안내는 세션이 만료되기 최소 20초 전에 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>로그인 만료 안내 모달에 시간 연장하기 버튼과 로그아웃하기 버튼을 제공한다.</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="g-filter-item">
+                                                    <div class="g-filter-tit">
+                                                        <a href="./service_03_08.html" class="krds-btn medium link">
+                                                            <span class="underline">로그아웃</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="g-filter-cont">
+                                                        <ul class="g-filter-list">
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>로그아웃 상태로 전환되었음을 분명하게 보여준다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-information" data-type="excellent">우수</span>
+                                                                <span>사용자 요청에 의해 로그아웃이 실행되는 경우 결과 화면과 로그아웃 실행 사이에 스피너를 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>로그아웃이 완료된 후, 상황에 적합한 화면으로 이동해야 한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-information" data-type="excellent">우수</span>
+                                                                <span>로그아웃에 대한 안내는 별도의 화면으로 구성하여 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-information" data-type="excellent">우수</span>
+                                                                <span>로그아웃 안내 화면에 사용자의 행동을 유도할 수 있는 액션 버튼을 제공한다.</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+								<!-- //사용성 가이드라인 체크리스트 -->
+
+                                <!-- 정보 변경 내역 -->
+								@@include("../inc/page-info-update-log.html")
+                                <!-- //정보 변경 내역 -->
+                            </div>
+                            <!-- //scroll-check -->
+                        </div>
+                        
+                    </div>
+                    <!-- //contents -->
+                </div>
+                <!-- //컨텐츠 영역 -->
+            </div>
+            <!-- //컨테이너 영역 -->
+
+            <!-- 푸터 영역 -->
+            <footer id="krds-footer">@@include("../inc/guide-footer.html")</footer>
+            <!-- //푸터 영역 -->
+        </div>
+    </body>
+</html>

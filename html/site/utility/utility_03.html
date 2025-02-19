@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include("../inc/head.html", { "title": "디자인 원칙 | 시작하기 - 표준 및 원칙 - KRDS", })
+
+    <body>
+        <div id="wrap" class="g-wrap">
+            @@include("../inc/guide-header.html")
+
+            <!-- 컨테이너 영역 -->
+            <div id="container" class="krds-in-page-navigation-type">
+                <!-- 컨텐츠 영역 -->
+                <div class="inner in-between">
+                    <!-- 사이드 메뉴 -->
+                    @@include("../inc/guide-lnb.html")
+                    <!-- //사이드 메뉴 -->
+
+                    <div class="contents">
+                        <!-- breadcrumb -->
+                        @@include("../inc/page-breadcrumb.html")
+                        <!-- breadcrumb -->
+
+                        <!-- page-title -->
+                        @@include("../inc/page-title.html", { 
+							"desc" : "디자인 시스템의 네이밍 규칙은 시스템 운영 및 관리 측면에서 매우 중요한 역할을 한다. 협업의 효율성을 높이며, 기획자, 디자이너, 개발자들이 작업을 명확히 구분하고 빠르게 이해할 수 있도록 돕는다. " 
+						})
+                        <!-- //page-title -->
+
+                        <div class="conts-area">
+                            <!-- quick link -->
+                            @@include("../inc/page-quick-nav.html")
+                            <!-- //quick link -->
+
+                            <!-- scroll-check -->
+                            <div class="g-description-area scroll-check">
+                                <!-- 디자인시스템에서 네이밍 규칙-->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">디자인시스템에서 네이밍 규칙</h3>
+                                    <div class="g-desc-area">
+										<p class="g-desc">
+											디자인 시스템에서 네이밍 규칙은 일관성, 가독성, 그리고 확장성을 보장하기 위해 필수적이다. 네이밍 규칙을 철저히 지킴으로써 기획자, 디자이너, 개발자 간의 협업이 효율적으로 이루어지며, 파일을 찾거나 수정하는 과정에서 혼란을 줄일 수 있다. 잘 정의된 네이밍 규칙은 시스템의 유지보수를 용이하게 하며, 시스템이 확장될 때도 예측 가능한 구조를 유지할 수 있도록 한다. 
+										</p>
+										<p class="g-desc">
+											네이밍 규칙은 주로 작업 파일, 토큰, 컴포넌트 명칭, 속성 표현에서 일관성을 보장하고, 직관적이며 의미 있는 방식으로 구조화하는 데 중점을 둔다.
+										</p>
+                                    </div>
+                                    <!-- 네이밍 적용 -->
+                                    <div class="g-conts-area sp-sm">
+                                        <h4 class="con-tit">네이밍 적용</h4>
+                                        <ul class="krds-info-list decimal">
+                                            <li>작업 파일</li>
+                                            <li>디자인 토큰</li>
+                                            <li>컴포넌트 명칭, 속성</li>
+                                        </ul>
+                                    </div>
+                                    <!--// 네이밍 적용 -->
+
+                                    <!-- 기본 규칙 -->
+                                    <div class="g-conts-area sp-sm g-conts-list">
+                                        <h4 class="con-tit">기본 규칙</h4>
+                                        <!-- 논리 구조 -->
+                                        <div class="g-conts-area">
+                                            <h5 class="con-tit sm">논리 구조</h5>
+                                            <p class="g-desc">각 구성 요소는 일관된 논리 구조에 따라 명명해야 한다. 네이밍은 예측 가능하고 변경 가능성이 적으며, 구조적으로 일관된 방식으로 작성하여 사용자가 이해하기 쉽도록 한다.</p>
+                                        </div>
+                                        <!-- //논리 구조 -->
+
+                                        <!-- 시각적 속성 배제 -->
+                                        <div class="g-conts-area sp-sm">
+                                            <h5 class="con-tit sm">시각적 속성 배제</h5>
+                                            <p class="g-desc">시각적 속성(예: 파란색 버튼, 둥근 모서리)을 포함해 네이밍할 경우, 요소가 변경될 때 일관성이 깨질 수 있다. 따라서, 시각적 속성을 배제하고 기능적 역할이나 용도를 기반으로 이름을 정의한다.</p>
+                                        </div>
+                                        <!-- //시각적 속성 배제 -->
+
+                                        <!-- 확장가능 -->
+                                        <div class="g-conts-area sp-sm">
+                                            <h5 class="con-tit sm">확장가능</h5>
+                                            <p class="g-desc">새로운 구성 요소나 변형이 추가될 가능성을 고려하여, 확장 가능한 네이밍 구조를 사용한다. 예를 들어, 버튼은 “primary”와 “secondary”로 구분하고, 필요 시 추가 속성을 부여해 확장할 수 있도록 한다.</p>
+                                        </div>
+                                        <!-- //확장가능 -->
+
+                                        <!-- 일관성 -->
+                                        <div class="g-conts-area sp-sm">
+                                            <h5 class="con-tit sm">일관성</h5>
+                                            <p class="g-desc">모든 구성 요소의 네이밍에서 일관된 표기 방식을 사용한다. 예를 들어, 단어 간 구분을 하이픈(-)으로 통일하고, 언더바(_)를 사용하는 경우 특정 목적에 한정한다.</p>
+                                        </div>
+                                        <!-- //일관성 -->
+
+                                        <!-- 명확성 -->
+                                        <div class="g-conts-area sp-sm">
+                                            <h5 class="con-tit sm">명확성</h5>
+                                            <p class="g-desc">줄임말은 피하고, 명확한 표현을 사용하여 이해하기 쉽게 한다. 예를 들어, “bg”보다는 “background”를, “xs”보다는 “xsmall”을 사용해 의미를 명확히 전달한다.</p>
+                                        </div>
+                                        <!-- //명확성 -->
+                                    </div>
+                                    <!--// 기본 규칙 -->
+                                </div>
+                                <!-- //디자인시스템에서 네이밍 규칙-->
+
+                                <!-- 작업 파일 내에서 규칙 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">작업 파일 내에서 규칙</h3>
+                                    <div class="g-conts-area">
+                                        <p class="g-desc">KRDS 디자인 시스템의 작업 파일(피그마 파일 기준)은 페이지, 프레임, 컴포넌트 단위로 분리하여 관리하며 각 단위의 명칭은 모든 가이드에서 동일하게 사용한다. 디자인 토큰에 영향을 미치는것과 미치지 않는 것으로 나눠지며, 각 규칙을 준수하여 사용한다.</p>
+                                    </div>
+
+                                    <!-- 토큰에 영향을 미치는 것 -->
+                                    <div class="g-conts-area sp-sm">
+                                        <h4 class="con-tit">토큰에 영향을 미치는 것</h4>
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">토큰에는 띄어쓰기를 사용 할 수 없어 토큰에 사용되는 단어 구분은 (_), (__), (-)등 기호를 사용한다.<br />토큰을 관리하는 로컬베리어블과 이를 연동해서 사용하는 로컬스타일, 코드에서 토큰으로 사용하는 컴포넌트 명은 규칙을 준수하여 사용한다.</p>
+                                            <div class="g-desc-body">
+                                                <div class="g-img-wrap">
+                                                    <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/utility/naming_work_01.png" alt="토큰에 영향을 미치는 것 예시" /></div>
+                                                </div>
+                                            </div>
+                                            <div class="g-desc-body">
+                                                <div class="g-column">
+                                                    <div class="g-column-item row">
+                                                        <div class="g-img-wrap">
+                                                            <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/utility/naming_work_02.png" alt="토큰에 영향을 미치는 것 컴포넌트 예시" /></div>
+                                                        </div>
+                                                        <div class="g-column-txt">
+                                                            <strong class="con-tit sm">컴포넌트<br />(component)</strong>
+                                                            <div class="g-desc-area">
+                                                                <p class="g-desc">코드와 동일하게 사용하기 위해 토큰명을 통일하여 사용한다.</p>
+                                                                <ul class="krds-info-list decimal">
+                                                                    <li>모두 소문자 사용</li>
+                                                                    <li>컴포넌트 내 명칭 띄어쓰기는 언더바(_)사용</li>
+                                                                    <li>컴포넌트+유형은 컴포넌트 더블언더바(__)유형으로 사용</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="g-column-item row">
+                                                        <div class="g-img-wrap">
+                                                            <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/utility/naming_work_03.png" alt="토큰에 영향을 미치는 것 로컬베리어블, 로컬스타일 예시" /></div>
+                                                        </div>
+                                                        <div class="g-column-txt">
+                                                            <strong class="con-tit sm">로컬베리어블, 로컬스타일<br />(local variable, local style)</strong>
+                                                            <div class="g-desc-area">
+                                                                <p class="g-desc">디자인 파일에서 토큰을 표현하는 방식으로 명칭 사용에 주의한다.</p>
+                                                                <ul class="krds-info-list decimal">
+                                                                    <li>모두 소문자 사용</li>
+                                                                    <li>띄어쓰기는 언더바(_)로 사용</li>
+                                                                    <li>size-height와 같이 토큰의 분리는 하이픈(-)사용</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //토큰에 영향을 미치는 것 -->
+
+                                    <!-- 토큰에 영향을 미치지 않는 것 -->
+                                    <div class="g-conts-area sp-sm">
+                                        <h4 class="con-tit">토큰에 영향을 미치지 않는 것</h4>
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">작업 파일 내에서 페이지나, 프레임 또는 컴포넌트를 구성하는 property 값은 토큰명과 상관이 없어 글자를 구분할 때 (-), (_)와 같은 기호를 사용하지 않고 띄어쓰기가 가능하다.</p>
+                                            <div class="g-desc-body">
+                                                <div class="g-img-wrap">
+                                                    <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/utility/naming_work_04.png" alt="토큰에 영향을 미치지 않는 것 예시" /></div>
+                                                </div>
+                                            </div>
+                                            <div class="g-desc-body">
+                                                <div class="g-column">
+                                                    <div class="g-column-item row">
+                                                        <div class="g-img-wrap">
+                                                            <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/utility/naming_work_05.png" alt="토큰에 영향을 미치지 않는 것 페이지, 프레임 예시" /></div>
+                                                        </div>
+                                                        <div class="g-column-txt">
+                                                            <strong class="con-tit sm">페이지 (page) / 프레임(frame)</strong>
+                                                            <div class="g-desc-area">
+                                                                <p class="g-desc">검색을 위해 영문+한글을 같이 사용한다.</p>
+                                                                <ul class="krds-info-list decimal">
+                                                                    <li>띄어쓰기로 단어를 구분</li>
+                                                                    <li>영문 표기 (한글) / Main menu (메인 메뉴)</li>
+                                                                    <li>영문으로 사용시 첫 글자만 대문자로 사용</li>
+                                                                    <li>커뮤니케이션을 위한 유니코드 활용<br />(작업중 ✍ , 완료 ✅ / 🎨 스타일가이드, 📌 메모 )</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="g-column-item row">
+                                                        <div class="g-img-wrap">
+                                                            <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/utility/naming_work_06.png" alt="토큰에 영향을 미치지 않는 것 프로퍼티 예시" /></div>
+                                                        </div>
+                                                        <div class="g-column-txt">
+                                                            <strong class="con-tit sm">프로퍼티 (property)</strong>
+                                                            <div class="g-desc-area">
+                                                                <p class="g-desc">컴포넌트를 구성하는 property로 아래와 같이 사용한다.</p>
+                                                                <ul class="krds-info-list decimal">
+                                                                    <li>띄어쓰기로 단어를 구분</li>
+                                                                    <li>Name- 첫 글자 대문자</li>
+                                                                    <li>value - 전체 소문자 사용</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //토큰에 영향을 미치지 않는 것 -->
+                                </div>
+                                <!-- //작업 파일 내에서 규칙칙-->
+
+                                <!-- 토큰 네이밍-->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">토큰 네이밍</h3>
+                                    <div class="g-conts-area">
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">토큰 네이밍은 재사용성과 확장성을 고려하여 간결하고 명확한 용어를 사용한다. 새로운 테마가 추가될 가능성을 염두에 두고, 모든 토큰을 유연하게 정의한다. 특히 숫자 척도와 같은 간결한 표현을 사용하여 의미를 쉽게 파악할 수 있도록 한다.</p>
+                                            <a href="../style/style_07.html" class="krds-btn medium text"><span class="underline">디자인 토큰 순서</span><i class="svg-icon ico-angle right"></i></a>
+                                        </div>
+                                    </div>
+
+                                    <!-- 토큰 구분자 -->
+                                    <div class="g-conts-area sp-sm">
+                                        <h4 class="con-tit">토큰 구분자</h4>
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">디자인 시스템에 적용된 토큰은 하이픈(-) 구분자를 사용하여 CSS와의 일관성을 유지하며, 이는 점(.)이나 슬래시(/)보다 가독성이 높다.</p>
+                                            <div class="g-desc-body">
+                                                <div class="g-img-wrap">
+                                                    <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/utility/naming_token_01.png" alt="토큰 구분자 예시" /></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //토큰 구분자 -->
+
+                                    <!-- 토큰의 주요 속성(Category) -->
+                                    <div class="g-conts-area">
+                                        <h4 class="con-tit">토큰의 주요 속성(Category)</h4>
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">토큰에서 사용되는 주요 속성 값이다.</p>
+                                            <div class="g-desc-body">
+                                                <ul class="g-column-wrap category">
+                                                    <li class="g-column">
+                                                        <div class="g-column-item">
+                                                            <div class="g-img-wrap">
+                                                                <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/utility/naming_token_02.png" alt="토큰의 주요 속성 색상 예시" /></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="g-column-item">
+                                                            <div class="g-column-txt">
+                                                                <strong class="con-tit sm">색상(Color)</strong>
+                                                                <p class="g-desc">색상은 주요 색상, 시스템 색상, 팔레트를 구성한다.</p>
+                                                                <ul class="krds-info-list decimal">
+                                                                    <li>주요 색상의 이름은 "primary", "secondary", “gray” 처럼 간결하고 명확한 목적을 나타내며 ”bule”, “red”로 사용하지 않는다.</li>
+                                                                    <li>색상 계열의 표기는 "primary-10", "primary-20"처럼 숫자 척도를 사용하여 명도와 채도를 표현하며, 10의 단위로 증가시켜 색상의 변화를 나타내며, 세밀한 수치를 사용할 경우 5단위를 포함한다.</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="g-column">
+                                                        <div class="g-column-item">
+                                                            <div class="g-img-wrap">
+                                                                <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/utility/naming_token_03.png" alt="토큰의 주요 속성 글자 예시" /></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="g-column-item">
+                                                            <div class="g-column-txt">
+                                                                <strong class="con-tit sm">글자(Typography)</strong>
+                                                                <p class="g-desc">타이포그래피 토큰은 글꼴, 크기, 줄 간격 등의 텍스트 스타일을 정의한다.</p>
+                                                                <ul class="krds-info-list decimal">
+                                                                    <li>타이포그래피 토큰을 유형별로 구분하여 사용한다. (예: "font-family", "font-size", "line-height")</li>
+                                                                    <li>모든 크기 단위는 동일한 단위를 사용한다. (예: 픽셀 또는 rem)</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="g-column">
+                                                        <div class="g-column-item">
+                                                            <div class="g-img-wrap">
+                                                                <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/utility/naming_token_04.png" alt="토큰의 주요 속성 숫자 예시" /></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="g-column-item">
+                                                            <div class="g-column-txt">
+                                                                <strong class="con-tit sm">숫자(number)</strong>
+                                                                <p class="g-desc">숫자 토큰은 주로 컴포넌트 내부의 간격이나 컴포넌트 사이의 간격을 정의하는 간격(spacing), 모서리 둥글기(radius), 높이값(size-height) 등을 정의한다.</p>
+                                                                <ul class="krds-info-list decimal">
+                                                                    <li>작은 단계에서 큰 단계로 일관되게 정의한다.</li>
+                                                                    <li>4px와 8px의 배수를 기본으로 하며, 중간 단위로 2px 또는 10px을 추가하여 필요한 세부 단계를 제공한다.</li>
+                                                                    <li>역할이 있는 시멘틱 요소에는 "small", “medium” "large"처럼 크기를 명확히 표현한다.</li>
+                                                                    <li>시멘틱 요소에서 역할이 아닌 단계를 표기하는 경우 “1”,”2,”와 같이 표현할 수 있다.</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //토큰의 주요 속성(Category) -->
+
+                                    <!-- 세부 속성 -->
+                                    <div class="g-conts-area">
+                                        <h4 class="con-tit">세부 속성</h4>
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">토큰 네이밍에서 각 세부 속성은 namespace &gt; theme &gt; category &gt; component &gt; type &gt; modifier 순으로 구성하여 네이밍 구조를 체계화한다.</p>
+                                            <div class="g-desc-body">
+                                                <div class="g-img-wrap">
+                                                    <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/utility/naming_token_05.png" alt="세부 속성 예시" /></div>
+                                                </div>
+                                            </div>
+                                            <div class="g-summary">
+                                                <ul class="g-summary-list">
+                                                    <li>
+                                                        <div class="g-summary-key"><strong>이름 (Namespace)</strong></div>
+                                                        <div class="g-summary-value">
+                                                            <p>코드에서 구분할 수 있도록 "krds"와 같은 네임스페이스를 사용한다.</p>
+                                                            <div class="group">
+                                                                <div class="group-item">
+                                                                    <span class="g-tag">krds</span>
+                                                                    <span class="txt">대한민국 정부 디자인 시스템</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="g-summary-key"><strong>테마 (Theme)</strong></div>
+                                                        <div class="g-summary-value">
+                                                            <p>디자인 시스템의 스타일을 정의하는 테마 이름은 "light", "dark"처럼 용도를 파악할 수 있도록 사용한다.</p>
+                                                            <div class="group">
+                                                                <div class="group-item">
+                                                                    <span class="g-tag">light</span>
+                                                                    <span class="g-tag">high-contrast</span>
+                                                                    <span class="txt">일반모드 / 선명한 화면 모드</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="g-summary-key"><strong>속성 (Category)</strong></div>
+                                                        <div class="g-summary-value">
+                                                            <p>카테고리는 디자인 토큰의 큰 범주로 모든 속성을 포괄할 수 있으며 "color", “typography”, "spacing"처럼 용도를 파악할 수 있도록 사용한다.</p>
+                                                            <div class="group">
+                                                                <div class="group-item">
+                                                                    <span class="g-tag">color</span>
+                                                                    <span class="g-tag">typographyt</span>
+                                                                    <span class="g-tag">spacing</span>
+                                                                    <span class="g-tag">shape</span>
+                                                                    <span class="txt">색상 / 글자 / 간격 / 형태</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="g-summary-key"><strong>컴포넌트 (Component)</strong></div>
+                                                        <div class="g-summary-value">
+                                                            <p>컴포넌트는 UI 요소를 구성하며, "button", "card"와 같이 일관성 있는 이름으로 정의하여 시스템 내에서 쉽게 파악할 수 있도록 한다.</p>
+                                                            <div class="group">
+                                                                <div class="group-item">
+                                                                    <span class="g-tag">button</span>
+                                                                    <span class="g-tag">input</span>
+                                                                    <span class="g-tag">link</span>
+                                                                    <span class="g-tag">card</span>
+                                                                    <span class="txt">버튼 / 인풋 / 링크 / 카드</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="g-summary-key"><strong>유형 (Type)</strong></div>
+                                                        <div class="g-summary-value">
+                                                            <p>유형은 "background", "surface" 등으로 카테고리 내에서 특정 기능이나 역할을 명시하며, 모든 유형은 일관되게 사용하여 명확성을 높인다.</p>
+                                                            <div class="group">
+                                                                <div class="group-item">
+                                                                    <span class="g-tag">background</span>
+                                                                    <span class="g-tag">surface</span>
+                                                                    <span class="g-tag">icon</span>
+                                                                    <span class="g-tag">padding</span>
+                                                                    <span class="g-tag">text</span>
+                                                                    <span class="txt">배경 / 표면 / 아이콘 / 패딩 / 텍스트</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="g-summary-key"><strong>변형 (Variant)</strong></div>
+                                                        <div class="g-summary-value">
+                                                            <p>카레고리의 변형은 "primary", "secondary", “danger”처럼 계층 구조와 시스템적 부분을 고려하여 명명하며, 시각적 변형을 명확히 전달한다.</p>
+                                                            <div class="group">
+                                                                <div class="group-item">
+                                                                    <span class="g-tag">primary</span>
+                                                                    <span class="g-tag">secondary</span>
+                                                                    <span class="g-tag">tertiary</span>
+                                                                    <span class="txt">계층 구조</span>
+                                                                </div>
+                                                                <div class="group-item">
+                                                                    <span class="g-tag">danger</span>
+                                                                    <span class="g-tag">warning</span>
+                                                                    <span class="g-tag">success</span>
+                                                                    <span class="g-tag">info</span>
+                                                                    <span class="txt">시스템</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="g-summary-key"><strong>요소 (Element)</strong></div>
+                                                        <div class="g-summary-value">
+                                                            <p>요소는 컴포넌트의 하위 구성 요소로, "label", "body", "text"과 같이 용도에 맞게 명명하여 명확히 구분한다.</p>
+                                                            <div class="group">
+                                                                <div class="group-item">
+                                                                    <span class="g-tag">label</span>
+                                                                    <span class="g-tag">title</span>
+                                                                    <span class="g-tag">body</span>
+                                                                    <span class="g-tag">line</span>
+                                                                    <span class="txt">레이블 / 타이틀 / 바디 / 라인</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="g-summary-key"><strong>상태 (State)</strong></div>
+                                                        <div class="g-summary-value">
+                                                            <p>상태는 "default", "hover"처럼 컴포넌트의 현재 상태를 나타내며, 각 상태는 일관된 네이밍을 사용한다.</p>
+                                                            <div class="group">
+                                                                <div class="group-item">
+                                                                    <span class="g-tag">default</span>
+                                                                    <span class="g-tag">hover</span>
+                                                                    <span class="g-tag">pressed</span>
+                                                                    <span class="txt">기본 상태</span>
+                                                                </div>
+                                                                <div class="group-item">
+                                                                    <span class="g-tag">selected</span>
+                                                                    <span class="g-tag">unseleted</span>
+                                                                    <span class="g-tag">indeterminate</span>
+                                                                    <span class="txt">선택 / 비선택 / 중립</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="g-summary-key"><strong>크기 (Size)</strong></div>
+                                                        <div class="g-summary-value">
+                                                            <p>크기는 "small", "large"와 같이 약어가 아닌 명확한 용어로 표현하며, 모든 컴포넌트에 일관되게 적용한다.</p>
+                                                            <div class="group">
+                                                                <div class="group-item">
+                                                                    <span class="g-tag">xxsmall</span>
+                                                                    <span class="g-tag">xsmall</span>
+                                                                    <span class="g-tag">small</span>
+                                                                    <span class="g-tag">medium</span>
+                                                                    <span class="g-tag">xlarge</span>
+                                                                    <span class="g-tag">xxlarge</span>
+                                                                    <span class="txt">large</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="g-summary-key"><strong>수정자 (Modifier)</strong></div>
+                                                        <div class="g-summary-value">
+                                                            <p>수정자는 "rounded", "outlined"처럼 추가적인 스타일이나 변형을 나타내며, 명확한 의미 전달을 위해 간결한 용어를 사용한다.</p>
+                                                            <div class="group">
+                                                                <div class="group-item">
+                                                                    <span class="g-tag">rounded</span>
+                                                                    <span class="g-tag">square</span>
+                                                                    <span class="txt">둥근 / 각진</span>
+                                                                </div>
+                                                                <div class="group-item">
+                                                                    <span class="g-tag">line</span>
+                                                                    <span class="g-tag">fill</span>
+                                                                    <span class="txt">아웃라인 / 채워진</span>
+                                                                </div>
+                                                                <div class="group-item">
+                                                                    <span class="g-tag">subtler</span>
+                                                                    <span class="g-tag">subtle</span>
+                                                                    <span class="g-tag">bold</span>
+                                                                    <span class="g-tag">bolder</span>
+                                                                    <span class="txt">강조 표현</span>
+                                                                </div>
+                                                                <div class="group-item">
+                                                                    <span class="g-tag">lighter</span>
+                                                                    <span class="g-tag">lighte</span>
+                                                                    <span class="g-tag">dark</span>
+                                                                    <span class="g-tag">darker</span>
+                                                                    <span class="txt">밝기 표현</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //세부 속성 -->
+                                </div>
+                                <!-- //토큰 네이밍 -->
+
+                                <!-- 토큰 속성 네이밍 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">토큰 속성 네이밍</h3>
+                                    <div class="g-conts-area">
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">전체 토큰 내 속성 값은 다르게 표현될 수 있는 요소를 정의하여 일관성 있게 관리하며, 디자인 시스템의 유지보수와 확장성에 기여한다.</p>
+                                            <div class="g-desc-body">
+                                                <!-- table list -->
+                                                <div class="krds-table-wrap">
+                                                    <table class="tbl col data">
+                                                        <caption>
+                                                            토큰 속성 네이밍에 대한 표로 구분, 설명에 대한 내용으로 구성되어 있으며 구분은 -light, -hight-contrast으로 구성되어있다.
+                                                        </caption>
+                                                        <colgroup>
+                                                            <col width="31.5%;" />
+                                                            <col width="auto;" />
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">구분</th>
+                                                                <th scope="col">설명</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">-light</th>
+                                                                <td>기본 모드</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">-hight-contrast</th>
+                                                                <td>선명한 화면 모드</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <!-- //table list -->
+                                            </div>
+                                            <div class="g-desc-body">
+                                                <!-- table list -->
+                                                <div class="krds-table-wrap">
+                                                    <table class="tbl col data">
+                                                        <caption>
+                                                            토큰 속성 네이밍에 대한 표로 구분, 설명에 대한 내용으로 구성되어 있으며 구분은 -background, -surfacet, -divider, -border, -element, -action, -gap, -padding, -fill, -line, -alpha, -neutral, -on(background), -dim(dimmed), -transparency, -inverse, -static 으로 구성되어있다.
+                                                        </caption>
+                                                        <colgroup>
+                                                            <col width="31.5%;" />
+                                                            <col width="auto;" />
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">구분</th>
+                                                                <th scope="col">설명</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">-background</th>
+                                                                <td>전체 페이지 배경</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">-surface</th>
+                                                                <td>엘리베이션 개념이 있는 표면</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">-divider</th>
+                                                                <td>콘텐츠의 사이나 요소들 간의 시각적인 구분을 하기 위한 선</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">-element</th>
+                                                                <td>컴포넌트의 외곽선, 박스의 테두리</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">-action</th>
+                                                                <td>버튼을 제외한 통일관 상호작용을 하는 ui</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">-gap</th>
+                                                                <td>콘텐츠 또는 요소들 간의 간격</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">-padding</th>
+                                                                <td>콘텐츠 또는 컴포넌트 내부의 여백</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">-fill</th>
+                                                                <td>주로 컴포넌트, 아이콘, 그래픽 요소에서 채움 스타일을 표현</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">-line</th>
+                                                                <td>주로 텍스트, 아이콘, 그래픽 요소의 선 스타일을 표현</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">-alpha</th>
+                                                                <td>투명도</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">-neutral</th>
+                                                                <td>중립적인 (상태값이 없는 형태)</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">-on(background)</th>
+                                                                <td>배경이 있을 때 적용되는 유형</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">-dim(dimmed)</th>
+                                                                <td>덮어지는 배경</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">-transparency</th>
+                                                                <td>투명도 0으로 퍼블에서 필요한 토큰</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">-inverse</th>
+                                                                <td>반대개념 (강조의 역할)</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">-static</th>
+                                                                <td>고정되는 변수 (모드가 변해도 변하지 않는 색상)</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <!-- //table list -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 밝기 표현 -->
+                                    <div class="g-conts-area sp-sm">
+                                        <h4 class="con-tit">밝기 표현</h4>
+                                        <!-- table list -->
+                                        <div class="krds-table-wrap">
+                                            <table class="tbl col data">
+                                                <caption>
+                                                    밝기 표현에 대한 표로 구분, 설명에 대한 내용으로 구성되어 있으며 구분은 -lighter, -light, -nomal, -darker 으로 구성되어있다.
+                                                </caption>
+                                                <colgroup>
+                                                    <col width="31.5%;" />
+                                                    <col width="auto;" />
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">구분</th>
+                                                        <th scope="col">설명</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">-lighter</th>
+                                                        <td>더 밝은</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">-light</th>
+                                                        <td>밝은</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">-nomal</th>
+                                                        <td>기본 단계</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">-dark</th>
+                                                        <td>어두운</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">-darker</th>
+                                                        <td>더 어두운</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- //table list -->
+                                    </div>
+                                    <!-- //밝기 표현 -->
+
+                                    <!-- 강조 표현 -->
+                                    <div class="g-conts-area">
+                                        <h4 class="con-tit">강조 표현</h4>
+                                        <!-- table list -->
+                                        <div class="krds-table-wrap">
+                                            <table class="tbl col data">
+                                                <caption>
+                                                    강조 표현에 대한 표로 구분, 설명에 대한 내용으로 구성되어 있으며 구분은 -subtler, -subtle, -bold, -bolder 으로 구성되어있다.
+                                                </caption>
+                                                <colgroup>
+                                                    <col width="31.5%;" />
+                                                    <col width="auto;" />
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">구분</th>
+                                                        <th scope="col">설명</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">-subtler</th>
+                                                        <td>더 미묘한</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">-subtle</th>
+                                                        <td>미묘한</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">-bold</th>
+                                                        <td>진한</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">-bolder</th>
+                                                        <td>더 진한</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- //table list -->
+                                    </div>
+                                    <!-- //강조 표현 -->
+
+                                    <!-- 상태 -->
+                                    <div class="g-conts-area">
+                                        <h4 class="con-tit">상태</h4>
+                                        <!-- table list -->
+                                        <div class="krds-table-wrap">
+                                            <table class="tbl col data">
+                                                <caption>
+                                                    강조 표현에 대한 표로 구분, 설명에 대한 내용으로 구성되어 있으며 구분은 -default, -hover, -pressed, -focused, -disabled, -error, -active, -completed, -view, -seleted, -unseleted, -indeterminate 으로 구성되어있다.
+                                                </caption>
+                                                <colgroup>
+                                                    <col width="31.5%;" />
+                                                    <col width="auto;" />
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">구분</th>
+                                                        <th scope="col">설명</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">-default</th>
+                                                        <td>상호작용이 없는 기본 상태</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">-hover</th>
+                                                        <td>마우스를 컴포넌트 위에 올렸을 때 상태</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">-pressed</th>
+                                                        <td>컴포넌트를 누르고 있는 상태</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">-focused</th>
+                                                        <td>초점이 맞춰진 상태</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">-disabled</th>
+                                                        <td>상호작용이 불가한 비활성화된 상태</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">-error</th>
+                                                        <td>오류 상태</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">-active</th>
+                                                        <td>컴포넌트가 활성화된 상태</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">-completed</th>
+                                                        <td>작업이 완료된 상태</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">-view</th>
+                                                        <td>사용은 금지되어 있는 읽기 상태</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">-seleted</th>
+                                                        <td>선택</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">-unseleted</th>
+                                                        <td>비선택</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">-indeterminate</th>
+                                                        <td>중립</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- //table list -->
+                                    </div>
+                                    <!-- //상태 -->
+                                </div>
+
+                                <!-- //토큰 속성 네이밍 -->
+
+                                <!-- 자주 묻는 질문 -->
+                                @@include("../inc/page-faq.html")
+                                <!-- //자주 묻는 질문 -->
+
+                                <!-- 컨텐츠 배너 영역 -->
+                                @@include("../inc/page-banner.html")
+                                <!--// 컨텐츠 배너 영역 -->
+                            </div>
+                            <!-- //scroll-check -->
+                        </div>
+                    </div>
+                </div>
+                <!-- //컨텐츠 영역 -->
+            </div>
+            <!-- //컨테이너 영역 -->
+
+            <!-- 푸터 영역 -->
+            <footer id="krds-footer">@@include("../inc/guide-footer.html")</footer>
+            <!-- //푸터 영역 -->
+        </div>
+    </body>
+</html>

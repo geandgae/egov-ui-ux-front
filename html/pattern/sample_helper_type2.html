@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ko">
+
+@@include("./inc/head.html", {
+	"title": "서브 - 신청안내 | 신청하기 | 신청 - KRDS",
+})
+
+<body>
+	<div id="wrap">
+		@@include("./inc/skip.html", {"class": "",})
+
+		@@include("./inc/header-top.html")
+
+		<!-- 헤더 영역 -->
+		<header id="krds-header">
+			@@include("./inc/header.html")
+		</header>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container">
+			<!-- breadcrumb -->
+			@@include("./inc/page-breadcrumb.html", { "depth": ["민원"] })
+			<!-- breadcrumb -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="inner narrow help-panel-flexible">
+				<!-- 페이지 타이틀 영역 -->
+				<div class="page-title-wrap">
+					<h1 class="h-tit">
+						건축물대장 등·초본 발급 신청
+						<p class="krds-badge-wrap">
+							<span class="krds-badge bg-light-primary">전자증명</span>
+							<span class="krds-badge bg-light-primary">전자문서지갑</span>
+							<button class="krds-btn medium icon btn-help-exec">
+								<span class="sr-only">도움말</span>
+								<i class="svg-icon ico-help"></i>
+							</button>
+						</p>
+					</h1>
+				</div>
+				<!-- //페이지 타이틀 영역 -->
+
+				<!-- 컨텐츠 영역 -->
+				<div class="conts-area">
+					<div class="conts-wrap">
+						<!-- 상단 가이드 박스 -->
+						<div class="txt-box outline">
+							<h4 class="outline-tit">시작하기 전에</h4>
+							<p class="outline-txt">인터넷으로 본 증명서를 발급받는 과정에서 위·변조하는 행위는 형법 제225조(공문서 등의 위조 ·변조) 또는 제227조의2(공전자가기록 위작 ·변작)의 규정에 따라 10년 이하의 징역을 받을 수 있습니다.</p>
+							<div class="conts-desc-wrap">
+								<h4 class="sec-tit">다음의 경우 정부24 누리집에서 온라인으로 민원을 신청할 수 없습니다.</h4>
+								<p class="outline-txt">다음 중 해당하는 사항이 있는 경우 관할 읍면사무소/동 주민센터에 문의 후 방문해주세요.</p>
+								<ul class="krds-info-list decimal">
+									<li>신청인이 미성년자(만 17세 미만)인 경우</li>
+									<li>기존 세대가 살고 있는 곳에 별도로 세대를 구성(2세대 이상)하는 경우</li>
+									<li>전입신고 인원에 미성년자가 포함되어 있고, 전출지 세대주가 온라인으로 ‘세대주 확인'민원을 신청할 수 없는 경우</li>
+								</ul>
+							</div>
+						</div>
+						<!-- //상단 가이드 박스 -->
+
+						<div class="txt-box bg-white">
+							<h4 class="box-tit1">기본 신청 정보 입력</h4>
+							<div class="box-cnt">
+								<!-- 건축물 소재지 -->
+								<div class="box-sec">
+									<h5 class="box-tit2">건축물 소재지</h5>
+									<div class="form-group">
+										<div class="form-tit">주소</div>
+										<div class="form-conts">
+											<div class="input-group m-column">
+												<input type="text" id="addr-input" class="krds-input" placeholder="검색 버튼을 눌러주세요" disabled title="주소">
+												<button type="button" class="krds-btn large secondary">검색</button>
+											</div>
+										</div>
+									</div>
+									<div class="form-group-row">
+										<div class="form-group">
+											<div class="form-tit">건축물구분</div>
+											<div class="form-conts">
+												<select class="krds-form-select" disabled="" id="addr-select">
+													<option value="">건축물 구분</option>
+													<option value="">항목2</option>
+													<option value="">항목3</option>
+													<option value="">항목4</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="form-tit">
+												<label for="addr-input2">본번</label>
+											</div>
+											<div class="form-conts">
+												<input type="text" id="addr-input2" class="krds-input" placeholder="본번" disabled="">
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="form-tit">
+												<label for="addr-input3">부번</label>
+											</div>
+											<div class="form-conts">
+												<input type="text" id="addr-input3" class="krds-input" placeholder="부번" disabled="">
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //건축물 소재지 -->
+
+								<!-- 건물 구분 -->
+								<div class="box-sec">
+									<h5 class="box-tit2">건물 구분</h5>
+									<div class="form-conts">
+										<div class="row krds-check-area chk-column">
+											<div class="krds-form-check">
+												<input type="radio" name="rdo_building_1" id="rdo_building_1" checked>
+												<label for="rdo_building_1">일반(단독주택)</label>
+											</div>
+											<div class="krds-form-check">
+												<input type="radio" name="rdo_building_1" id="rdo_building_2">
+												<label for="rdo_building_2">집합(아파트, 연립주택 등)</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //건물 구분 -->
+
+								<!-- 대장 종류 -->
+								<div class="box-sec">
+									<h5 class="box-tit2">대장 종류</h5>
+									<div class="form-group">
+										<div class="form-conts">
+											<div class="krds-check-area chk-column">
+												<div class="krds-form-check">
+													<input type="radio" name="rdo_type_1" id="rdo_type_1">
+													<label for="rdo_type_1">총괄</label>
+												</div>
+												<div class="krds-form-check">
+													<input type="radio" name="rdo_type_1" id="rdo_type_2">
+													<label for="rdo_type_2">표제부</label>
+												</div>
+												<div class="krds-form-check">
+													<input type="radio" name="rdo_type_1" id="rdo_type_3" checked>
+													<label for="rdo_type_3">전유부</label>
+													<ul class="krds-form-check-cnt">
+														<li>
+															<label for="building_type-input1" class="form-label">건물(동) 명칭</label>
+															<div class="input-group m-column">
+																<input type="text" id="building_type-input1" class="krds-input" placeholder="검색 버튼을 눌러주세요" value="" disabled>
+																<button type="button" class="krds-btn large secondary">검색</button>
+															</div>
+														</li>
+														<li>
+															<label for="building_type-inpu2" class="form-label">호 명칭</label>
+															<div class="input-group m-column">
+																<input type="text" id="building_type-inpu2" class="krds-input" placeholder="검색 버튼을 눌러주세요" disabled>
+																<button type="button" class="krds-btn large secondary">검색</button>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //대장 종류 -->
+							</div>
+						</div>
+
+						<div class="txt-box bg-white">
+							<h4 class="box-tit1">발급 유형 선택</h4>
+							<div class="box-cnt">
+								<!-- 발급 유형 -->
+								<div class="box-sec">
+									<h5 class="box-tit2">
+										발급 유형
+										<button class="krds-btn medium icon btn-help-exec">
+											<span class="sr-only">도움말</span>
+											<i class="svg-icon ico-help"></i>
+										</button>
+									</h5>
+									<div class="form-group">
+										<div class="form-conts">
+											<div class="row krds-check-area chk-column">
+												<div class="krds-form-check large">
+													<input type="radio" name="rdo_1" id="rdo_1" checked>
+													<label for="rdo_1">온라인 발급 - 본인 출력</label>
+												</div>
+												<div class="krds-form-check large">
+													<input type="radio" name="rdo_1" id="rdo_2">
+													<label for="rdo_2">온라인 발급 - 전자지갑</label>
+												</div>
+												<div class="krds-form-check large">
+													<input type="radio" name="rdo_1" id="rdo_3">
+													<label for="rdo_3">온라인 발급 - 제3자 제출</label>
+												</div>
+												<div class="krds-form-check large">
+													<input type="radio" name="rdo_1" id="rdo_4">
+													<label for="rdo_4">등기우편</label>
+												</div>
+												<div class="krds-form-check large">
+													<input type="radio" name="rdo_1" id="rdo_5">
+													<label for="rdo_5">일반우편</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //발급 유형 -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //컨텐츠 영역 -->
+
+				@@include("./inc/help-panel.html", {
+					contents: "tab",
+					active: "1",
+					tab2: "type1"
+				})
+
+				<!-- 페이지 버튼 영역 -->
+				<div class="page-btn-wrap both m-column">
+					<button type="button" class="krds-btn xlarge tertiary">취소하기</button>
+					<button type="button" class="krds-btn xlarge primary">신청하기</button>
+				</div>
+				<!-- //페이지 버튼 영역 -->
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+
+		<!-- 푸터 영역 -->
+		<footer id="krds-footer">
+			@@include("./inc/footer.html", {"footerType": "type1",})
+		</footer>
+		<!-- //푸터 영역 -->
+	</div>
+	
+	@@include("./inc/modal-wrap.html")
+	
+</body>
+
+</html>

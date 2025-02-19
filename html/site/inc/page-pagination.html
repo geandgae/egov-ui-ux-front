@@ -1,0 +1,21 @@
+<div class="krds-pagination" id="pagination">
+	<script type="text/stache" class="-tmpl">
+		{{#prev}}<a class="page-navi prev" href="javascript:;" data-page="{{../prev}}">이전</a>{{/prev}}
+		<div class="page-links">
+			{{#first}}
+			<a class="page-link" href="javascript:;" data-page="{{../first}}">{{../first}}</a>
+			<span class="page-link link-dot"></span>
+			{{/first}}
+
+			{{#pages}}
+			<a class="page-link {{active}}" href="javascript:;" data-page="{{page}}">{{#active}}<span class="sr-only">현재페이지</span>{{/active}}{{page}}</a>
+			{{/pages}}
+
+			{{#last}}
+			<span class="page-link link-dot"></span>
+			<a class="page-link" href="javascript:;" data-page="{{../last}}">{{../last}}</a>
+			{{/last}}
+		</div>
+		{{#next}}<a class="page-navi next" href="javascript:;" data-page="{{../next}}">다음</a>{{/next}}
+	</script>
+</div>

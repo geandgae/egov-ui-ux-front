@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include("../inc/head.html", { "title": "재검색 | 서비스 패턴 - 검색 - KRDS", })
+
+    <body>
+        <div id="wrap" class="g-wrap">
+            @@include("../inc/guide-header.html")
+
+            <!-- 컨테이너 영역 -->
+            <div id="container" class="krds-in-page-navigation-type">
+                <!-- 컨텐츠 영역 -->
+                <div class="inner in-between">
+                    <!-- 사이드 메뉴 -->
+                    @@include("../inc/guide-lnb.html")
+                    <!-- //사이드 메뉴 -->
+
+                    <!-- contents -->
+                    <div class="contents">
+                        <!-- breadcrumb -->
+                        @@include("../inc/page-breadcrumb.html")
+                        <!-- breadcrumb -->
+
+                        <!-- page-title -->
+						@@include("../inc/page-title.html", { "desc" : "" })
+                        <!-- //page-title -->
+
+                        <div class="conts-area">
+                            <!-- quick link -->
+                            @@include("../inc/page-quick-nav.html")
+                            <!-- //quick link -->
+
+                            <!-- scroll-check -->
+                            <div class="g-description-area scroll-check">
+								<!-- 구조 -->
+                                <div class="g-conts-area structure section-link">
+                                     <h3 class="sec-tit">구조</h3>
+                                    <div class="g-conts-area">
+                                        <div class="g-img-wrap">
+                                            <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/service/search_again_structure.png" alt="구조 예시" /></div>
+                                        </div>
+                                        <ol class="krds-info-list ordered">
+                                            <li><span class="num">1.</span><strong>정렬 컨트롤</strong>검색 결과 목록의 순서를 변경하는데 사용되는 컨트롤</li>
+                                            <li><span class="num">2.</span><strong>필터 컨트롤</strong>검색 결과 목록을 특정 주제, 범주, 속성으로 제한하는 데 사용되는 컨트롤</li>
+                                        </ol>
+                                    </div>
+                                </div>
+								<!-- //구조 -->
+
+								<!-- 사용성 가이드라인 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">사용성 가이드라인</h3>
+                                    <div class="g-conts-area sp-sm">
+                                        <div class="g-desc-box">
+                                            <p class="g-tit"><span class="krds-badge bg-primary">필수</span>상세 검색 컨트롤을 숨기지 않는다.</p>
+                                            <p class="g-desc">화면 너비로 인해 상세 검색 컨트롤이 모달에서 제공되지 않는 한 상세 검색 컨트롤은 사용자가 검색 과정을 반복하는 동안 항상 표시되어야 한다. 상세 검색 컨트롤을 숨기면 재검색 과정에서 상세 검색 수단을 발견하지 못하거나, 설정한 조건을 기억하지 못해 실수할 가능성이 높아진다.</p>
+                                        </div>
+										<div class="g-img-wrap caption-format success">
+											<p class="caption"><span class="svg-icon ico-success-fill pure"></span>모범 사례</p>
+											<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/service/search_again_guide_01.png" alt="상세 검색 컨트롤을 숨기지 않는다 모범 사례 예시" /></div>
+										</div>
+										<div class="g-img-wrap caption-format error">
+											<p class="caption"><span class="svg-icon ico-error-fill pure"></span>피해야 할 사례</p>
+											<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/service/search_again_guide_01_02.png" alt="상세 검색 컨트롤을 숨기지 않는다 피해야 할 사례 예시" /></div>
+										</div>
+                                        <div class="g-desc-box">
+                                            <p class="g-tit"><span class="krds-badge bg-primary">필수</span>사용자가 설정한 상세 검색 조건을 유지한다.</p>
+                                            <p class="g-desc">사용자가 의도적으로 설정을 해제하기 전까지 재검색 전 과정 동안 상세 검색 조건을 유지하여 사용자가 필요한 맥락 내에서 연속적으로 검색을 수행할 수 있도록 해야 한다.</p>
+                                        </div>
+                                        <div class="g-desc-box">
+                                            <p class="g-tit"><span class="krds-badge bg-secondary">권장</span>상세 검색 조건의 적용을 일괄적으로 해제할 수 있는 수단을 제공하고 직관적으로 인지할 수 있도록 표현한다.</p>
+                                            <p class="g-desc">기본 검색 외에 복합 검색, 고급 검색이 사용되는 경우 사용자가 여러 개의 범주와 속성별로 조건을 설정할 수 있으므로 재검색 과정에서 조건 전체를 변경하고자 하는 경우 일괄 해제 기능을 제공하여 사용자의 행동을 단축시켜야 한다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+								<!-- //사용성 가이드라인 -->
+
+								<!-- 예시 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">예시</h3>
+                                    <div class="g-conts-area">
+										<!-- table -->
+										<div class="krds-table-wrap scroll">
+											<table class="tbl col data">
+												<colgroup>
+													<col style="width: 15%" />
+													<col style="width: 15%" />
+													<col />
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col">1Depth</th>
+														<th scope="col">2Depth</th>
+														<th scope="col">File Link</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="name">탐색</td>
+														<td>타입1</td>
+														<td class="file">
+															<a href="../../pattern/sample_quest_01.html" target="_blank" title="새 창 열기" class="krds-btn medium text underline">html 화면 확인하기</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="name"></td>
+														<td></td>
+														<td class="file">
+															<a href="../../pattern/sample_quest_0101.html" target="_blank" title="새 창 열기" class="krds-btn medium text underline">html 화면 확인하기</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="name"></td>
+														<td>타입2</td>
+														<td class="file">
+															<a href="../../pattern/sample_quest_02.html" target="_blank" title="새 창 열기" class="krds-btn medium text underline">html 화면 확인하기</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<!-- //table -->
+                                    </div>
+                                </div>
+								<!-- //예시 -->
+
+                                <!-- 관련된 항목 더보기 -->
+								<div class="g-conts-area section-link">
+									@@include("../inc/page-related-items.html",{ 
+                                        "patternBasis": [
+												{
+													"title": "필터링정렬",  
+													"url": "./../global/global_10.html"
+												},
+											]
+										}
+									)
+								</div>
+                                <!-- //관련된 항목 더보기 -->
+
+								<!-- 자주 묻는 질문 -->
+								@@include("../inc/page-faq.html")
+								<!-- //자주 묻는 질문 -->
+								
+								<!-- 정보 변경 내역 -->
+                                @@include("../inc/page-info-update-log.html")
+                                <!-- //정보 변경 내역 -->
+								
+								<!-- 컨텐츠 배너 영역 -->
+								@@include("../inc/page-banner.html")
+								<!--// 컨텐츠 배너 영역 -->
+                            </div>
+                            <!-- //scroll-check -->
+                        </div>
+                        
+                    </div>
+                    <!-- //contents -->
+                </div>
+                <!-- //컨텐츠 영역 -->
+            </div>
+            <!-- //컨테이너 영역 -->
+
+            <!-- 푸터 영역 -->
+            <footer id="krds-footer">@@include("../inc/guide-footer.html")</footer>
+            <!-- //푸터 영역 -->
+        </div>
+    </body>
+</html>

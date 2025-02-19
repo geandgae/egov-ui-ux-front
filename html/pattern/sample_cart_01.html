@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include(
+		"./inc/head.html", { "title": "서브 - 목록 | 바구니 - KRDS", 
+	})
+
+    <body>
+        <div id="wrap">
+            @@include("./inc/skip.html", {"class": "",}) @@include("./inc/header-top.html")
+
+            <!-- 헤더 영역 -->
+            <header id="krds-header">@@include("./inc/header-type1.html")</header>
+            <!-- //헤더 영역 -->
+
+            <!-- 컨테이너 영역 -->
+            <div id="container">
+				<!-- breadcrumb -->
+				@@include("./inc/page-breadcrumb.html", { "depth": ["서비스 신청"] })
+				<!-- breadcrumb -->
+				 
+                <!-- 컨텐츠 영역 -->
+                <div class="inner">
+
+                    <!-- 페이지 타이틀 영역 -->
+                    <div class="page-title-wrap">
+                        @@include("./inc/page-title.html", { "title": "바구니" })
+                    </div>
+                    <!-- //페이지 타이틀 영역 -->
+
+                    <!-- *** 탭 ***  -->
+                    <div class="krds-tab-area layer">
+                        <!-- tab list -->
+                        <div class="tab fill full">
+                            <ul role="tablist">
+                                <li id="tab01" role="tab" aria-selected="true" aria-controls="tabpanel01" class="active">
+                                    <button type="button" class="btn-tab">본관(3) <i class="sr-only created">선택됨</i></button>
+                                </li>
+                                <li id="tab02" role="tab" aria-selected="false" aria-controls="tabpanel02">
+                                    <button type="button" class="btn-tab" disabled>디지털도서관(0)</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- //tab list -->
+
+                        <!-- tab contents -->
+                        <div class="tab-conts-wrap">
+                            <section id="tabpanel01" role="tabpanel" aria-labelledby="tab01" class="tab-conts fade active">
+                                <h3 class="sr-only">본관</h3>
+                                <!-- 안내영역 -->
+                                <div class="txt-box outline">
+                                    <h4 class="outline-tit">시작하기 전에</h4>
+                                    <ul class="check-list">
+                                        <li>신청은 1회 최대 5책을 선택하여 신청할 수 있으며, 다운로드 서비스는 제한 없이 이용하실 수 있습니다.</li>
+                                        <li>바구니는 신청을 위해 임시보관하며, 자료는 일주일 후 자동 삭제됩니다. (자료의 영구보관은 "스크랩" 이용)</li>
+                                        <li>
+                                            1983년 이전 발행 자료는 지질이 약하고 산성화가 진행되어 별도의 이용절차로 운영하고 있습니다.
+                                            <ul class="krds-info-list decimal">
+                                                <li>국립중앙도서관의 자료는 후대에 전승되는 소중한 문화유산입니다. 여러분들의 협력을 부탁 드립니다.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <!-- disclosure -->
+                                    <div class="krds-disclosure conts-expand-area">
+                                        <button type="button" class="btn-conts-expand">신청 서비스안내</button>
+                                        <div class="expand-wrap">
+                                            <div class="expand-in">
+                                                <ul class="krds-info-list decimal">
+                                                    <li>하나의 아이디로 안전하고 편리하게 여러 전자정부 서비스를 이용할 수 있는 서비스입니다.</li>
+                                                    <li>디지털원패스 이용문의 : 1533-3713 (평일9~18시, 공휴일제외)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //disclosure -->
+                                </div>
+                                <!-- //안내영역 -->
+
+                                <div>
+                                    <!-- 검색 결과 : 리스트 상단 -->
+                                    <div class="search-list-top">
+                                        <div class="sch-left">
+                                            <div class="krds-check-area">
+                                                <div class="krds-form-check">
+                                                    <input type="checkbox" class="chk" id="list_chk_all" />
+                                                    <label for="list_chk_all">전체선택</label>
+                                                </div>
+                                            </div>
+                                            <ul class="side-line-ul">
+                                                <li>
+                                                    <button type="button" class="krds-btn medium text">
+                                                        <i class="svg-icon ico-email"></i>
+                                                        목록 이메일전송
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="krds-btn medium text">
+                                                        <i class="svg-icon ico-print"></i>
+                                                        목록 인쇄
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="krds-btn medium text">
+                                                        <i class="svg-icon ico-down"></i>
+                                                        목록 다운로드
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="krds-btn medium text">
+                                                        <i class="svg-icon ico-scrap"></i>
+                                                        자료스크랩
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <ul class="sch-sort">
+                                            <li>
+                                                <strong class="sort-label"><label for="search_result_count">목록 표시 개수</label></strong>
+                                                <select class="krds-form-select-sort" id="search_result_count">
+                                                    <option>10개</option>
+                                                    <option>9개</option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <strong class="sort-label"><label for="sort">정렬기준</label></strong>
+                                                <div class="w-sort-btn">
+                                                    <button type="button" class="active">관련도순</button>
+                                                    <button type="button">최신순</button>
+                                                    <button type="button">인기순</button>
+                                                </div>
+                                                <div class="m-sort-btn">
+                                                    <select class="krds-form-select-sort" id="sort">
+                                                        <option>관련도순</option>
+                                                        <option>최신순</option>
+                                                        <option>인기순</option>
+                                                    </select>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- //검색 결과 : 리스트 상단 -->
+
+                                    <!-- 검색 결과 : 리스트 -->
+                                    <ul class="krds-structured-list type-full">
+                                        <li class="structured-item">
+                                            <div class="krds-check-area">
+                                                <div class="krds-form-check large">
+                                                    <input type="checkbox" class="chk" id="list_chk_1" />
+                                                    <label for="list_chk_1"></label>
+                                                </div>
+                                            </div>
+                                            <div class="in">
+                                                <div class="card-top">
+                                                    <span class="krds-badge bg-light-primary">도서</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <a href="#" class="c-text">
+                                                        <p class="c-tit">
+                                                            <span class="span">방구석 오페라 : 아름다운 사랑과 전율의 배신, 운명적 서사 25편</span>
+                                                        </p>
+														<p class="c-txt">전문교육을 받은 산모·신생아 건강관리사가 출산 가정을 방문해 산모의 건강회복을 돕고, 신생아를 보살펴 출산 가정의 경제적 부담을 덜어 줍니다.</p>
+                                                        <div class="c-txt">
+                                                            <ul class="c-txt-ul">
+                                                                <li>셰종보 지음; 하은지 옮김</li>
+                                                                <li>더페이지 다빈치하우스 미디어숲</li>
+                                                                <li>2023</li>
+                                                                <li>
+                                                                    <span class="key">비치일 :</span>
+                                                                    <span class="value">2023.11.24</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span class="key">청구기호 :</span>
+                                                                    <span class="value">674.204-23-1</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span class="key">자료이용장소 :</span>
+                                                                    <span class="value text-point-primary">4층 도서자료실(자료실내비치)</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </a>
+                                                    <div class="c-btn">
+                                                        <a href="#" class="krds-btn medium secondary">신청하기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="structured-item">
+                                            <div class="krds-check-area">
+                                                <div class="krds-form-check large">
+                                                    <input type="checkbox" class="chk" id="list_chk_2" />
+                                                    <label for="list_chk_2"></label>
+                                                </div>
+                                            </div>
+                                            <div class="in">         
+                                                <div class="card-top">
+                                                    <span class="krds-badge bg-light-primary">도서</span>
+                                                </div>                                       
+                                                <div class="card-body">
+                                                    <a href="#" class="c-text">
+                                                        <p class="c-tit">
+                                                            <span class="span">밥 먹여주는 경제학 : 인생 고민, 경제학에 묻다</span>
+                                                        </p>
+                                                        <div class="c-txt">
+                                                            <ul class="c-txt-ul">
+                                                                <li>셰종보 지음; 하은지 옮김</li>
+                                                                <li>더페이지 다빈치하우스 미디어숲</li>
+                                                                <li>2023</li>
+                                                                <li>
+                                                                    <span class="key">비치일 :</span>
+                                                                    <span class="value">2023.11.24</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span class="key">청구기호 :</span>
+                                                                    <span class="value">674.204-23-1</span>
+                                                                </li>
+																<li>
+                                                                    <span class="key">자료이용장소 :</span>
+                                                                    <span class="value text-point-primary">4층 도서자료실(자료실내비치)</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </a>
+                                                    <div class="c-btn">
+                                                        <a href="#" class="krds-btn medium secondary">신청하기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="structured-item">
+                                            <div class="krds-check-area">
+                                                <div class="krds-form-check large">
+                                                    <input type="checkbox" class="chk" id="list_chk_3" />
+                                                    <label for="list_chk_3"></label>
+                                                </div>
+                                            </div>
+                                            <div class="in">
+                                                <div class="card-top">
+                                                    <span class="krds-badge bg-light-primary">잡지/학술지</span>
+                                                </div>    
+                                                <div class="card-body">
+                                                    <a href="#" class="c-text">
+                                                        <p class="c-tit">
+                                                            <span class="span">GBSA policy focus : issue & analysis. Vol. 3. 2020 March</span>
+                                                        </p>
+                                                        <div class="c-txt">
+                                                            <ul class="c-txt-ul">
+                                                                <li>경기도경제과학진흥원 [편]</li>
+                                                                <li>RITECCONTENTS리텍콘텐츠 RITEC CONTENTS리텍 콘텐츠</li>
+                                                                <li>2023</li>
+                                                                <li>
+                                                                    <span class="key">비치일 :</span>
+                                                                    <span class="value">2002.10.10</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span class="key">청구기호 :</span>
+                                                                    <span class="value">674.204-23-1</span>
+                                                                </li>
+																<li>
+                                                                    <span class="key">자료이용장소 :</span>
+                                                                    <span class="value text-point-primary">보존용자료</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </a>
+                                                    <div class="c-btn">
+                                                        <a href="#" class="krds-btn medium secondary">신청하기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="structured-item">
+                                            <div class="krds-check-area">
+                                                <div class="krds-form-check large">
+                                                    <input type="checkbox" class="chk" id="list_chk_4" />
+                                                    <label for="list_chk_4"></label>
+                                                </div>
+                                            </div>
+                                            <div class="in">
+                                                <div class="card-top">
+                                                    <span class="krds-badge bg-light-primary">도서</span>
+                                                </div>    
+                                                <div class="card-body">
+                                                    <a href="#" class="c-text">
+                                                        <p class="c-tit">
+                                                            <span class="span">소나기</span>
+                                                        </p>
+                                                        <div class="c-txt">
+                                                            <ul class="c-txt-ul">
+                                                                <li>황순원 지음</li>
+                                                                <li>홍신문화사</li>
+                                                                <li>2004</li>
+                                                                <li>
+                                                                    <span class="key">비치일 :</span>
+                                                                    <span class="value">2006.03.27</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span class="key">청구기호 :</span>
+                                                                    <span class="value">813.6-4-45-17</span>
+                                                                </li>
+																<li>
+                                                                    <span class="key">자료이용장소 :</span>
+                                                                    <span class="value text-point-primary">디지털도서관 디지털자료실</span>
+                                                                </li>
+																<li>
+                                                                    <span class="key">원문이용방법 :</span>
+                                                                    <span class="value">[국립중앙도서관,협약도서관]-열람,인쇄시 과금</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </a>
+                                                    <div class="c-btn">
+                                                        <a href="#" class="krds-btn medium secondary">신청하기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="structured-item">
+                                            <div class="krds-check-area">
+                                                <div class="krds-form-check large">
+                                                    <input type="checkbox" class="chk" id="list_chk_5" />
+                                                    <label for="list_chk_5"></label>
+                                                </div>
+                                            </div>
+                                            <div class="in">
+                                                <div class="card-top">
+                                                    <span class="krds-badge bg-light-primary">도서</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <a href="#" class="c-text">
+                                                        <p class="c-tit">
+                                                            <span class="span">방구석 오페라 : 아름다운 사랑과 전율의 배신, 운명적 서사 25편</span>
+                                                        </p>
+                                                        <div class="c-txt">
+                                                            <ul class="c-txt-ul">
+                                                                <li>셰종보 지음; 하은지 옮김</li>
+                                                                <li>더페이지 다빈치하우스 미디어숲</li>
+                                                                <li>2023</li>
+                                                                <li>
+                                                                    <span class="key">비치일 :</span>
+                                                                    <span class="value">20231124</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span class="key">청구기호 :</span>
+                                                                    <span class="value">320-23-45</span>
+                                                                </li>
+                                                            </ul>
+                                                            <p class="c-txt-p">
+                                                                <span class="key">자료이용장소 :</span>
+                                                                <span class="value text-point-primary">4층 도서자료실(자료실내비치)</span>
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                    <div class="c-btn">
+                                                        <a href="#" class="krds-btn medium secondary">신청하기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="structured-item">
+                                            <div class="krds-check-area">
+                                                <div class="krds-form-check large">
+                                                    <input type="checkbox" class="chk" id="list_chk_6" />
+                                                    <label for="list_chk_6"></label>
+                                                </div>
+                                            </div>
+                                            <div class="in">
+                                                <div class="card-top">
+                                                    <span class="krds-badge bg-light-primary">도서</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <a href="#" class="c-text">
+                                                        <p class="c-tit">
+                                                            <span class="span">방구석 오페라 : 아름다운 사랑과 전율의 배신, 운명적 서사 25편</span>
+                                                        </p>
+                                                        <div class="c-txt">
+                                                            <ul class="c-txt-ul">
+                                                                <li>셰종보 지음; 하은지 옮김</li>
+                                                                <li>더페이지 다빈치하우스 미디어숲</li>
+                                                                <li>2023</li>
+                                                                <li>
+                                                                    <span class="key">비치일 :</span>
+                                                                    <span class="value">20231124</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span class="key">청구기호 :</span>
+                                                                    <span class="value">320-23-45</span>
+                                                                </li>
+                                                            </ul>
+                                                            <p class="c-txt-p">
+                                                                <span class="key">자료이용장소 :</span>
+                                                                <span class="value text-point-primary">4층 도서자료실(자료실내비치)</span>
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                    <div class="c-btn">
+                                                        <a href="#" class="krds-btn medium secondary">신청하기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+										<li class="structured-item">
+                                            <div class="krds-check-area">
+                                                <div class="krds-form-check large">
+                                                    <input type="checkbox" class="chk" id="list_chk_7" />
+                                                    <label for="list_chk_7"></label>
+                                                </div>
+                                            </div>
+                                            <div class="in">
+                                                <div class="card-top">
+                                                    <span class="krds-badge bg-light-primary">잡지/학술지</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <a href="#" class="c-text">
+                                                        <p class="c-tit">
+                                                            <span class="span">GBSA policy focus : issue & analysis. Vol. 3. 2020 March</span>
+                                                        </p>
+                                                        <div class="c-txt">
+                                                            <ul class="c-txt-ul">
+                                                                <li>경기도경제과학진흥원 [편]</li>
+                                                                <li>RITECCONTENTS리텍콘텐츠 RITEC CONTENTS리텍 콘텐츠</li>
+                                                                <li>2023</li>
+                                                                <li>
+                                                                    <span class="key">비치일 :</span>
+                                                                    <span class="value">2002.10.10</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span class="key">청구기호 :</span>
+                                                                    <span class="value">674.204-23-1</span>
+                                                                </li>
+																<li>
+                                                                    <span class="key">자료이용장소 :</span>
+                                                                    <span class="value text-point-primary">보존용자료</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </a>
+                                                    <div class="c-btn">
+                                                        <a href="#" class="krds-btn medium secondary">신청하기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="structured-item">
+                                            <div class="krds-check-area">
+                                                <div class="krds-form-check large">
+                                                    <input type="checkbox" class="chk" id="list_chk_8" />
+                                                    <label for="list_chk_8"></label>
+                                                </div>
+                                            </div>
+                                            <div class="in">
+                                                <div class="card-top">
+                                                    <span class="krds-badge bg-light-primary">도서</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <a href="#" class="c-text">
+                                                        <p class="c-tit">
+                                                            <span class="span">소나기</span>
+                                                        </p>
+                                                        <div class="c-txt">
+                                                            <ul class="c-txt-ul">
+                                                                <li>황순원 지음</li>
+                                                                <li>홍신문화사</li>
+                                                                <li>2004</li>
+                                                                <li>
+                                                                    <span class="key">비치일 :</span>
+                                                                    <span class="value">2006.03.27</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span class="key">청구기호 :</span>
+                                                                    <span class="value">813.6-4-45-17</span>
+                                                                </li>
+																<li>
+                                                                    <span class="key">자료이용장소 :</span>
+                                                                    <span class="value text-point-primary">디지털도서관 디지털자료실</span>
+                                                                </li>
+																<li>
+                                                                    <span class="key">원문이용방법 :</span>
+                                                                    <span class="value">[국립중앙도서관,협약도서관]-열람,인쇄시 과금</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </a>
+                                                    <div class="c-btn">
+                                                        <a href="#" class="krds-btn medium secondary">신청하기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="structured-item">
+                                            <div class="krds-check-area">
+                                                <div class="krds-form-check large">
+                                                    <input type="checkbox" class="chk" id="list_chk_9" />
+                                                    <label for="list_chk_9"></label>
+                                                </div>
+                                            </div>
+                                            <div class="in">
+                                                <div class="card-top">
+                                                    <span class="krds-badge bg-light-primary">도서</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <a href="#" class="c-text">
+                                                        <p class="c-tit">
+                                                            <span class="span">방구석 오페라 : 아름다운 사랑과 전율의 배신, 운명적 서사 25편</span>
+                                                        </p>
+                                                        <div class="c-txt">
+                                                            <ul class="c-txt-ul">
+                                                                <li>셰종보 지음; 하은지 옮김</li>
+                                                                <li>더페이지 다빈치하우스 미디어숲</li>
+                                                                <li>2023</li>
+                                                                <li>
+                                                                    <span class="key">비치일 :</span>
+                                                                    <span class="value">20231124</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span class="key">청구기호 :</span>
+                                                                    <span class="value">320-23-45</span>
+                                                                </li>
+                                                            </ul>
+                                                            <p class="c-txt-p">
+                                                                <span class="key">자료이용장소 :</span>
+                                                                <span class="value text-point-primary">4층 도서자료실(자료실내비치)</span>
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                    <div class="c-btn">
+                                                        <a href="#" class="krds-btn medium secondary">신청하기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="structured-item">
+                                            <div class="krds-check-area">
+                                                <div class="krds-form-check large">
+                                                    <input type="checkbox" class="chk" id="list_chk_10" />
+                                                    <label for="list_chk_10"></label>
+                                                </div>
+                                            </div>
+                                            <div class="in">
+                                                <div class="card-top">
+                                                    <span class="krds-badge bg-light-primary">도서</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <a href="#" class="c-text">
+                                                        <p class="c-tit">
+                                                            <span class="span">방구석 오페라 : 아름다운 사랑과 전율의 배신, 운명적 서사 25편</span>
+                                                        </p>
+                                                        <div class="c-txt">
+                                                            <ul class="c-txt-ul">
+                                                                <li>셰종보 지음; 하은지 옮김</li>
+                                                                <li>더페이지 다빈치하우스 미디어숲</li>
+                                                                <li>2023</li>
+                                                                <li>
+                                                                    <span class="key">비치일 :</span>
+                                                                    <span class="value">20231124</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span class="key">청구기호 :</span>
+                                                                    <span class="value">320-23-45</span>
+                                                                </li>
+                                                            </ul>
+                                                            <p class="c-txt-p">
+                                                                <span class="key">자료이용장소 :</span>
+                                                                <span class="value text-point-primary">4층 도서자료실(자료실내비치)</span>
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                    <div class="c-btn">
+                                                        <a href="#" class="krds-btn medium disabled">신청하기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <!-- //검색 결과 : 리스트 -->
+
+                                    <!-- 페이지네이션 영역 -->
+									@@include("./inc/page-pagination.html")
+									<!-- //페이지네이션 영역 -->
+
+                                    <!-- 신청 버튼 -->
+                                    <div class="page-btn-wrap page-apply-btn">
+                                        <div class="apply-select active">
+                                            <button type="button" class="krds-btn xlarge secondary">
+                                                <p><em class="total">2</em>개 선택됨</p>
+                                                <i class="svg-icon ico-angle"></i>
+                                            </button>
+                                            <ul class="apply-list">
+                                                <li>
+                                                    <div class="txt">
+                                                        <span class="krds-badge bg-light-primary">도서</span>
+                                                        <span class="span"> 밥 먹여주는 경제학 : 인생 고민, 경제학에 묻다 </span>
+                                                    </div>
+                                                    <button type="button" class="krds-btn medium text"><i class="svg-icon ico-delete-fill"></i> 삭제</button>
+                                                </li>
+                                                <li>
+                                                    <div class="txt">
+                                                        <span class="krds-badge bg-light-primary">도서</span>
+                                                        <span class="span"> (김실현의)훈민정음 95 따라하기 </span>
+                                                    </div>
+                                                    <button type="button" class="krds-btn medium text"><i class="svg-icon ico-delete-fill"></i> 삭제</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="krds-btn xlarge primary">일괄 신청하기</button>
+                                    </div>
+                                    <!-- //신청 버튼 -->
+                                </div>
+                            </section>
+                            <section id="tabpanel02" role="tabpanel" aria-labelledby="tab02" class="tab-conts fade">
+                                <h3 class="sr-only">디지털도서관</h3>
+                                탭 2 내용 <br />
+                                탭 2 내용 <br />
+                                탭 2 내용 <br />
+                                탭 2 내용 <br />
+                                탭 2 내용 <br />
+                                탭 2 내용 <br />
+                                탭 2 내용 <br />
+                            </section>
+                        </div>
+                        <!-- //tab contents -->
+                    </div>
+                    <!-- //*** 탭 ***  -->
+                </div>
+                <!-- //컨텐츠 영역 -->
+            </div>
+            <!-- //컨테이너 영역 -->
+
+            <!-- 푸터 영역 -->
+            <footer id="krds-footer">@@include("./inc/footer.html", {"footerType": "type2",})</footer>
+            <!-- //푸터 영역 -->
+        </div>
+        
+    	@@include("./inc/modal-wrap.html")
+	
+    </body>
+</html>

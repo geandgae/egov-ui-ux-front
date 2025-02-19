@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include("../inc/head.html", { "title": "언어 변경 (Language switcher) | 컴포넌트 - KRDS", })
+
+    <body>
+        <div id="wrap" class="g-wrap">
+            @@include("../inc/guide-header.html")
+
+            <!-- 컨테이너 영역 -->
+            <div id="container" class="krds-in-page-navigation-type">
+                <!-- 컨텐츠 영역 -->
+                <div class="inner in-between">
+                    <!-- 사이드 메뉴 -->
+                    @@include("../inc/guide-lnb.html")
+                    <!-- //사이드 메뉴 -->
+
+                    <div class="contents">
+                        <!-- breadcrumb -->
+                        @@include("../inc/page-breadcrumb.html")
+                        <!-- breadcrumb -->
+
+                        <!-- page-title -->
+                        @@include("../inc/page-title.html", { 
+							"desc" : "언어 변경은 서비스의 콘텐츠를 표시할 언어를 변경하거나 별도의 외국어 서비스로 이동하는 데 사용되는 요소이다. 한국어가 익숙하지 않은 사용자가 콘텐츠 표시 언어를 변경할 수 있는 수단을 발견하지 못한다면 서비스를 이용할 수 없게 되므로, 디지털 정부서비스로 직관적이고 일관된 방식으로 언어 변경을 제공하는 것이 매우 중요하다." 
+						})
+                        <!-- //page-title -->
+
+                        <div class="conts-area">
+                            <!-- 탭 메뉴 -->
+                            <div class="krds-tab-area layer">
+                                <!-- tab list -->
+                                @@include("../inc/page-tab-list.html", { "list": [ { name: "개요", class: "active" }, { name: "접근성", class: "" }, { name: "코드", class: "" } ] })
+                                <!-- //tab list -->
+                                <!-- tab contents -->
+                                <div class="tab-conts-wrap">
+                                    <!-- quick link -->
+                                    @@include("../inc/page-quick-nav.html")
+                                    <!-- //quick link -->
+
+                                    <!-- tabpanelInfo01 -->
+                                    <section id="tabpanelInfo01" aria-labelledby="tabInfo01" class="tab-conts active" data-quick-nav="true">
+                                        <!-- scroll-check -->
+                                        <div class="g-description-area scroll-check">
+                                             <!-- 구조 -->
+                                             <div class="g-conts-area structure section-link">
+                                                <h3 class="sec-tit">구조</h3>
+                                                <div class="g-conts-area">
+                                                    <div class="g-img-wrap">
+                                                        <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/component/language_structure.png" alt="구조 예시" /></div>
+                                                    </div>
+                                                    <ol class="krds-info-list ordered">
+                                                        <li><span class="num">1.</span><strong>아이콘과 레이블</strong> 언어 변경 옵션 목록을 실행하는 데 사용하는 버튼/링크의 이름</li>
+                                                        <li><span class="num">2.</span><strong>현재 언어</strong> 현재 표시되고 있는 언어 이름</li>
+                                                        <li><span class="num">3.</span><strong>옵션</strong> 사용자가 선택할 수 있는 표시 언어 옵션 값의 목록. 언어 이름을 ‘원어-현재 서비스를 표시하는 데 사용된 언어’로 작성함</li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                            <!-- //구조 -->
+
+                                            <!-- 유형 -->
+                                            <div class="g-conts-area section-link">
+                                                <h3 class="sec-tit">유형</h3>
+                                                <div class="g-conts-area sp-sm">
+                                                    <h4 class="con-tit">링크</h4>
+													<p class="g-desc">서비스가 2개의 언어를 지원하는 경우, 두 언어 간 표시를 전환할 때 사용한다.</p>
+                                                </div>
+                                                <div class="g-conts-area">
+                                                    <h4 class="con-tit">드롭다운</h4>
+													<p class="g-desc">서비스가 3개 이상의 언어를 지원하는 경우 사용한다.</p>
+                                                </div>
+                                            </div>
+                                            <!-- //유형 -->
+
+                                            <!-- 사용성 가이드라인 -->
+                                            <div class="g-conts-area section-link">
+                                                <h3 class="sec-tit">사용성 가이드라인</h3>
+												<div class="g-conts-area sp-sm">
+													<div class="g-desc-box">
+														<p class="g-tit">링크 레이블에 아이콘을 제공한다.</p>
+														<p class="g-desc">드롭다드롭다운 유형에서 레이블 왼쪽에 지구본 형태의 아이콘을 표시하여 사용자가 버튼의 용도를 직관적으로 인지할 수 있도록 표현한다. 언어 변경을 필요로 하는 사용자는 레이블 텍스트만으로 의미를 이해하는 것이 어려울 수 있으므로 사용자에게 익숙한 기호 체계를 활용하여 부가적인 단서를 제공해야 한다.</p>
+													</div>
+                                                    <div class="g-desc-box">
+														<p class="g-tit">링크 레이블은 전환되는 언어의 이름을 해당 언어로 작성한다.</p>
+														<p class="g-desc">사용자가 링크 레이블을 읽고 이해할 수 있어야 이용하기 적합한 언어로 전환하거나 관련 서비스로 이동할 수 있다. 만약 모든 언어 이름이 영어로 작성되어 있다면 영어를 읽을 수 없는 사용자는 자신에게 필요한 서비스가 제공되고 있더라도 사용할 수 없을 것이다.</p>
+                                                        <p class="g-desc">특히 링크 유형의 언어 변경 방식을 사용할 때, 두 언어 간 링크 레이블을 반대로 제공하거나 하나의 언어로만 고정하여 제공하지 않도록 유의해야 한다. 예를 들어, 한국어, 영어로 표시되는 서비스가 있다면 한국어 화면에서 링크 레이블은 ‘English’, 영어 화면에서 링크 레이블은 ‘한국어’로 표시되어야 한다.</p>
+                                                    </div>
+                                                    <div class="g-desc-box">
+														<p class="g-tit">링크 레이블을 언어 코드로 축약하지 않는다.</p>
+														<p class="g-desc">사용자에게 익숙하지 않은 언어 코드를 링크 레이블로 사용해서는 안 된다. 언어 이름을 그대로 사용했을 때 의미를 명확하게 전달할 수 있으며, 별도 설명 없이도 스크린 리더 사용자에게 자연스러운 설명을 제공할 수 있다.</p>
+													</div>
+                                                    <div class="g-desc-box">
+														<p class="g-tit">국가명은 필요한 경우에만 사용한다.</p>
+														<p class="g-desc">한 국가 내에서도 다양한 언어가 사용되므로 서비스 언어 변경을 위한 링크 레이블을 국가와 관련된 정보로 표현하는 것은 적절하지 않다. 만약 사용자의 국적이나 접속 국가에 따라 제공되는 서비스가 달라지거나 서비스 정책이 변경되는 경우에는 링크에 국가명을 보조적인 정보로 제공할 수 있다. 그러나 국가명을 보조적인 정보로 제공하는 경우에도 언어명이 가장 강조된 정보여야 한다.</p>
+													</div>
+                                                    <div class="g-desc-box">
+														<p class="g-tit">외국어 서비스로 이동하는 경우 링크를 새 창으로 실행하고, 새 창 열림 아이콘을 제공한다.</p>
+														<p class="g-desc">이때, 외국어 서비스는 서비스 내 콘텐츠 전체 내용을 외국어로 번역하는 대신, 외국어 사용자들에게 가장 중요하고 필수적인 정보만을 선별하여 제공하는 간소화된 다국어 정보 플랫폼을 의미한다. 별도의 외국어 서비스를 제공하는 경우, 사용자가 언어 변경을 시도하게 되면 사용자가 탐색 중인 화면의 맥락과 상관없이 외국어 서비스의 대표 화면으로 이동하게 된다. 사용자가 이용 맥락의 변화로 인한 혼동을 겪지 않도록 링크를 새 창으로 실행하고, 새 창 열림 아이콘을 제공해야 한다.</p>
+													</div>
+												</div>
+                                            </div>
+                                            <!-- //사용성 가이드라인 -->
+
+                                            <!-- 플랫폼에 대한 고려 사항 -->
+                                             <div class="g-conts-area section-link">
+                                                <h3 class="sec-tit">플랫폼에 대한 고려 사항</h3>
+												<div class="g-conts-area sp-sm">
+													<div class="g-desc-box">
+														<p class="g-tit">화면 너비가 충분하지 않은 경우, 언어 변경 컴포넌트를 햄버거 메뉴 내부나 푸터에 배치한다.</p>
+														<p class="g-desc">외국어로 표시된 콘텐츠에 대한 이용 빈도가 높거나 언어 변경이 중요한 서비스인 경우 언어 변경 버튼을 푸터에 배치하여, 사용자가 숨겨진 콘텐츠 영역을 탐색하지 않고도 쉽게 기능을 발견할 수 있도록 하는 것이 좋다. 일반적인 서비스에서는 헤더의 복잡성을 줄이기 위해, ‘헤더’ 컴포넌트 가이드라인을 참조하여 햄버거 메뉴 내부에 언어 변경 버튼을 배치한다.</p>
+													</div>
+												</div>
+                                            </div>
+                                            <!-- //플랫폼에 대한 고려 사항 -->
+
+											<!-- 자주 묻는 질문 -->
+											@@include("../inc/page-faq.html")
+											<!-- //자주 묻는 질문 -->
+
+                                            <!-- 정보 변경 내역 -->
+                                            @@include("../inc/page-info-update-log.html")
+                                            <!-- //정보 변경 내역 -->
+											
+											<!-- 컨텐츠 배너 영역 -->
+											@@include("../inc/page-banner.html")
+											<!--// 컨텐츠 배너 영역 -->
+                                        </div>
+                                        <!-- //scroll-check -->
+                                    </section>
+                                    <!-- //tabpanelInfo01 -->
+
+                                    <!-- tabpanelInfo02 -->
+                                    <section id="tabpanelInfo02" aria-labelledby="tabInfo02" class="tab-conts" data-quick-nav="true">
+                                        <!-- scroll-check -->
+                                        <div class="g-description-area scroll-check">
+                                            <!-- 접근성 가이드라인 -->
+                                            <div class="g-conts-area section-link">
+                                               <h3 class="sec-tit">접근성 가이드라인</h3>
+												<div class="g-conts-area sp-sm">
+													<div class="g-desc-box">
+														<p class="g-tit">링크에 lang 속성을 선언하고 레이블과 일치하는 언어 코드를 속성값으로 제공한다.</p>
+														<p class="g-desc">스크린 리더가 lang 속성값으로 제공된 언어 코드를 식별하여 해당 언어에 맞는 발음과 억양으로 레이블을 읽어주게 된다. 잘못된 발음은 링크 레이블의 내용 이해를 어렵게 만들며, 해석에 정신적 노력이 필요하므로 피로를 증가시킨다.</p>
+														<ul class="krds-info-list decimal">
+															<li>WCAG 2.1 Language of Parts (AA)</li>
+														</ul>
+													</div>
+												</div>
+                                            </div>
+                                            <!-- //접근성 가이드라인 -->
+
+                                            <!-- 상호작용 가이드라인 -->
+                                            <div class="g-conts-area section-link">
+                                                <h3 class="sec-tit">상호작용 가이드라인</h3>
+                                                <div class="g-conts-area sp-sm">
+                                                    <h4 class="con-tit">드롭다운 목록 확장 및 축소</h4>
+                                                    <!-- table list -->
+                                                    <div class="krds-table-wrap">
+                                                        <table class="tbl col data">
+                                                            <caption>
+                                                                상호작용 가이드라인 드롭다운 목록 확장 및 축소에 대한 표로 구분/내용으로 구성되어있으며 구분 항목은 Click, Enter, Space, Esc으로 구성되어있음
+                                                            </caption>
+                                                            <colgroup>
+                                                                <col style="width: 15%" />
+                                                                <col />
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">구분</th>
+                                                                    <th scope="col">내용</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row">Click</th>
+                                                                    <td>컨테이너를 Click 했을 때, 옵션 목록이 확장되거나 축소된다.옵션 목록이 확장된 상태에서 레이블, 컨테이너, 옵션 목록이 아닌 영역을 Click 하면 옵션 목록은 축소되어야 한다.</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Enter, Space</th>
+                                                                    <td>컨테이너에 초점이 있는 경우, 옵션 목록이 확장되거나 축소된다.</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Esc</th>
+                                                                    <td>옵션 목록을 축소하고 컨테이너로 초점이 이동해야 한다.</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- //table list -->
+                                                </div>
+                                                <div class="g-conts-area">
+                                                    <h4 class="con-tit">드롭다운 목록 탐색</h4>
+                                                    <!-- table list -->
+                                                    <div class="krds-table-wrap">
+                                                        <table class="tbl col data">
+                                                            <caption>
+                                                                상호작용 가이드라인 드롭다운 목록 탐색에 대한 표로 구분/내용으로 구성되어있으며 구분 항목은 Tab, Shift + Tab, Scroll로 구성되어있음
+                                                            </caption>
+                                                            <colgroup>
+                                                                <col style="width: 15%" />
+                                                                <col />
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">구분</th>
+                                                                    <th scope="col">내용</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row">Tab, Shift + Tab</th>
+                                                                    <td>Tab, Shift + Tab 키를 눌렀을 때 옵션에 접근할 수 있어야 한다.</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Scroll</th>
+                                                                    <td>옵션 목록에 스크롤이 생성된 경우 목록이 상/하로 이동한다.</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- //table list -->
+                                                </div>
+                                            </div>
+                                            <!-- //상호작용 가이드라인 -->
+                                        </div>
+                                        <!-- //scroll-check -->
+                                    </section>
+                                    <!-- //tabpanelInfo02 -->
+
+                                    <!-- tabpanelInfo03 -->
+                                    <section id="tabpanelInfo03" aria-labelledby="tabInfo03" class="tab-conts" data-quick-nav="true">
+                                        <!-- scroll-check -->
+                                        <div class="g-description-area scroll-check">
+                                            <!-- 예시 -->
+                                            <div class="g-conts-area section-link">
+                                                <h3 class="sec-tit">예시</h3>
+												@@include("../inc/page-example.html",{ "example": [ 
+													{ title: "기본", folder: "..", file: "language_switcher", class: "overflow-visible" },
+													{ title: "페이지 전환", folder: "..", file: "language_switcher_page", class: "overflow-visible" }
+												]})
+                                            </div>
+                                            <!-- //예시 -->
+
+                                            <!-- 마크업 가이드 -->
+                                            <div class="g-conts-area section-link">
+                                                <h3 class="sec-tit">마크업 가이드</h3>
+                                                <!-- CSS 선택자 -->
+                                                <div class="g-conts-area sp-sm">
+                                                    <h4 class="con-tit">CSS 선택자</h4>
+                                                    <!-- table list -->
+                                                    <div class="krds-table-wrap">
+                                                        <table class="tbl col data">
+                                                            <caption>
+                                                                마크업 가이드 CSS 선택자에 대한 표로 필수 로 구성되어있으며 구분 항목은 전체영역구성되어있음
+                                                            </caption>
+                                                            <colgroup>
+                                                                <col style="width: 20%" />
+                                                                <col />
+                                                                <col style="width: 20%" />
+                                                                <col />
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col" colspan="2">필수</th>
+                                                                    <th scope="col" colspan="2">선택</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row">전체영역</th>
+                                                                    <td>.krds-drop-wrap .krds-language</td>
+                                                                    <th scope="row">드롭다운 위치</th>
+                                                                    <td>
+                                                                        .drop-left (왼쪽 정렬)<br />
+                                                                        .drop-right (오른쪽 정렬)
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">드롭다운 메뉴 전체영역</th>
+                                                                    <td colspan="3">.drop-menu</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">드롭다운 메뉴 상단</th>
+                                                                    <td colspan="3">.drop-top</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">드롭다운 메뉴 리스트</th>
+                                                                    <td colspan="3">.drop-list</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">드롭다운 메뉴 하단</th>
+                                                                    <td colspan="3">.drop-bottom</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- //table list -->
+                                                </div>
+                                                <!--// CSS 선택자 -->
+                                            </div>
+                                            <!-- //마크업 가이드 -->
+                                        </div>
+                                        <!-- //scroll-check -->
+                                    </section>
+                                    <!-- //tabpanelInfo03 -->
+                                </div>
+                                <!-- //tab contents -->
+                            </div>
+                            <!-- //탭 메뉴 -->
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- //컨텐츠 영역 -->
+            </div>
+            <!-- //컨테이너 영역 -->
+
+            <!-- 푸터 영역 -->
+            <footer id="krds-footer">@@include("../inc/guide-footer.html")</footer>
+            <!-- //푸터 영역 -->
+        </div>
+    </body>
+</html>

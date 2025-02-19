@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+@@include("./inc/head.html", {
+	"title": "서브 - 코치마크 | 전입신고 | 신청 - KRDS",
+})
+
+<body>
+	<div id="wrap">
+		@@include("./inc/skip.html", {"class": "",})
+
+		@@include("./inc/header-top.html")
+
+		<!-- 헤더 영역 -->
+		<header id="krds-header">
+			@@include("./inc/header.html")
+		</header>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container">
+			<!-- breadcrumb -->
+			@@include("./inc/page-breadcrumb.html", { "depth": ["민원"] })
+			<!-- breadcrumb -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="inner narrow page-step help-panel-flexible">
+			<!-- 페이지 타이틀 영역 -->
+			<div class="page-title-wrap">
+				@@include("./inc/page-title.html", { "title": "전입신고" })
+			</div>
+			<!-- //페이지 타이틀 영역 -->
+
+			<!-- 스텝 영역 -->
+			<ol class="krds-step-wrap">
+				<li class="done">
+					<span>
+						<i class="step">1단계</i>
+						<span class="step-tit">유의사항 확인</span>
+					</span>
+				</li>
+				<li class="done">
+					<span>
+						<i class="step">2단계</i>
+						<span class="step-tit">신청인 정보</span>
+					</span>
+				</li>
+				<li class="active">
+					<span>
+						<em class="sr-only">현재단계</em>
+						<i class="step">3단계</i>
+						<span class="step-tit">이사 전 살던 곳</span>
+					</span>
+				</li>
+				<li>
+					<span>
+						<i class="step">4단계</i>
+						<span class="step-tit">이사 온 곳</span>
+					</span>
+				</li>
+				<li>
+					<span>
+						<i class="step">5단계</i>
+						<span class="step-tit">추가 신청(선택)</span>
+					</span>
+				</li>
+			</ol>
+			<!-- //스텝 영역 -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="conts-area step-type">
+				<div class="conts-wrap">
+					<div class="conts-wrap">
+						<h3 class="sec-tit">
+							<span class="step-now"><strong class="active">3단계</strong> / 5단계</span>
+							이사 전 살던 곳
+						</h3>
+
+						<div>
+							<!-- 이사 전 살던 곳 -->
+							<div class="txt-box bg-white">
+								<h4 class="box-tit1">이사 전 살던 곳</h4>
+								<div class="box-cnt">
+									<!-- 이사 전에 살던 곳 주소(전출지) -->
+									<div class="box-sec">
+										<h5 class="box-tit2">이사 전에 살던 곳 주소(전출지)</h5>
+										<div class="form-group">
+											<div class="form-conts">
+												<div class="input-group m-column">
+													<select class="krds-form-select" title="시도 선택">
+														<option value="">시도 선택</option>
+														<option value="">서울특별시</option>
+													</select>
+													<select class="krds-form-select" title="시군구 선택" disabled>
+														<option value="">시군구 선택</option>
+														<option value="">성동구</option>
+													</select>
+													<button type="button" class="krds-btn large secondary" onclick="addrSch()">주소 조회</button>
+												</div>
+											</div>
+										</div>
+										<div class="form-addr-result" id="sch-result-addr">
+											<ul class="info-ul">
+												<li>
+													<span class="key">기본주소</span>
+													<span class="value">세종특별자치시 도움6로 42(어진동)</span>
+												</li>
+												<li>
+													<span class="key">상세주소</span>
+													<span class="value">행정안전부</span>
+												</li>
+											</ul>
+											<ul class="info-ul">
+												<li>
+													<span class="key">관할 읍·면사무소/동 주민센터</span>
+													<span class="value">어진동 행정복지센터</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<!-- //이사 전에 살던 곳 주소(전출지) -->
+								</div>
+							</div>
+							<!-- //이사 전 살던 곳 -->
+
+							<!-- 신고 대상자 -->
+							<div class="txt-box bg-white">
+								<h4 class="box-tit1">신고 대상자</h4>
+								<div class="tbl-no-data" id="sch-tbl-no">이사 전에 살던 곳 주소를 <br class="w-hide">조회해 주세요.</div>
+								<div class="box-cnt" id="sch-result-tbl">
+									<div class="box-sec type-table">
+										<h5 class="box-tit2">이사 가는 사람</h5>
+										<p class="box-desc"><span>3</span>명 중 <strong class="text-point-primary">3</strong>명 선택됨</p>
+										<!-- table list -->
+										<div class="krds-table-wrap">
+											<table class="tbl col data">
+												<caption>
+													서비스 대상자를 선택하는 표이며, 세대주와의 관계, 성명, 생년월일, 성별로 구성되어있으며 민원 신청인인 전출지 전 세대주,새로운 세대주,전입지 세대주로 구성되어 있음
+												</caption>
+												<colgroup>
+													<col style="width: 10%">
+													<col style="width: 22%">
+													<col style="width: 20%">
+													<col style="width: 30%">
+													<col>
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col" class="text-center">
+															<div class="krds-form-check ico-only">
+																<input type="checkbox" name="save_id" id="chk_all">
+																<label for="chk_all">
+																	<span class="sr-only">선택</span>
+																</label>
+															</div>
+														</th>
+														<th scope="col">세대주와의 관계</th>
+														<th scope="col">성명</th>
+														<th scope="col">생년월일</th>
+														<th scope="col" class="text-center">성별</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="text-center">
+															<div class="krds-form-check ico-only">
+																<input type="checkbox" name="save_id" id="chk_1-1">
+																<label for="chk_1-1">
+																	<span class="sr-only">선택</span>
+																</label>
+															</div>
+														</td>
+														<td>본인 (신청인)</td>
+														<td>김플립</td>
+														<td>1990년 11월 23일</td>
+														<td class="text-center">여</td>
+													</tr>
+													<tr>
+														<td class="text-center">
+															<div class="krds-form-check ico-only">
+																<input type="checkbox" name="save_id" id="chk_1-2">
+																<label for="chk_1-2">
+																	<span class="sr-only">선택</span>
+																</label>
+															</div>
+														</td>
+														<td>배우자</td>
+														<td>홍길동</td>
+														<td>1986년 05월 02일</td>
+														<td class="text-center">남</td>
+													</tr>
+													<tr>
+														<td class="text-center">
+															<div class="krds-form-check ico-only">
+																<input type="checkbox" name="save_id" id="chk_1-3">
+																<label for="chk_1-3">
+																	<span class="sr-only">선택</span>
+																</label>
+															</div>
+														</td>
+														<td>자녀</td>
+														<td>홍미영</td>
+														<td>2009년 06월 21일</td>
+														<td class="text-center">여</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<!-- //table list -->
+									</div>
+								</div>
+							</div>
+							<!-- //신고 대상자 -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //컨텐츠 영역 -->
+
+			@@include("./inc/help-panel.html", {
+				contents: "tab",
+				active: "2",
+				tab2: "type2"
+			})
+
+			<!-- 페이지 버튼 영역 -->
+			<div class="page-btn-wrap both m-column">
+				<button type="button" class="krds-btn xlarge tertiary">이전으로</button>
+				<div class="btn-wrap krds-coach-mark">
+					<button type="button" class="krds-btn xlarge tertiary">임시저장</button>
+					<button type="button" class="krds-btn primary xlarge coach-btn">다음으로</button>
+					<!-- 따라하기 말풍선 -->
+					<div class="coach-balloon">
+						<h5 class="sr-only">따라하기 가이드</h5>
+						<h6 class="coach-tit">4단계 : 이사 전 살던 곳</h6>
+						<p class="desc">이사 전에 살던 곳의 주소를 선택 후 ‘주소 조회’를 클릭해주세요.</p>
+						<div class="coach-controls">
+						<div class="num">
+							<span class="sr-only">현재 단계</span>
+							<strong>4</strong>
+							<span class="sr-only">총 단계</span>
+							<span>4</span>
+						</div>
+						<div class="btn-wrap">
+							<button type="button" class="krds-btn small text" onclick="location.href='sample_coach_01.html'">그만보기</button>
+							<button type="button" class="krds-btn small text" onclick="location.href='sample_coach_0104.html'">이전으로</button>
+							<button type="button" class="krds-btn small tertiary" onclick="location.href='sample_coach_01.html'">마치기</button>
+						</div>
+						</div>
+					</div>
+					<!--// 따라하기 말풍선 -->
+				</div>
+			</div>
+			<!-- //페이지 버튼 영역 -->
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+
+		<!-- 푸터 영역 -->
+		<footer id="krds-footer">
+			@@include("./inc/footer.html", {"footerType": "type1",})
+		</footer>
+		<!-- //푸터 영역 -->
+	</div>
+	
+	@@include("./inc/modal-wrap.html")
+	
+</body>
+
+</html>

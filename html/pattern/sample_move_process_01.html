@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="ko">
+
+@@include("./inc/head.html", {
+	"title": "서브 - 전입신고 | 신청 - KRDS",
+})
+
+<body>
+	<div id="wrap">
+		@@include("./inc/skip.html", {"class": "",})
+
+		@@include("./inc/header-top.html")
+
+		<!-- 헤더 영역 -->
+		<header id="krds-header">
+			@@include("./inc/header.html")
+		</header>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container" class="krds-in-page-navigation-type">
+			<!-- breadcrumb -->
+			@@include("./inc/page-breadcrumb.html", { "depth": ["민원"] })
+			<!-- breadcrumb -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="inner">
+				<!-- 페이지 타이틀 영역 -->
+				<div class="page-title-wrap">
+					@@include("./inc/page-title.html", { "title": "전입신고" })
+					<p class="guide-txt">주소지 변경 및 등록을 위한 전입사실을 새로운 거주지 관할기관에게 신고하는 민원사무입니다.</p>
+				</div>
+				<!-- //페이지 타이틀 영역 -->
+
+				<!-- 컨텐츠 영역 -->
+				<div class="conts-area">
+					<!-- In-page navigation -->
+					<div class="krds-in-page-navigation-area">
+						<div class="in-page-navigation-header">
+							<p class="quick-caption">이 페이지의 구성</p>
+							<p class="quick-title">장애아동수당</p>
+						</div>
+						<nav class="in-page-navigation-list">
+							<ul>
+								<li><a href="#section_01" class="active">민원 개요</a></li>
+								<li><a href="#section_02">기본 정보</a></li>
+								<li><a href="#section_03">신청 방법 및 절차</a></li>
+								<li><a href="#section_04">제출 서류</a></li>
+								<li><a href="#section_05">부가정보</a></li>
+								<li><a href="#section_06">정보 변경 내역</a></li>
+							</ul>
+						</nav>
+						<div class="in-page-navigation-action">
+							<button type="button" class="krds-btn small">온라인 신청하기</button>
+							<p class="quick-info">장애아동수당 외 <strong>1건</strong></p>
+						</div>
+					</div>
+					<!-- //In-page navigation -->
+
+					<!-- real contents -->
+					<div class="conts-wrap scroll-check">
+						<div class="conts-wrap section-link" id="section_01">
+							<h3 class="sec-tit">민원 개요</h3>
+							<!-- def-list-wrap -->
+							<div class="def-list-wrap">
+								<dl class="def-list">
+									<dt>신청방법</dt>
+									<dd>인터넷, 방문</dd>
+									<dt>신청자격</dt>
+									<dd>본인 또는 대리인(온라인은 대리인 신청 불가)</dd>
+									<dt>처리기간</dt>
+									<dd>
+										<p>즉시(근무시간 내 3시간)</p>
+										<button type="button" class="krds-btn medium text">
+											처리기간 계산방법
+											<i class="svg-icon ico-angle right"></i>
+										</button>
+									</dd>
+									<dt>신청서</dt>
+									<dd>
+										<ul class="list">
+											<li>전입신고서(세대 모두 이동)</li>
+											<li>
+												전입(세대 일부 이동,편입,합가,위임용)재등록신고서 (주민등록법 시행령:
+												<a href="#" class="krds-btn medium text">
+													별지서식 15, 15호의2호
+													<i class="svg-icon ico-link"></i>
+												</a>
+												)
+											</li>
+											<li>
+												<a href="#" class="krds-btn medium text">
+													신청서 작성예시
+													<i class="svg-icon ico-link"></i>
+												</a>
+											</li>
+										</ul>
+									</dd>
+									<dt>구비서류</dt>
+									<dd>있음 (하단참조)</dd>
+									<dt>수수료</dt>
+									<dd>수수료 없음</dd>
+								</dl>
+							</div>
+							<!-- //def-list-wrap -->
+						</div>
+						<div class="conts-wrap section-link" id="section_02">
+							<h3 class="sec-tit">기본 정보</h3>
+							<div class="conts-wrap">
+								<h4 class="sec-tit">제공 내용</h4>
+								<div class="conts-wrap">
+									<div class="conts-desc">
+										이 민원은 하나의 세대에 속하는 자의 전원 또는 그 일부가 거주지를 이동한 때에는 신고의무자가 새로운
+										거주지에 전입한 날부터 14일 이내에 주소지변경 및 등록을 위한 전입사실을 새로운 거주지 관할기관에게 신고하는 민원사무입니다.
+										(재외국민은 재외국민임을 확인해야하므로 읍면동 방문하여 신청하여야 합니다. 민원 접수·처리에 관해서는 해당 읍면동에 문의하시기 바랍니다)
+									</div>
+									<!-- 참고 박스 -->
+									<div class="helper-box refer">
+										<p class="helper-tit">참고</p>
+										<div class="helper-desc-wrap">
+											<p>
+												방문하여 전입신고 시 신고자 본인과 이사하는 곳의 세대주, 전입하는 분들의 신분증을 꼭 지참해야 함. 다만,
+												가족관계(배우자, 직계혈족)일 경우에는 신고자 본인만 신분증을 지참하면 됨.
+											</p>
+										</div>
+									</div>
+									<!-- //참고 박스 -->
+								</div>
+							</div>
+						</div>
+						<div class="conts-wrap section-link" id="section_03">
+							<h3 class="sec-tit">신청 방법 및 절차</h3>
+							<div class="conts-wrap">
+								<h4 class="sec-tit">신청 방법</h4>
+								<ul class="krds-info-list decimal">
+									<li>방문 신청(읍면동 주민센터)</li>
+									<li>온라인 신청(복지로 PC/모바일웹, 모바일앱)</li>
+								</ul>
+							</div>
+							<div class="conts-wrap">
+								<h4 class="sec-tit">신청 및 처리 절차</h4>
+								<!-- 영역 확장/축소 -->
+								<div class="krds-disclosure conts-expand-area step active">
+									<div class="expand-wrap">
+										<ol class="service-step">
+											<li>
+												<span class="num">1</span>
+												<div class="tit-area">
+													<p class="tit">접수</p>
+													<span class="period">근무시간 내 3시간</span>
+												</div>
+												<p class="conts-desc">읍면동에서 서비스 신청을 접수합니다.</p>
+												<a href="#" class="krds-btn medium text">
+													관할 처리기관 검색
+													<i class="svg-icon ico-link"></i>
+												</a>
+											</li>
+											<li>
+												<span class="num">2</span>
+												<div class="tit-area">
+													<p class="tit">처리</p>
+													<span class="period">근무시간 내 3시간</span>
+												</div>
+												<p class="conts-desc">읍면동에서 조사 및 심사를 진행합니다.</p>
+												<a href="#" class="krds-btn medium text">
+													관할 처리기관 검색
+													<i class="svg-icon ico-link"></i>
+												</a>
+											</li>
+										</ol>
+									</div>
+								</div>
+								<!-- //영역 확장/축소 -->
+								<!-- 참고 박스 -->
+								<div class="helper-box refer">
+									<p class="helper-tit">참고</p>
+									<div class="helper-desc-wrap">
+										<p>
+											각 기관을 선택하면 해당기관 정보조회가 가능하며, 조회된 접수/처리기관에 대한 실제 민원 접수/처리 가능여부는 해당기관에 확인해 주시기 바랍니다.
+										</p>
+									</div>
+								</div>
+								<!-- //참고 박스 -->
+							</div>
+						</div>
+						<div class="conts-wrap section-link" id="section_04">
+							<h3 class="sec-tit">제출 서류</h3>
+							<div class="conts-wrap">
+								<h4 class="sec-tit">민원인이 제출해야 하는 서류</h4>
+								<div class="conts-wrap">
+									<h5 class="sec-tit">본인이 신청하는 경우</h5>
+									<ul class="krds-info-list decimal">
+										<li>
+											신분증 제시 (다음 중 1개, 유효기간 내 신분증에 한함)<br>
+											① 주민등록증, ② 청소년증 ③ 운전면허증, ④ 국가유공자증, ⑤ 장애인등록증 (주민등록번호가 포함된 경우만 가능함), ⑥ 여권
+										</li>
+									</ul>
+								</div>
+
+								<div class="conts-wrap">
+									<h5 class="sec-tit">대리인이 신청하는 경우</h5>
+									<ul class="krds-info-list decimal">
+										<li>대리인의 신분증 제시</li>
+										<li>위임장(주민등록법 시행령 별지 제15호2서식) 제출</li>
+										<li>위임인의 신분증 제시</li>
+										<li>신청 자격 증명 자료</li>
+									</ul>
+								</div>
+
+								<div class="conts-wrap">
+									<h5 class="sec-tit">서식</h5>
+									<!-- box list -->
+									<ul class="box-group-area">
+										<li>
+											<p class="tit">전입신고서 [주민등록법 시행령 : 별지서식 15, 15호의2호] [hwp, 17KB]</p>
+											<div class="btn-wrap">
+												<button type="button" class="krds-btn medium text">다운로드 <i class="svg-icon ico-down"></i></button>
+												<button type="button" class="krds-btn medium text">바로보기 <i class="svg-icon ico-link"></i></button>
+											</div>
+										</li>
+										<li>
+											<p class="tit">전입재등록신고서 [주민등록법 시행령 : 별지서식 15, 15호의2호] [hwp, 17KB]</p>
+											<div class="btn-wrap">
+												<button type="button" class="krds-btn medium text">다운로드 <i class="svg-icon ico-down"></i></button>
+												<button type="button" class="krds-btn medium text">바로보기 <i class="svg-icon ico-link"></i></button>
+											</div>
+										</li>
+										<li>
+											<p class="tit">위임장(주민등록법 시행령 별지 제15호의2호서식) [hwp, 17KB] </p>
+											<div class="btn-wrap">
+												<button type="button" class="krds-btn medium text">다운로드 <i class="svg-icon ico-down"></i></button>
+												<button type="button" class="krds-btn medium text">바로보기 <i class="svg-icon ico-link"></i></button>
+											</div>
+										</li>
+									</ul>
+									<!-- //box list -->
+								</div>
+							</div>
+
+							<div class="conts-wrap">
+								<h4 class="sec-tit">민원인이 제출하지 않아도 되는 서류 (담당 공무원이 확인)</h4>
+								<div class="conts-wrap">
+									<h5 class="sec-tit">본인이 신청하는 경우</h5>
+									<ul class="krds-info-list decimal">
+										<li>건축물대장(일반/집합)</li>
+										<li>(재외국민인 경우) 재외국민등록부등본</li>
+										<li>(재외국민인 경우) 해외이주신고확인서</li>
+										<li>(해외체류신고자, 재외국민인 경우) 출입국에관한사실증명</li>
+									</ul>
+								</div>
+
+								<div class="conts-wrap">
+									<h5 class="sec-tit">대리인이 신청하는 경우</h5>
+									<ul class="krds-info-list decimal">
+										<li>건축물대장(일반/집합)</li>
+										<li>(재외국민인 경우) 해외이주신고확인서</li>
+										<li>(재외국민인 경우) 재외국민등록부등본</li>
+										<li>(해외체류신고자, 재외국민인 경우) 출입국에관한사실증명</li>
+									</ul>
+									<!-- 참고 박스 -->
+									<div class="helper-box refer">
+										<p class="helper-tit">제출하지 않아도 되는 구비서류는 행정정보 공동 이용 동의가 필요합니다.</p>
+										<div class="helper-desc-wrap">
+											<p>
+												행정정보 공동이용 동의를 사전동의 신청을 하게 되면 이용기관 담당자가 시스템을 통해 제출할 서류를 조회할 수 있게 되어 별도로
+												서류를 제출할 필요가 없습니다. 행정정보 공동이용 동의는 방문시 이용기관에서 또는 온라인에서 신청시 사전동의를 하실 수 있습니다.<br>
+												이용문의 : 행정정보공동이용센터 (1600-8200)<br>
+												문의시간 : 월~금 09:00~18:00
+											</p>
+										</div>
+									</div>
+									<!-- //참고 박스 -->
+								</div>
+							</div>
+
+						</div>
+						<div class="conts-wrap section-link" id="section_05">
+							<h3 class="sec-tit">부가정보</h3>
+							<div class="conts-wrap">
+								<h4 class="sec-tit">근거 법령</h4>
+								<ul class="krds-info-list decimal type-link">
+									<li>
+										<a href="#" class="krds-btn medium link" target="_blank" title="새 창 열림">
+											<span class="underline">주민등록법 (제16조)</span>
+											<i class="svg-icon ico-link"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="krds-btn medium link" target="_blank" title="새 창 열림">
+											<span class="underline">주민등록법 시행령 (제23조)</span>
+											<i class="svg-icon ico-link"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+
+							<div class="conts-wrap">
+								<h4 class="sec-tit">제도를 담당하는 기관</h4>
+								<div class="conts-wrap">
+									<ul class="krds-info-list decimal">
+										<li>행정안전부 주민과</li>
+									</ul>
+
+									<!-- 참고 박스 -->
+									<div class="helper-box refer">
+										<p class="helper-tit">참고</p>
+										<div class="helper-desc-wrap">
+											<p>
+												위 담당부서와 전화번호는 이 민원의 제도를 담당하고 있는 (중앙)행정기관입니다.개별 민원에 대한 문의 사항은
+												접수·처리기관(관할처리기관)과 연락하시기 바랍니다.
+											</p>
+										</div>
+									</div>
+									<!-- //참고 박스 -->
+								</div>
+							</div>
+							<div class="conts-wrap">
+								<h4 class="sec-tit">자주묻는 질문</h4>
+								<!-- box list -->
+								<ul class="box-group-area">
+									<li>
+										<p class="tit">온라인 전입신고 처리가 완료되었는데 처리결과를 확인할 수 없습니다.</p>
+										<div class="btn-wrap">
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</li>
+									<li>
+										<p class="tit">온라인 전입신고 시 전출입 구분은 어떤걸 선택해야 하나요?</p>
+										<div class="btn-wrap">
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</li>
+									<li>
+										<p class="tit">온라인 전입신고 시 [세대주확인]은 어떻게 하나요?</p>
+										<div class="btn-wrap">
+											<button type="button" class="krds-btn medium text">자세히보기 <i class="svg-icon ico-more"></i></button>
+										</div>
+									</li>
+								</ul>
+								<!-- //box list -->
+							</div>
+						</div>
+						<div class="conts-wrap section-link" id="section_06">
+							<h3 class="sec-tit">정보 변경 내역</h3>
+							<!-- table list -->
+							<div class="krds-table-wrap">
+								<table class="tbl col data">
+									<caption>정보 변경 내역 표로 변경일자, 변경 내용으로 구성되어있음</caption>
+									<colgroup>
+										<col style="width: 30%;">
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">변경일자</th>
+											<th scope="col">변경 내용</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>2023년 12월 18일</td>
+											<td>2024년 기준 반영</td>
+										</tr>
+										<tr>
+											<td>2021년 11월 12일</td>
+											<td>최초 등록</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- //table list -->
+						</div>
+					</div>
+					<!-- //real contents -->
+				</div>
+				<!-- //컨텐츠 영역 -->
+				<!-- 페이지 버튼 영역 -->
+				<div class="page-btn-wrap guide mob-only m-column">
+					<button type="button" class="krds-btn large primary" onclick="location.href='sample_move_process_02.html'">
+						온라인 신청하기
+					</button>
+				</div>
+				<!-- //페이지 버튼 영역 -->
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+
+		<!-- 푸터 영역 -->
+		<footer id="krds-footer">
+			@@include("./inc/footer.html", {"footerType": "type1",})
+		</footer>
+		<!-- //푸터 영역 -->
+	</div>
+
+	@@include("./inc/modal-wrap.html")
+	
+</body>
+
+</html>

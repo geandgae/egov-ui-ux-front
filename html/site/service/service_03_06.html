@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include("../inc/head.html", { "title": "로그인 완료 | 서비스 패턴 - 로그인 - KRDS", })
+
+    <body>
+        <div id="wrap" class="g-wrap">
+            @@include("../inc/guide-header.html")
+
+            <!-- 컨테이너 영역 -->
+            <div id="container" class="krds-in-page-navigation-type">
+                <!-- 컨텐츠 영역 -->
+                <div class="inner in-between">
+                    <!-- 사이드 메뉴 -->
+                    @@include("../inc/guide-lnb.html")
+                    <!-- //사이드 메뉴 -->
+
+                    <!-- contents -->
+                    <div class="contents">
+                        <!-- breadcrumb -->
+                        @@include("../inc/page-breadcrumb.html")
+                        <!-- breadcrumb -->
+
+                        <!-- page-title -->
+                        @@include("../inc/page-title.html", { "desc" : "" })
+                        <!-- //page-title -->
+
+                        <div class="conts-area">
+                            <!-- quick link -->
+                            @@include("../inc/page-quick-nav.html")
+                            <!-- //quick link -->
+
+                            <!-- scroll-check -->
+                            <div class="g-description-area scroll-check">
+								<!-- 구조 -->
+                                <div class="g-conts-area structure section-link">
+                                     <h3 class="sec-tit">구조</h3>
+                                    <div class="g-conts-area">
+                                        <div class="g-img-wrap">
+                                            <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/service/login_complete_structure.png" alt="구조 예시" /></div>
+                                        </div>
+                                        <ol class="krds-info-list ordered">
+                                            <li>
+                                                <span class="num">1.</span><strong>사용자 이름</strong>
+                                                사용자의 이름, 별명, 프로필 사진이 제공됨. 사용자의 개인화 서비스로 이동하는 링크나 계정 관련 옵션 목록을 확인하기 위한 메뉴 실행 버튼으로 사용될 수 있음
+                                            </li>
+                                            <li><span class="num">2.</span><strong>로그아웃 버튼</strong> 로그인 상태를 해제하기 위한 버튼</li>
+                                            <li>
+                                                <span class="num">3.</span><strong>개인화 메뉴</strong>
+                                                사용자 개인화 서비스, 설정 화면, 로그아웃 버튼 등의 기능을 제공하는 메뉴로 드롭다운 메뉴나 드로어 메뉴로 제공될 수 있음
+                                            </li>
+                                            <li>
+                                                <span class="num">4.</span><strong>로그아웃까지 남은 시간</strong>
+                                                로그인 세션이 유지되기까지 남은 시간을 표시함
+                                            </li>
+                                            <li>
+                                                <span class="num">5.</span><strong>로그인 연장 버튼</strong>
+                                                로그인 상태 유지 시간을 연장하기 위한 버튼
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+								<!-- //구조 -->
+
+								<!-- 사용성 가이드라인 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">사용성 가이드라인</h3>
+                                    <div class="g-conts-area sp-sm">
+                                        <div class="g-desc-box">
+                                            <p class="g-tit"><span class="krds-badge bg-secondary">권장</span>로그인이 완료된 후, 로그인 상황에 적합한 화면으로 이동해야 한다.</p>
+                                            <p class="g-desc">로그인 플로(Flow)에 진입하기 전의 사용자 여정이 단절되지 않도록 로그인을 시도한 상황에 적합한 화면으로 연결해야 한다.</p>
+                                            <ul class="krds-info-list decimal">
+                                                <li>사용자가 의도적으로 로그인 버튼을 눌러 로그인한 경우, 사용자가 탐색 중이던 화면으로 연결되어야 한다.</li>
+                                                <li>사용자가 특정 서비스에 접근을 시도하여 ‘로그인 안내’ 단계를 거쳐 로그인이 완료된 경우 사용자가 접근을 시도한 화면으로 이동하면 된다.</li>
+                                                <li>사용자가 특정 기능의 사용/적용을 시도하여 ‘로그인 안내’ 단계를 거쳐 로그인이 완료된 경우 사용자가 탐색 중이던 화면으로 연결되어야 한다.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="g-img-wrap caption-format success">
+                                            <p class="caption"><span class="svg-icon ico-success-fill pure"></span>모범 사례</p>
+                                            <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/service/login_complete_guide_01.png" alt="로그인이 완료된 후, 로그인 상황에 적합한 화면으로 이동해야 한다. 모범 사례 예시" /></div>
+                                        </div>
+                                        <div class="g-img-wrap caption-format error">
+                                            <p class="caption"><span class="svg-icon ico-error-fill pure"></span>피해야 할 사례</p>
+                                            <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/service/login_complete_guide_01_02.png" alt="로그인이 완료된 후, 로그인 상황에 적합한 화면으로 이동해야 한다. 피해야 할 사례 예시" /></div>
+                                        </div>
+                                        <div class="g-desc-box">
+                                            <p class="g-tit"><span class="krds-badge bg-secondary">권장</span>로그인 상태로 전환되었음을 명확하게 표현한다.</p>
+                                            <p class="g-desc">로그인 기능이 사라지고 로그아웃 옵션을 표시하는 등의 방법으로 현재 로그인 상태에 있음을 사용자에게 알려주어야 한다. 마이페이지 버튼을 실행시켜 활성화된 레이어에 사용자 이름을 제공하면 로그인 상태를 표현하면서도 개인 정보를 보호할 수 있다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+								<!-- //사용성 가이드라인 -->
+
+								<!-- 예시 -->
+                                <!-- <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">예시</h3>
+                                    <div class="g-conts-area">
+                                        <div class="krds-table-wrap">
+                                            <table class="tbl col data">
+                                                <colgroup>
+                                                    <col style="width: 10%" />
+                                                    <col style="width: 10%" />
+                                                    <col style="width: 25%" />
+                                                    <col style="width: 150px" />
+                                                    <col style="width: 15%" />
+                                                    <col />
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">1Depth</th>
+                                                        <th scope="col">2Depth</th>
+                                                        <th scope="col">3Depth</th>
+                                                        <th scope="col">TYPE</th>
+                                                        <th scope="col">File Link</th>
+                                                        <th scope="col">비고</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="name">정부24</td>
+                                                        <td>로그인 입력</td>
+                                                        <td></td>
+                                                        <td>page</td>
+                                                        <td class="file">
+                                                            <a href="../../pattern/sample_login_0101.html" target="_blank" title="새 창 열기" class="krds-btn medium text underline">html 화면 확인하기</a>
+                                                        </td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div> -->
+								<!-- //예시 -->
+
+								<!-- 접근성 가이드라인 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">접근성 가이드라인</h3>
+                                    <div class="g-conts-area sp-sm">
+                                        <div class="g-desc-box">
+                                            <p class="g-tit">로그인 완료 후 화면이 로딩되었을 때 초점은 문서 가장 처음부터 접근되도록 한다.</p>
+                                            <p class="g-desc">로그인 완료 후 화면이 로딩되었을 때 키보드 및 스크린 리더 초점은 문서 가장 처음부터 접근하도록 구현한다. 문서의 시작 영역이 아닌 헤더나 본문에 초점이 자동으로 이동하게 예측하지 못한 위치에서 탐색이 시작되어 사용자가 당황할 수 있다.</p>
+                                            <ul class="krds-info-list decimal">
+                                                <li>KWCAG 2.2 초점 이동과 표시</li>
+                                                <li>WCAG 2.1 Focus Order (A)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+								<!-- //접근성 가이드라인 -->
+
+                                <!-- 자주 묻는 질문 -->
+                                @@include("../inc/page-faq.html")
+                                <!-- //자주 묻는 질문 -->
+								
+								<!-- 정보 변경 내역 -->
+                                @@include("../inc/page-info-update-log.html")
+                                <!-- //정보 변경 내역 -->
+								
+								<!-- 컨텐츠 배너 영역 -->
+								@@include("../inc/page-banner.html")
+								<!--// 컨텐츠 배너 영역 -->
+                            </div>
+                            <!-- //scroll-check -->
+                        </div>
+                        
+                    </div>
+                    <!-- //contents -->
+                </div>
+                <!-- //컨텐츠 영역 -->
+            </div>
+            <!-- //컨테이너 영역 -->
+
+            <!-- 푸터 영역 -->
+            <footer id="krds-footer">@@include("../inc/guide-footer.html")</footer>
+            <!-- //푸터 영역 -->
+        </div>
+    </body>
+</html>

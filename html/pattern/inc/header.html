@@ -1,0 +1,86 @@
+<!-- 헤더 컨텐츠 영역  -->
+			<div class="header-in">
+				<!-- 헤더 상단 기타메뉴 -->
+				<div class="header-container">
+					<div class="inner">
+						<div class="header-utility">
+							<ul class="utility-list">
+								<li>
+									@@include("./language-switcher.html", {"languageType": "type1"})
+								</li>
+								<li>
+									<div class="krds-drop-wrap">
+										<button type="button" class="krds-btn small text drop-btn">
+											지원 <i class="svg-icon ico-toggle"></i>
+										</button>
+										<div class="drop-menu">
+											<div class="drop-in">
+												<ul class="drop-list">
+													<li><a href="#" class="item-link">인증센터</a></li>
+													<li><a href="#" class="item-link">누리집안내지도</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<button type="button" class="krds-btn small text open-modal" data-target="modal_adjust_display">
+									  	<i class="svg-icon ico-view-mode"></i> 글자&middot;화면 설정
+									</button>
+								</li>
+							</ul>
+						</div>
+						<div class="header-branding">
+							<h2 class="logo sample">
+								<a href="#">
+									<span class="sr-only">대한민국정부</span>
+								</a>
+							</h2>
+							<div class="header-actions">
+								<button type="button" class="btn-navi sch open-modal" title="통합검색 레이어" data-target="popTotalSch">통합검색</button>
+								<a href="#" class="btn-navi login">로그인</a>
+								<button type="button" class="btn-navi join">회원가입</button>
+								<div class="krds-drop-wrap my-drop">
+									<button type="button" class="btn-navi my drop-btn">나의 GOV</button>
+									<div class="drop-menu">
+										<div class="drop-in">
+											<div class="drop-top">
+												<p class="my-name">홍길동님</p>
+												<dl class="my-time">
+													<dt>로그아웃까지 남은 시간</dt>
+													<dd>
+														<span class="time">12:00</span>
+														<button type="button" class="krds-btn small text h-auto">시간 연장</button>
+													</dd>
+												</dl>
+											</div>
+											<ul class="drop-list">
+												<li><a href="#" class="item-link">나의 GOV 홈</a></li>
+												<li><a href="#" class="item-link">나의 신청내역</a></li>
+												<li><a href="#" class="item-link">나의 생활정보</a></li>
+												<li><a href="#" class="item-link">나의 정보관리</a></li>
+											</ul>
+											<div class="drop-bottom">
+												<button type="button" class="krds-btn medium text">
+													<i class="svg-icon ico-logout"></i> 로그아웃
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<button type="button" class="btn-navi all" aria-controls="mobile-nav">전체메뉴</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //헤더 상단 기타메뉴 -->
+
+				<!-- 메인메뉴 : 데스크탑 -->
+				@@include("./gnb-pc.html")
+				<!-- //메인메뉴 : 데스크탑 -->
+			</div>
+			<!-- //헤더 컨텐츠 영역  -->
+
+			<!-- 메인메뉴 : 모바일 -->
+			@@include("./gnb-mobile.html")
+			<!-- //메인메뉴 : 모바일 -->

@@ -1,0 +1,132 @@
+{
+  "name": "2024-uiux",
+  "version": "1.0.0",
+  "description": "2024범정부 UIUX 고도화",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "start": "gulp",
+    "dist": "gulp dist",
+    "ts": "node ./transform/transform-json.js",
+    "token-custom": "style-dictionary build --config ./transform/transform-scss.js",
+    "token-auto": "npm run ts && npm run token-custom",
+    "deploy": "gulp deploy"
+  },
+  "namespace": {
+    "minify": {
+        "file": "krds.min",
+        "path": {
+            "from": "../../",
+            "to": "https://www.krds.go.kr/resources/"
+        }
+    }
+  },
+  "dir": {
+    "clone": {
+      "resources": {
+        "scss": [
+          "common/**/",
+          "component/"
+        ],
+        "css": [
+          "plugin/",
+          "token/"
+        ],
+        "js": [
+          "component/",
+          "plugin/"
+        ],
+        "img": [
+          "component/icon/"
+        ]
+      },
+      "html": [
+        "code/"
+      ],
+      "config": [
+        "krds_uiux/"
+      ]
+    },
+    "compile": {
+      "scss": [
+        "common/",
+        "component/"
+      ]
+    }
+  },
+  "path": {
+    "src": {
+      "root": "./",
+      "clone": {
+        "resources": {
+          "root": "resources/",
+          "branch": {
+            "scss": "scss/",
+            "css": "css/",
+            "js": "js/",
+            "img": "img/",
+            "fonts": "fonts/"
+          }
+        },
+        "html": "html/",
+        "tokens": "tokens/",
+        "config": "config/"
+      },
+      "compile": {
+        "root": "resources/",
+        "branch": {
+          "scss": "scss/"
+        }
+      },
+      "minify": {
+        "root": "krds-uiux/resources/",
+        "branch": {
+          "css": "css/**/",
+          "js": "js/**/"
+        }
+      }
+    },
+    "dest": {
+      "root": "./krds-uiux/",
+      "clean": "",
+      "clone": {
+        "resources": "resources/",
+        "html": "html/",
+        "tokens": "tokens/",
+        "config": {
+          "root": "config/",
+          "branch": {
+            "krds_uiux": ""
+          }
+        }
+      },
+      "compile": {
+        "scss": "resources/css/"
+      },
+      "minify": {
+        "css": "resources/cdn",
+        "js": "resources/cdn"
+      }
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^3.0.2",
+    "del": "^7.1.0",
+    "fs-extra": "^11.2.0",
+    "gulp": "^5.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-dart-sass": "^1.1.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-flatten": "^0.4.0",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "style-dictionary": "^3.9.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-replace": "^1.1.4"
+  }
+}

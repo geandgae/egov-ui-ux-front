@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ko">
+
+@@include("./inc/head.html", {
+	"title": "서브 - 로그인하기 | 로그인방식선택(싱글타입) - KRDS",
+})
+
+<body>
+	<div id="wrap">
+		@@include("./inc/skip.html", {"class": "",})
+
+		@@include("./inc/header-top.html")
+
+		<!-- 헤더 영역 -->
+		<header id="krds-header">
+			@@include("./inc/header.html")
+		</header>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container">
+			<!-- breadcrumb -->
+			@@include("./inc/page-breadcrumb.html")
+			<!-- breadcrumb -->
+			 
+			<!-- Inner 영역 -->
+			<div class="inner narrow">
+				<!-- 페이지 타이틀 영역 -->
+				<div class="page-title-wrap">
+					@@include("./inc/page-title.html", { "title": '<span class="small-txt">대한민국 디지털정부 사용자 로그인</span>아이디/비밀번호 로그인' })
+				</div>
+				<!-- //페이지 타이틀 영역 -->
+
+				<!-- 컨텐츠 영역 -->
+				<div class="conts-area login-form">
+					<!-- 옵션 선택 -->
+					<div class="login-opt-wrap">
+						<!-- tooltip 사용 예 -->
+						<div class="krds-contextual-help bottom left">
+							<!-- tooltip-txt 영역 -->
+							<div class="krds-form-toggle-switch">
+								<input type="checkbox" id="switch_keyboard">
+								<label for="switch_keyboard"><span class="switch-toggle"><i></i></span>키보드 보안 프로그램 사용</label>
+							</div>
+							<!-- //tooltip-txt 영역 -->
+							<div class="tooltip-action">
+								<button type="button" class="krds-btn medium icon tooltip-btn" aria-expanded="false">
+									<span class="sr-only">도움말</span>
+									<i class="svg-icon ico-tooltip"></i>
+								</button>
+								<div class="tooltip-popover">
+									<h4 class="tooltip-title">도움말 제목</h4>
+									<div class="tooltip-contents">
+										<p>컴포넌트 주변에 배치되어 해당 컴포넌트의 상태나 관련된 상세 정보를 제공하는 컴포넌트이다. 맥락적 도움말은 정보 아이콘이나 도움 아이콘 버튼을 통해 사용자가 요청하는 경우에만 화면에 표시된다.</p>
+										<div class="btn-wrap">
+											<a href="#;" class="krds-btn xsmall text">바로가기<i class="svg-icon ico-angle right"></i></a>
+										</div>
+									</div>
+									<button type="button" class="krds-btn xsmall icon tooltip-close">
+										<span class="sr-only">닫기</span>
+										<i class="svg-icon ico-modal-close"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+						<!-- //tooltip 사용 예 -->
+					</div>
+					<!-- //옵션 선택 -->
+
+					<!-- 로그인 폼 -->
+					<div class="login-form-area">
+						<div class="login-wrap">
+							<fieldset>
+								<legend>로그인 폼</legend>
+								<div class="fieldset">
+									<div class="form-group">
+										<div class="form-tit">
+											<label for="login_id">아이디</label>
+										</div>
+										<div class="form-conts">
+											<input type="text" id="login_id" class="krds-input" autocomplete="on" placeholder="아이디를 입력하세요">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="form-tit">
+											<label for="login_pw">비밀번호</label>
+										</div>
+										<div class="form-conts btn-ico-wrap">
+											<input type="password" id="login_pw" class="krds-input" placeholder="비밀번호를 입력하세요">
+											<button type="button" class="krds-btn medium icon">
+												<span class="sr-only">입력한 비밀번호 보기</span>
+												<i class="svg-icon ico-pw-visible"></i>
+											</button>
+										</div>
+									</div>
+									<div class="form-group krds-check-area">
+										<div class="krds-form-check">
+											<input type="checkbox" name="save_id" id="save_id">
+											<label for="save_id">아이디 저장</label>
+										</div>
+									</div>
+									<div class="form-group">
+										<button type="submit" class="krds-btn large primary">로그인</button>
+									</div>
+									<div class="form-group">
+										<ul class="link-group">
+											<li><a href="#" class="krds-btn medium text">아이디 찾기</a></li>
+											<li><a href="#" class="krds-btn medium text">비밀번호 찾기</a></li>
+											<li><a href="#" class="krds-btn medium text">회원가입</a></li>
+										</ul>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+
+						<div class="login-info-wrap">
+							<ul class="krds-info-list decimal">
+								<li>본인 인증이 필요한 서비스 이용시 별도의 간편 인증, 공동·금융 인증이 진행됩니다.</li>
+								<li>개인정보 보호를 위해 비밀번호 5회 이상 오류 시, 비밀번호 재설정이 필요합니다.</li>
+								<li>비밀번호는 주기적(6개월)으로 변경하시고, 서비스 이용 후 반드시 로그아웃 하시기 바랍니다.</li>
+							</ul>
+						</div>
+					</div>
+					<!-- //로그인 폼 -->
+
+					<!-- 회원가입 이동 -->
+					<div class="join-member-bn-wrap">
+						<p class="txt-desc">원하는 로그인 방법이 아니신가요?</p>
+						<div class="btn-wrap">
+							<a href="#" class="krds-btn medium text">다른 로그인 방법 보기 <i class="svg-icon ico-angle right"></i></a>
+						</div>
+					</div>
+					<!-- //회원가입 이동 -->
+
+					<!-- 도움박스 -->
+					<div class="helper-box">
+						<p class="helper-tit">로그인에 어려움이 있으신가요?</p>
+						<div class="helper-desc-wrap">
+							<ul class="krds-info-list decimal">
+								<li>
+									로그인 <a href="#" class="krds-btn medium link"><span class="underline">관련 도움말</span></a>이나 
+									다른 사용자가 <a href="#" class="krds-btn medium link"><span class="underline">자주 찾는 질문</span></a>을 확인해보세요.
+								</li>
+								<li>02-3703-2500 (내선번호 4번)으로 전화주세요. 서비스에 로그인할 수 있도록 도와드리겠습니다.</li>
+							</ul>
+						</div>
+					</div>
+					<!-- //도움박스 -->
+				</div>
+				<!-- //컨텐츠 영역 -->
+			</div>
+			<!-- //Inner 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+
+		<!-- 푸터 영역 -->
+		<footer id="krds-footer">
+			@@include("./inc/footer.html", {"footerType": "type1",})
+		</footer>
+		<!-- //푸터 영역 -->
+	</div>
+	
+	@@include("./inc/modal-wrap.html")
+	
+</body>
+
+</html>

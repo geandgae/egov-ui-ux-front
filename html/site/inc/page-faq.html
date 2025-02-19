@@ -1,0 +1,27 @@
+<div class="g-conts-area g-question section-link-mute -page-faq" style="display: none;">
+    <h3 class="sec-tit">자주 묻는 질문</h3>
+    <!-- accordion -->
+    <div class="krds-accordion" id="faq-list"></div>
+
+    <a href="../community/community_02.html" class="krds-btn medium text"><span class="sr-only">자주 묻는 질문</span>더보기<i class="svg-icon ico-angle right"></i></a>
+    <!-- //accordion -->
+    <script type="text/stache" id="faq-template">
+        {{#items}}
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button type="button" class="btn-accordion">
+                        <span class="category keyword">{{nttType}}</span>
+                        <span class="title"><strong>{{nttSj}}</strong></span>
+                    </button>
+                </div>
+                <div class="accordion-collapse collapse">
+                    <div class="accordion-body">{{{nttCn}}}</div>
+                </div>
+            </div>
+		{{/items}}
+    </script>
+</div>
+<script type="module">
+    import PageFaqControl from '/resources/js/controls/page-faq-control.js';
+    new PageFaqControl('.-page-faq');
+</script>

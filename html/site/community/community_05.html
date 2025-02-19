@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include("../inc/head.html", { "title": "문의하기 | 커뮤니티 - KRDS", })
+
+    <body>
+        <div id="wrap" class="g-wrap">
+            @@include("../inc/guide-header.html")
+
+            <!-- 컨테이너 영역 -->
+            <div id="container">
+                <!-- 컨텐츠 영역 -->
+                <div class="inner in-between">
+                    <!-- 사이드 메뉴 -->
+                    @@include("../inc/guide-lnb.html")
+                    <!-- //사이드 메뉴 -->
+
+                    <div class="contents">
+                        <!-- breadcrumb -->
+                        @@include("../inc/page-breadcrumb.html")
+                        <!-- breadcrumb -->
+
+                        <!-- page-title -->
+                        @@include("../inc/page-title.html", { desc: ''})
+                        <!-- //page-title -->
+
+                        <div class="conts-area">
+							<div class="g-description-area">
+								<div class="g-conts-area">
+									<h3 class="con-tit sm">온라인 문의</h3>
+									<p class="g-desc">
+										문의사항이 있으시면 
+										<a href="krds@pulip.com" class="krds-btn medium link">
+											<span class="underline">krds@pulip.com</span> <i class="svg-icon ico-go"></i>
+										</a> 
+										에서 작성해 주세요. 질문이나 제안 사항이 있다면 <br> 
+										<a href="#" class="krds-btn medium link" target="_blank" target="새 창 열기">
+											<span class="underline">GitHub 커뮤니티</span> <i class="svg-icon ico-go"></i>
+										</a> 
+										을 이용하시거나 
+										<a href="#" class="krds-btn medium link" target="_blank" target="새 창 열기">
+											<span class="underline">Figma 커뮤니티</span> <i class="svg-icon ico-go"></i>
+										</a> 
+										를 이용해주세요.
+									</p>
+								</div>
+
+								<div class="g-conts-area">
+									<h3 class="con-tit sm">커뮤니티 담당자</h3>
+									<div class="community-contact-box">
+										<dl>
+											<dt>헬프데스크</dt>
+											<dd>
+												<div class="txt">
+													<i class="svg-icon ico-call"></i>
+													<a href="tel:070-7096-0406">070-7096-0406</a>
+												</div>
+												<div class="txt">
+													<i class="svg-icon ico-email"></i>
+													<a href="mailto:krds@pulip.com" class="krds-btn medium link">
+														<span class="underline">krds@pulip.com</span>
+														<i class="svg-icon ico-go"></i>
+													</a>
+												</div>
+											</dd>
+										</dl>
+										<dl>
+											<dt>한국지능정보사회진흥원</dt>
+											<dd>
+												<div class="txt">
+													<i class="svg-icon ico-call"></i>
+													<a href="tel:053-230-1923">053-230-1923</a>
+												</div>
+												<div class="txt">
+													<i class="svg-icon ico-email"></i>
+													<a href="mailto:uiux@nia.or.kr" class="krds-btn medium link">
+														<span class="underline">uiux@nia.or.kr</span>
+														<i class="svg-icon ico-go"></i>
+													</a>
+												</div>
+											</dd>
+										</dl>
+										<dl>
+											<dt>행정안전부</dt>
+											<dd>
+												<div class="txt">
+													<i class="svg-icon ico-call"></i>
+													<a href="tel:044-205-2728">044-205-2728</a>
+													<a href="tel:044-205-2729">044-205-2729</a>
+												</div>
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //컨텐츠 영역 -->
+            </div>
+            <!-- //컨테이너 영역 -->
+
+            <!-- 푸터 영역 -->
+            <footer id="krds-footer">@@include("../inc/guide-footer.html")</footer>
+            <!-- //푸터 영역 -->
+        </div>
+
+    </body>
+</html>

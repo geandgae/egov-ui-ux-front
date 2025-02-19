@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    @@include('../inc/head.html', { 'title': '문의 및 건의 | 커뮤니티 - KRDS', })
+
+    <body>
+        <div id='wrap' class='g-wrap'>
+            @@include('../inc/guide-header.html')
+
+            <!-- 컨테이너 영역 -->
+            <div id='container'>
+                <!-- 컨텐츠 영역 -->
+                <div class='inner in-between'>
+                    <!-- 사이드 메뉴 -->
+                    @@include('../inc/guide-lnb.html')
+                    <!-- //사이드 메뉴 -->
+
+                    <div class='contents'>
+                        <!-- breadcrumb -->
+                        @@include('../inc/page-breadcrumb.html')
+                        <!-- breadcrumb -->
+						
+                        <div class='community-page-title line inquire' id='title'>
+                            <div class='item'>
+                                <span class='category'>운영자</span>
+                            </div>
+                            <h2 class='tit'>KRDS 문의 및 건의에 대한 작성 안내입니다.</h2>
+                            <p class='info'>
+                                <span class='date'>2024.08.20</span>
+                            </p>
+                        </div>
+
+                        <div class='conts-area'>
+                            <div class='g-description-area line' id='contents'>
+                                <div class='g-conts-area enter-from'>
+                                    <ol class='krds-info-list ordered'>
+                                        <li>
+                                            <strong class='tit'><span>1.</span> 개인정보보호</strong>
+                                            <p>글 작성 시 본문 또는 첨부파일 내에 개인정보(주민등록번호, 연락처, 이메일 등)가 포함되어 게시하지 않도록 유의하시기 바랍니다.개인정보가 노출되면 악용될 수 있으며, 특히 타인의 개인정보가 노출될 경우, 개인정보보호법에 의해 처벌받을 수 있습니다.</p>    
+                                        </li>
+                                        <li>
+                                            <strong class='tit'><span>2.</span> 문의하시기 전</strong>
+                                            <ul class='krds-info-list decimal'>
+                                                <li>자주하는 질문을 통해 문제 해결방법을 확인하실 수 있습니다.</li>
+                                                <li>남기신 문의에 대해 비공개로 설정하신 고객님의 문의내역은 내 문의 및 건의 에서 확인하실 수 있습니다.</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong class='tit'><span>3.</span> 비공개글 설정 시</strong>
+                                            <ul class='krds-info-list decimal'>
+                                                <li>비공개 시 작성자와 비밀번호를 반드시 기억해주시기 바랍니다. 본인글(문의 및 답변) 확인 시 필요한 정보입니다.</li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                </div>
+                                
+                            </div>
+                        </div>
+						
+                        <!-- 페이지 버튼 영역 -->
+                        <div class='page-btn-wrap m-column both'>
+							<a href='javascript:;' class='krds-btn xlarge tertiary' id='btn-back'>목록으로 돌아가기</a>
+						</div>
+                        <!-- //페이지 버튼 영역 -->
+                    </div>
+                </div>
+                <!-- //컨텐츠 영역 -->
+            </div>
+            <!-- //컨테이너 영역 -->
+           
+            <!-- 푸터 영역 -->
+            <footer id='footer'>@@include('../inc/guide-footer.html')</footer>
+            <!-- //푸터 영역 -->
+        </div>
+        <script>
+            document.getElementById('btn-back').addEventListener('click', function() {
+               history.back();
+            });
+        </script>
+    </body>
+</html>

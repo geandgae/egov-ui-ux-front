@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include("../inc/head.html", { "title": "적용 사례 | 커뮤니티 - KRDS", })
+
+    <body>
+        <div id="wrap" class="g-wrap">
+            @@include("../inc/guide-header.html")
+
+            <!-- 컨테이너 영역 -->
+            <div id="container">
+                <!-- 컨텐츠 영역 -->
+                <div class="inner in-between">
+                    <!-- 사이드 메뉴 -->
+                    @@include("../inc/guide-lnb.html")
+                    <!-- //사이드 메뉴 -->
+
+                    <div class="contents">
+                        <!-- breadcrumb -->
+                        @@include("../inc/page-breadcrumb.html")
+                        <!-- breadcrumb -->
+
+                        <!-- page-title -->
+                        @@include("../inc/page-title.html", { desc: "" })
+                        <!-- //page-title -->
+
+                        <!-- 검색영역 -->
+                        <div class="g-search-area" id="keyword_sch_area">
+							<!-- 검색 리스트 상단 -->
+							<div class="search-list-top">
+								<ul class="sch-info" aria-live="polite">
+									<li>총 <span class="point total" id="cnt">0</span>건</li>
+								</ul>
+								<ul class="sch-sort">
+									<li class="li1">
+										<strong class="sort-label"><label for="ntt-type">적용 사례 유형</label></strong>
+										<select class="krds-form-select-sort custom-select-size" id="ntt-type">
+											<option value="">전체</option>
+										</select>
+									</li>
+								</ul>
+							</div>
+							<!-- //검색 리스트 상단 -->
+
+                            <!-- search-list -->
+							<ul class="krds-structured-list type2" id="list"></ul>
+                            <!-- //search-list -->
+
+							<!-- no data : data 없을 시 hide 클래스 삭제 -->
+							<div class="no-data hide" id="no-data">
+								<h4 class="no-data-tit">검색어 <strong class="keyword"></strong>에 대한 검색 결과가 없습니다.</h4>
+								<div class="no-data-desc">
+									<ul class="krds-info-list decimal">
+										<li>철자나 맞춤법 오류가 있는지 확인해 주세요</li>
+										<li>여러 단어로 나누거나 다른 검색어로 검색해 주세요.</li>
+										<li>보다 일반적인 단어로 검색해 주세요.</li>
+									</ul>
+								</div>
+							</div>
+							<!-- //no data -->
+
+							<!-- 페이지네이션 영역 -->
+							@@include("../inc/page-pagination.html")
+							<!-- //페이지네이션 영역 -->
+                        </div>
+                        <!--// 검색영역 -->
+
+                        <!-- 컨텐츠 배너 영역 -->
+                        @@include("../inc/page-banner.html")
+                        <!--// 컨텐츠 배너 영역 -->
+                    </div>
+                </div>
+                <!-- //컨텐츠 영역 -->
+            </div>
+            <!-- //컨테이너 영역 -->
+
+            <!-- 푸터 영역 -->
+            <footer id="krds-footer">@@include("../inc/guide-footer.html")</footer>
+            <!-- //푸터 영역 -->
+        </div>
+
+		<script type="text/stache" id="list-template">
+			{{#items}}
+			<li class="search-item">
+				<a href="./community_03_01.html?nttId={{nttId}}">
+					<div class="card-body">
+						<div class="img-wrap">
+							<img src="{{thumbImage}}" alt="">
+						</div>
+						<div class="c-text">
+							<span class="krds-badge bg-light-primary" data-keyword="login">{{nttType}}</span>
+							<p class="c-tit">{{nttSj}}</p>
+							<div class="btn-wrap">
+								<span class="krds-btn medium text">자세히보기 <i class="svg-icon ico-angle right"></i></span>
+							</div>
+						</div>
+					</div>
+				</a>
+			</li>
+			{{/items}}
+		</script>
+
+		<script type="module">
+			import CaseListControl from '/resources/js/controls/case-list-control.js';
+			new CaseListControl('#container');
+		</script>
+    </body>
+</html>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include("../inc/head.html", { "title": "개요 | 서비스 패턴 - 방문 - KRDS", })
+
+    <body>
+        <div id="wrap" class="g-wrap">
+            @@include("../inc/guide-header.html")
+
+            <!-- 컨테이너 영역 -->
+            <div id="container">
+                <!-- 컨텐츠 영역 -->
+                <div class="inner in-between">
+                    <!-- 사이드 메뉴 -->
+                    @@include("../inc/guide-lnb.html")
+                    <!-- //사이드 메뉴 -->
+
+                    <!-- contents -->
+                    <div class="contents">
+                        <!-- breadcrumb -->
+                        @@include("../inc/page-breadcrumb.html")
+                        <!-- breadcrumb -->
+
+                        <!-- page-title -->
+                        @@include("../inc/page-title.html", { 
+							"desc" : "검색은 사용자가 큰 데이터 집합에서 원하는 정보를 찾을 수 있도록 도와주는 기능이다. 사용자가 무엇을 찾고 싶은지 알고 있는 경우에는 일차적인 정보 탐색 수단으로 사용될 수 있으며, 탐색 수단을 통해 원하는 콘텐츠를 찾지 못하는 상황에는 특정 정보와 관련된 단서를 제공함으로써 사용자가 필요한 콘텐츠를 쉽게 찾을 수 있도록 해준다." 
+						})
+                        <!-- //page-title -->
+
+                        <div class="conts-area">
+                            <!-- scroll-check -->
+                            <div class="g-description-area scroll-check">
+								<!-- 용례 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">용례</h3>
+                                    <div class="g-conts-area sp-sm">
+                                        <h4 class="con-tit">사용하기 적합하지 않은 경우</h4>
+										<ul class="krds-info-list decimal">
+											<li>단일 화면 웹사이트나 서비스 또는 규모가 매우 작은 서비스에서는 통합 검색 없이 정보를 탐색할 수 있다.</li>
+										</ul>
+                                    </div>
+                                </div>
+								<!-- //용례 -->
+
+								<!-- 유형 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">유형</h3>
+                                    <div class="g-conts-area sp-sm">
+                                        <h4 class="con-tit">통합검색</h4>
+                                        <div class="g-desc-box">
+                                            <p class="g-desc">
+                                                웹사이트 또는 애플리케이션 전체를 검색하는 것으로 사용자가 서비스에 익숙하지 않은 경우, 검색을 통해 서비스의 데이터 구조와 활용할 수 있는 정보를 더 쉽게 파악할 수 있다. 일반적으로 헤더 영역에 배치되며, 검색 결과는 별도의 결과 화면에서 제공된다.
+                                            </p>
+                                            <ul class="krds-info-list decimal">
+                                                <li>웹사이트 통합 검색</li>
+                                                <li>자료 검색</li>
+                                            </ul>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="g-conts-area">
+                                        <h4 class="con-tit">부분 검색</h4>
+                                        <div class="g-desc-box">
+                                            <p class="g-desc">
+                                                소규모 웹사이트, 단일 화면 서비스, 특정 정보 목록, 표와 같은 소규모 데이터 집합을 검색하는 데 사용한다. 데이터 집합 상단에 배치되며, 검색 결과는 데이터 집합에 직접 반영된다.
+                                            </p>
+                                            <ul class="krds-info-list decimal">
+                                                <li>게시물 검색</li>
+                                                <li>목록 부분 검색</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+								<!-- //유형 -->
+
+								<!-- 이용 상황별 플로 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">이용 상황별 플로(Flow)</h3>
+                                    <div class="g-img-wrap outline">
+                                        <div class="g-img-zomm"><img src="../../../resources/img/guide/contents/service/search_flow.png" alt="이용 상황별 플로(Flow) 예시" /></div>
+                                    </div>
+                                    <div class="g-flow-wrap">
+                                        <ol class="g-flow-list">
+                                            <li class="item">
+                                                <h4 class="g-flow-tit"><strong class="g-number">1</strong>검색어 입력</h4>
+                                                <ul class="g-flow-box">
+                                                    <li>
+                                                        <strong class="g-flow-stit">검색어 입력 도움 받기</strong>
+                                                        <p class="g-flow-dsec">검색어를 입력하는 과정에서 참고할 수 있는 정보를 제공받고 활용하는 과정</p>
+                                                    </li>
+                                                    <li>
+                                                        <strong class="g-flow-stit">검색어 입력과 수정</strong>
+                                                        <p class="g-flow-dsec">검색 키워드의 입력, 수정, 삭제를 수행</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="item">
+                                                <h4 class="g-flow-tit"><strong class="g-number">2</strong>검색 결과 확인</h4>
+                                                <ul class="g-flow-box">
+                                                    <li>
+                                                        <strong class="g-flow-stit">결과 화면 진입</strong>
+                                                        <p class="g-flow-dsec">검색 결과 화면으로 진입</p>
+                                                    </li>
+                                                    <li>
+                                                        <strong class="g-flow-stit">검색 결과 개괄</strong>
+                                                        <p class="g-flow-dsec">상세 목록, 목록 내 항목 탐색 전 몇 건의 결과가 도출되었는지를 포함하여 전반적인 결과를 파악하는 과정</p>
+                                                    </li>
+                                                    <li>
+                                                        <strong class="g-flow-stit">목록 탐색</strong>
+                                                        <p class="g-flow-dsec">검색 결과 목록의 구성에 대한 파악을 수행</p>
+                                                    </li>
+                                                    <li>
+                                                        <strong class="g-flow-stit">목표 결과 찾기</strong>
+                                                        <p class="g-flow-dsec">목표한 검색 결과에 대한 탐색 수행</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="item">
+                                                <h4 class="g-flow-tit"><strong class="g-number">3</strong>검색 결과 이용</h4>
+                                                <ul class="g-flow-box">
+                                                    <li>
+                                                        <strong class="g-flow-stit">외부/연계 서비스로의 이동</strong>
+                                                        <p class="g-flow-dsec">링크를 실행하여 연계된 외부 서비스로 이동하거나 서비스 내에서 관련 페이지로 이동하는 과정</p>
+                                                    </li>
+                                                    <li>
+                                                        <strong class="g-flow-stit">상세 내용 확인</strong>
+                                                        <p class="g-flow-dsec">이동 과정 없이 목록 자체에서 필요한 정보를 확인하는 과정</p>
+                                                    </li>
+                                                    <li>
+                                                        <strong class="g-flow-stit">검색 결과 다운로드/저장</strong>
+                                                        <p class="g-flow-dsec">검색 결과를 다른 목적으로 사용하기 위해 파일 형태로 다운로드 받거나 저장</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="item">
+                                                <h4 class="g-flow-tit"><strong class="g-number">4</strong>재검색</h4>
+                                                <ul class="g-flow-box">
+                                                    <li>
+                                                        <strong class="g-flow-stit">검색 조건 계속 이용</strong>
+                                                        <p class="g-flow-dsec">기존 조건이 적용된 목록을 계속하여 탐색하거나, 조건 중 일부만을 변경하여 원하는 정보를 계속하여 탐색하는 과정</p>
+                                                    </li>
+                                                    <li>
+                                                        <strong class="g-flow-stit">새로운 검색 조건 설정</strong>
+                                                        <p class="g-flow-dsec">기존 조건을 삭제하고 새로운 검색 조건을 설정하거나, 세부 조건 설정 없이 새로운 키워드로 검색을 시도하는 과정</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="item">
+                                                <h4 class="g-flow-tit"><strong class="g-number">5</strong>상세 검색</h4>
+                                                <ul class="g-flow-box">
+                                                    <li>
+                                                        <strong class="g-flow-stit">상세 검색 기능 찾기</strong>
+                                                        <p class="g-flow-dsec">상세 검색, 정렬/필터링 수단에 대한 탐색 수행</p>
+                                                    </li>
+                                                    <li>
+                                                        <strong class="g-flow-stit">상세 검색 조건 설정</strong>
+                                                        <p class="g-flow-dsec">검색 결과 목록을 원하는 범위로 좁히기 위해 상세 조건을 설정하는 과정</p>
+                                                    </li>
+                                                    <li>
+                                                        <strong class="g-flow-stit">상세 검색 조건의 확인 및 적용</strong>
+                                                        <p class="g-flow-dsec">설정한 상세 검색 조건을 최종적으로 적용하고 적용 결과를 확인</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+								<!-- //이용 상황별 플로 -->
+
+								<!-- 사용성 가이드라인 체크리스트 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">사용성 가이드라인 체크리스트</h3>
+                                    <div class="g-conts-area">
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">서비스 패턴의 사용성 가이드라인은 사용자 관점에서의 중요도와 만족도를 기준으로 하여 3개의 적용 수준으로 구분되어 있다. 핵심 서비스에 대한 사용자 경험의 향상을 위해서는 기본적으로 최하위 적용 수준인 필수 수준의 가이드라인을 준수해야 한다.</p>
+                                            <a href="/../utility/utility_01.html" class="krds-btn medium text underline">적용수준(서비스패턴) 가이드라인 확인 <i class="svg-icon ico-angle right"></i></a>
+                                        </div>
+                                    </div>
+                                  
+                                    <div class="g-conts-area sp-sm">
+                                        <div class="g-desc-box" id="apply-level-filter">
+                                            <div class="g-tit-wrap">
+                                                <h4 class="g-tit">적용 수준 필터</h4>
+                                                <div class="krds-check-area">
+                                                    <div class="krds-form-check">
+                                                        <input type="checkbox" name="chk_1" id="required" />
+                                                        <label for="required">필수</label>
+                                                    </div>
+                                                    <div class="krds-form-check">
+                                                        <input type="checkbox" name="chk_1" id="advised" />
+                                                        <label for="advised">권장</label>
+                                                    </div>
+                                                    <div class="krds-form-check">
+                                                        <input type="checkbox" name="chk_1" id="excellent" />
+                                                        <label for="excellent">우수</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="g-filter">
+                                                <div class="g-filter-item">
+                                                    <div class="g-filter-tit">
+                                                        <a href="./service_02_02.html" class="krds-btn medium link">
+                                                            <span class="underline">검색 기능 찾기</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="g-filter-cont">
+                                                        <ul class="g-filter-list">
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>서비스 내 모든 화면에서 통합 검색 기능을 실행할 수 있도록 한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>통합 검색 기능 실행 버튼은 모든 화면에서 헤더 우측에 일관성 있게 배치한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>통합 검색 기능은 검색어 입력 필드와 돋보기 버튼의 조합 또는 돋보기 버튼 형태로 사용한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>부분 검색 기능은 콘텐츠 목록의 수준과 맥락을 고려하여 사용자가 예측할 수 있는 영역에 배치한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>검색 기능 주변에 불필요한 요소의 배치를 최소화한다.</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="g-filter-item">
+                                                    <div class="g-filter-tit">
+                                                        <a href="./service_02_03.html" class="krds-btn medium link">
+                                                            <span class="underline">검색어 입력</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="g-filter-cont">
+                                                        <ul class="g-filter-list">
+                                                            <li>
+                                                                <span class="krds-badge bg-information" data-type="excellent">우수</span>
+                                                                <span>사용자가 검색어 입력 행위에 집중할 수 있도록 한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>스코프 필터를 사용하는 경우, ‘전체’ 옵션을 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>검색어 입력 필드는 일반적인 검색어가 한눈에 파악될 수 있는 너비로 제공하고 줄바꿈이나 말줄임표를 사용하지 않는다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>통합 검색이 아닌 검색에는 입력 필드에 레이블을 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>플레이스홀더를 사용하는 경우, 유도 문구 외에 검색에 대한 단서나 레이블을 포함해서는 안 된다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>사용자에게 다양한 방식의 검색어 입력 도움을 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-information" data-type="excellent">우수</span>
+                                                                <span>검색어 입력 도움은 가능한 사용자가 검색어를 입력하는 시점에 실시간으로 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>실시간으로 검색어를 제안할 수 없는 경우, 검색 결과 화면에서 보조적인 도움 수단을 제공한다.</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="g-filter-item">
+                                                    <div class="g-filter-tit">
+                                                        <a href="./service_02_04.html" class="krds-btn medium link">
+                                                            <span class="underline">검색 결과 확인</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="g-filter-cont">
+                                                        <ul class="g-filter-list">
+                                                            <li>
+                                                                <span class="krds-badge bg-information" data-type="excellent">우수</span>
+                                                                <span>검색 결과가 표시되기 전에 로딩 상태에 대한 정보를 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>검색 결과 화면에 검색어 입력 필드를 유지한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>검색 결과 화면에 여러 개의 검색어 입력 필드를 사용하지 않는다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>사용자가 재검색을 시도하지 않는 한 검색어 입력 필드에 검색어를 유지한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>검색 결과 수를 표시한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>검색어와 관련된 결과가 반환되는지 확인한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-information" data-type="excellent">우수</span>
+                                                                <span>유사 검색어나 관련된 검색어에 대한 검색 결과를 함께 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>초기 검색 결과 목록은 정확도 또는 관련도순으로 정렬하여 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-information" data-type="excellent">우수</span>
+                                                                <span>검색 결과가 지나치게 많이 제공되는 경우 사용자에게 범위를 제한할 수 있는 방법에 대해 안내한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>검색 결과가 없는 경우, 결과를 명확하게 알리고 적절한 대안을 제공한다.</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="g-filter-item">
+                                                    <div class="g-filter-tit">
+                                                        <a href="./service_02_05.html" class="krds-btn medium link">
+                                                            <span class="underline">상세 검색</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="g-filter-cont">
+                                                        <ul class="g-filter-list">
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>기본 정렬, 필터 컨트롤을 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>기본 검색에서 정렬, 필터 컨트롤은 일정한 순서로 제공되어야 한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>스코프 필터를 사용하는 경우 결과 페이지 상단에 설정된 범위를 명시적으로 표시한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-information" data-type="excellent">우수</span>
+                                                                <span>정렬, 필터 적용 결과는 가능한 한 사용자가 값을 선택하였을 때 적용한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-information" data-type="excellent">우수</span>
+                                                                <span>조건이 적용되었음을 확인할 수 있는 명확한 시각적 단서를 제공한다.</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="g-filter-item">
+                                                    <div class="g-filter-tit">
+                                                        <a href="./service_02_06.html" class="krds-btn medium link">
+                                                            <span class="underline">검색 결과 이용</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="g-filter-cont">
+                                                        <ul class="g-filter-list">
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>사용자가 필요로 하는 주제별로 검색 결과가 제공되도록 설계한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>검색 주제 분류는 7개를 초과하지 않도록 한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>주제별 탐색 탭을 사용하는 경우 전체 목록이 가장 첫 번째 탭으로 제공되어야 한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-information" data-type="excellent">우수</span>
+                                                                <span>전체 결과 목록은 주제별 섹션 구분 없이 결과의 정확도나 관련도 순으로 정렬한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>제목과 설명은 명확하고 간결하게 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>항목에 검색 결과 범주 정보가 명확하게 드러나도록 표현한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>검색어와 일치하는 항목을 강조 표시한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>기본 검색 결과 목록에 표시되는 항목의 수를 10개 이상으로 제공한다.</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="g-filter-item">
+                                                    <div class="g-filter-tit">
+                                                        <a href="./service_02_07.html" class="krds-btn medium link">
+                                                            <span class="underline">재검색</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="g-filter-cont">
+                                                        <ul class="g-filter-list">
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>상세 검색 컨트롤을 숨기지 않는다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>사용자가 설정한 상세 검색 조건을 유지한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>상세 검색 조건의 적용을 일괄적으로 해제할 수 있는 수단을 제공하고 직관적으로 인지할 수 있도록 표현한다.</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="g-filter-item">
+                                                    <div class="g-filter-tit">
+                                                        <a href="./service_02_08.html" class="krds-btn medium link">
+                                                            <span class="underline">검색 종료</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="g-filter-cont">
+                                                        <ul class="g-filter-list">
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>검색 과업 맥락에서 벗어나 다른 페이지 또는 다른 탐색 수단에 빠르게 접근할 수 있도록 해야 한다.</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+								<!-- //사용성 가이드라인 체크리스트 -->
+
+                                <!-- 정보 변경 내역 -->
+								@@include("../inc/page-info-update-log.html")
+                                <!-- //정보 변경 내역 -->
+                            </div>
+                            <!-- //scroll-check -->
+                        </div>
+                        
+                    </div>
+                    <!-- //contents -->
+                </div>
+                <!-- //컨텐츠 영역 -->
+            </div>
+            <!-- //컨테이너 영역 -->
+
+            <!-- 푸터 영역 -->
+            <footer id="krds-footer">@@include("../inc/guide-footer.html")</footer>
+            <!-- //푸터 영역 -->
+        </div>
+    </body>
+</html>

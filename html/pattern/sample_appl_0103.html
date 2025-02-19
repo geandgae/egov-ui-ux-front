@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include("./inc/head.html", { "title": "서브 - 목록 | 신청 - KRDS", })
+
+  <body>
+    <div id="wrap">
+      @@include("./inc/skip.html", {"class": "",}) @@include("./inc/header-top.html")
+
+      <!-- 헤더 영역 -->
+      <header id="krds-header">@@include("./inc/header-type1.html")</header>
+      <!-- //헤더 영역 -->
+
+      <!-- 컨테이너 영역 -->
+      <div id="container">
+        <!-- breadcrumb -->
+        @@include("./inc/page-breadcrumb.html")
+        <!-- breadcrumb -->
+
+        <!-- 컨텐츠 영역 -->
+        <div class="inner">
+          <!-- 페이지 타이틀 영역 -->
+          <div class="page-title-wrap">
+            @@include("./inc/page-title.html", { "title": "서비스 신청" })
+          </div>
+          <!-- //페이지 타이틀 영역 -->
+
+          <!-- 검색 입력폼 -->
+          <div class="search-top-box">
+            <div class="sch-form-wrap">
+              <div class="sch-input">
+                <input type="text" class="krds-input" placeholder="검색어를 입력해주세요" title="검색어 입력" />
+                <button type="button" class="krds-btn medium icon ico-search">
+                  <span class="sr-only">검색</span>
+                  <i class="svg-icon ico-sch"></i>
+                </button>
+              </div>
+              <button type="button" class="krds-btn medium text"><i class="svg-icon ico-sch-plus"></i>고급검색</button>
+            </div>
+            <div class="sch-filter-box">
+              <div class="filter-form">
+                <div>
+                  <label class="label" for="appl-sch-sel1">생애 주기</label>
+                  <select id="appl-sch-sel1" class="krds-form-select medium">
+                    <option value="">전체</option>
+                    <option value="">항목</option>
+                    <option value="">항목</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="label" for="appl-sch-sel2">가구 상황</label>
+                  <select id="appl-sch-sel2" class="krds-form-select medium">
+                    <option value="">전체</option>
+                    <option value="">항목</option>
+                    <option value="">항목</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="label" for="appl-sch-sel3">관심 주제</label>
+                  <select id="appl-sch-sel3" class="krds-form-select medium">
+                    <option value="">전체</option>
+                    <option value="">항목</option>
+                    <option value="">항목</option>
+                  </select>
+                </div>
+              </div>
+              <dl class="filter-chip">
+                <dt>선택된 필터 <span class="num">2</span></dt>
+                <dd>
+                  <button type="button" class="krds-btn xlarge icon border">
+                    <span class="sr-only">새로고침</span>
+                    <i class="svg-icon ico-refresh"></i>
+                  </button>
+                  <div class="chip-wrap krds-tag-wrap large">
+                    <span class="krds-btn-tag">
+                      영유아
+                      <button type="button" class="btn-delete">
+                        <span class="sr-only">삭제</span>
+                      </button>
+                    </span>
+                    <span class="krds-btn-tag">
+                      필터값
+                      <button type="button" class="btn-delete">
+                        <span class="sr-only">삭제</span>
+                      </button>
+                    </span>
+                    <span class="krds-btn-tag">
+                      필터값
+                      <button type="button" class="btn-delete">
+                        <span class="sr-only">삭제</span>
+                      </button>
+                    </span>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <!-- //검색 입력폼 -->
+
+          <!-- 검색 결과 : 리스트 상단 -->
+          <div class="search-list-top">
+            <ul class="sch-info" aria-live="polite">
+              <li>검색 결과 <span class="point">249</span>건</li>
+            </ul>
+            <ul class="sch-sort">
+              <li class="m-hide">
+                <strong class="sort-label"><label for="search_result_count">목록 표시 개수</label></strong>
+                <select class="krds-form-select-sort" id="search_result_count">
+                  <option>10개</option>
+                  <option>9개</option>
+                </select>
+              </li>
+              <li class="w-hide">
+                <button type="button" class="krds-btn large text ico-filter open-modal" data-target="popFilterId">
+                  <span class="span">필터</span>
+                  <span class="krds-badge bg-primary number">2</span>
+                  <i class="svg-icon ico-filter"></i>
+                </button>
+              </li>
+              <li>
+                <strong class="sort-label"><label for="sort">정렬기준</label></strong>
+                <div class="w-sort-btn">
+                  <button type="button" class="active">관련도순</button>
+                  <button type="button">최신순</button>
+                  <button type="button">인기순</button>
+                </div>
+                <div class="m-sort-btn">
+                  <select class="krds-form-select-sort" id="sort">
+                    <option>관련도순</option>
+                    <option>최신순</option>
+                    <option>인기순</option>
+                  </select>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- //검색 결과 : 리스트 상단 -->
+
+          <!-- 검색 결과 : 리스트 -->
+          <ul class="krds-structured-list type-full">
+            <li class="structured-item">
+              <div class="krds-check-area">
+                <div class="krds-form-check large">
+                  <input type="checkbox" class="chk" id="list_chk_1" checked />
+                  <label for="list_chk_1"></label>
+                </div>
+              </div>
+              <div class="in">
+                <div class="card-top">
+                  <span class="krds-badge bg-light-primary">신청중</span>
+                </div>
+                <div class="card-body">
+                  <a href="#" class="c-text">
+                    <p class="c-tit"><span class="span">산모·신생아 건강관리 지원사업</span></p>
+                    <p class="c-txt">
+                      다문화가정의 자녀가 건강한 사회구성원, 글로벌 인재로 성장할 수 있도록 체계적인 언어발달을 돕습니다.다문화가정의 자녀가 건강한 사회구성원,
+                      글로벌 인재로 성장할 수 있도록 체계적인 언어발달을 돕습니다.
+                    </p>
+                    <p class="c-date">
+                      <strong class="key">신청 기간</strong>
+                      <span class="value">2023.11.01-2024.04.30</span>
+                    </p>
+                  </a>
+                  <div class="c-btn">
+                    <a href="#" class="krds-btn medium secondary">신청하기</a>
+                  </div>
+                </div>
+                <div class="card-btm">
+                  <span class="tag">청소년</span>
+                  <span class="tag">영유아</span>
+                </div>
+                <div class="card-btn">
+                  <button type="button" class="krds-btn medium text"><i class="svg-icon ico-like"></i> 찜하기</button>
+                </div>
+              </div>
+            </li>
+            <li class="structured-item">
+              <div class="krds-check-area">
+                <div class="krds-form-check large">
+                  <input type="checkbox" class="chk" id="list_chk_2" />
+                  <label for="list_chk_2"></label>
+                </div>
+              </div>
+              <div class="in">
+                <div class="card-top">
+                  <span class="krds-badge bg-light-primary">신청중</span>
+                </div>
+                <div class="card-body">
+                  <a href="#" class="c-text">
+                    <p class="c-tit"><span class="span">저소득층 기저귀·조제분유 지원</span></p>
+                    <p class="c-txt">다문화가정의 자녀가 건강한 사회구성원, 글로벌 인재로 성장할 수 있도록 체계적인 언어발달을 돕습니다.</p>
+                    <p class="c-date">
+                      <strong class="key">신청 기간</strong>
+                      <span class="value">2023.11.01-2024.04.30</span>
+                    </p>
+                  </a>
+                  <div class="c-btn">
+                    <a href="#" class="krds-btn medium secondary" title="저소득층 기저귀·조제분유 지원">신청하기</a>
+                  </div>
+                </div>
+                <div class="card-btm">
+                  <span class="tag">청소년</span>
+                  <span class="tag">영유아</span>
+                </div>
+                <div class="card-btn">
+                  <button type="button" class="krds-btn medium text" title="저소득층 기저귀·조제분유 지원"><i class="svg-icon ico-share"></i> 공유하기</button>
+                  <button type="button" class="krds-btn medium text" title="저소득층 기저귀·조제분유 지원"><i class="svg-icon ico-like"></i> 찜하기</button>
+                </div>
+              </div>
+            </li>
+            <li class="structured-item">
+              <div class="krds-check-area">
+                <div class="krds-form-check large">
+                  <input type="checkbox" class="chk" id="list_chk_3" />
+                  <label for="list_chk_3"></label>
+                </div>
+              </div>
+              <div class="in">
+                <div class="card-top">
+                  <span class="krds-badge bg-light-success">방문 신청</span>
+                </div>
+                <div class="card-body">
+                  <a href="#" class="c-text">
+                    <p class="c-tit"><span class="span">여성장애인출산비용지원</span></p>
+                    <p class="c-txt">다문화가정의 자녀가 건강한 사회구성원, 글로벌 인재로 성장할 수 있도록 체계적인 언어발달을 돕습니다.</p>
+                    <p class="c-date">
+                      <strong class="key">신청 기간</strong>
+                      <span class="value">2023.11.01-2024.04.30</span>
+                    </p>
+                  </a>
+                  <div class="c-btn">
+                    <a href="#" class="krds-btn medium secondary" title="여성장애인출산비용지원">신청하기</a>
+                  </div>
+                </div>
+                <div class="card-btm">
+                  <span class="tag">청소년</span>
+                  <span class="tag">영유아</span>
+                </div>
+                <div class="card-btn">
+                  <button type="button" class="krds-btn medium text" title="여성장애인출산비용지원"><i class="svg-icon ico-share"></i> 공유하기</button>
+                  <button type="button" class="krds-btn medium text" title="여성장애인출산비용지원"><i class="svg-icon ico-like"></i> 찜하기</button>
+                </div>
+              </div>
+            </li>
+            <li class="structured-item">
+              <div class="krds-check-area">
+                <div class="krds-form-check large">
+                  <input type="checkbox" class="chk" id="list_chk_4" />
+                  <label for="list_chk_4"></label>
+                </div>
+              </div>
+              <div class="in">
+                <div class="card-top">
+                  <span class="krds-badge bg-light-primary">신청중</span>
+                </div>
+                <div class="card-body">
+                  <a href="#" class="c-text">
+                    <p class="c-tit"><span class="span">기초연금기초연금</span></p>
+                    <p class="c-txt">다문화가정의 자녀가 건강한 사회구성원, 글로벌 인재로 성장할 수 있도록 체계적인 언어발달을 돕습니다.</p>
+                    <p class="c-date">
+                      <strong class="key">신청 기간</strong>
+                      <span class="value">2023.11.01-2024.04.30</span>
+                    </p>
+                  </a>
+                  <div class="c-btn">
+                    <a href="#" class="krds-btn medium secondary" title="기초연금기초연금">신청하기</a>
+                  </div>
+                </div>
+                <div class="card-btm">
+                  <span class="tag">청소년</span>
+                  <span class="tag">영유아</span>
+                </div>
+                <div class="card-btn">
+                  <button type="button" class="krds-btn medium text" title="기초연금기초연금"><i class="svg-icon ico-share"></i> 공유하기</button>
+                  <button type="button" class="krds-btn medium text" title="기초연금기초연금"><i class="svg-icon ico-like"></i> 찜하기</button>
+                </div>
+              </div>
+            </li>
+            <li class="structured-item">
+              <div class="krds-check-area">
+                <div class="krds-form-check large">
+                  <input type="checkbox" class="chk" id="list_chk_5" />
+                  <label for="list_chk_5"></label>
+                </div>
+              </div>
+              <div class="in">
+                <div class="card-top">
+                  <span class="krds-badge bg-light-disabled">신청예정</span>
+                </div>
+                <div class="card-body">
+                  <a href="#" class="c-text">
+                    <p class="c-tit"><span class="span">차상위계층확인사업</span></p>
+                    <p class="c-txt">다문화가정의 자녀가 건강한 사회구성원, 글로벌 인재로 성장할 수 있도록 체계적인 언어발달을 돕습니다.</p>
+                    <p class="c-date">
+                      <strong class="key">신청 기간</strong>
+                      <span class="value">2023.11.01-2024.04.30</span>
+                    </p>
+                  </a>
+                  <div class="c-btn">
+                    <span class="krds-btn medium secondary disabled" title="차상위계층확인사업">신청하기</span>
+                  </div>
+                </div>
+                <div class="card-btm">
+                  <span class="tag">청소년</span>
+                  <span class="tag">영유아</span>
+                </div>
+                <div class="card-btn">
+                  <button type="button" class="krds-btn medium text" title="차상위계층확인사업"><i class="svg-icon ico-share"></i> 공유하기</button>
+                  <button type="button" class="krds-btn medium text" title="차상위계층확인사업"><i class="svg-icon ico-like"></i> 찜하기</button>
+                </div>
+              </div>
+            </li>
+            <li class="structured-item">
+              <div class="krds-check-area">
+                <div class="krds-form-check large">
+                  <input type="checkbox" class="chk" id="list_chk_6" />
+                  <label for="list_chk_6"></label>
+                </div>
+              </div>
+              <div class="in">
+                <div class="card-top">
+                  <span class="krds-badge bg-light-disabled">신청마감</span>
+                </div>
+                <div class="card-body">
+                  <a href="#" class="c-text">
+                    <p class="c-tit"><span class="span">부모급여 지원</span></p>
+                    <p class="c-txt">다문화가정의 자녀가 건강한 사회구성원, 글로벌 인재로 성장할 수 있도록 체계적인 언어발달을 돕습니다.</p>
+                    <p class="c-date">
+                      <strong class="key">신청 기간</strong>
+                      <span class="value">2023.11.01-2024.04.30</span>
+                    </p>
+                  </a>
+                  <div class="c-btn">
+                    <span class="krds-btn medium secondary disabled" title="부모급여 지원">신청하기</span>
+                  </div>
+                </div>
+                <div class="card-btm">
+                  <span class="tag">청소년</span>
+                  <span class="tag">영유아</span>
+                </div>
+                <div class="card-btn">
+                  <button type="button" class="krds-btn medium text" title="부모급여 지원"><i class="svg-icon ico-share"></i> 공유하기</button>
+                  <button type="button" class="krds-btn medium text" title="부모급여 지원"><i class="svg-icon ico-like"></i> 찜하기</button>
+                </div>
+              </div>
+            </li>
+            <li class="structured-item">
+              <div class="krds-check-area">
+                <div class="krds-form-check large">
+                  <input type="checkbox" class="chk" id="list_chk_7" />
+                  <label for="list_chk_7"></label>
+                </div>
+              </div>
+              <div class="in">
+                <div class="card-top">
+                  <span class="krds-badge bg-light-primary">신청중</span>
+                </div>
+                <div class="card-body">
+                  <a href="#" class="c-text">
+                    <p class="c-tit"><span class="span">가정양육수당 지원</span></p>
+                    <p class="c-txt">다문화가정의 자녀가 건강한 사회구성원, 글로벌 인재로 성장할 수 있도록 체계적인 언어발달을 돕습니다.</p>
+                    <p class="c-date">
+                      <strong class="key">신청 기간</strong>
+                      <span class="value">2023.11.01-2024.04.30</span>
+                    </p>
+                  </a>
+                  <div class="c-btn">
+                    <a href="#" class="krds-btn medium secondary" title="가정양육수당 지원">신청하기</a>
+                  </div>
+                </div>
+                <div class="card-btm">
+                  <span class="tag">청소년</span>
+                  <span class="tag">영유아</span>
+                </div>
+                <div class="card-btn">
+                  <button type="button" class="krds-btn medium text" title="가정양육수당 지원"><i class="svg-icon ico-share"></i> 공유하기</button>
+                  <button type="button" class="krds-btn medium text" title="가정양육수당 지원"><i class="svg-icon ico-like"></i> 찜하기</button>
+                </div>
+              </div>
+            </li>
+            <li class="structured-item">
+              <div class="krds-check-area">
+                <div class="krds-form-check large">
+                  <input type="checkbox" class="chk" id="list_chk_8" />
+                  <label for="list_chk_8"></label>
+                </div>
+              </div>
+              <div class="in">
+                <div class="card-top">
+                  <span class="krds-badge bg-light-primary">신청중</span>
+                </div>
+                <div class="card-body">
+                  <a href="#" class="c-text">
+                    <p class="c-tit"><span class="span">아동발달지원계좌(디딤씨앗통장)지원</span></p>
+                    <p class="c-txt">다문화가정의 자녀가 건강한 사회구성원, 글로벌 인재로 성장할 수 있도록 체계적인 언어발달을 돕습니다.</p>
+                    <p class="c-date">
+                      <strong class="key">신청 기간</strong>
+                      <span class="value">2023.11.01-2024.04.30</span>
+                    </p>
+                  </a>
+                  <div class="c-btn">
+                    <a href="#" class="krds-btn medium secondary" title="아동발달지원계좌(디딤씨앗통장)지원">신청하기</a>
+                  </div>
+                </div>
+                <div class="card-btm">
+                  <span class="tag">청소년</span>
+                  <span class="tag">영유아</span>
+                </div>
+                <div class="card-btn">
+                  <button type="button" class="krds-btn medium text" title="아동발달지원계좌(디딤씨앗통장)지원">
+                    <i class="svg-icon ico-share"></i> 공유하기
+                  </button>
+                  <button type="button" class="krds-btn medium text" title="아동발달지원계좌(디딤씨앗통장)지원"><i class="svg-icon ico-like"></i> 찜하기</button>
+                </div>
+              </div>
+            </li>
+            <li class="structured-item">
+              <div class="krds-check-area">
+                <div class="krds-form-check large">
+                  <input type="checkbox" class="chk" id="list_chk_9" checked />
+                  <label for="list_chk_9"></label>
+                </div>
+              </div>
+              <div class="in">
+                <div class="card-top">
+                  <span class="krds-badge bg-light-primary">신청중</span>
+                </div>
+                <div class="card-body">
+                  <a href="#" class="c-text">
+                    <p class="c-tit"><span class="span">보호종료아동 자립수당 지급</span></p>
+                    <p class="c-txt">다문화가정의 자녀가 건강한 사회구성원, 글로벌 인재로 성장할 수 있도록 체계적인 언어발달을 돕습니다.</p>
+                    <p class="c-date">
+                      <strong class="key">신청 기간</strong>
+                      <span class="value">2023.11.01-2024.04.30</span>
+                    </p>
+                  </a>
+                  <div class="c-btn">
+                    <a href="#" class="krds-btn medium secondary" title="보호종료아동 자립수당 지급">신청하기</a>
+                  </div>
+                </div>
+                <div class="card-btm">
+                  <span class="tag">청소년</span>
+                  <span class="tag">영유아</span>
+                </div>
+                <div class="card-btn">
+                  <button type="button" class="krds-btn medium text" title="보호종료아동 자립수당 지급"><i class="svg-icon ico-share"></i> 공유하기</button>
+                  <button type="button" class="krds-btn medium text" title="보호종료아동 자립수당 지급"><i class="svg-icon ico-like"></i> 찜하기</button>
+                </div>
+              </div>
+            </li>
+            <li class="structured-item">
+              <div class="krds-check-area">
+                <div class="krds-form-check large">
+                  <input type="checkbox" class="chk" id="list_chk_10" checked />
+                  <label for="list_chk_10"></label>
+                </div>
+              </div>
+              <div class="in">
+                <div class="card-top">
+                  <span class="krds-badge bg-light-primary">신청중</span>
+                </div>
+                <div class="card-body">
+                  <a href="#" class="c-text">
+                    <p class="c-tit"><span class="span">의료급여본인부담면제</span></p>
+                    <p class="c-txt">다문화가정의 자녀가 건강한 사회구성원, 글로벌 인재로 성장할 수 있도록 체계적인 언어발달을 돕습니다.</p>
+                    <p class="c-date">
+                      <strong class="key">신청 기간</strong>
+                      <span class="value">2023.11.01-2024.04.30</span>
+                    </p>
+                  </a>
+                  <div class="c-btn">
+                    <a href="#" class="krds-btn medium secondary" title="의료급여본인부담면제">신청하기</a>
+                  </div>
+                </div>
+                <div class="card-btm">
+                  <span class="tag">청소년</span>
+                  <span class="tag">영유아</span>
+                </div>
+                <div class="card-btn">
+                  <button type="button" class="krds-btn medium text" title="의료급여본인부담면제"><i class="svg-icon ico-share"></i> 공유하기</button>
+                  <button type="button" class="krds-btn medium text" title="의료급여본인부담면제"><i class="svg-icon ico-like"></i> 찜하기</button>
+                </div>
+              </div>
+            </li>
+            <li class="structured-item">
+              <div class="krds-check-area">
+                <div class="krds-form-check large">
+                  <input type="checkbox" class="chk" id="list_chk_11" />
+                  <label for="list_chk_11"></label>
+                </div>
+              </div>
+              <div class="in">
+                <div class="card-top">
+                  <span class="krds-badge bg-light-primary">신청중</span>
+                </div>
+                <div class="card-body">
+                  <a href="#" class="c-text">
+                    <p class="c-tit"><span class="span">아동발달지원계좌(디딤씨앗통장)지원</span></p>
+                    <p class="c-txt">다문화가정의 자녀가 건강한 사회구성원, 글로벌 인재로 성장할 수 있도록 체계적인 언어발달을 돕습니다.</p>
+                    <p class="c-date">
+                      <strong class="key">신청 기간</strong>
+                      <span class="value">2023.11.01-2024.04.30</span>
+                    </p>
+                  </a>
+                  <div class="c-btn">
+                    <a href="#" class="krds-btn medium secondary" title="아동발달지원계좌(디딤씨앗통장)지원">신청하기</a>
+                  </div>
+                </div>
+                <div class="card-btm">
+                  <span class="tag">청소년</span>
+                  <span class="tag">영유아</span>
+                </div>
+                <div class="card-btn">
+                  <button type="button" class="krds-btn medium text" title="아동발달지원계좌(디딤씨앗통장)지원">
+                    <i class="svg-icon ico-share"></i> 공유하기
+                  </button>
+                  <button type="button" class="krds-btn medium text" title="아동발달지원계좌(디딤씨앗통장)지원"><i class="svg-icon ico-like"></i> 찜하기</button>
+                </div>
+              </div>
+            </li>
+            <li class="structured-item">
+              <div class="krds-check-area">
+                <div class="krds-form-check large">
+                  <input type="checkbox" class="chk" id="list_chk_12" />
+                  <label for="list_chk_12"></label>
+                </div>
+              </div>
+              <div class="in">
+                <div class="card-top">
+                  <span class="krds-badge bg-light-primary">신청중</span>
+                </div>
+                <div class="card-body">
+                  <a href="#" class="c-text">
+                    <p class="c-tit"><span class="span">보호종료아동 자립수당 지급</span></p>
+                    <p class="c-txt">다문화가정의 자녀가 건강한 사회구성원, 글로벌 인재로 성장할 수 있도록 체계적인 언어발달을 돕습니다.</p>
+                    <p class="c-date">
+                      <strong class="key">신청 기간</strong>
+                      <span class="value">2023.11.01-2024.04.30</span>
+                    </p>
+                  </a>
+                  <div class="c-btn">
+                    <a href="#" class="krds-btn medium secondary" title="보호종료아동 자립수당 지급">신청하기</a>
+                  </div>
+                </div>
+                <div class="card-btm">
+                  <span class="tag">청소년</span>
+                  <span class="tag">영유아</span>
+                </div>
+                <div class="card-btn">
+                  <button type="button" class="krds-btn medium text" title="보호종료아동 자립수당 지급"><i class="svg-icon ico-share"></i> 공유하기</button>
+                  <button type="button" class="krds-btn medium text" title="보호종료아동 자립수당 지급"><i class="svg-icon ico-like"></i> 찜하기</button>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <!-- //검색 결과 : 리스트 -->
+
+          <!-- 페이지네이션 영역 -->
+          @@include("./inc/page-pagination.html")
+          <!-- //페이지네이션 영역 -->
+
+          <!-- 신청 버튼 -->
+          <div class="page-btn-wrap page-apply-btn">
+            <div class="apply-select">
+              <button type="button" class="krds-btn xlarge secondary">
+                <p><em class="total">2</em>개 선택됨</p>
+                <i class="svg-icon ico-angle"></i>
+              </button>
+              <ul class="apply-list">
+                <li>
+                  <div class="txt">
+                    <span class="krds-badge bg-light-primary">도서</span>
+                    <span class="span"> 밥 먹여주는 경제학 : 인생 고민, 경제학에 묻다 </span>
+                  </div>
+                  <button type="button" class="krds-btn medium text"><i class="svg-icon ico-del"></i> 삭제</button>
+                </li>
+                <li>
+                  <div class="txt">
+                    <span class="krds-badge bg-light-primary">도서</span>
+                    <span class="span"> (김실현의)훈민정음 95 따라하기 </span>
+                  </div>
+                  <button type="button" class="krds-btn medium text"><i class="svg-icon ico-del"></i> 삭제</button>
+                </li>
+              </ul>
+            </div>
+            <button type="button" class="krds-btn xlarge primary">일괄 신청하기</button>
+          </div>
+          <!-- //신청 버튼 -->
+        </div>
+        <!-- //컨텐츠 영역 -->
+      </div>
+      <!-- //컨테이너 영역 -->
+
+      <!-- 푸터 영역 -->
+      <footer id="krds-footer">@@include("./inc/footer.html", {"footerType": "type2",})</footer>
+      <!-- //푸터 영역 -->
+    </div>
+
+    @@include("./inc/modal-wrap.html")
+
+    <!-- 레이어 : 검색필터 -->
+    @@include("./inc/popup-filter.html", { "filtered": "false", "list": "normal" })
+    <!-- //레이어 : 검색필터 -->
+	 
+  </body>
+</html>

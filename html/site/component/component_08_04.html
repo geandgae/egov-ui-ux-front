@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include("../inc/head.html", { "title": "코치마크 (Coach mark) | 컴포넌트 - KRDS", })
+
+    <body>
+        <div id="wrap" class="g-wrap">
+            @@include("../inc/guide-header.html")
+
+            <!-- 컨테이너 영역 -->
+            <div id="container" class="krds-in-page-navigation-type">
+                <!-- 컨텐츠 영역 -->
+                <div class="inner in-between">
+                    <!-- 사이드 메뉴 -->
+                    @@include("../inc/guide-lnb.html")
+                    <!-- //사이드 메뉴 -->
+
+                    <div class="contents">
+                        <!-- breadcrumb -->
+                        @@include("../inc/page-breadcrumb.html")
+                        <!-- breadcrumb -->
+
+                        <!-- page-title -->
+                        @@include("../inc/page-title.html", { 
+							"desc" : "코치마크는 사용자에게 새로 도입된 기능을 안내하거나, 여러 단계를 거쳐 수행해야 하는 복잡한 과업을 사용자가 보다 쉽게 완료할 수 있도록 세부 수행 단계별로 고맥락적 도움말을 제공하는 컴포넌트이다." 
+						})
+                        <!-- //page-title -->
+
+                        <div class="conts-area">
+                            <!-- 탭 메뉴 -->
+                            <div class="krds-tab-area layer">
+                                <!-- tab list -->
+                                @@include("../inc/page-tab-list.html", { "list": [ { name: "개요", class: "active" }, { name: "접근성", class: "" }, { name: "코드", class: "" } ] })
+                                <!-- //tab list -->
+                                <!-- tab contents -->
+                                <div class="tab-conts-wrap">
+                                    <!-- quick link -->
+                                    @@include("../inc/page-quick-nav.html")
+                                    <!-- //quick link -->
+
+                                    <!-- tabpanelInfo01 -->
+                                    <section id="tabpanelInfo01" aria-labelledby="tabInfo01" class="tab-conts active" data-quick-nav="true">
+                                        <!-- scroll-check -->
+                                        <div class="g-description-area scroll-check">
+                                            <!-- 구조 -->
+                                            <div class="g-conts-area structure section-link">
+                                                <h3 class="sec-tit">구조</h3>
+                                                <div class="g-conts-area">
+                                                    <div class="g-img-wrap">
+                                                        <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/component/coachmark_structure.png" alt="구조 예시" /></div>
+                                                    </div>
+                                                    <ol class="krds-info-list ordered">
+                                                        <li><span class="num">1.</span><strong>스포트라이트</strong> 지시 사항 제공을 위해 주의를 집중시키고자 하는 사용자 인터페이스 또는 콘텐츠 섹션. 사용자 인터페이스 또는 콘텐츠 섹션 주변을 둘러싼 외곽선과 애니메이션을 통해 주목도를 높임</li>
+                                                        <li>
+                                                            <span class="num">2.</span><strong>코치마크 팝오버</strong>
+															<ol class="krds-info-list ordered">
+																<li><span class="num">a.</span><strong>제목</strong>과업 수행 단계 번호와 과업 명칭 텍스트를 제공함</li>
+																<li><span class="num">b.</span><strong>지시 사항</strong>과업 수행을 위해 사용자가 확인하거나 따라야 할 사항을 안내하는 텍스트</li>
+																<li><span class="num">c.</span><strong>단계 식별자</strong>전체 단계와 현재 수행 중인 단계 번호를 분수 형식으로 표시함</li>
+																<li><span class="num">d.</span><strong>액션 버튼</strong>건너뛰기, 이전, 다음 버튼이 제공됨</li>
+															</ol>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                            <!-- //구조 -->
+
+                                            <!-- 용례 -->
+                                            <div class="g-conts-area section-link">
+                                                <h3 class="sec-tit">용례</h3>
+                                                 <div class="g-conts-area sp-sm">
+                                                    <h4 class="con-tit">사용하기 적합한 경우</h4>
+													<ul class="krds-info-list decimal">
+														<li>사용자를 안내하고 플로(Flow) 단계의 전체적인 순서를 학습시키기 위해 사용하는 경우</li>
+														<li>사용자가 사용 가능한 기능에 대한 개요를 파악할 수 있도록 하기 위해 사용하는 경우</li>
+													</ul>
+                                                </div>
+                                            </div>
+                                            <!-- //용례 -->
+
+                                            <!-- 사용성 가이드라인 -->
+                                            <div class="g-conts-area section-link">
+                                                <h3 class="sec-tit">사용성 가이드라인</h3>
+												<div class="g-conts-area sp-sm">
+													<div class="g-desc-box">
+														<p class="g-tit">코치마크는 정보를 제공하고자 하는 요소 주변에 배치한다.</p>
+														<p class="g-desc">정보를 제공하고자 하는 사용자 인터페이스 또는 콘텐츠 섹션 옆에 배치하여 관련 요소와의 연관성이 명확하게 인지될 수 있도록 한다.</p>
+													</div>
+													<div class="g-desc-box">
+														<p class="g-tit">팝오버 영역이 본문의 중요 콘텐츠를 가리지 않도록 표현한다.</p>
+														<p class="g-desc">팝오버 영역이 안내를 제공하고자 하는 본문 콘텐츠 요소를 가리지 않도록 적절한 표시 방향을 설정한다.</p>
+													</div>
+													<div class="g-img-wrap caption-format success">
+														<p class="caption"><span class="svg-icon ico-success-fill pure"></span>모범 사례</p>
+														<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/component/coachmark_guide_01.png" alt="팝오버 영역이 본문의 중요 콘텐츠를 가리지 않도록 표현한다 모범 사례 예시" /></div>
+													</div>
+													<div class="g-desc-box">
+														<p class="g-tit">팝오버 영역의 너비를 일관되게 유지한다.</p>
+														<p class="g-desc">코치마크 팝오버 영역의 너비는 최대 지시 사항 텍스트 길이를 고려하여 결정한다. 하나의 과업에 대해 제공되는 모든 코치마크 팝오버는 동일한 너비를 갖도록 표현해야 한다.</p>
+													</div>
+													<div class="g-desc-box">
+														<p class="g-tit">코치마크의 제목과 지시 사항은 간결하고 명확하게 작성한다.</p>
+														<p class="g-desc">코치마크는 관련 요소에 대한 간결한 설명을 제공하여 사용자의 부담을 줄이고 과업의 완수를 격려해야 한다. 가능한 한 제목은 1줄을 유지하고 지시 사항은 3줄 이내로 작성한다.</p>
+													</div>
+													<div class="g-desc-box">
+														<p class="g-tit">지나치게 많은 코치마크를 사용하지 않는다.</p>
+														<p class="g-desc">한 페이지에 4개 이하의 코치마크를 사용하는 것이 가장 이상적이며, 최대 15단계를 넘지 않도록 한다. 최적의 코치마크 수를 유지하기 위해 각 코치마크가 사용자에게 도움 되는 정보를 포함하고 있는지 점검해야 한다. 불필요한 코치마크는 삭제하고 가능한 경우 메시지를 합치되, 사용자가 거쳐야 하는 핵심적인 과업 단계가 누락되지 않도록 유의한다.</p>
+													</div>
+													<div class="g-desc-box">
+														<p class="g-tit">코치마크는 전체 과업 플로(Flow)를 고려하여 논리적인 순서로 제공한다.</p>
+														<p class="g-desc">사용자의 실제 이용 플로(Flow)를 반영하여 논리적인 순서에 따라 단계가 진행될 수 있도록 구성해야 한다.</p>
+													</div>
+													<div class="g-desc-box">
+														<p class="g-tit">한 화면에 여러 개의 코치마크가 표시되지 않도록 한다.</p>
+														<p class="g-desc">여러 개의 코치마크가 동시에 표시되는 것은 코치마크의 제공 목적과 이용 흐름에 적합하지 않다.</p>
+													</div>
+													<div class="g-desc-box">
+														<p class="g-tit">코치마크가 표시된 상태에서 다른 메시지가 표시되지 않도록 한다.</p>
+														<p class="g-desc">코치마크가 제공될 때 페이지에 다른 알림이나 배너 등의 레이어가 실행되지 않도록 구성하여 사용자가 코치마크에서 안내하고 있는 과업에 집중할 수 있도록 한다.</p>
+													</div>
+													<div class="g-desc-box">
+														<p class="g-tit">지시 사항 내부 링크는 새 창으로 실행한다.</p>
+														<p class="g-desc">지시 사항에 참고 링크가 포함되어 있는 경우에는 항상 새 창으로 링크를 실행시켜 사용자의 현재 과업 맥락이 중단되지 않도록 한다.</p>
+													</div>
+													<div class="g-desc-box">
+														<p class="g-tit">모든 단계에서 액션 버튼을 일관성 있는 순서로 배치하고 동일한 레이블을 사용한다.</p>
+														<p class="g-desc">
+															모든 단계에서 액션 버튼은 왼쪽부터 ’그만보기’, ‘이전’, ‘다음’ 순서로 제공한다. <br />
+															단일 단계의 코치마크에서 ‘다음’ 버튼의 레이블은 ‘확인’으로 사용한다. 여러 단계의 코치마크에서 첫 번째 단계는 ‘이전’ 버튼을 사용하지 않으며, 마지막 단계에서 ‘다음’ 버튼의 레이블은 ‘마치기’로 제공한다.
+														</p>
+													</div>
+													<div class="g-img-wrap caption-format success">
+														<p class="caption"><span class="svg-icon ico-success-fill pure"></span>모범 사례</p>
+														<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/component/coachmark_guide_02.png" alt="모든 단계에서 액션 버튼을 일관성 있는 순서로 배치하고 동일한 레이블을 사용한다 모범 사례 예시" /></div>
+													</div>
+													<div class="g-desc-box">
+														<p class="g-tit">액션 버튼을 적절한 강조 수준으로 표현한다.</p>
+														<p class="g-desc">’그만보기’, ‘이전’ 버튼은 텍스트 버튼 스타일을, ‘다음’, ‘마치기’ 버튼은 고스트 버튼 스타일을 사용한다. ‘다음’, ‘마치기’ 버튼은 본문 액션 버튼의 강조 수준보다 낮아야 한다.</p>
+													</div>
+													<div class="g-img-wrap caption-format error">
+														<p class="caption"><span class="svg-icon ico-error-fill pure"></span>피해야 할 사례</p>
+														<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/component/coachmark_guide_03.png" alt="액션 버튼을 적절한 강조 수준으로 표현한다 피해야 할 사례 예시" /></div>
+													</div>
+													<div class="g-desc-box">
+														<p class="g-tit">사용자의 특정 행동 이후 다음 단계의 코치마크에 접근 가능한 경우, 사용자의 행동 완수 여부를 시스템이 확인하도록 한다.</p>
+														<p class="g-desc">코치마크에서 사용자가 지시 사항에 따라 특정 행동을 하도록 요구하는 경우, 사용자가 해당 행동을 완수했을 때 자동으로 다음 단계의 코치마크로 넘어가도록 한다. 사용자 스스로가 해당 행동을 수행하였음을 확인하는 것이 아니라 시스템에서 사용자가 정확한 행동을 수행하였는지 확인함으로써 사용자가 부적절하게 다음 단계에 접근하는 오류를 방지해야 한다. 이 경우 ‘그만보기’ 버튼을 제공하는 한, 다음 버튼을 제공하지 않아도 된다.</p>
+													</div>
+												</div>
+                                            </div>
+                                            <!-- //사용성 가이드라인 -->
+
+                                            <!-- 플랫폼에 대한 고려 사항 -->
+                                             <div class="g-conts-area section-link">
+                                                <h3 class="sec-tit">플랫폼에 대한 고려 사항</h3>
+												<div class="g-conts-area sp-sm">
+													<div class="g-desc-box">
+														<p class="g-tit">모든 화면 크기에서 팝오버 영역이 완전히 표시되는지 확인한다.</p>
+														<p class="g-desc">특정 너비에서 코치마크 팝오버 영역이 시각적으로 확인할 수 없는 화면 밖의 영역에 배치되지 않는지 확인하여 문제가 발견된 경우 적절한 영역으로 배치를 변경해야 한다.</p>
+													</div>
+												</div>
+                                            </div>
+                                            <!-- //플랫폼에 대한 고려 사항 -->
+
+											<!-- 자주 묻는 질문 -->
+											@@include("../inc/page-faq.html")
+											<!-- //자주 묻는 질문 -->
+
+                                            <!-- 정보 변경 내역 -->
+                                            @@include("../inc/page-info-update-log.html")
+                                            <!-- //정보 변경 내역 -->
+											
+											<!-- 컨텐츠 배너 영역 -->
+											@@include("../inc/page-banner.html")
+											<!--// 컨텐츠 배너 영역 -->
+                                        </div>
+                                        <!-- //scroll-check -->
+                                    </section>
+                                    <!-- //tabpanelInfo01 -->
+
+                                    <!-- tabpanelInfo02 -->
+                                    <section id="tabpanelInfo02" aria-labelledby="tabInfo02" class="tab-conts" data-quick-nav="true">
+                                        <!-- scroll-check -->
+                                        <div class="g-description-area scroll-check">
+                                            <!-- 접근성 가이드라인 -->
+                                            <div class="g-conts-area section-link">
+                                               <h3 class="sec-tit">접근성 가이드라인</h3>
+												<div class="g-conts-area sp-sm">
+													<div class="g-desc-box">
+														<p class="g-tit">스포트라이트와 인접 배경 간 명도 대비를 3:1 이상으로 제공한다.</p>
+														<p class="g-desc">사용자가 집중해야 할 요소를 명확하게 인지할 수 있도록 스포트라이트와 인접 배경의 명도 대비를 3:1 이상으로 제공해야 한다.</p>
+														<ul class="krds-info-list decimal">
+															<li>KWCAG 2.2 텍스트 콘텐츠의 명도 대비</li>
+															<li>WCAG 2.1 Non-text Contrast (AA)</li>
+														</ul>
+													</div>
+													<div class="g-desc-box">
+														<p class="g-tit">코치마크는 사용자가 요청한 경우에만 실행되어야 한다.</p>
+														<p class="g-desc">페이지가 로딩되자마자 특정 코치마크가 활성화되는 등 사용자가 의도하지 않는 상황에서 자동으로 실행되어서는 안 된다.</p>
+														<ul class="krds-info-list decimal">
+															<li>KWCAG 2.2 사용자 요구에 따른 실행</li>
+															<li>WCAG 2.1 On Focus (A)</li>
+															<li>WCAG 2.1 On Input (A)</li>
+														</ul>
+													</div>
+													<div class="g-desc-box">
+														<p class="g-tit">관련 요소와 코치마크 팝오버 콘텐츠를 적절한 순서로 제공한다.</p>
+														<p class="g-desc">스크린 리더 사용자가 코치마크 팝오버 콘텐츠에 논리적인 순서로 접근할 수 있도록 관련 있는 요소의 바로 다음 요소로 제공해야 한다.</p>
+														<ul class="krds-info-list decimal">
+															<li>KWCAG 2.2 콘텐츠의 선형화</li>
+															<li>WCAG 2.1 Meaningful Sequence (A)</li>
+														</ul>
+													</div>
+												</div>
+                                            </div>
+                                            <!-- //접근성 가이드라인 -->
+
+                                            <!-- 상호작용 가이드라인 -->
+                                            <div class="g-conts-area section-link">
+                                                <h3 class="sec-tit">상호작용 가이드라인</h3>
+                                                <div class="g-conts-area sp-sm">
+                                                    <h4 class="con-tit">팝오버 내부 콘텐츠 탐색</h4>
+                                                    <!-- table list -->
+                                                    <div class="krds-table-wrap">
+                                                        <table class="tbl col data">
+                                                            <caption>
+                                                                상호작용 가이드라인 팝오버 내부 콘텐츠 탐색에 대한 표로 구분/설명으로 구성되어있으며 구분 항목은 Tab 로 구성되어있음
+                                                            </caption>
+                                                            <colgroup>
+                                                                <col style="width: 15%" />
+                                                                <col />
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">구분</th>
+                                                                    <th scope="col">설명</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row">Tab</th>
+                                                                    <td>코치마크 팝오버가 활성화된 상태에서 내부 컨트롤 요소를 순차적으로 탐색한다.</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- //table list -->
+                                                </div>
+                                                <div class="g-conts-area">
+                                                    <h4 class="con-tit">코치마크 비활성화</h4>
+                                                    <!-- table list -->
+                                                    <div class="krds-table-wrap">
+                                                        <table class="tbl col data">
+                                                            <caption>
+                                                                상호작용 가이드라인 코치마크 비활성화에 대한 표로 이동에 대한 표로 구분/설명으로 구성되어있으며 구분 항목은 Click, Enter, Space 로 구성되어있음
+                                                            </caption>
+                                                            <colgroup>
+                                                                <col style="width: 15%" />
+                                                                <col />
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">구분</th>
+                                                                    <th scope="col">설명</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row">Click</th>
+                                                                    <td>
+                                                                        그만보기 버튼을 Click 하면 코치마크 팝오버가 숨겨진다. <br />
+                                                                        키보드 초점은 따라하기 패널에서 따라하기를 실행하는 버튼으로 이동한다.
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Enter, Space</th>
+                                                                    <td>
+                                                                        그만보기 버튼이 초점을 가진 상태에서 Enter 또는 Space 키를 누르면 코치마크 팝오버가 숨겨진다. <br />
+                                                                        키보드 초점은 따라하기 패널에서 따라하기를 실행하는 버튼으로 이동한다.
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- //table list -->
+                                                </div>
+                                            </div>
+                                            <!-- //상호작용 가이드라인 -->
+                                        </div>
+                                        <!-- //scroll-check -->
+                                    </section>
+                                    <!-- //tabpanelInfo02 -->
+
+                                    <!-- tabpanelInfo03 -->
+                                    <section id="tabpanelInfo03" aria-labelledby="tabInfo03" class="tab-conts" data-quick-nav="true">
+                                        <!-- scroll-check -->
+                                        <div class="g-description-area scroll-check">
+                                            <!-- 예시 -->
+                                            <div class="g-conts-area section-link">
+                                                <h3 class="sec-tit">예시</h3>
+												@@include("../inc/page-example.html",{ "example": [ 
+													{ title: "기본", folder: "..", file: "coach_mark", class: "overflow-visible" }
+												]})
+                                                <div class="g-conts-area">
+                                                    <div class="g-cont-in">
+                                                        <div class="krds-table-wrap scroll">
+                                                            <table class="tbl col data">
+                                                                <colgroup>
+                                                                    <col style="width: 15%" />
+                                                                    <col style="width: 25%" />
+                                                                    <col />
+                                                                </colgroup>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">1Depth</th>
+                                                                        <th scope="col">2Depth</th>
+                                                                        <th scope="col">File Link</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="hr">
+                                                                        <td class="name">코치마크</td>
+                                                                        <td>단계적 실습패널-선택 단계</td>
+                                                                        <td class="file"><a href="../../pattern/sample_coach_01.html" target="_blank" title="새 창 열기" class="krds-btn medium text underline">[코치마크]</a></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="name"></td>
+                                                                        <td>단계적 실습패널-1단계</td>
+                                                                        <td class="file"><a href="../../pattern/sample_coach_0101.html" target="_blank" title="새 창 열기" class="krds-btn medium text underline">[코치마크]</a></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="name"></td>
+                                                                        <td>단계적 실습패널-2단계</td>
+                                                                        <td class="file"><a href="../../pattern/sample_coach_0102.html" target="_blank" title="새 창 열기" class="krds-btn medium text underline">[코치마크]</a></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="name"></td>
+                                                                        <td>단계적 실습패널-3단계</td>
+                                                                        <td class="file"><a href="../../pattern/sample_coach_0103.html" target="_blank" title="새 창 열기" class="krds-btn medium text underline">[코치마크]</a></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="name"></td>
+                                                                        <td>단계적 실습패널-4단계</td>
+                                                                        <td class="file"><a href="../../pattern/sample_coach_0104.html" target="_blank" title="새 창 열기" class="krds-btn medium text underline">[코치마크]</a></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- //예시 -->
+                                            <!-- 마크업 가이드 -->
+                                            <div class="g-conts-area section-link">
+                                                <h3 class="sec-tit">마크업 가이드</h3>
+                                                <!-- CSS 선택자 -->
+                                                <div class="g-conts-area sp-sm">
+                                                    <h4 class="con-tit">CSS 선택자</h4>
+                                                    <!-- table list -->
+                                                    <div class="krds-table-wrap">
+                                                        <table class="tbl col data">
+                                                            <caption>
+                                                                마크업 가이드 CSS 선택자에 대한 표로 필수 로 구성되어있으며 구분 항목은 전체영역, 팝오버로 구성되어있음
+                                                            </caption>
+                                                            <colgroup>
+                                                                <col style="width: 20%" />
+                                                                <col />
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col" colspan="2">필수</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row">전체영역</th>
+                                                                    <td>.krds-coach-mark</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">팝오버</th>
+                                                                    <td>.coach-balloon</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- //table list -->
+                                                </div>
+                                                <!--// CSS 선택자 -->
+                                            </div>
+                                            <!-- //마크업 가이드 -->
+											<!-- 컴포넌트 토큰 -->
+											<div class="g-conts-area section-link">
+												<h3 class="sec-tit">컴포넌트 토큰 (css variable)</h3>
+												<div class="g-code-wrap">
+													<!-- code -->
+													<div class="g-code-box">
+														<pre data-src="./variable/coach_mark.html" class="language-css"></pre>
+													</div>
+													<!-- //code -->
+												</div>
+	
+											</div>
+											<!-- //컴포넌트 토큰 -->
+                                        </div>
+                                        <!-- //scroll-check -->
+                                    </section>
+                                    <!-- //tabpanelInfo03 -->
+                                </div>
+                                <!-- //tab contents -->
+                            </div>
+                            <!-- //탭 메뉴 -->
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- //컨텐츠 영역 -->
+            </div>
+            <!-- //컨테이너 영역 -->
+
+            <!-- 푸터 영역 -->
+            <footer id="krds-footer">@@include("../inc/guide-footer.html")</footer>
+            <!-- //푸터 영역 -->
+        </div>
+    </body>
+</html>

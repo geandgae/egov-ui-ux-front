@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include("../inc/head.html", { "title": "개요 | 서비스 패턴 - 방문 - KRDS", })
+
+    <body>
+        <div id="wrap" class="g-wrap">
+            @@include("../inc/guide-header.html")
+
+            <!-- 컨테이너 영역 -->
+            <div id="container">
+                <!-- 컨텐츠 영역 -->
+                <div class="inner in-between">
+                    <!-- 사이드 메뉴 -->
+                    @@include("../inc/guide-lnb.html")
+                    <!-- //사이드 메뉴 -->
+
+                    <!-- contents -->
+                    <div class="contents">
+                        <!-- breadcrumb -->
+                        @@include("../inc/page-breadcrumb.html")
+                        <!-- breadcrumb -->
+
+                        <!-- page-title -->
+                        @@include("../inc/page-title.html", { 
+							"desc" : "정책 정보 확인은 디지털 서비스에 게재된 정부/기관의 행동 방침, 계획, 법률에 관한 정보를 사용자가 확인하는 과업이다." 
+						})
+                        <!-- //page-title -->
+
+                        <div class="conts-area">
+                            <!-- scroll-check -->
+                            <div class="g-description-area scroll-check">
+								<!-- 유형 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">유형</h3>
+                                    <div class="g-conts-area sp-sm">
+                                        <h4 class="con-tit">정책 정보</h4>
+                                        <p class="g-desc">
+                                            정부가 공공문제를 해결하거나 정치적·행정적 목표를 실현하기 위해 마련한 법률·정책·사업·사업계획·정부방침·정책지침·결의 사항 등에 대한 정보 <br />
+											예&#41; 주요 정책 소개
+                                        </p>
+                                    </div>
+                                    <div class="g-conts-area">
+                                        <h4 class="con-tit">관련 자료</h4>
+                                        <p class="g-desc">
+                                            주요 정책을 이해하고 참여하는데 필요한 각종 자료<br/>
+											예&#41; 보고서, 매뉴얼, 법령 자료, 정책 홍보자료, 연구 자료, 국정 과제 등 <br />
+                                        </p>
+                                    </div>
+                                </div>
+								<!-- //유형 -->
+								 
+								<!-- 이용 상황별 플로 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">이용 상황별 플로(Flow)</h3>
+                                    <div class="g-img-wrap outline">
+                                        <div class="g-img-zomm"><img src="../../../resources/img/guide/contents/service/policy_flow.png" alt="이용 상황별 플로(Flow) 예시" /></div>
+                                    </div>
+                                    <div class="g-flow-wrap">
+                                        <ol class="g-flow-list">
+                                            <li class="item">
+                                                <h4 class="g-flow-tit"><strong class="g-number">1</strong>정책 상세 정보 확인</h4>
+                                                <ul class="g-flow-box">
+                                                    <li>
+                                                        <p class="g-flow-dsec">상세 콘텐츠를 확인하여 찾고자 한 내용에 부합하는지, 어떤 내용이 포함되어 있는지 등을 이해하고 비교 및 검토를 수행하는 과정</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="item">
+                                                <h4 class="g-flow-tit"><strong class="g-number">2</strong>정책 자료 참고</h4>
+                                                <ul class="g-flow-box">
+                                                    <li>
+                                                        <p class="g-flow-dsec">정책과 관련된 각종 자료를 통해 궁금증을 해결하거나 사업·서비스의 참여에 도움이 되는 내용을 확인하는 과정</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+								<!-- //이용 상황별 플로 -->
+
+								<!-- 사용성 가이드라인 체크리스트 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">사용성 가이드라인 체크리스트</h3>
+                                    <div class="g-conts-area">
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">서비스 패턴의 사용성 가이드라인은 사용자 관점에서의 중요도와 만족도를 기준으로 하여 3개의 적용 수준으로 구분되어 있다. 핵심 서비스에 대한 사용자 경험의 향상을 위해서는 기본적으로 최하위 적용 수준인 필수 수준의 가이드라인을 준수해야 한다.</p>
+                                            <a href="./../utility/utility_01.html" class="krds-btn medium text underline">적용수준(서비스패턴) 가이드라인 확인 <i class="svg-icon ico-angle right"></i></a>
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="g-conts-area sp-sm">
+                                        <div class="g-desc-box" id="apply-level-filter">
+                                            <div class="g-tit-wrap">
+                                                <h4 class="g-tit">적용 수준 필터</h4>
+                                                <div class="krds-check-area">
+                                                    <div class="krds-form-check">
+                                                        <input type="checkbox" name="chk_1" id="required" />
+                                                        <label for="required">필수</label>
+                                                    </div>
+                                                    <div class="krds-form-check">
+                                                        <input type="checkbox" name="chk_1" id="advised" />
+                                                        <label for="advised">권장</label>
+                                                    </div>
+                                                    <div class="krds-form-check">
+                                                        <input type="checkbox" name="chk_1" id="excellent" />
+                                                        <label for="excellent">우수</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="g-filter">
+                                                <div class="g-filter-item">
+                                                    <div class="g-filter-tit">
+                                                        <a href="./service_05_02.html" class="krds-btn medium link">
+                                                            <span class="underline">정책 탐색</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="g-filter-cont">
+                                                        <ul class="g-filter-list">
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>모든 정책을 하나의 목록에서 탐색할 수 있는 수단을 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>필터링 또는 검색 기능을 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>정책의 대상/분야 등의 분류 체계를 표시한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>새로운 정책 및 자료를 명확하게 구분한다.</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="g-filter-item">
+                                                    <div class="g-filter-tit">
+                                                        <a href="./service_05_03.html" class="krds-btn medium link">
+                                                            <span class="underline">정보 확인</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="g-filter-cont">
+                                                        <ul class="g-filter-list">
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>화면 제목을 정책명으로 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>상세 정보 콘텐츠는 간결하며 이해하기 쉽게 작성한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>상세 정보는 정확하고 최신화된 상태로 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>내용이 없는 콘텐츠 섹션과 섹션 제목은 표시되지 않도록 한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-information" data-type="excellent">우수</span>
+                                                                <span>인포그래픽, 사진, 동영상 등의 콘텐츠를 적절하게 활용한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>사용자에게 도움을 줄 수 있는 다양한 부가 정보를 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>부가 정보는 사용자가 필요에 따라 상세 내용을 확인할 수 있게 제공하는 방안을 고려한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>모든 링크는 실행하였을 때, 링크 레이블에 명시된 적절한 화면으로 이동해야 한다.</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="g-filter-item">
+                                                    <div class="g-filter-tit">
+                                                        <a href="./service_05_04.html" class="krds-btn medium link">
+                                                            <span class="underline">정책 자료 탐색</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="g-filter-cont">
+                                                        <ul class="g-filter-list">
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>필터링 또는 검색 기능을 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>새로운 자료, 변경이 있는 자료를 명확하게 구분한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>정책 관련 간행물의 발행 주기에 대한 정보를 제공한다.</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+								<!-- //사용성 가이드라인 체크리스트 -->
+
+                                <!-- 정보 변경 내역 -->
+								@@include("../inc/page-info-update-log.html")
+                                <!-- //정보 변경 내역 -->
+                            </div>
+                            <!-- //scroll-check -->
+                        </div>
+                        
+                    </div>
+                    <!-- //contents -->
+                </div>
+                <!-- //컨텐츠 영역 -->
+            </div>
+            <!-- //컨테이너 영역 -->
+
+            <!-- 푸터 영역 -->
+            <footer id="krds-footer">@@include("../inc/guide-footer.html")</footer>
+            <!-- //푸터 영역 -->
+        </div>
+    </body>
+</html>

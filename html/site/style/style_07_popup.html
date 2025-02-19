@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ko">
+	@@include("../inc/head.html", { "title": "디자인 토큰 전체 보기 | 디자인 토큰 - KRDS", })
+
+	<body>
+		<div id="wrap" class="g-wrap popup">
+			<!-- modal 글자 / 화면 설정 -->
+			<section id="modal_adjust_display" class="krds-modal fade" aria-labelledby="tit_modal_adjust_display">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<!-- modal title -->
+						<div class="modal-header">
+							<h2 id="tit_modal_adjust_display" class="modal-title">
+								글자&middot;화면 표시 설정
+							</h2>
+						</div>
+						<!-- //modal title -->
+						<!-- modal contents -->
+						<div class="modal-conts">
+							<div class="conts-area">
+								
+								<!-- adjust_display -->
+								<div class="adjust_display">
+									<!-- 글자 / 화면 표시 설정 -->
+									<div class="fieldset adjust_scale">
+										<div class="form-group scale-options">
+											<h3>글자&middot;화면 표시 설정</h3>
+											<div class="form-conts">
+												<div class="krds-check-area chk-column">
+													<div class="krds-form-check">
+														<input type="radio" name="scale_level" id="scale_level_small" value="small">
+														<label for="scale_level_small">작게</label>
+													</div>
+													<div class="krds-form-check">
+														<input type="radio" name="scale_level" id="scale_level_medium" value="medium" checked>
+														<label for="scale_level_medium">보통</label>
+													</div>
+													<div class="krds-form-check">
+														<input type="radio" name="scale_level" id="scale_level_large" value="large">
+														<label for="scale_level_large">조금 크게</label>
+													</div>
+													<div class="krds-form-check">
+														<input type="radio" name="scale_level" id="scale_level_xlarge" value="xlarge">
+														<label for="scale_level_xlarge">크게</label>
+													</div>
+													<div class="krds-form-check">
+														<input type="radio" name="scale_level" id="scale_level_xxlarge" value="xxlarge">
+														<label for="scale_level_xxlarge">가장 크게</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- 화면 표시 모드 -->
+									<div class="fieldset">
+										<div class="form-group view-mode-options">
+											<h3>화면 표시 모드</h3>
+											<div class="form-conts">
+												<div class="krds-check-area chk-column">
+													<div class="krds-form-check view-mode-light">
+														<input type="radio" name="view_mode" id="view_mode_light" value="light" checked>
+														<label for="view_mode_light">기본 (밝은 배경)</label>
+													</div>
+													<div class="krds-form-check view-mode-dark">
+														<input type="radio" name="view_mode" id="view_mode_dark" value="high-contrast">
+														<label for="view_mode_dark">선명하게 (어두운 배경)</label>
+													</div>
+													<div class="krds-form-check view-mode-default">
+														<input type="radio" name="view_mode" id="view_mode_default" value="theme">
+														<label for="view_mode_default">시스템 설정</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //adjust_display -->
+							
+							</div>
+						</div>
+						<!-- //modal contents -->
+						<!-- modal btn -->
+						<div class="modal-btn btn-wrap">
+							<button type="button" class="krds-btn medium tertiary close-modal" id="reset_display">초기화</button>
+							<button type="button" class="krds-btn medium primary close-modal">닫기</button>
+						</div>
+						<!-- //modal btn -->
+						<!-- close button -->
+						<button type="button" class="krds-btn medium icon btn-close close-modal">
+							<span class="sr-only">닫기</span>
+							<i class="svg-icon ico-popup-close"></i>
+						</button>
+						<!-- //close button -->
+					</div>
+				</div>
+				<div class="modal-back"></div>
+			</section>
+			<!-- //modal 글자 / 화면 설정 -->
+			
+			<!-- 컨테이너 영역 -->
+			<div id="container" class="krds-in-page-navigation-type">
+				<!-- 컨텐츠 영역 -->
+				<div class="inner">
+					<div class="contents">
+
+						<!-- page-title -->
+						<div class="page-title-wrap">
+							<h1 class="h-tit">디자인 토큰 전체 보기</h1>
+							<div class="h-txt-item">
+								<p class="h-txt">
+									KRDS에서 사용된 모든 토큰을 확인할 수 있으며, 각 토큰명과 CSS 변수명, 그리고 값(value)을 명시한다. 
+								</p>
+								<p class="h-txt">
+									CSS 변수명은 실제로 (--krds)로 시작되지만, 편의를 위해 디자인 토큰 목록에서 --namespace 값인 (--krds) 표기는 생략한다.
+								</p>
+							</div>
+							
+							<!-- disclosure -->
+							<div class="krds-disclosure border conts-expand-area">
+								<button type="button" class="btn-conts-expand">CSS 변수 추출 시 확인사항</button>
+								<div class="expand-wrap">
+									<div class="expand-in token-check-list-wrap">
+										<ul class="token-check-list">
+											<li>
+												<h4 class="tit">CSS 변수명 최적화</h4>
+												<ul class="krds-info-list decimal">
+													<li>KRDS Figma Local Variable의 collection 및 기본 mode 명칭은 CSS 변수명이 지나치게 길어지는 것을 방지하기 위해 생략한다.</li>
+													<li>KRDS Figma Local Variable의 기본 mode 명칭은 'value-set'이다.</li>
+												</ul>
+											</li>
+											<li>
+												<h4 class="tit">단위 체계 통일</h4>
+												<ul class="krds-info-list decimal">
+													<li>반응형 디자인과 접근성을 고려해 CSS에서 rem 단위를 사용한다.</li>
+													<li>JSON으로 토큰을 내보낼 때 Figma에서 사용된 px 단위를 자동으로 rem으로 변환하여 실제 개발 환경과 동일한 체계를 유지한다.</li>
+												</ul>
+											</li>
+										</ul>
+										<!-- 추후 작업 가능하면 추가 예정 -->
+										<!--<div class="btn-wrap">
+											<a href="#" target="_blank" title="새 창 열림" class="krds-btn medium link">
+												<span class="underline">토큰 구조 확인하기</span>
+												<i class="svg-icon ico-go"></i>
+											</a>
+										</div>-->
+										<!-- 추후 작업 가능하면 추가 예정 -->
+									</div>
+								</div>
+							</div>
+							<!-- //disclosure -->
+						</div>
+						<!-- //page-title -->
+
+						<div class="conts-area">
+							<!-- 탭 메뉴 -->
+							<div class="krds-tab-area layer">
+								<!-- tab list -->
+                                @@include("../inc/page-tab-list.html", { "list": [ { name: "semantic token", class: "active" }, { name: "primitive token", class: "" }] })
+                                <!-- //tab list -->
+							
+								<!-- tab contents -->
+								<div class="tab-conts-wrap">
+									
+									<!-- 검색 입력폼 -->
+									<fieldset>
+										<div class="search-top-box">
+											<div class="form-group">
+												<div class="form-tit">
+													<h3><label for="keyword">토큰 검색</label></h3>
+												</div>
+												<div class="sch-form-wrap">                        
+													<div class="sch-input">
+													<input type="text" id="keyword" class="krds-input" placeholder="토큰명을 입력해주세요." title="토큰명 입력">
+													<button type="button" class="krds-btn medium icon ico-search btn-exec" id="btn-search">
+														<span class="sr-only">검색</span>
+														<i class="svg-icon ico-sch"></i>
+													</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</fieldset>
+									<!-- //검색 입력폼 -->
+
+									<!-- quick link -->
+									@@include("../inc/page-quick-nav.html")
+									<!-- //quick link -->
+
+									
+									<!-- tabpanelInfo01 -->
+									<section id="tabpanelInfo01" aria-labelledby="tabInfo01" class="tab-conts active" data-quick-nav="true">
+										
+										<!-- scroll-check -->
+										<div class="g-description-area scroll-check" id="semantic"></div>
+										<!-- //scroll-check -->
+									</section>
+									<!-- //tabpanelInfo01 -->
+
+									<!-- tabpanelInfo02 -->
+									<section id="tabpanelInfo02" aria-labelledby="tabInfo02" class="tab-conts" data-quick-nav="true">
+										<!-- scroll-check -->
+										<div class="g-description-area scroll-check" id="primitive"></div>
+										<!-- //scroll-check -->
+									</section>
+									<!-- //tabpanelInfo02 -->
+								</div>
+								<!-- //tab contents -->
+							</div>
+							<!-- //탭 메뉴 -->
+						</div>
+						
+					</div>
+				</div>
+				<!-- //컨텐츠 영역 -->
+			</div>
+			<!-- //컨테이너 영역 -->
+
+			
+		</div>
+
+		<script type="text/stache" id="tmpl-semantic">
+			{{#document}}
+				<div class="g-conts-area section-link" data-type="title" data-keyword="{{name}}">
+					<h3 class="sec-tit">{{name}}</h3>
+					{{#subtitles}}
+						<div class="g-conts-area {{#first}}sp-sm{{/first}} {{^name}}no-space{{/name}}" data-type="subtitle" data-keyword="{{name}}">
+							{{#name}}<h4 class="con-tit">{{.}}</h4>{{/name}}
+							<div class="krds-table-wrap">
+								<table class="tbl col data style ico_token_palette">
+									<caption>
+										Color - background 에 대한 표로 token name, css token / value 대한 내용으로 구성되어 있으며
+										token name은 color-background-white 구성되어있다.
+									</caption>
+									<colgroup>
+										<col style="width:40%">
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">token name</th>
+											<th scope="col">css token / value</th>
+										</tr>
+									</thead>
+									<tbody>
+										{{#items}}
+											 <tr data-type="item" data-keyword="{{name}}">
+												<td data-label="{{name}}">
+													<span class="token-name"><i class="svg-icon {{../../icon}}"></i>{{name}}</span>
+												</td>
+												<td data-label="css token / value">
+													{{#values}}
+														<div class="token-value-box" data-type="value" data-keyword="{{name}}">
+															<div class="token-color-wrap">
+																<div class="token-color">
+																	<button type="button" class="token-copy"><span>{{name}}</span><i class="svg-icon ico-copy"><span class="sr-only">복사</span></i></button>
+																	<ul class="token-value-list" data-type="label" data-keyword="{{label}}">
+																		{{#label}}<li>{{.}}</li>{{/label}}
+																		<li>{{value}}</li>
+																	</ul>
+																</div>
+															</div>
+															{{#eq(type, 'color')}}
+																<div class="token-box">
+																	<div class="box" style="background-color:{{#first}}#ffffff{{else}}#000000{{/first}}; border-color: none;">
+																		<div style="background-color:{{value}}"></div>
+																	</div>
+																</div>
+															{{/eq}}
+														</div>
+													{{/values}}
+												</td>
+											</tr>
+										{{/items}}
+									</tbody>
+								</table>
+							</div>
+						</div>
+					{{/subtitles}}
+				</div>
+			{{/document}}
+		</script>
+
+		<script type="text/stache" id="tmpl-primitive">
+			{{#document}}
+				<div class="g-conts-area section-link" data-type="title" data-keyword="{{name}}">
+					<h3 class="sec-tit">{{name}}</h3>
+					{{#subtitles}}
+						<div class="g-conts-area {{#first}}sp-sm{{/first}} {{^name}}no-space{{/name}}" data-type="subtitle" data-keyword="{{name}}">
+							{{#name}}<h4 class="con-tit">{{.}}</h4>{{/name}}
+							<div class="krds-table-wrap">
+								<table class="tbl col data style ico_token_palette">
+									<caption>
+										Color - background 에 대한 표로 token name, css token / value 대한 내용으로 구성되어 있으며
+										token name은 color-gray-0, color-gray-5, color-gray-10 구성되어있다.
+									</caption>
+									<colgroup>
+										<col style="width:40%">
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">token name</th>
+											{{#eq(../icon, 'ico-color')}}
+												<th scope="col">css token / value</th>
+											{{else}}
+												<th scope="col">css token</th>
+												<th scope="col">value</th>
+											{{/eq}}
+										</tr>
+									</thead>
+									<tbody>
+										{{#items}}
+											 <tr data-type="item" data-keyword="{{name}}">
+												<td data-label="{{name}}">
+													<span class="token-name"><i class="svg-icon {{../../icon}}"></i>{{name}}</span>
+												</td>
+												{{#eq(../../icon, 'ico-color')}}
+													<td data-label="css token / value">
+														{{#values}}
+															<div class="token-value-box column" data-type="value" data-keyword="{{name}}">
+																<div class="token-color-wrap">
+																	<div class="token-color">
+																		<button type="button" class="token-copy"><span>{{name}}</span><i class="svg-icon ico-copy"><span class="sr-only">복사</span></i></button>
+																	</div>
+																</div>
+																<div class="token-box">
+																	<div class="box" style="background-color:{{#first}}#ffffff{{else}}#000000{{/first}}; border-color: none;">
+																		<div style="background-color:{{value}}"></div>
+																	</div>
+																	<div class="value">
+																		<span class="txt">{{value}}</span>
+																		{{#opacity}}<span class="txt-sm">opacity:{{.}}%</span>{{/opacity}}
+																	</div>
+																</div>
+															</div>
+														{{/values}}
+													</td>
+												{{else}}
+													{{#values}}
+														<td data-label="css token" data-type="value" data-keyword="{{name}}">
+															<div class="token-color">
+																<button type="button" class="token-copy"><span>{{name}}</span><i class="svg-icon ico-copy"><span class="sr-only">복사</span></i></button>
+															</div>
+														</td>
+														<td data-label="value">
+															<div class="value">
+																<span class="txt">{{value}}</span>
+															</div>
+														</td>
+													{{/values}}
+												{{/eq}}
+											</tr>
+										{{/items}}
+									</tbody>
+								</table>
+							</div>
+							{{#eq(name, 'font-weight')}}
+								<div class="g-alert notice">
+									<p class="desc">
+										피그마의 디자인 토큰 내보내기 시 font-weight가 잘못된 rem 단위로 변환되는 것을 방지하기 위해, 디자인 토큰에서는 'regular'와 같은 문자형으로 정의하고 실제 CSS에서는 400과 같은 숫자값으로 따로 지정한 토큰을 사용한다.
+									</p>
+								</div>
+						{{/eq}}
+						</div>
+					{{/subtitles}}
+				</div>
+			{{/document}}
+		</script>
+
+		<script type="module">
+			import TokenControl from '/resources/js/controls/token-control.js';
+			new TokenControl('#container');
+		</script>
+	</body>
+</html>

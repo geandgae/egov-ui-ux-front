@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include("../inc/head.html", { "title": "공식 배너 (Masthead) | 컴포넌트 - KRDS", })
+
+  <body>
+    <div id="wrap" class="g-wrap">
+        @@include("../inc/guide-header.html")
+
+        <!-- 컨테이너 영역 -->
+        <div id="container">         
+            <!-- 컨텐츠 영역 -->
+            <div class="inner in-between">
+                <!-- 사이드 메뉴 -->
+                @@include("../inc/guide-lnb.html")
+                <!-- //사이드 메뉴 -->
+            
+                <div class="contents">
+
+                    <!-- breadcrumb -->
+                    @@include("../inc/page-breadcrumb.html")
+                    <!-- breadcrumb -->
+
+                    <!-- page-title -->
+                    @@include("../inc/page-title.html", { 
+						"desc" :"사용자 인터페이스의 가장 작은 단위로 과업에 상관없이 일관성 있게 사용되는 공통 요소에 대한 가이드를 의미한다. 보편적인 UI 요소를 기반으로 디지털 정부 서비스에서 빈번하게 사용되는 구성요소를 정의하고, 각 컴포넌트의 특성과 상태, 역할에 따른 유형을 제시하며, 사용성, 접근성, 상호작용 가이드라인 및 플랫폼 고려 사항을 기술한다."
+					})  
+                    <!-- //page-title -->
+
+                    <!-- 검생영역 -->
+                    <div class="g-search-area" id="keyword_sch_area">
+                        <!-- 검색 입력폼 -->
+                        <fieldset>
+                            <div class="search-top-box">
+                                <div class="form-group">
+                                    <div class="form-tit">
+                                        <h3><label for="keyword_search">컴포넌트명</label></h3>
+                                    </div>
+                                    <div class="sch-form-wrap">                        
+                                        <div class="sch-input">
+                                        <input type="text" id="keyword_search" class="krds-input" placeholder="컴포넌트명을 입력해주세요." title="컴포넌트명 입력">
+                                        <button type="button" class="krds-btn medium icon ico-search btn-exec">
+                                            <span class="sr-only">검색</span>
+                                            <i class="svg-icon ico-sch"></i>
+                                        </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <!-- //검색 입력폼 -->
+ 
+                        <!-- 검색 결과 : 리스트 상단 -->
+                        <div class="search-list-top">
+                            <ul class="sch-info" aria-live="polite">
+                                <li>총 <span class="point total">37</span>건</li>
+                            </ul>
+                            <ul class="sch-sort">
+                                <li>
+                                    <strong class="sort-label"><label for="sortSelect">유형</label></strong>
+                                    <select class="krds-form-select-sort custom-select-size" id="sortSelect">
+                                        <option value="all">전체</option>
+                                        <option value="identity">아이덴티티</option>
+                                        <option value="enter">입력</option>
+                                        <option value="help">도움</option>
+                                        <option value="feedback">피드백</option>
+                                        <option value="pick">선택</option>
+                                        <option value="action">액션</option>
+                                        <option value="layoutExpress">레이아웃 및 표현</option>
+                                        <option value="express">탐색</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- //검색 결과 : 리스트 상단 -->
+
+                        <!-- keyword list -->
+                        <ul class="krds-structured-list">
+                            <li class="search-item">
+                                <a href="./component_02_01.html">
+                                    <div class="card-top">
+                                        <div class="img-wrap component_01"></div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="c-text">
+                                            <p class="c-tit keyword">
+                                               공식 배너
+												<span class="c-sub-txt keyword">Masthead</span>
+                                            </p>
+                                            <p class="c-txt keyword">
+                                                공식 배너는 사용자가 대한민국 정부 조직 및 관련 기관에서 운영 및
+                                                관리하는 디지털 정부서비스임을 식별할 수 있도록 제공하는 정보 배너이다.
+                                            </p>
+                                        </div>
+                                    </div>   
+                                    <div class="card-btm">
+                                        <span class="krds-badge bg-light-primary keyword" data-keyword="identity">아이덴티티</span>
+                                    </div>                            
+                                </a>
+                            </li>
+                            <li class="search-item">
+                                <a href="./component_02_02.html">
+                                    <div class="card-top">
+                                        <div class="img-wrap component_02"></div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="c-text">
+                                            <p class="c-tit keyword">
+												운영기관 식별자
+												<span class="c-sub-txt keyword">Identifier</span>
+											</p>
+                                            <p class="c-txt keyword">
+                                                운영기관 식별자는 디지털 정부서비스에 대한 신뢰성을 위해 서비스
+                                                운영 주체의 상위 기관을 안내하는 요소로 공식 배너, 푸터와 함께
+                                                서비스의 일관성, 브랜드를 확인할 수 있는 핵심 요소이다.
+                                            </p>
+                                        </div>                                        
+                                    </div>
+                                    <div class="card-btm">
+                                        <span class="krds-badge bg-light-primary keyword" data-keyword="identity">아이덴티티</span>
+                                    </div>
+                                </a>
+                            </li>
+							<li class="search-item">
+                                <a href="./component_02_03.html">
+                                    <div class="card-top">
+                                        <div class="img-wrap component_03"></div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="c-text">
+                                            <p class="c-tit keyword">
+												헤더
+												<span class="c-sub-txt keyword">Header</span>
+											</p>
+                                            <p class="c-txt keyword">
+                                                헤더는 사용자가 웹사이트에 접속하자마자 마주하게 되는 화면의
+                                                최상단 영역으로 디지털 정부 서비스의 브랜드 이미지를 전달하는 핵심
+                                                영역이다. 모든 페이지에 일관성 있게 배치되며 통합검색, 메인 메뉴 등
+                                                서비스 정보를 탐색하고 이동할 수 있는 핵심 탐색 수단을 제공한다.
+                                            </p>
+                                        </div>                                        
+                                    </div>
+                                    <div class="card-btm">
+                                        <span class="krds-badge bg-light-primary keyword" data-keyword="identity">아이덴티티</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="search-item">
+                                <a href="./component_02_04.html">
+                                    <div class="card-top">
+                                        <div class="img-wrap component_04"></div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="c-text">
+                                            <p class="c-tit keyword">
+												푸터
+												<span class="c-sub-txt keyword">Footer</span>
+											</p>
+                                            <p class="c-txt keyword">
+                                                푸터는 화면을 구성하는 가장 마지막 요소로 헤더와 본문에서 원하는
+                                                정보를 찾지 못하였거나 사이트 구조 탐색 중에 길을 잃은 사용자들이
+                                                대면하게 되는 정보이다. 따라서 푸터에는 사용자가 서비스를 탐색할 수
+                                                있는 추가적인 수단, 문제를 해결하는 데 참고할 수 있는 유용한 링크가
+                                                제공되어야 한다.
+                                            </p>
+                                        </div>                                       
+                                    </div>
+                                    <div class="card-btm">
+                                        <span class="krds-badge bg-light-primary keyword" data-keyword="identity">아이덴티티</span>
+                                    </div>
+                                </a>
+                            </li>
+							<li class="search-item">
+								<a href="./component_03_01.html">
+									<div class="card-top">
+										<div class="img-wrap component_05"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												건너뛰기 링크
+												<span class="c-sub-txt keyword">Skip link</span>
+											</p>
+											<p class="c-txt keyword">
+												건너뛰기 링크는 웹사이트에서 웹 페이지의 주요 콘텐츠 섹션의 탐색을
+												도와주는 페이지 내부 링크이다. 키보드나 가상 초점을 이용하여
+												콘텐츠를 탐색하는 사용자는 건너뛰기 링크를 이용하여 대부분의
+												페이지에서 반복되는 콘텐츠 영역을 건너뛰고 주요 콘텐츠로 빠르게
+												이동할 수 있다.
+											</p>               
+										</div>              
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="express">탐색</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_03_02.html">
+									<div class="card-top">
+										<div class="img-wrap component_06"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												메인 메뉴
+												<span class="c-sub-txt keyword">Main menu</span>
+											</p>
+											<p class="c-txt keyword">
+												메인 메뉴는 사용자가 페이지를 탐색할 때, 가장 많이 사용하는 유형의
+												메뉴이다. 일반적으로 헤더와 함께 거의 모든 페이지에 제공되며, 사용자가
+												자주 방문하거나 중요도가 높은 페이지로 이동할 수 있는 링크가 포함되어
+												있다. 빈번하게 활용되는 사용자의 일차적인 이동 수단이기 때문에
+												사용하기 쉽게 설계해야 한다.
+											</p>       
+										</div>                        
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="express">탐색</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_03_03.html">
+									<div class="card-top">
+										<div class="img-wrap component_07"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												브레드크럼
+												<span class="c-sub-txt keyword">Breadcrumb</span>
+											</p>
+											<p class="c-txt keyword">
+												브레드크럼은 탐색 계층 구조를 표시하여 사용자가 현재 위치를 파악하고
+												계층 구조의 수준을 이동할 수 있게 해준다. 브레드크럼을 통해 사용자는
+												탐색 중인 화면의 상위 수준 화면으로 이동할 수 있다.
+											</p>    
+										</div>                           
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="express">탐색</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_03_04.html">
+									<div class="card-top">
+										<div class="img-wrap component_08"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												사이드 메뉴
+												<span class="c-sub-txt keyword">Side navigation</span>
+											</p>
+											<p class="c-txt keyword">
+												사이드 메뉴는 서브 화면 내에서의 이동을 위해 사용하는 메뉴이다.
+												일반적으로 본문 영역의 좌측에 사이드바 형태로 제공된다. 메인
+												메뉴보다 훨씬 좁고 깊은 페이지 구조 탐색에 사용되기 때문에 링크의
+												개수가 많고 복잡하게 표현되기 쉽다. 사이트 규모가 클수록 사이드
+												메뉴를 단순하고 직관적으로 설계하여 사용자가 탐색 중에 길을 잃지
+												않도록 해야 한다.
+											</p>
+										</div>
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="express">탐색</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_03_05.html">
+									<div class="card-top">
+										<div class="img-wrap component_09"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												콘텐츠 내 탐색
+												<span class="c-sub-txt keyword">In-page navigation</span>
+											</p>
+											<p class="c-txt keyword">
+												콘텐츠 내 탐색은 사용자가 본문의 구조를 훑어보고 원하는 콘텐츠로
+												빠르게 이동할 수 있도록 하는 탐색 수단이다. 화면을 스크롤 할 때 특정
+												위치에 고정되어 콘텐츠의 목차 역할을 하는 동시에 사용자가 페이지 내
+												탐색에서 특정 항목을 클릭하면 연결된 섹션으로 스크롤 된다.
+											</p>       
+										</div>                        
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="express">탐색</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_03_06.html">
+									<div class="card-top">
+										<div class="img-wrap component_10"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												페이지네이션
+												<span class="c-sub-txt keyword">Pagination</span>
+											</p>
+											<p class="c-txt keyword">
+												페이지네이션은 많은 양의 콘텐츠를 탐색하기 쉽도록 여러 화면에
+												나누고, 분할된 화면을 탐색하는 데 사용되는 요소이다.
+											</p>     
+										</div>                          
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="express">탐색</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_03_07.html">
+									<div class="card-top">
+										<div class="img-wrap component_11"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												탭바
+												<span class="c-sub-txt keyword">Tab bars</span>
+											</p>
+											<p class="c-txt keyword">
+												탭바는 화면 하단에 고정하여 제공하는 탐색 수단으로 작은 디바이스나 좁은 화면에서 서비스의 핵심 화면으로 빠르게 접근할 수 있도록 도와준다
+											</p>     
+										</div>                          
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="express">탐색</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_04_01.html">
+									<div class="card-top">
+										<div class="img-wrap component_12"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												구조화 목록
+												<span class="c-sub-txt keyword">Structured list</span>
+											</p>
+											<p class="c-txt keyword">
+												구조화 목록은 유사하거나 관련된 콘텐츠 집합을 표현하기 위한 형식으로
+												목록에 제공된 데이터에 대한 상세 정보 탐색 수단 또는 관련 기능 실행
+												수단으로 활용된다. 사용자가 콘텐츠를 효율적으로 탐색하고 다음 행동을
+												빠르게 결정할 수 있도록 목록 내 정보는 상세 페이지에서 제공되는
+												복잡한 콘텐츠 중 핵심적이거나 흥미를 끌 수 있는 정보를 논리적 흐름에
+												따라 조직화하여 명확한 위계 구조를 반영해 제공해야 한다.
+											</p>      
+										</div>                        
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="layoutExpress">레이아웃 및 표현</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_04_02.html">
+									<div class="card-top">
+										<div class="img-wrap component_13"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												긴급 공지
+												<span class="c-sub-txt keyword">Critical alerts</span>
+											</p>
+											<p class="c-txt keyword">
+												긴급 공지는 본문 상단에 강조되어 표시되는 배너로 사용자에게
+												긴급하거나 중요한 정보를 전달하는 데 사용된다. 모든 공공 디지털
+												서비스에서 동일한 긴급 공지 컴포넌트를 사용함으로써 사용자는 긴급한
+												정보를 일관되고 예측 가능한 방식으로 찾고 이해할 수 있다.
+											</p>
+										</div>
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="layoutExpress">레이아웃 및 표현</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_04_03.html">
+									<div class="card-top">
+										<div class="img-wrap component_14"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												달력
+												<span class="c-sub-txt keyword">Calendar</span>
+											</p>
+											<p class="c-txt keyword">달력은 날짜와 관련된 정보와 기능을 제공하는 데 사용한다.</p>
+										</div>
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="layoutExpress">레이아웃 및 표현</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_04_04.html">
+									<div class="card-top">
+										<div class="img-wrap component_15"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												디스클로저
+												<span class="c-sub-txt keyword">Disclosure</span>
+											</p>
+											<p class="c-txt keyword">
+												디스클로저는 특정한 정보, 컨트롤, 섹션에 관련된 부가적인 정보를
+												표시하거나 숨기는 데 사용되는 요소이다. 디스클로저 하위 콘텐츠
+												섹션은 기본으로 축소된 상태로 제공되며 사용자가 요청하는 경우에
+												확장되어 자세한 정보가 표시된다. 이는 사용자의 인지적 부담을
+												감소시키고 정보를 빠르게 훑어보는 데 도움이 된다.
+											</p>
+										</div>
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="layoutExpress">레이아웃 및 표현</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_04_05.html">
+									<div class="card-top">
+										<div class="img-wrap component_16"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												모달
+												<span class="c-sub-txt keyword">Modal</span>
+											</p>
+											<p class="c-txt keyword">
+												모달은 대화창의 한 종류로 기본 창에 종속된 요소이다. 기본 창과 겹쳐져
+												가장 상단에 표시되며, 이때 기본 창은 비활성 상태로 전환되어 상호
+												작용이 불가능하므로 사용자는 모달에서의 단일한 과업 또는 메시지에
+												집중할 수 있다.
+											</p>          
+										</div>                 
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="layoutExpress">레이아웃 및 표현</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_04_06.html">
+									<div class="card-top">
+										<div class="img-wrap component_17"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												배지
+												<span class="c-sub-txt keyword">Badge</span>
+											</p>
+											<p class="c-txt keyword">
+												컴포넌트에 대한 빠른 인지와 탐색을 돕기 위해 컴포넌트 근처에
+												표시되는 작은 문자 또는 숫자 데이터이다. 컴포넌트의 분류 체계,
+												구조화된 정보, 상태 정보, 기타 메타 데이터를 표시할 수 있으며
+												사용자의 주의를 끌기 위해 색상을 활용할 수 있다.
+											</p>
+										</div>
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="layoutExpress">레이아웃 및 표현</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_04_07.html">
+									<div class="card-top">
+										<div class="img-wrap component_18"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												아코디언
+												<span class="c-sub-txt keyword">Accordion</span>
+											</p>
+											<p class="c-txt keyword">
+												아코디언은 한 페이지에서 관련 있는 여러 콘텐츠 섹션을 확인할 수
+												있도록 하는 컴포넌트로 콘텐츠 섹션의 헤더 목록이 수직으로 쌓여 있는
+												형태로 표현된다. 일반적으로 헤더 목록은 컨트롤 요소로 활용되며
+												사용자는 필요에 따라 헤더를 선택하여 하위 콘텐츠 섹션을 표시하거나
+												숨길 수 있다.
+											</p>      
+										</div>                         
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="layoutExpress">레이아웃 및 표현</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_04_08.html">
+									<div class="card-top">
+										<div class="img-wrap component_19"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												이미지
+												<span class="c-sub-txt keyword">Image</span>
+											</p>
+											<p class="c-txt keyword">
+												이미지는 콘텐츠 양식 중 하나로 단일 이미지 또는 이미지 시퀀스로
+												표현될 수 있다. 이미지를 적절하게 사용하게 되면 사용자는 텍스트보다
+												효과적으로 정보를 인지할 수 있으며, 텍스트로 표현하기 어려운 정보를
+												전달할 수 있다.
+											</p>        
+										</div>                      
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="layoutExpress">레이아웃 및 표현</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_04_09.html">
+									<div class="card-top">
+										<div class="img-wrap component_20"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												캐러셀
+												<span class="c-sub-txt keyword">Carousel</span>
+											</p>
+											<p class="c-txt keyword">
+												캐러셀은 하나의 콘텐츠 영역 내에 여러 개의 서로 다른 콘텐츠를 표시할
+												수 있는 컴포넌트이다. 캐러셀에 포함된 콘텐츠는 가로로 배치되어
+												있으며, 사용자가 좌/우로 콘텐츠를 회전시켜 콘텐츠를 탐색하도록
+												하거나 자동으로 회전하도록 설정할 수 있다.
+											</p>      
+										</div>                        
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="layoutExpress">레이아웃 및 표현</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_04_10.html">
+									<div class="card-top">
+										<div class="img-wrap component_21"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												탭
+												<span class="c-sub-txt keyword">Tab</span>
+											</p>
+											<p class="c-txt keyword">
+												탭은 버튼을 눌러 상호배타적인 여러 개의 콘텐츠 섹션을 전환할 수
+												있는 컴포넌트이다. 콘텐츠 섹션은 동일한 영역 내에서 전환되기 때문에
+												정보를 탐색하는 맥락을 유지할 수 있고 작은 공간에 많은 양의 콘텐츠를
+												효과적으로 표현할 수 있다.
+											</p>
+										</div>
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="layoutExpress">레이아웃 및 표현</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_04_11.html">
+									<div class="card-top">
+										<div class="img-wrap component_22"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												표
+												<span class="c-sub-txt keyword">Table</span>
+											</p>
+											<p class="c-txt keyword">
+												표는 데이터를 하나 이상의 행과 열로 조직화하여 표현하는 형식으로
+												사용자가 빠르게 많은 양의 정보를 확인하고 비교할 수 있도록 도와준다.
+												대화형 요소가 아니기 때문에 데이터를 정렬하는 것 외에 행 전체나
+												데이터 셀은 대화형 요소가 아니다.
+											</p>               
+										</div>                
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="layoutExpress">레이아웃 및 표현</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_04_12.html">
+									<div class="card-top">
+										<div class="img-wrap component_23"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												스플래시 스크린
+												<span class="c-sub-txt keyword">Splash screen</span>
+											</p>
+											<p class="c-txt keyword">
+												스플래시 스크린은 응용 프로그램이 실행되기 전에 사용자에게 짧은 시간 동안 제공되는 화면으로 모바일 애플리케이션 전용 컴포넌트이다.
+											</p>               
+										</div>                
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="layoutExpress">레이아웃 및 표현</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_04_13.html">
+									<div class="card-top">
+										<div class="img-wrap component_24"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												텍스트 목록
+												<span class="c-sub-txt keyword">Text list</span>
+											</p>
+											<p class="c-txt keyword">
+												텍스트 목록은 계층 구조가 있는 텍스트 블록을 읽기 쉽게 구성한 것이다.
+											</p>               
+										</div>                
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="layoutExpress">레이아웃 및 표현</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_05_01.html">
+									<div class="card-top">
+										<div class="img-wrap component_25"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												링크
+												<span class="c-sub-txt keyword">Link</span>
+											</p>
+											<p class="c-txt keyword">
+												링크는 다른 서비스/애플리케이션, 한 서비스 내의 다른 화면, 한 화면
+												내의 다른 섹션 등으로 이동하는 데 사용되는 탐색 요소이다.
+											</p>
+										</div>
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="action">액션</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_05_02.html">
+									<div class="card-top">
+										<div class="img-wrap component_26"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												버튼
+												<span class="c-sub-txt keyword">Button</span>
+											</p>
+											<p class="c-txt keyword">
+												버튼은 어떤 기능이나 동작을 실행하거나 기능을 사용하기 위한 상태로
+												변경하는 요소이다. 사용자가 서비스를 이용하는 과정에서 어떤 행동이
+												중요한지에 따라 관련된 버튼이 다양한 스타일로 표현된다.
+											</p>     
+										</div>                           
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="action">액션</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_06_01.html">
+									<div class="card-top">
+										<div class="img-wrap component_27"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												라디오 버튼
+												<span class="c-sub-txt keyword">Radio button</span>
+											</p>
+											<p class="c-txt keyword">
+												라디오 버튼은 사용자가 여러 개의 옵션 중 한 개의 값을 선택할 수
+												있도록 하는 경우에 사용한다. 사용자가 옵션 목록에서 새로운 옵션을
+												선택했을 때, 기존에 선택되었던 옵션은 자동으로 선택이 해제되어야 한다.
+											</p>
+										</div>
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="pick">선택</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_06_02.html">
+									<div class="card-top">
+										<div class="img-wrap component_28"></div>
+									</div>
+									<div class="card-body">   
+										<div class="c-text">
+											<p class="c-tit keyword">
+												체크박스
+												<span class="c-sub-txt keyword">Checkbox</span>
+											</p>
+											<p class="c-txt keyword">
+												체크박스는 사용자가 여러 개의 옵션 중 한 개 이상의 값을 선택할
+												수 있도록 하는 경우에 사용한다. 즉, 체크박스 옵션의 선택은
+												상호배타적이므로 한 개의 옵션을 선택하는 것은 다른 옵션의 선택에
+												영향을 미치지 않는다.
+											</p>
+										</div>   
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="pick">선택</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_06_03.html">
+									<div class="card-top">
+										<div class="img-wrap component_29"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												셀렉트
+												<span class="c-sub-txt keyword">Select</span>
+											</p>
+											<p class="c-txt keyword">
+												셀렉트는 사용자에게 여러 개의 옵션 목록을 팝업으로 제공하여 그 중 한
+												개의 값을 선택할 수 있도록 하는 경우에 사용한다.
+											</p>
+										</div>
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="pick">선택</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_06_04.html">
+									<div class="card-top">
+										<div class="img-wrap component_30"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												태그
+												<span class="c-sub-txt keyword">Tag</span>
+											</p>
+											<p class="c-txt keyword">
+												태그는 키워드 또는 레이블을 사용하여 콘텐츠를 분류하는 수단이다.
+												콘텐츠 항목에 직접 관련 분류 체계, 데이터 속성을 표시하거나, 목록에서
+												특정 분류 체계, 데이터 속성을 가진 항목이 선택되었음을 보여주기 위한
+												태그 그룹으로 사용된다.
+											</p>
+										</div>
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="pick">선택</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_06_07.html">
+									<div class="card-top">
+										<div class="img-wrap component_31"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												토글 스위치
+												<span class="c-sub-txt keyword">Toggle switch</span>
+											</p>
+											<p class="c-txt keyword">
+												토글은 상호 배타적인 두 가지 상태를 전환하는 데 사용되는 요소이다.
+											</p>
+										</div>
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="pick">선택</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_07_01.html">
+									<div class="card-top">
+										<div class="img-wrap component_32"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												단계 표시기
+												<span class="c-sub-txt keyword">Step indicator</span>
+											</p>
+											<p class="c-txt keyword">
+												서비스 이용을 위해 사용자가 거쳐야 하는 일련의 단계를 시각화하여
+												표현한 것으로 진행 상태에 대한 피드백을 사용자에게 전달한다.
+											</p>
+										</div>
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="feedback">피드백</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_07_02.html">
+									<div class="card-top">
+										<div class="img-wrap component_33"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												스피너
+												<span class="c-sub-txt keyword">Spinner</span>
+											</p>
+											<p class="c-txt keyword">
+												스피너는 페이지나 요소의 다양한 처리 상태를 시각적으로 표시한 것으로
+												화면 전체나 일부 요소에 접근하기 위해 일정 시간 동안 대기해야 함을
+												사용자에게 안내한다.
+											</p>
+										</div>
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="feedback">피드백</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_08_01.html">
+									<div class="card-top">
+										<div class="img-wrap component_34"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												도움 패널
+												<span class="c-sub-txt keyword">Help panel</span>
+											</p>
+											<p class="c-txt keyword">
+												도움 패널은 본문 콘텐츠의 섹션이나 일부 요소에 대한 개념/용어 설명,
+												옵션의 구성, 이용 방법 등과 관련된 정보나 도움말 콘텐츠를 제공하는
+												사이드 패널이다.
+											</p>
+										</div>
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="enter">입력</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_08_02.html">
+									<div class="card-top">
+										<div class="img-wrap component_35"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												따라하기 패널 
+												<span class="c-sub-txt keyword">Tutorial panel</span>
+											</p>
+											<p class="c-txt keyword">
+												따라하기 패널은 본문 콘텐츠와 관련된 이용 방법을 실제 이용 절차에 따라
+												단계적으로 수행할 수 있도록 도와주며 코치마크를 실행하는 데 사용되는
+												사이드 패널이다.
+											</p>
+										</div>
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="help">도움</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_08_03.html">
+									<div class="card-top">
+										<div class="img-wrap component_36"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												맥락적 도움말
+												<span class="c-sub-txt keyword">Contextual help</span>
+											</p>
+											<p class="c-txt keyword">
+												컴포넌트 주변에 배치되어 해당 컴포넌트의 상태나 관련된 상세 정보를
+												제공하는 컴포넌트이다. 맥락적 도움말은 정보 아이콘이나 도움 아이콘
+												버튼을 통해 사용자가 요청하는 경우에만 화면에 표시된다.
+											</p>
+										</div>
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="help">도움</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_08_04.html">
+									<div class="card-top">
+										<div class="img-wrap component_37"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												코치마크
+												<span class="c-sub-txt keyword">Coach mark</span>
+											</p>
+											<p class="c-txt keyword">
+												코치마크는 사용자에게 새로 도입된 기능을 안내하거나, 여러 단계를
+												거쳐 수행해야 하는 복잡한 과업을 사용자가 보다 쉽게 완료할 수 있도록
+												세부 수행 단계별로 고맥락적 도움말을 제공하는 컴포넌트이다.
+											</p>    
+										</div>                            
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="help">도움</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_08_05.html">
+									<div class="card-top">
+										<div class="img-wrap component_38"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												툴팁
+												<span class="c-sub-txt keyword">Tooltip</span>
+											</p>
+											<p class="c-txt keyword">
+												툴팁은 요소나 본문 텍스트에 제공되는 짧은 부가 설명이다. 설명이 필요한 대상 또는 별도의 활성화 버튼에 마우스를 올리거나 초점을 이동했을 때 설명 텍스트가 표시된다.
+											</p>    
+										</div>                            
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="help">도움</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_09_01.html">  
+									<div class="card-top">
+										<div class="img-wrap component_39"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												날짜 입력 필드
+												<span class="c-sub-txt keyword">Date input</span>
+											</p>
+											<p class="c-txt keyword">
+												날짜 입력 필드는 사용자가 특정 날짜 또는 기간을 입력하거나 선택하는
+												데 사용되는 요소이다.
+											</p>
+										</div>
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="enter">입력</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_09_02.html">
+									<div class="card-top">
+										<div class="img-wrap component_40"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												텍스트 영역 <span class="sub">(Textarea)</span>
+												<span class="c-sub-txt keyword">Textarea</span>
+											</p>
+											<p class="c-txt keyword">
+												텍스트 영역은 사용자가 키보드로 글자, 숫자, 기호 등이 조합된 여러
+												줄의 텍스트를 입력하는 경우에 사용하는 요소이다.
+											</p>
+										</div>
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="enter">입력</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_09_03.html">
+									<div class="card-top">
+										<div class="img-wrap component_41"></div>
+									</div>
+									<div class="card-body">        
+										<div class="c-text">
+											<p class="c-tit keyword">
+												텍스트 입력 필드
+												<span class="c-sub-txt keyword">Text input</span>
+											</p>
+											<p class="c-txt keyword">
+												탭은 버튼을 눌러 상호배타적인 여러 개의 콘텐츠 섹션을 전환할 수
+												있는 컴포넌트이다. 콘텐츠 섹션은 동일한 영역 내에서 전환되기 때문에
+												정보를 탐색하는 맥락을 유지할 수 있고 작은 공간에 많은 양의 콘텐츠를
+												효과적으로 표현할 수 있다.
+											</p>              
+										</div>                    
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="enter">입력</span>
+									</div>
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_09_04.html">
+									<div class="card-top">
+										<div class="img-wrap component_42"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												파일 업로드
+												<span class="c-sub-txt keyword">File upload</span>
+											</p>
+											<p class="c-txt keyword">
+												파일 업로드는 하나 이상의 디바이스의 로컬 파일을 선택하고 첨부하는
+												데 사용하는 입력 컴포넌트이다.
+											</p>         
+										</div>                                                     
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="enter">입력</span>
+									</div>   
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_10_01.html">
+									<div class="card-top">
+										<div class="img-wrap component_43"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												언어 변경
+												<span class="c-sub-txt keyword">Language switcher</span>
+											</p>
+											<p class="c-txt keyword">
+												언어 변경은 서비스의 콘텐츠를 표시할 언어를 변경하거나 별도의 외국어 서비스로 이동하는 데 사용되는 요소이다. 
+												한국어가 익숙하지 않은 사용자가 콘텐츠 표시 언어를 변경할 수 있는 수단을 발견하지 못한다면 서비스를 이용할 수 없게 되므로, 
+												디지털 정부 서비스로 직관적이고 일관된 방식으로 언어 변경을 제공하는 것이 매우 중요하다.
+											</p>         
+										</div>                                                     
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="enter">설정</span>
+									</div>   
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_10_02.html">
+									<div class="card-top">
+										<div class="img-wrap component_44"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												화면 크기 조정
+												<span class="c-sub-txt keyword">Resize</span>
+											</p>
+											<p class="c-txt keyword">
+												화면 크기 조정은 텍스트를 포함하여 화면에 표시되는 정보를 확대하거나 축소하는 데 사용되는 요소이다.
+											</p>         
+										</div>                                                     
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="enter">설정</span>
+									</div>   
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_11_01.html">
+									<div class="card-top">
+										<div class="img-wrap component_45"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												접근 가능한 미디어
+												<span class="c-sub-txt keyword">Accessible multimedia</span>
+											</p>
+											<p class="c-txt keyword">
+												미디어 콘텐츠에 설명이 필요한 경우에 사용하는 컴포넌트이다. 정지된 이미지에 설명을 제공할 때는 숨김 콘텐츠를, 
+												오디오/비디오/멀티미디어 콘텐츠에 설명을 제공할 때는 접근 가능한 미디어 컴포넌트를 사용한다.
+											</p>         
+										</div>                                                     
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="enter">콘텐츠</span>
+									</div>   
+								</a>
+							</li>
+							<li class="search-item">
+								<a href="./component_11_02.html">
+									<div class="card-top">
+										<div class="img-wrap component_46"></div>
+									</div>
+									<div class="card-body">
+										<div class="c-text">
+											<p class="c-tit keyword">
+												숨긴 콘텐츠
+												<span class="c-sub-txt keyword">Accessible multimedia</span>
+											</p>
+											<p class="c-txt keyword">
+												숨긴 콘텐츠는 화면에는 보이지 않지만, 스크린 리더 사용자는 읽을 수 있도록 설계된 컴포넌트이다. 
+												정안 사용자에게는 불필요한 설명을 제공하지 않으면서 스크린 리더 사용자에게는 시각적 콘텐츠, 
+												상호작용 상태 등에 대한 추가적인 정보를 전달할 수 있다.
+											</p>         
+										</div>                                                     
+									</div>
+									<div class="card-btm">
+										<span class="krds-badge bg-light-primary keyword" data-keyword="enter">콘텐츠</span>
+									</div>   
+								</a>
+							</li>
+                        </ul>
+                        <!-- //keyword list -->
+
+                        <!-- no data -->
+                        <div class="no-data hide">
+                            <p class="no-data-tit">검색어 <strong class="keyword"></strong>에 대한 검색 결과가 없습니다.</p>
+                            <div class="no-data-desc">
+                                <ul class="krds-info-list decimal">
+                                    <li>철자나 맞춤법 오류가 있는지 확인해 주세요</li>
+                                    <li>여러 단어로 나누거나 다른 검색어로 검색해 주세요.</li>
+                                    <li>보다 일반적인 단어로 검색해 주세요.</li>
+                                </ul>
+                            </div>
+                        </div>
+                         <!-- //no data -->
+                    </div>
+                    <!--// 검생영역 -->  
+
+                    <!-- 컨텐츠 배너 영역 -->
+                    @@include("../inc/page-banner.html")  
+                    <!--// 컨텐츠 배너 영역 -->
+                </div>
+            </div>
+            <!-- //컨텐츠 영역 -->
+        </div>  
+        <!-- //컨테이너 영역 -->
+
+        <!-- 푸터 영역 -->
+        <footer id="krds-footer">@@include("../inc/guide-footer.html")</footer>
+        <!-- //푸터 영역 -->
+    </div>
+  </body>
+</html>

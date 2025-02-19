@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include("../inc/head.html", { "title": "문의 및 건의 | 커뮤니티 - KRDS", })
+
+    <body>
+        <div id="wrap" class="g-wrap">
+            @@include("../inc/guide-header.html")
+
+            <!-- 컨테이너 영역 -->
+            <div id="container">
+                <!-- 컨텐츠 영역 -->
+                <div class="inner in-between">
+                    <!-- 사이드 메뉴 -->
+                    @@include("../inc/guide-lnb.html")
+                    <!-- //사이드 메뉴 -->
+
+                    <div class="contents">
+                        <!-- breadcrumb -->
+                        @@include("../inc/page-breadcrumb.html")
+                        <!-- breadcrumb -->
+						
+                        <!-- 완료 메세지 -->
+                        <div class="comp-msg-wrap">   
+                            고객님의 문의가 접수되었습니다.
+                            <p class="msg-txt">KRDS 헬프데스크에서 문의내용 확인 후 답변드리겠습니다.</p>
+                        </div>
+                        <!-- //완료 메세지 -->
+                       
+                        <div class="comp-info-box">
+                            <h3 class="key">문의내용</h3>
+                            <p class="value"> 전남교육청은 교육부 소속이긴 하지만 행정구분상 공공기관으로 구분된다고 알고 있습니다. 공식 배너 적용이 선택 요소로 제시되어 있는데 공식배너를 제공하지 않아도 되나요?</p>
+                        </div>
+
+                        <!-- 버튼 -->
+                        <div class="comp-btn-wrap">
+                            <button type="button" class="krds-btn xlarge tertiary">목록으로 돌아가기</button>
+                        </div>
+                        <!-- //버튼 -->
+                    </div>
+                </div>
+                <!-- //컨텐츠 영역 -->
+            </div>
+            <!-- //컨테이너 영역 -->
+           
+            <!-- 푸터 영역 -->
+            <footer id="krds-footer">@@include("../inc/guide-footer.html")</footer>
+            <!-- //푸터 영역 -->
+        </div>
+    </body>
+</html>

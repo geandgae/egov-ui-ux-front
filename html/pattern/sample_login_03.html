@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ko">
+
+@@include("./inc/head.html", {
+	"title": "서브 - 로그인 - KRDS",
+})
+
+<body>
+	<div id="wrap">
+		@@include("./inc/skip.html", {"class": "",})
+
+		@@include("./inc/header-top.html")
+
+		<!-- 헤더 영역 -->
+		<header id="krds-header">
+			@@include("./inc/header.html")
+		</header>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container">
+			<!-- breadcrumb -->
+			@@include("./inc/page-breadcrumb.html")
+			<!-- breadcrumb -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="inner narrow">
+				<!-- 페이지 타이틀 영역 -->
+				<div class="page-title-wrap">
+					@@include("./inc/page-title.html", { "title": '<span class="small-txt">대한민국 디지털정부 사용자 로그인</span>어떤 목적으로 <br class="w-hide">로그인하시나요?' })
+					<p class="h-txt">
+						대한민국 디지털정부는 서비스 이용 편의를 위해 다양한 인증 방식을 제공합니다.<br class="m-hide">
+						이용 목적에 맞는 적절한 인증 방법을 안내할 수 있도록 아래 버튼을 선택해주세요.<br class="m-hide">
+						서비스 이용이 처음이라면 로그인 방식에 따라 회원가입이 필요할 수 있습니다.
+					</p>
+				</div>
+				<!-- //페이지 타이틀 영역 -->
+				<!-- 컨텐츠 영역 -->
+				<div class="conts-area">
+					<!-- 로그인 방식 선택 -->
+					<ul class="login-type-ul">
+						<li>
+							<div class="in">
+								<h4 class="tit">개인 이용</h4>
+								<p class="txt">일반 개인 이용자(내국인, 외국인, 재외국민)의 신분으로 로그인합니다.</p>
+								<div class="btn-wrap">
+									<button type="button" class="krds-btn large tertiary">
+										<span class="text-bold">개인 이용자</span> 로그인
+										<i class="svg-icon ico-angle right"></i>
+									</button>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="in">
+								<h4 class="tit">기업·기관·단체 이용</h4>
+								<p class="txt">법인·기관·단체의 대표자 또는 담당자의 신분으로 로그인합니다.</p>
+								<div class="btn-wrap">
+									<button type="button" class="krds-btn large tertiary">
+										<span class="text-bold">기업 이용자</span> 로그인
+										<i class="svg-icon ico-angle right"></i>
+									</button>
+									<button type="button" class="krds-btn large tertiary">
+										<span class="text-bold">기관 이용자</span> 로그인
+										<i class="svg-icon ico-angle right"></i>
+									</button>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="in">
+								<h4 class="tit">대리인 이용</h4>
+								<p class="txt">개인 또는 법인·기관·단체를 대신하여 서비스를 이용합니다.</p>
+								<div class="btn-wrap">
+									<button type="button" class="krds-btn large tertiary">
+										<span class="text-bold">개업 대리인</span> 로그인
+										<i class="svg-icon ico-angle right"></i>
+									</button>
+									<button type="button" class="krds-btn large tertiary">
+										<span class="text-bold">개관 대리인</span> 로그인
+										<i class="svg-icon ico-angle right"></i>
+									</button>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<!-- //로그인 방식 선택 -->
+				</div>
+				<!-- //컨텐츠 영역 -->
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+
+		<!-- 푸터 영역 -->
+		<footer id="krds-footer">
+			@@include("./inc/footer.html", {"footerType": "type1",})
+		</footer>
+		<!-- //푸터 영역 -->
+	</div>
+
+	@@include("./inc/modal-wrap.html")
+	
+</body>
+
+</html>

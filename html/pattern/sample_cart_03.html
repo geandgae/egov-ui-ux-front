@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include(
+		"./inc/head.html", { "title": "서브 - 신청완료 | 자료당일신청 | 바구니 - KRDS", 
+	})
+
+    <body>
+        <div id="wrap">
+            @@include("./inc/skip.html", {"class": "",}) @@include("./inc/header-top.html")
+
+            <!-- 헤더 영역 -->
+            <header id="krds-header">@@include("./inc/header-type1.html")</header>
+            <!-- //헤더 영역 -->
+
+            <!-- 컨테이너 영역 -->
+            <div id="container">
+				<!-- breadcrumb -->
+				@@include("./inc/page-breadcrumb.html", { "depth": ["민원서비스", "자료당일신청"] })
+				<!-- breadcrumb -->
+
+                <!-- 컨텐츠 영역 -->
+                <div class="inner">
+                    <!-- 완료 메세지 -->
+                    <div class="comp-msg-wrap">자료당일신청이 <span class="point">완료</span>되었습니다.</div>
+                    <!-- //완료 메세지 -->
+
+                    <!-- 신청 정보 -->
+                    <ul class="comp-info-box">
+                        <li>
+                            <div class="key">도서명</div>
+                            <div class="value">
+                                <ul class="txt-list">
+                                    <li>소나기</li>
+                                    <li>홍신문화사</li>
+                                    <li>청구기호 : 813.6-4-45-17</li>
+                                    <li>훈민정음 95 따라하기</li>
+                                    <li>소담출판사</li>
+                                    <li>2018</li>
+                                    <li>청구기호 : 81362-13-31</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="key">이용할 자료실</div>
+                            <div class="value">3층 연속 간행물실(서고자료대출반납)</div>
+                        </li>
+                        <li>
+                            <div class="key">서고신청</div>
+                            <div class="value">09:00~17:00 (관련 및 관외신청가능)</div>
+                        </li>
+                        <li>
+                            <div class="key">자료대출/반납</div>
+                            <div class="value">10:00~18:00 (단, 야간도서관 운영일인 수요일은 10:00~21:00)</div>
+                        </li>
+                    </ul>
+                    <!-- //신청 정보 -->
+
+                    <!-- 버튼 -->
+                    <div class="comp-btn-wrap">
+                        <button type="button" class="krds-btn xlarge tertiary">다시 민원신청하기</button>
+                        <button type="button" class="krds-btn xlarge primary">신청내역/결과보기</button>
+                    </div>
+                    <!-- //버튼 -->
+
+                    <!-- 기타 링크 -->
+                    <dl class="comp-link-box">
+                        <dt>
+                            <p class="tit">이런 서비스는 어떠세요?</p>
+                            <p class="txt">'자료당일신청'을 신청하는 분들이 함께 이용한 서비스입니다.</p>
+                        </dt>
+                        <dd>
+                            <a href="#" class="krds-btn medium text">보존용자료 주말신청 <i class="svg-icon ico-angle right"></i></a>
+                            <a href="#" class="krds-btn medium text">비치희망도서 신청 <i class="svg-icon ico-angle right"></i></a>
+                        </dd>
+                    </dl>
+                    <!-- //기타 링크 -->
+
+                    <!-- 평가1 -->
+                    <div class="txt-box bg-gray">
+                        <div class="assess-question-wrap">
+                            <div class="assess-qu">이 페이지에 만족하시나요?</div>
+                            <div class="assess-an">
+                                <div class="krds-form-chip large">
+                                    <input type="radio" class="radio" name="rdo_chip_size1" id="rdo_chip_lg1-1" />
+                                    <label class="krds-form-chip-outline yes" for="rdo_chip_lg1-1">네</label>
+                                </div>
+                                <div class="krds-form-chip large">
+                                    <input type="radio" class="radio" name="rdo_chip_size1" id="rdo_chip_lg1-2" />
+                                    <label class="krds-form-chip-outline no" for="rdo_chip_lg1-2">아니오</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //평가1 -->
+                </div>
+                <!-- //컨텐츠 영역 -->
+            </div>
+            <!-- //컨테이너 영역 -->
+
+            <!-- 푸터 영역 -->
+            <footer id="krds-footer">@@include("./inc/footer.html", {"footerType": "type2",})</footer>
+            <!-- //푸터 영역 -->
+        </div>
+        
+    	@@include("./inc/modal-wrap.html")
+	
+    </body>
+</html>

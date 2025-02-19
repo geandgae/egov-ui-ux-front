@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include("../inc/head.html", { "title": "형태 (Shape) | 스타일 가이드 - KRDS", })
+
+    <body>
+        <div id="wrap" class="g-wrap">
+            @@include("../inc/guide-header.html")
+
+            <!-- 컨테이너 영역 -->
+            <div id="container" class="krds-in-page-navigation-type">
+                <!-- 컨텐츠 영역 -->
+                <div class="inner in-between">
+                    <!-- 사이드 메뉴 -->
+                    @@include("../inc/guide-lnb.html")
+                    <!-- //사이드 메뉴 -->
+
+                    <div class="contents">
+                        <!-- breadcrumb -->
+                        @@include("../inc/page-breadcrumb.html")
+                        <!-- breadcrumb -->
+
+                        <!-- page-title -->
+                        @@include("../inc/page-title.html", { 
+							"desc" : "형태는 브랜드의 시각적 아이덴티티를 표현하는 중요한 요소로, UI 요소에 적용되는 둥글기 값인 래디어스(radius)를 통해 버튼, 카드, 컨테이너, 이미지 등에 고유한 느낌과 분위기를 만들어낸다." 
+						})
+                        <!-- //page-title -->
+
+                        <div class="conts-area">
+                            <!-- quick link -->
+                            @@include("../inc/page-quick-nav.html")
+                            <!-- //quick link -->
+
+                            <!-- scroll-check -->
+                            <div class="g-description-area scroll-check">
+                                <!-- 형태가 주는 이미지 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">형태가 주는 이미지</h3>
+                                    <div class="g-conts-area">
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">디자인 시스템에서 컴포넌트의 형태(shape)는 브랜드의 시각적 아이덴티티를 형성하는 핵심 요소이다. 형태의 변형에 따라 사용자가 해당 서비스나 기관에 느끼는 감정과 인식이 달라질 수 있다. 둥근 모서리와 각진 모서리는 각각 다른 이미지를 전달하며, 이를 통해 각 기관의 아이덴티티를 표현할 수 있다.</p>
+                                            <div class="g-desc-body">
+                                                <div class="g-img-wrap">
+                                                    <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/shape_img_01.png" alt="형태가 주는 이미지 예시" /></div>
+                                                </div>
+                                            </div>
+                                            <!-- disclosure -->  
+                                            <div class="krds-disclosure conts-expand-area border">
+                                                <button type="button" class="btn-conts-expand">각진 형태와 둥근 형태가 주는 이미지</button>
+                                                <div class="expand-wrap"> 
+                                                    <div class="expand-in"> 
+                                                        <div class="info-area">
+                                                            <div class="info-item">
+                                                                <div class="info-head">
+                                                                    <p class="tit">각진 형태</p>
+                                                                </div>
+                                                                <div class="info-body">
+                                                                    <p>심리학적 연구에서는 각진 모서리(Angular or Square Shapes)가 사람들에게 신뢰성과 효율성을 전달한다고 보고하며, 사람들은 직선과 각을 체계적이고 정확한 것으로 인식하는 경향이 있다.</p>
+                                                                    <ul class="krds-info-list decimal">
+                                                                        <li>전문성: 각진 형태는 정확하고 전문적인 느낌을 주어, 신뢰감을 전달한다.</li>
+                                                                        <li>효율성: 각진 디자인은 깔끔하고 효율적인 인상을 주며, 복잡한 정보를 깔끔하게 전달하는 데 주로 사용된다.</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>  
+                                                            <div class="info-item">
+                                                                <div class="info-head">
+                                                                    <p class="tit">둥근 형태</p>
+                                                                </div>
+                                                                <div class="info-body">
+                                                                    <p>심리학적 연구에서 둥근 형태(Rounded Shapes)는 긍정적인 감정과 연결된다고 한다. 둥근 모서리는 위협적이지 않고 안정적인 느낌을 주어, 사람들이 그 형태에 더 편안함을 느끼도록 한다.</p>
+                                                                    <ul class="krds-info-list decimal">
+                                                                        <li>친근함: 둥근 모서리는 부드럽고 친근한 인상을 주며, 따뜻한 사용자 경험을 유도한다.</li>
+                                                                        <li>안정감: 둥근 모서리는 안정감과 보호받는 느낌을 제공하여 긍정적인 감정을 유도한다.</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>                                                                    
+                                                           
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- //disclosure -->
+                                        </div>                                        
+                                    </div>
+                                </div>
+                                <!--// 형태가 주는 이미지 -->
+
+                                <!-- 래디어스 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">래디어스</h3>
+                                    <!-- 표준형 스타일 -->
+                                    <div class="g-conts-area sp-sm">
+                                        <h4 class="con-tit">표준형 스타일</h4>    
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">표준형 스타일은 xsmall-small-medium-large-xlarge 5단계로 구성되며, 각 레벨은 컴포넌트의 사이즈로 구분되된다. 각 레벨은 함께 사용할 빈도가 높은 컴포넌트의 묶음으로 같은 형태의 래디어스(radius) 적용이 필요하다.</p>
+                                            <p class="g-desc">표준형 스타일은 2px~12px의 래디어스 값을 사용하며, 이는 정부가 주는 신뢰감과 안정감, 친근함을 표현하기 위한 래디어스 값이다. 과하게 둥근 형태로 변형되는 것을 방지하기 위해 래디어스 최대 값을 12px로 설정한다.</p>
+                                            <a href="./../style/style_07.html" class="krds-btn medium text"><span class="underline">디자인 토큰 확인하기</span><i class="svg-icon ico-angle right"></i></a>
+                                            <div class="g-desc-body">
+                                                <div class="g-img-wrap">
+                                                    <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/shape_radius_01.png" alt="래디어스 예시"></div>
+                                                </div>
+                                            </div>
+                                            <div class="g-desc-body">
+                                                <div class="krds-table-wrap">
+                                                    <table class="tbl col data style">
+                                                        <caption>
+                                                        표준형 스타일에 대한 표로 Level, Usage, Container size, Radius size, Apply components, 대한 내용으로 구성되어 있으며 
+                                                        Level은 Xsmall, Small, Medium, Large,Xlarge 구성되어있다.
+                                                        </caption>
+                                                        <colgroup>
+                                                            <col style="width:12%">
+                                                            <col style="width:auto">
+                                                            <col style="width:16%">
+                                                            <col style="width:16%">
+                                                            <col style="width:20%">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                            <th scope="col">Level</th>
+                                                            <th scope="col">Usage</th>
+                                                            <th scope="col">Container size</th>
+                                                            <th scope="col">Radius size</th>
+                                                            <th scope="col">Apply components</th>  
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="bg-gray">
+                                                                <th scope="row" rowspan="3" class="vt">Xsmall</th>
+                                                                <td rowspan="3" class="vt">
+                                                                    컴포넌트 레벨에서 가장 작은 크기로 인디게이터, 뱃지, 프로그레스 바 같은 초소형 크기에 사용한다.
+                                                                    <span class="point">* 온전한 원형의 형태를 사용하는 경우 radius-max token을 사용한다.</span>
+                                                                </td>
+                                                                <td class="ac">8*8</td>
+                                                                <td class="ac">2px</td>
+                                                                <td rowspan="3" class="vt">Element</td>
+                                                            </tr>
+                                                            <tr class="bg-gray">
+                                                                <td class="ac">12*12</td>
+                                                                <td class="ac">2px</td>
+                                                            </tr>
+                                                            <tr class="bg-gray">
+                                                                <td class="ac">16*16</td>
+                                                                <td class="ac">2px</td>
+                                                            </tr>
+                                                            <tr class="bg-light">
+                                                                <th scope="row" rowspan="3" class="vt">Small</th>
+                                                                <td class="vt" rowspan="3">태그, 칩 같은 작은 컴포넌트에서 사용한다.</td>
+                                                                <td class="ac">20*20</td>
+                                                                <td class="ac">4px</td>
+                                                                <td rowspan="3" class="vt">Chips<br/>Checkbox<br/>Radio button<br/>Switch<br/>Tag</td>
+                                                            </tr>
+                                                            <tr class="bg-light">
+                                                                <td class="ac">24*24</td>
+                                                                <td class="ac">4px</td>
+                                                            </tr>
+                                                            <tr class="bg-light">
+                                                                <td class="ac">32*32</td>
+                                                                <td class="ac">4px</td>
+                                                            </tr>
+                                                            <tr class="bg-gray">
+                                                                <th scope="row" rowspan="4">Medium</th>
+                                                                <td rowspan="4">기본이 되는 값으로 주로 버튼, 인풋 등에서 사용한다.</td>
+                                                                <td class="ac">40*40</td>
+                                                                <td class="ac">6px</td>
+                                                                <td rowspan="4">Button<br/>Text input<br/>Textarea<br/>Select<br/>Carousel-Number<br/>Step indicator<br/>Pagination</td>
+                                                            </tr>
+                                                            <tr class="bg-gray">
+                                                                <td class="ac">48*48</td>
+                                                                <td class="ac">6px</td>
+                                                            </tr>
+                                                            <tr class="bg-gray">
+                                                                <td class="ac">56*56</td>
+                                                                <td class="ac">6px</td>
+                                                            </tr>
+                                                            <tr class="bg-gray">
+                                                                <td class="ac">64*64</td>
+                                                                <td class="ac">6px</td>
+                                                            </tr>
+                                                            <tr class="bg-light">
+                                                                <th scope="row" rowspan="2">Large</th>
+                                                                <td rowspan="2">주로 카드와 같은 큰 컴포넌트에 사용한다</td>
+                                                                <td class="ac">72*72</td>
+                                                                <td class="ac">10px</td>
+                                                                <td rowspan="2">Card<br/>Dialog</td>
+                                                            </tr>
+                                                            <tr class="bg-light">
+                                                                <td class="ac">80*80</td>
+                                                                <td class="ac">10px</td>
+                                                            </tr>
+                                                            <tr class="bg-gray">
+                                                                <th scope="row" rowspan="2">Xlarge</th>
+                                                                <td rowspan="2">가장 큰 값으로 주로 배너, 바텀 시트 같은 화면을 차지하는 비율이 큰 컴포넌트에 사용한다.</td>
+                                                                <td class="ac">96*96</td>
+                                                                <td class="ac">12px</td>
+                                                                <td rowspan="2">Banner<br/>Dialog<br/>Bottom sheet</td>
+                                                            </tr>
+                                                            <tr class="bg-gray">
+                                                                <td class="ac">120*120</td>
+                                                                <td class="ac">12px (max)</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <!-- disclosure -->  
+                                            <div class="krds-disclosure conts-expand-area border">
+                                                <button type="button" class="btn-conts-expand">표준형 스타일 래디어스 계산법</button>
+                                                <div class="expand-wrap"> 
+                                                    <div class="expand-in"> 
+                                                        <div class="info-area">
+                                                            <div class="info-body">
+                                                                <ol class="g-column">
+                                                                    <li class="g-column-item row">
+                                                                        <div class="g-img-wrap pure">
+                                                                            <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/shape_radius_02.png" alt="컨테이너 높이 X 비율 1/8 (0.125) = radius 예시" /></div>
+                                                                         </div>
+                                                                        <div class="g-column-txt">
+                                                                            <p class="con-tit sm"><strong class="g-number">1</strong>컨테이너 높이 X 비율 1/8 (0.125) = radius</p>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="g-column-item row">
+                                                                        <div class="g-img-wrap pure">
+                                                                            <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/shape_radius_03.png" alt="radius 결과값 반올 예시" /></div>
+                                                                         </div>
+                                                                         <div class="g-column-txt">
+                                                                            <p class="con-tit sm"><strong class="g-number">2</strong>radius 결과값 반올</p>
+                                                                         </div>
+                                                                    </li>
+                                                                </ol>
+                                                            </div>  
+                                                            <div class="helper-box refer">
+                                                                <h4 class="helper-tit">계산 시 주의사항</h4>
+                                                                <ul class="krds-info-list decimal">
+                                                                    <li>계산한 radius값을 반올림했을 때 홀수인 경우, 숫자가 더 높은 짝수로 변경한다.
+                                                                       <ul class="krds-info-list dash">
+                                                                           <li>높이(12) x 비율(0.125) = 1.5일 때 radius는 2로 적용한다.</li>
+                                                                           <li>높이(20) x 비율(0.125) = 2.5일 때 radius는 4로 적용한다.</li>
+                                                                           <li>높이(120) x 비율(0.125) = 15일 때 radius는 max값인 12로 적용한다.</li>
+                                                                       </ul>
+                                                                   </li>
+                                                              </ul> 
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- //disclosure -->
+                                        </div>
+                                    </div>
+                                    <!--// 표준형 스타일 -->
+
+                                    <!-- 확장형 스타일 -->
+                                    <div class="g-conts-area sp-sm">
+                                        <h4 class="con-tit">확장형 스타일</h4>   
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">각 기관의 아이덴티티에 맞게 커스터마이즈된 래디어스 값을 설정할 수 있다. 1px 이상의 래디어스 값을 사용할 때는 표준형 스타일의 계층 구조를 참고하여 일관성을 유지한다.</p>
+                                            <div class="g-desc-body">
+                                                <div class="g-img-wrap">
+                                                    <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/shape_radius_04.png" alt="확장형 스타일 예시"></div>
+                                                </div>
+                                            </div>
+                                            <!-- disclosure -->  
+                                            <div class="krds-disclosure conts-expand-area border">
+                                                <button type="button" class="btn-conts-expand">컴포넌트의 사이즈에 맞는 래디어스값 설정</button>
+                                                <div class="expand-wrap"> 
+                                                    <div class="expand-in"> 
+                                                        <div class="info-area">
+                                                            <div class="info-head">
+                                                                <p class="tit">래디어스 비율에 맞게 적용하는 방법</p>
+                                                            </div>
+                                                            <div class="info-body">
+                                                                <p>컨테이너 높이 x 비율 = 래디우스값</p>  
+                                                                <ol class="krds-info-list ordered">
+                                                                    <li><span class="num">1.</span>기준이 되는 컴포넌트를 기관에 맞는 래디어스 값을 테스트하여 비율 값을 찾는다.</li>
+                                                                    <li><span class="num">2.</span>그 비율로 사용되는 컴포넌트 높이값 기준으로 래디어스 값을 적용한다.</li>
+                                                                </ol>
+                                                                <div class="info-box">
+                                                                    <p class="sub-tit">예시</p>
+                                                                    <div class="g-img-wrap pure">
+                                                                        <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/shape_radius_05.png" alt="래디어스 비율에 맞게 적용하는 방법 예시" /></div>
+                                                                    </div>
+                                                                    <ul class="krds-info-list dash">
+                                                                        <li>디자인 시스템에서 래디어스 값은 짝수로 사용하는 것을 권장한다.</li>
+                                                                        <li>컨테이너와 비율을 계산 후 나온 수치 값이 홀수 이거나 소수점으로 나올시 함께 사용될 컴포넌트를 고려하여 근사치에 맞게 올림하여 짝수의 값을 사용한다.</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- //disclosure -->
+                                        </div> 
+                                    </div>
+                                    <!--// 확장형 스타일 -->
+
+                                    <!-- 표현 방법 -->
+                                    <div class="g-conts-area sp-sm">
+                                        <h4 class="con-tit">표현 방법</h4>   
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">래디어스 값은 px와 % 단위로 설정할 수 있다.</p>
+                                            <ul class="krds-info-list decimal">
+                                                <li>px 값 사용: 버튼이나 입력 필드 같은 요소는 크기에 맞는 일관된 둥글기 설정이 중요하므로 px 단위로 설정한다.</li>
+                                                <li>% 값 사용: 프로필 사진처럼 완전한 원형이 필요한 경우 % 값을 사용하여 더 직관적으로 설정할 수 있다.</li>
+                                            </ul>
+                                            <div class="g-desc-body">
+                                                <!-- disclosure -->  
+                                                <div class="krds-disclosure conts-expand-area border">
+                                                    <button type="button" class="btn-conts-expand">전체 래디어스를 % 설정시 주의사항</button>
+                                                    <div class="expand-wrap"> 
+                                                        <div class="expand-in"> 
+                                                            <div class="info-area"> 
+                                                                <div class="info-body">
+                                                                    <ul class="krds-info-list decimal">
+                                                                        <li>비율 변동: 컴포넌트마다 크기 비율이 달라지므로 둥글기값 조정이 어려울 수 있다.</li>
+                                                                        <li>텍스트 목일관성 부족: % 단위로 설정하면 UI 요소마다 둥글기값이 일정하지 않아 디자인의 일관성을 유지하기 어렵다.</li>
+                                                                        <li>작은 컴포넌트: 작은 컴포넌트에 50%를 적용하면 지나치게 둥글어져 의도와 다른 디자인 결과가 나올 수 있다.</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- //disclosure -->
+                                            </div>
+                                        </div> 
+                                    </div>
+                                    <!--// 표현 방법 -->
+                                </div> 
+                                <!--// 래디어스 -->
+
+                                <!-- 래디어스 적용 -->
+                                 <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">래디어스 적용</h3>
+									<p class="g-desc">함께 사용이 되는 비슷한 크기의 구성 요소는 래디어스 값을 동일하게 적용하는 것이 좋다.</p>
+                                    <!-- 함께 배치되는 컴포넌트의 일관된 래디어스 -->
+                                    <div class="g-conts-area sp-sm">
+                                        <h4 class="con-tit">함께 배치되는 컴포넌트의 일관된 래디어스</h4>    
+                                        <div class="g-column">
+											<div class="g-img-wrap g-colum-item">
+												<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/shape_radius_03_01.png" alt="함께 배치되는 컴포넌트의 일관된 래디어스 예시" /></div>
+											</div>
+                                            <div class="g-img-wrap g-colum-item">
+                                                <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/shape_radius_03_02.png" alt="함께 배치되는 컴포넌트의 일관된 래디어스 예시 이미지2" /></div>
+                                            </div>
+                                        </div>
+                                       
+                                    </div>
+                                    <!--// 함께 배치되는 컴포넌트의 일관된 래디어스 -->
+
+                                    <!-- 화면 구성 요소 간의 래디어스 조화 -->
+                                    <div class="g-conts-area">
+                                        <h4 class="con-tit">화면 구성 요소 간의 래디어스 조화</h4>    
+                                        <div class="g-desc-area">
+                                            <div class="g-img-wrap">
+                                                <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/shape_radius_03_03.png" alt="화면 구성 요소 간의 래디어스 조화 예시" /></div>
+                                            </div>
+                                        </div>
+                                    </div>
+									<!-- //화면 구성 요소 간의 래디어스 조화 -->
+                                </div>
+                                <!--// 래디어스 적용 -->
+
+                                <!-- 사용가이드 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">사용가이드</h3>
+                                    <!-- 비율 -->
+                                    <div class="g-conts-area sp-sm">
+                                        <h4 class="con-tit">비율</h4>
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">컨테이너 사이즈가 커지면 래디어스값도 비율에 맞게 적용한다.</p>
+                                            <div class="g-desc-body">
+                                                <div class="g-column">
+                                                    <div class="g-img-wrap caption-format success p-sm g-column-item">
+														<p class="caption"><span class="svg-icon ico-success-fill pure"></span>모범 사례</p>
+														<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/shape_guide_01_good.png" alt="모범 사례 예시"></div>
+													</div>
+                                                    <div class="g-img-wrap caption-format error p-sm g-column-item">
+														<p class="caption"><span class="svg-icon ico-error-fill pure"></span>피해야 할 사례</p>
+														<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/shape_guide_01_bad.png" alt="피해야 할 사례 예시"></div>
+													</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>     
+                                    <!--// 비율 -->   
+
+                                    <!-- 동일한 래디어스 적용 -->
+                                    <div class="g-conts-area">
+                                        <h4 class="con-tit">동일한 래디어스 적용</h4>
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">비슷한 크기의 구성 요소는 동일한 래디어스를 적용하면 디자인의 통일성과 조화로움을 높일 수 있다.</p>
+                                            <div class="g-desc-body">
+                                                <div class="g-column">
+                                                    <div class="g-img-wrap caption-format success p-sm g-column-item">
+                                                        <p class="caption"><span class="svg-icon ico-success-fill pure"></span>모범 사례</p>
+                                                        <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/shape_guide_02_good.png" alt="모범 사례 예시"></div>
+                                                    </div>
+                                                    <div class="g-img-wrap caption-format error p-sm g-column-item">
+														<p class="caption"><span class="svg-icon ico-error-fill pure"></span>피해야 할 사례</p>
+														<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/shape_guide_02_bad.png" alt="피해야 할 사례 예시"></div>
+													</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>     
+                                    <!--// 동일한 래디어스 적용 -->   
+
+
+                                    <!-- 콘텐츠 영역 침범 -->
+                                    <div class="g-conts-area">
+                                        <h4 class="con-tit">콘텐츠 영역 침범</h4>
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">과한 래디어스 값 적용으로 콘텐츠에 영향을 주지 않는다. 둥근 형태를 사용할땐 내부 패딩값을 충분히 준다.</p>
+                                            <div class="g-desc-body">
+                                                <div class="g-column">
+                                                    <div class="g-img-wrap caption-format success p-sm g-column-item">
+														<p class="caption"><span class="svg-icon ico-success-fill pure"></span>모범 사례</p>
+														<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/shape_guide_03_good.png" alt="모범 사례 예시"></div>
+													</div>
+                                                    <div class="g-img-wrap caption-format error p-sm g-column-item">
+														<p class="caption"><span class="svg-icon ico-error-fill pure"></span>피해야 할 사례</p>
+														<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/shape_guide_03_bad.png" alt="피해야 할 사례 예시"></div>
+													</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>     
+                                    <!--// 콘텐츠 영역 침범 -->   
+
+                                    <!-- 콘텐츠 영역 침범 -->
+                                    <div class="g-conts-area">
+                                        <h4 class="con-tit">% 사용</h4>
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">작은 컴포넌트에서 50%를 적용하면 모서리가 지나치게 둥글어져 의도와 다른 디자인 결과가 나올 수 있다.</p>
+                                            <div class="g-desc-body">
+                                                <div class="g-column">
+                                                    <div class="g-img-wrap caption-format success p-sm g-column-item">
+														<p class="caption"><span class="svg-icon ico-success-fill pure"></span>모범 사례</p>
+														<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/shape_guide_04_good.png" alt="모범 사례 예시"></div>
+													</div>
+                                                    <div class="g-img-wrap caption-format error p-sm g-column-item">
+														<p class="caption"><span class="svg-icon ico-error-fill pure"></span>피해야 할 사례</p>
+														<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/shape_guide_04_bad.png" alt="피해야 할 사례 예시"></div>
+													</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>     
+                                    <!--// 콘텐츠 영역 침범 -->   
+                                </div>
+                                <!--// 사용가이드 -->
+
+                                <!-- 자주 묻는 질문 -->
+                                @@include("../inc/page-faq.html")
+                                <!-- //자주 묻는 질문 -->
+
+                                <!-- 정보 변경 내역 -->
+								@@include("../inc/page-info-update-log.html")
+                                <!-- //정보 변경 내역 -->
+
+                                <!-- 컨텐츠 배너 영역 -->
+                                @@include("../inc/page-banner.html")
+                                <!--// 컨텐츠 배너 영역 -->
+                            </div>
+                            <!-- //scroll-check -->
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- //컨텐츠 영역 -->
+            </div>
+            <!-- //컨테이너 영역 -->
+
+            <!-- 푸터 영역 -->
+			<footer id="krds-footer">
+				@@include("../inc/guide-footer.html")
+			</footer>
+            <!-- //푸터 영역 -->
+        </div>
+    </body>
+</html>

@@ -1,0 +1,100 @@
+<!-- 검색 입력폼 -->
+<div class="search-top-box">
+	<div class="sch-filter-box">
+		<div class="filter-form">
+			<div>
+				<label class="label" for="appl-sch-sel1">생애 주기</label>
+				<select id="appl-sch-sel1" class="krds-form-select medium">
+					<option value="">전체</option>
+					<option value="">항목</option>
+					<option value="">항목</option>
+				</select>
+			</div>
+			<div>
+				<label class="label" for="appl-sch-sel2">가구 상황</label>
+				<select id="appl-sch-sel2" class="krds-form-select medium">
+					<option value="">전체</option>
+					<option value="">항목</option>
+					<option value="">항목</option>
+				</select>
+			</div>
+			<div>
+				<label class="label" for="appl-sch-sel3">관심 주제</label>
+				<select id="appl-sch-sel3" class="krds-form-select medium">
+					<option value="">전체</option>
+					<option value="">항목</option>
+					<option value="">항목</option>
+				</select>
+			</div>
+		</div>
+		<dl class="filter-chip">
+			<dt>선택된 필터<span class="num">2</span></dt>
+			<dd>
+				<button type="button" class="krds-btn xlarge icon border">
+					<span class="sr-only">새로고침</span>
+					<i class="svg-icon ico-refresh"></i>
+				</button>
+				<div class="chip-wrap krds-tag-wrap large">
+					<span class="krds-btn-tag">
+						영유아
+						<button type="button" class="btn-delete">
+							<span class="sr-only">삭제</span>
+						</button>
+					</span>
+					<span class="krds-btn-tag">
+						필터 값
+						<button type="button" class="btn-delete">
+							<span class="sr-only">삭제</span>
+						</button>
+					</span>
+					<span class="krds-btn-tag">
+						필터 값
+						<button type="button" class="btn-delete">
+							<span class="sr-only">삭제</span>
+						</button>
+					</span>
+				</div>
+			</dd>
+		</dl>
+	</div>
+</div>
+<!-- //검색 입력폼 -->
+
+<!-- 검색 결과 : 리스트 상단 -->
+<div class="search-list-top">
+	<ul class="sch-info" aria-live="polite">
+		<li>검색 결과 <span class="point">24</span>건</li>
+	</ul>
+	<ul class="sch-sort">
+		<li class="m-hide">
+			<strong class="sort-label"><label for="search_result_count">목록 표시 개수</label></strong>
+			<select class="krds-form-select-sort" id="search_result_count">
+				<option>10개</option>
+				<option>9개</option>
+			</select>
+		</li>
+		<li class="w-hide">
+			<button type="button" class="krds-btn large text ico-filter">
+				<span class="span">필터</span>
+				<span class="krds-badge bg-primary number">122</span>
+				<i class="svg-icon ico-filter"></i>
+			</button>
+		</li>
+		<li>
+			<strong class="sort-label"><label for="sort">정렬기준</label></strong>
+			<div class="w-sort-btn">
+				<button type="button" class="active">관련도순</button>
+				<button type="button">최신순</button>
+				<button type="button">인기순</button>
+			</div>
+			<div class="m-sort-btn">
+				<select class="krds-form-select-sort" id="sort">
+					<option>관련도순</option>
+					<option>최신순</option>
+					<option>인기순</option>
+				</select>
+			</div>
+		</li>
+	</ul>
+</div>
+<!-- //검색 결과 : 리스트 상단 -->

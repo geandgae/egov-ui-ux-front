@@ -1,0 +1,24 @@
+<div class="page-title-wrap">
+  <h1 class="h-tit">page title</h1>
+  @@if (context.desc) {
+    <div class="g-info-box">
+		@@if (!Array.isArray(context.desc)) {
+			<p class="g-desc">@@desc</p>
+		}
+		@@if (Array.isArray(context.desc)) {
+			@@for (var i=0; i < desc.length; i++) {
+				<p class="g-desc">`+desc[i]+`</p>
+			}
+		}
+    </div>
+  }
+  @@if (context.list) {
+    <div class="g-info-box">
+		<ul class="krds-info-list decimal">
+			@@for (var i=0; i < list.length; i++) {
+				<li>`+list[i]+`</li>
+			}
+		</ul>
+    </div>
+  }
+</div>

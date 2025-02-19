@@ -1,0 +1,34 @@
+<!-- 예시 -->
+@@for (var i=0; i < example.length; i++) {
+<div class="g-conts-area sp-sm">
+  <h4 class="con-tit">`+example[i].title+`</h4>
+  <div class="g-example-wrap">
+    <div @@if (`example[i].context.class`) {class="g-example `+example[i].class+`"}>
+      <div class="g-example-scroll">
+        <div class="g-example-inner">
+          <div class="sample-view">
+            <!-- example -->
+            @@include("../`+example[i].folder+`/code/`+example[i].file+`.html")
+            <!-- //example -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="g-code-wrap krds-accordion">
+      <div class="accordion-item">
+        <h5 class="accordion-header"><button type="button" class="btn-accordion">코드 확인하기</button></h5>
+        <div class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <!-- code -->
+            <div class="g-code-box">
+              <pre data-src="../`+example[i].folder+`/code/`+example[i].file+`.html"></pre>
+            </div>
+            <!-- //code -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+}
+<!-- //예시 -->

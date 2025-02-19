@@ -1,0 +1,174 @@
+<!-- 본문 바로가기 영역  -->
+<div id="krds-skip-link">
+  <a href="#breadcrumb">본문 바로가기</a>
+</div>
+<!-- //본문 바로가기 영역  -->
+
+<!-- 상단 배너영역 -->
+<div id="krds-masthead">
+  <div class="toggle-wrap">
+    <div class="toggle-head">
+      <div class="inner">
+        <span class="nuri-txt">이 누리집은 대한민국 공식 전자정부 누리집입니다.</span>
+        <!-- <button type="button" class="krds-btn xsmall text toggle-btn">
+					공식 누리집 확인방법 <i class="svg-icon ico-angle"></i>
+					<span class="sr-only">열기</span>
+				</button> -->
+      </div>
+    </div>
+
+    <!-- <div class="toggle-body">
+      <div class="inner">
+        <dl class="nuri">
+          <dt>공식 누리집 주소 확인하기</dt>
+          <dd class="desc">
+            go.kr 주소를 사용하는 누리집은 대한민국 정부기관이 관리하는 누리집입니다.<br />
+            이밖에 or.kr 또는 .kr등 다른 도메인 주소를 사용하고 있다면 아래 URL에서 도메인 주소를 확인해 보세요
+          </dd>
+          <dd>
+            <a href="#" class="krds-btn xsmall text" target="_blank" title="새 창 열기"> 운영중인 공식 누리집보기 <i class="svg-icon ico-link"></i> </a>
+          </dd>
+        </dl>
+      </div>
+    </div> -->
+    
+  </div>
+</div>
+<!-- //상단 배너영역 -->
+
+<!-- 헤더 영역 -->
+<header id="krds-header">
+  <!-- 헤더 컨텐츠 영역 -->
+  <div class="header-in">
+    <!-- 헤더 상단 기타메뉴 -->
+    <div class="header-container">
+      <div class="inner">
+        <div class="header-utility">
+          <ul class="utility-list">
+            <li>
+              <button type="button" class="krds-btn small text open-modal" data-target="modal_adjust_display">
+                <i class="svg-icon ico-view-mode"></i> 글자&middot;화면 설정
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="header-branding">
+          <h2 class="logo">
+            <a href="/dist/html/site/index.html">
+              <span class="sr-only">KRDS - Korea Design System</span>
+	            <!-- <img src="../../../resources/img/guide/common/ico_logo_krds.svg" alt="KRDS"> -->
+            </a>
+          </h2>
+          <div class="header-actions">
+            <!-- 메인메뉴 : 데스크탑 -->
+            @@include("./gnb-pc.html")
+            <!-- //메인메뉴 : 데스크탑 -->
+
+            <button type="button" class="btn-navi all" aria-controls="mobile-nav">전체메뉴</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //헤더 상단 기타메뉴 -->
+  </div>
+  <!-- //헤더 컨텐츠 영역 -->
+
+  <!-- 메인메뉴 : 모바일 -->
+  @@include("./gnb-mobile.html")
+  <!-- //메인메뉴 : 모바일 -->
+</header>
+<!-- //헤더 영역 -->
+
+
+<!-- modal 글자 / 화면 설정 -->
+<section id="modal_adjust_display" class="krds-modal fade" aria-labelledby="tit_modal_adjust_display">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<!-- modal title -->
+			<div class="modal-header">
+				<h2 id="tit_modal_adjust_display" class="modal-title">
+					글자&middot;화면 표시 설정
+				</h2>
+			</div>
+			<!-- //modal title -->
+			<!-- modal contents -->
+			<div class="modal-conts">
+				<div class="conts-area">
+
+          <!-- adjust_display -->
+          <div class="adjust_display">
+            <!-- 글자 / 화면 표시 설정 -->
+            <div class="fieldset adjust_scale">
+              <div class="form-group scale-options">
+                <h3>글자&middot;화면 표시 설정</h3>
+                <div class="form-conts">
+                  <div class="krds-check-area chk-column">
+                    <div class="krds-form-check">
+                      <input type="radio" name="scale_level" id="scale_level_small" value="small">
+                      <label for="scale_level_small">작게</label>
+                    </div>
+                    <div class="krds-form-check">
+                      <input type="radio" name="scale_level" id="scale_level_medium" value="medium" checked>
+                      <label for="scale_level_medium">보통</label>
+                    </div>
+                    <div class="krds-form-check">
+                      <input type="radio" name="scale_level" id="scale_level_large" value="large">
+                      <label for="scale_level_large">조금 크게</label>
+                    </div>
+                    <div class="krds-form-check">
+                      <input type="radio" name="scale_level" id="scale_level_xlarge" value="xlarge">
+                      <label for="scale_level_xlarge">크게</label>
+                    </div>
+                    <div class="krds-form-check">
+                      <input type="radio" name="scale_level" id="scale_level_xxlarge" value="xxlarge">
+                      <label for="scale_level_xxlarge">가장 크게</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 화면 표시 모드 -->
+            <div class="fieldset">
+              <div class="form-group view-mode-options">
+                <h3>화면 표시 모드</h3>
+                <div class="form-conts">
+                  <div class="krds-check-area chk-column">
+                    <div class="krds-form-check view-mode-light">
+                      <input type="radio" name="view_mode" id="view_mode_light" value="light" checked>
+                      <label for="view_mode_light">기본 (밝은 배경)</label>
+                    </div>
+                    <div class="krds-form-check view-mode-dark">
+                      <input type="radio" name="view_mode" id="view_mode_dark" value="high-contrast">
+                      <label for="view_mode_dark">선명하게 (어두운 배경)</label>
+                    </div>
+                    <div class="krds-form-check view-mode-default">
+                      <input type="radio" name="view_mode" id="view_mode_default" value="theme">
+                      <label for="view_mode_default">시스템 설정</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- //adjust_display -->
+
+				</div>
+			</div>
+			<!-- //modal contents -->
+			<!-- modal btn -->
+			<div class="modal-btn btn-wrap">
+				<button type="button" class="krds-btn medium tertiary close-modal" id="reset_display">초기화</button>
+				<button type="button" class="krds-btn medium primary close-modal">닫기</button>
+			</div>
+			<!-- //modal btn -->
+			<!-- close button -->
+			<button type="button" class="krds-btn medium icon btn-close close-modal">
+				<span class="sr-only">닫기</span>
+				<i class="svg-icon ico-popup-close"></i>
+			</button>
+			<!-- //close button -->
+		</div>
+	</div>
+	<div class="modal-back"></div>
+</section>
+<!-- //modal 글자 / 화면 설정 -->

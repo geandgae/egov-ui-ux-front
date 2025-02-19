@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include("../inc/head.html", { "title": "서체 (Typography) | 스타일 가이드 - KRDS", })
+
+    <body>
+        <div id="wrap" class="g-wrap">
+            @@include("../inc/guide-header.html")
+
+            <!-- 컨테이너 영역 -->
+            <div id="container" class="krds-in-page-navigation-type">
+                <!-- 컨텐츠 영역 -->
+                <div class="inner in-between">
+                    <!-- 사이드 메뉴 -->
+                    @@include("../inc/guide-lnb.html")
+                    <!-- //사이드 메뉴 -->
+
+                    <div class="contents">
+                        <!-- breadcrumb -->
+                        @@include("../inc/page-breadcrumb.html")
+                        <!-- breadcrumb -->
+
+                        <!-- page-title -->
+                        @@include("../inc/page-title.html", { 
+							"desc" : "타이포그래피는 정보를 효과적으로 전달하고 일관된 사용자 경험을 제공하는 데 필수적인 요소이다. 글꼴, 크기, 두께, 간격, 계층 구조를 정의하여 가독성을 높이고, 내용을 중요도에 따라 시각적으로 표현한다. 가이드에 맞춘 타이포그래피는 명확한 정보 전달을 가능하게 하며, 다양한 화면에서도 일관된 경험을 제공한다." 
+						})
+                        <!-- //page-title -->
+
+                        <div class="conts-area">
+                            <!-- quick link -->
+                            @@include("../inc/page-quick-nav.html")
+                            <!-- //quick link -->
+
+                            <!-- scroll-check -->
+                            <div class="g-description-area scroll-check">
+                                <!-- 서체 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">서체</h3>
+                                    <div class="g-conts-area no-space">
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">표준형 스타일은 국문과 영문 모두 Pretendard GOV 서체(typeface)를 기본으로 사용한다.</p>
+                                            <div class="g-desc-body">
+                                                <div class="g-img-wrap">
+                                                    <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/typography_typeface.png" alt="서체 예시" /></div>
+                                                </div>
+                                            </div>
+                                            <a href="https://github.com/orioncactus/pretendard/tree/main/packages/pretendard-gov" class="krds-btn medium link" target="_blank" title="새창열림">
+												<span class="underline">Pretendard GOV 서체 바로가기</span>
+                                                <i class="svg-icon ico-go"></i>
+                                            </a>
+                                             <!-- disclosure -->  
+                                             <div class="krds-disclosure conts-expand-area border">
+                                                <button type="button" class="btn-conts-expand">Pretendard GOV는</button>
+                                                <div class="expand-wrap"> 
+                                                    <div class="expand-in">
+                                                        <div class="info-area">
+                                                            <div class="info-body">
+                                                                <p class="g-txt-gray">Pretendard GOV는 Pretendard를 기반으로 만들어졌으며 공공기관에서의 접근성과 가독성에 초점을 맞춰, 정부 웹사이트나 공식 문서 등에서 쉽게 읽히고 이해될 수 있도록 설계되었다.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- //disclosure -->
+                                        </div>
+                                    </div>
+
+                                    <div class="g-conts-area sp-sm">
+                                        <h4 class="con-tit">확장형 스타일</h4>
+                                        <div class="g-desc-area">
+											<p class="g-desc">확장형 스타일은 가독성이 높은 고딕 계열 서체를 권장한다.</p>
+											<p class="g-desc">자체 개발 폰트가 고딕 계열이 아니거나 가독성이 낮다면 디스플레이나 배너 등 특정 영역에서만 제한적으로 사용하고, 본문과 제목에는 가독성을 위해 고딕 계열 서체를 사용한다.</p>
+											<ul class="krds-info-list decimal">
+												<li>추천 고딕계열 폰트 : 노토 산스, 나눔 고딕, 스포카 한 산스</li>
+											</ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--// 서체 -->
+
+                                <!-- 글자 두께 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">글자 두께</h3>
+                                    <div class="g-desc-area">
+                                        <p class="g-desc">표준형 스타일은 글자 간의 명확한 대비를 위해 regular(400)와 bold(700) 두 가지 두께(font-weight)를 사용한다. 각 두께는 저시력자를 포함한 대부분의 사용자에게 명확한 대비를 주는 굵기로 regular는 주로 본문에 사용하여 기본 가독성을 보장하고, bold는 강조가 필요한 제목이나 중요한 내용에 사용한다.</p>
+                                        <div class="g-desc-body">
+                                            <div class="g-column">
+                                                <div class="g-column-item">
+                                                    <div class="g-img-wrap">
+                                                        <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/typography_width_01.png" alt="글자 두께 - Regular 400 예시" /></div>
+                                                    </div>
+                                                </div>
+                                                <div class="g-column-item">
+                                                    <div class="g-img-wrap">
+                                                        <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/typography_width_02.png" alt="글자 두께 - Bold 700 예시" /></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                         <!-- disclosure -->
+                                         <div class="krds-disclosure conts-expand-area border">
+                                            <button type="button" class="btn-conts-expand">이상적인 글자 두께</button>
+                                            <div class="expand-wrap">
+                                                <div class="expand-in">
+                                                    <div class="info-area">  
+                                                        <div class="info-body">
+                                                            <p>글자의 두께는 화면 크기와 사용자 특성에 따라 가독성에 영향을 미친다. 지나치게 얇은 두께(light, thin)는 배경과의 구분이 어렵고, 지나치게 두꺼운 두께(extra bold)는 시각적 피로를 유발할 수 있다.</p>
+                                                            <p>텍스트의 두께 사용은 최대 4가지 정도로 제한하는 것이 이상적이며, 너무 많은 두께의 종류를 이용하면 사용자가 정보의 중요도를 혼동할 수 있으므로 주의한다</p>
+                                                            <ul class="krds-info-list hollow">
+                                                                <li>이상적인 텍스트 두께 :  regular(400), medium(500), bold(700)</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>  
+                                            </div>
+                                        </div>
+                                        <!-- //disclosure -->                   
+                                    </div>
+                                </div>   
+                                <!--// 글자 두께 -->
+
+                                <!-- 줄 간격 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">줄 간격</h3> 
+                                    <div class="g-conts-area">
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">줄 간격(line-height)은 가독성과 접근성을 위해 최소 150% 이상으로 설정하여, 시각적 피로를 줄이고 시각장애나 난독증 사용자의 읽기 편의를 높인다. 다양한 글자 크기에 대응하기 위해 px 단위가 아닌 em 또는 % 등 상대적 단위를 사용한다.</p>
+                                            <div class="g-desc-body">
+                                                <div class="g-img-wrap">
+                                                    <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/typography_line_01.png" alt="줄 간격 예시" /></div>
+                                                </div>
+                                            </div>
+                                            <a href="https://www.w3.org/WAI/WCAG22/quickref/#text-spacing" class="krds-btn medium link" target="_blank" title="새 창 열기">
+                                                <span class="underline">1.4.12Text Spacing-Level AA</span>
+                                                <i class="svg-icon ico-go"></i>
+                                            </a>
+											<div class="g-desc-body">
+                                                <!-- disclosure -->
+                                                <div class="krds-disclosure conts-expand-area border">
+                                                    <button type="button" class="btn-conts-expand">Figma vertical trim 설정</button>
+                                                    <div class="expand-wrap">
+                                                        <div class="expand-in">  
+                                                            <div class="info-area">
+                                                                <div class="info-head">
+                                                                    <p class="tit">Figma vertical trim</p>
+                                                                </div>
+                                                                <div class="info-body g-desc-area">
+                                                                    <p>Figma에서 Vertical Trim은 type settings에서 텍스트 컴포넌트의 세로 간격을 조정하는 방식으로, 폰트 전체의 높이를 기준으로 계산한 standard와 텍스트의 대문자 상단(Cap height)과 기준선(Baseline) 사이를 기준으로 계산한 Cap height to baseline이 있다.</p>
+																	<p>표준형 스타일은 디자인과 개발 환경 간의 텍스트 정렬 불일치를 방지하고, 더 나은 일관성을 유지하기 위해 Vertical Trim을 "Standard"로 설정한다.</p>
+                                                                    <div class="g-desc-body">
+                                                                        <div class="g-img-wrap">
+                                                                            <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/typography_line_02.png" alt="Figma vertical trim의 standard와 cap height to baseline의 예시" /></div>
+                                                                        </div>
+                                                                    </div>
+																	<div class="g-desc-body">
+																		<p class="sub-tit">Standard</p>
+																		<ul class="krds-info-list decimal">
+																			<li>Standard는 폰트의 전체 높이를 기준으로 삼아 CSS의 line-height와 구조적으로 유사해, 예상치 못한 레이아웃 오류를 줄일 수 있다.</li>
+																			<li>글자의 상단 요소와 하단 요소가 모두 포함 되어 간격 설정에 유의해야한다.</li>
+																		</ul>
+																	</div>
+																	<div class="g-desc-body">
+																		<p class="sub-tit">Cap height to baseline</p>
+																		<ul class="krds-info-list decimal">
+																			<li>Cap height to baseline 설정은 텍스트의 대문자 상단과 기준선만을 기준으로 하여, 텍스트가 컴포넌트나 레이아웃 그리드와 정확히 맞아떨어지도록 하기 위해 활용된다.</li>
+																			<li>실제 개발 환경에서의 line-height 계산과 다르게 보일 수 있으니 주의해야한다.</li>
+																		</ul>
+																	</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- //disclosure -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>   
+                                <!--// 줄 간격 -->
+
+                                <!-- 기본 사이즈 -->
+                                <div class="g-conts-area section-link">  
+                                    <h3 class="sec-tit">기본 사이즈</h3>
+                                    <div class="g-conts-area">
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">본문 폰트 크기는 모든 사용자가 쉽게 읽을 수 있도록 최소 16px 이상으로 설정한다. 적절한 글자 크기는 정보 접근성을 보장하는 중요한 요소로, 특히 디지털 취약계층를 고려하여 설정해야 한다.</p>
+                                            <p class="g-desc">표준형 스타일의 Pretendard GOV는 다른 서체에 비해 상대적으로 크기가 작아 17px을 기본 크기로 사용한다.</p>
+                                            <div class="g-desc-body">
+                                                <!-- disclosure -->
+                                                <div class="krds-disclosure conts-expand-area border">
+                                                    <button type="button" class="btn-conts-expand">서체별 특성</button>
+                                                    <div class="expand-wrap">
+                                                        <div class="expand-in">  
+                                                            <div class="info-area">
+                                                                <div class="info-head">
+                                                                    <p class="tit">서체별 특성</p>
+                                                                </div>
+                                                                <div class="info-body g-desc-area">
+                                                                    <p>같은 크기의 글자도 폰트 특성상 글자 크기가 다르게 느껴질 수 있다. 16px의 같은 사이즈도 '나눔고딕'은 크기가 상대적으로 커 보이는 반면, 'pretendard GOV'는 크기가 작게 느껴질 수 있어 시각적으로 균형 잡힌 크기로 설정해야 한다.</p>
+                                                                    <div class="g-desc-body">
+                                                                        <div class="g-img-wrap">
+                                                                            <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/typography_size_01.png" alt="글자의 특성 예시" /></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="g-desc-body">
+                                                                        <div class="g-column">
+                                                                            <div class="g-column-item">
+                                                                                <div class="g-img-wrap">
+                                                                                    <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/typography_size_02.png" alt="모든 사용자를 포용하는 서비스 Pretendard GOV 17px 예시" /></div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="g-column-item">
+                                                                                <div class="g-img-wrap">
+                                                                                    <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/typography_size_03.png" alt="모든 사용자를 포용하는 서비스 Pretendard GOV 16px 예시" /></div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="g-column-item">
+                                                                                <div class="g-img-wrap">
+                                                                                    <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/typography_size_04.png" alt="모든 사용자를 포용하는 서비스 나눔고딕 16px 예시" /></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- //disclosure -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>   
+                                <!--// 기본 사이즈 -->
+
+                                <!-- 표현 단위(rem) -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">표현 단위(rem)</h3>
+                                    <div class="g-conts-area">
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">글자 크기와 반응형 디자인을 고려하여 개발 시 코드에서 rem 단위로 변환해 사용한다. rem은 루트 요소에 따라 조정되는 상대 단위로, 사용자가 브라우저 크기에 따라 텍스트 크기를 조정할 수 있어 접근성과 반응성이 향상된다. rem 기본값은 10px 또는 62.5%로 설정하여 px로 환산해 사용한다.</p>
+                                            <div class="g-desc-body">
+                                                <!-- table list -->
+                                                <div class="krds-table-wrap">
+                                                    <table class="tbl col data style">
+                                                        <caption>표현 단위(rem) 에 대한 표로 rem의 기본값, % 기준, px 기준에 대한 내용으로 구성되어 있으며 rem의 기본값은 시스템 기본 폰트 크기 16px 기준으로 구성되어있다.</caption>
+                                                        <colgroup>
+                                                            <col>
+                                                            <col style="width: 30%;">
+                                                            <col style="width: 30%;">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>    
+                                                                <th scope="col">rem의 기본값</th>
+                                                                <th scope="col">% 기준</th>
+                                                                <th scope="col">px 기준</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>  
+                                                            <tr class="bg-gray">
+                                                                <th scope="row" rowspan="3" class="vt">시스템 기본 폰트 크기 16px 기준</th>
+                                                                <td>100%</td>
+                                                                <td>16px</td>
+                                                            </tr>
+                                                            <tr class="bg-gray">
+                                                                <td>62.5%</td>
+                                                                <td>10px</td>
+                                                            </tr>
+                                                            <tr class="bg-gray">
+                                                                <td>50%</td>
+                                                                <td>8px</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <!-- //table list -->
+                                            </div>
+                                            <a href="https://sitero.co.kr/fontsize" class="krds-btn medium link" target="_blank" title="새 창 열기">
+                                                <span class="underline">단위변환 참고 사이트</span>
+                                                <i class="svg-icon ico-go"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>   
+                                <!--// 표현 단위(rem) -->
+
+                                <!-- 글자 스케일 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">글자 스케일</h3>
+                                    <div class="g-conts-area">
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">글자 스케일(type scale)은 정보 전달과 체계적인 글자 사용을 위해 계층에 맞는 글자 크기를 정의한다. 표준형 스타일은 display, heading, body의 구조를 사용하며, 각 영역의 목적에 맞게 글자 크기를 설정한다.</p>
+                                            <p class="g-desc">표준형 스타일은 display, heading, body의 구조를 사용하며, 각 영역의 목적에 맞게 글자 크기를 설정한다.</p>
+                                            <div class="g-desc-body">
+                                                <a href="./../style/style_07.html" class="krds-btn medium text"><span class="underline">디자인 토큰 확인하기</span><i class="svg-icon ico-angle right"></i></a>
+                                            </div>
+                                           <!-- disclosure -->
+                                           <div class="krds-disclosure conts-expand-area border">
+                                                <button type="button" class="btn-conts-expand">글자 스케일 재설정시 주의사항</button>
+                                                <div class="expand-wrap">
+                                                    <div class="expand-in">
+                                                        <div class="info-area">  
+                                                            <div class="info-body">
+                                                                <p>명확한 크기 차이를 설정해 사용자가 정보를 체계적으로 이해하도록 돕는다.<br/>이상적인 heading과 body 간의 글자 크기 차이는 1.25~1.5배로 설정하여 시각적 흐름을 자연스럽게 유지한다.</p>
+                                                                <ul class="krds-info-list hollow">
+                                                                    <li>Type-scale을 재설정할 경우 기본 글자 사이즈를 기준으로 비율을 설정한다</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- //disclosure -->
+                                        </div>
+                                    </div>
+
+                                    <!-- Display -->
+                                    <div class="g-conts-area">
+                                        <h4 class="con-tit">Display</h4>
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">디스플레이(Display)는 화면에서 가장 큰 텍스트로 주로 배너와 같은 마케팅 용도로 사용하며, 자유롭게 변형할 수 있으나 과도한 크기 사용은 지양한다.</p>
+                                            <div class="g-desc-body">
+                                                <div class="g-img-wrap">
+                                                    <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/typography_display_01.png" alt="Display 예시" /></div>
+                                                </div>
+                                            </div>
+                                            <!-- table list -->
+                                            <div class="krds-table-wrap">
+                                                <table class="tbl col data style no-border">
+                                                    <caption>표현 단위(rem) 에 대한 표로 Style, Size(pc), Size(mobile), Font weight, Line height, Letter spacing, 대한 내용으로 구성되어 있으며 Style은 large, medium, 구성되어있다.</caption>
+                                                    <colgroup>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>    
+                                                            <th scope="col">Style</th>
+                                                            <th scope="col">Size(pc)</th>
+                                                            <th scope="col">Size(mobile)</th>
+                                                            <th scope="col">Font weight</th>
+                                                            <th scope="col">Line height</th>
+                                                            <th scope="col">Letter spacing</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>  
+                                                        <tr class="bg-gray">
+                                                            <th scope="row">large</th>
+                                                            <td>60</td>
+                                                            <td>44</td>
+                                                            <td>700</td>
+                                                            <td>150%</td>
+                                                            <td>1px</td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <th scope="row">medium</th>
+                                                            <td>44</td>
+                                                            <td>32</td>
+                                                            <td>700</td>
+                                                            <td>150%</td>
+                                                            <td>1px</td>
+                                                        </tr>
+                                                        <tr class="bg-gray">
+                                                            <th scope="row">small</th>
+                                                            <td>36</td>
+                                                            <td>28</td>
+                                                            <td>700</td>
+                                                            <td>150%</td>
+                                                            <td>1px</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- //table list -->
+                                        </div>
+                                    </div>
+                                    <!--// Display -->
+
+                                    <!-- Heading -->
+                                    <div class="g-conts-area">
+                                        <h4 class="con-tit">Heading</h4>
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">헤딩(Heading)은 페이지 단위의 타이틀과 모듈 단위의 역할을 강조하는 데 사용하며, h1부터 h5까지 계층을 설정한다.</p>
+                                            <ul class="krds-info-list decimal">
+                                                <li>xlarge-xxsmall까지 h1-h2-h3-h4-h5의 계층 설정하여 사용한다.</li>
+                                                <li>콘텐츠의 정보 구조가 단순할 경우 heading요소를 단순화 하여 사용할 수 있다.</li>
+                                                <li>본문 사이즈와 헤딩의 폰트 사이즈가 같아지는 영역은 주의하여 사용한다.</li>
+                                            </ul>
+                                            <div class="g-desc-body">
+                                                <div class="g-img-wrap">
+                                                    <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/typography_heading_01.png" alt="Heading 예시" /></div>
+                                                </div>
+                                            </div>
+                                            <!-- table list -->
+                                            <div class="krds-table-wrap">
+                                                <table class="tbl col data style">
+                                                    <caption>Heading 에 대한 표로 Style, Size(pc), Size(mobile), Font weight, Line height, Letter spacing, 대한 내용으로 구성되어 있으며 Style은 xxlarge, xlarge, large, medium, small, small 구성되어있다.</caption>
+                                                    <colgroup>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>    
+                                                            <th scope="col">Style</th>
+                                                            <th scope="col">Size(pc)</th>
+                                                            <th scope="col">Size(mobile)</th>
+                                                            <th scope="col">Font weight</th>
+                                                            <th scope="col">Line height</th>
+                                                            <th scope="col">Letter spacing</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>  
+                                                        <tr class="bg-gray">
+                                                            <th scope="row">xlarge</th>
+                                                            <td>40</td>
+                                                            <td>28</td>
+                                                            <td>700</td>
+                                                            <td>150%</td>
+                                                            <td>1px</td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <th scope="row">large</th>
+                                                            <td>32</td>
+                                                            <td>24</td>
+                                                            <td>700</td>
+                                                            <td>150%</td>
+                                                            <td>1px</td>
+                                                        </tr>
+                                                        <tr class="bg-gray">
+                                                            <th scope="row">medium</th>
+                                                            <td>24</td>
+                                                            <td>22</td>
+                                                            <td>700</td>
+                                                            <td>150%</td>
+                                                            <td>0px</td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <th scope="row">small</th>
+                                                            <td>19</td>
+                                                            <td>19</td>
+                                                            <td>700</td>
+                                                            <td>150%</td>
+                                                            <td>0px</td>
+                                                        </tr>
+                                                        <tr class="bg-gray">
+                                                            <th scope="row">xsmall</th>
+                                                            <td>17</td>
+                                                            <td>17</td>
+                                                            <td>700</td>
+                                                            <td>150%</td>
+                                                            <td>0px</td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <th scope="row">xxsmall</th>
+                                                            <td>15</td>
+                                                            <td>15</td>
+                                                            <td>700</td>
+                                                            <td>150%</td>
+                                                            <td>0px</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- //table list -->
+                                            <div class="g-desc-body">
+                                                <h5 class="con-tit sm">계층별 사용</h5>
+                                                <!-- table list -->
+                                                 <div class="krds-table-wrap">
+                                                    <table class="tbl col data">
+                                                        <caption>Heading 에 대한 표로 구조, 범위, 사용 대한 내용으로 구성되어 있으며 구조는 h2, h3, h4, h5, h6 구성되어있다.</caption>
+                                                        <colgroup>
+                                                            <col style="width: 10%;">
+                                                            <col style="width: 20%;">
+                                                            <col>
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>    
+                                                                <th scope="col">구조</th>
+                                                                <th scope="col">범위</th>
+                                                                <th scope="col">사용</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>  
+                                                            <tr>
+                                                                <th scope="col">h1</th>
+                                                                <td>xlarge-large</td>
+                                                                <td>페이지나 섹션의 가장 중요한 제목으로, 주요 주제를 강조하는 데 사용한다.</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="col">h2</th>
+                                                                <td>large-medium</td>
+                                                                <td>콘텐츠의 주요 섹션을 구분하여 H1보다 작은 부제목 역할을 한다.</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="col">h3</th>
+                                                                <td>medium-small</td>
+                                                                <td>세부 섹션을 나타내는 제목으로, H1과 H2보다 작은 크기로 사용한다.</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="col">h4</th>
+                                                                <td>small-xsmall</td>
+                                                                <td>본문과 비슷한 크기의 제목으로, 세부적인 콘텐츠에 대한 설명에 사용한다.</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="col">h5</th>
+                                                                <td>xsmall-xxsmall</td>
+                                                                <td>가장 작은 제목으로, 부차적인 정보나 보조 설명을 위해 사용한다.</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <!-- //table list -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--// Heading -->
+
+                                    <!-- Body -->  
+                                    <div class="g-conts-area">
+                                        <h4 class="con-tit">Body</h4>
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">본문과 기본 콘텐츠에 적용된다.</p>
+                                            <div class="g-desc-body">
+                                                <div class="g-img-wrap">
+                                                    <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/typography_body_01.png" alt="Body 예시" /></div>
+                                                </div>
+                                            </div>
+                                            <!-- table list -->
+                                            <div class="krds-table-wrap">
+                                                <table class="tbl col data style no-border">
+                                                    <caption>
+                                                        Body 에 대한 표로 Style, Size(pc), Size(mobile), Font weight, Line height, Letter spacing, 대한 내용으로 구성되어 있으며 
+                                                        Style은 large-bold, medium-bold, small-bold, xsmall-bold, large, medium*, small, xsmall 구성되어있다.
+                                                    </caption>
+                                                    <colgroup>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>    
+                                                            <th scope="col">Style</th>
+                                                            <th scope="col">Size(pc)</th>
+                                                            <th scope="col">Size(mobile)</th>
+                                                            <th scope="col">Font weight</th>
+                                                            <th scope="col">Line height</th>
+                                                            <th scope="col">Letter spacing</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>  
+                                                        <tr class="bg-gray">
+                                                            <th scope="row">large-bold</th>
+                                                            <td>19</td>
+                                                            <td>19</td>
+                                                            <td>700</td>
+                                                            <td>150%</td>
+                                                            <td>0px</td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <th scope="row">medium-bold</th>
+                                                            <td>17</td>
+                                                            <td>17</td>
+                                                            <td>700</td>
+                                                            <td>150%</td>
+                                                            <td>0px</td>
+                                                        </tr>
+                                                        <tr class="bg-gray">
+                                                            <th scope="row">small-bold</th>
+                                                            <td>15</td>
+                                                            <td>15</td>
+                                                            <td>700</td>
+                                                            <td>150%</td>
+                                                            <td>0px</td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <th scope="row">xsmall-bold</th>
+                                                            <td>13</td>
+                                                            <td>13</td>
+                                                            <td>700</td>
+                                                            <td>150%</td>
+                                                            <td>0px</td>
+                                                        </tr>
+                                                        <tr class="bg-gray">
+                                                            <th scope="row">large</th>
+                                                            <td>19</td>
+                                                            <td>19</td>
+                                                            <td>400</td>
+                                                            <td>150%</td>
+                                                            <td>0px</td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <th scope="row"><strong>medium*</strong></th>
+                                                            <td><strong>17</strong></td>
+                                                            <td><strong>17</strong></td>
+                                                            <td><strong>400</strong></td>
+                                                            <td><strong>150%</strong></td>
+                                                            <td><strong>0px</strong></td>
+                                                        </tr>
+                                                        <tr class="bg-gray">
+                                                            <th scope="row">small</th>
+                                                            <td>15</td>
+                                                            <td>15</td>
+                                                            <td>400</td>
+                                                            <td>150%</td>
+                                                            <td>0px</td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <th scope="row">xsmall</th>
+                                                            <td>13</td>
+                                                            <td>13</td>
+                                                            <td>400</td>
+                                                            <td>150%</td>
+                                                            <td>0px</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- //table list -->
+                                            <div class="g-desc-body">
+                                                <h5 class="con-tit sm">계층별 사용</h5>
+                                                <!-- table list -->
+                                                <div class="krds-table-wrap">
+                                                    <table class="tbl col data">
+                                                        <caption>body 에 대한 표로 범위, 사용 대한 내용으로 구성되어 있으며 구조는 범위 large,  medium, small, xsmall구성되어있다.</caption>
+                                                        <colgroup>
+                                                            <col style="width: 20%;">
+                                                            <col>
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>    
+                                                                
+                                                                <th scope="col">범위</th>
+                                                                <th scope="col">사용</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>    
+                                                            <tr>
+                                                                <th scope="row">large</th>
+                                                                <td>전체 글에 대한 써머리 또는 중요한 정보를 전달할 때 사용된다.</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">medium</th>
+                                                                <td>본문 텍스트에 사용되는 표준 크기로 전체적인 ui요소에서 사용된다.</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">small</th>
+                                                                <td>덜 중요한 정보나 부가적인 설명 문구에 사용되며, 작은 크기로 가독성에 주의해야 한다.</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">xsmall</th>
+                                                                <td>가장 작은 크기로, 주석, 보조 설명 또는 부가적인 정보에 사용되며, 가독성이 떨어질 수 있으므로 신중하게 사용해야 한다.</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <!-- //table list -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--// Body -->  
+                                </div>   
+                                <!--// 글자 스케일 -->
+
+                                <!-- 특정 역할의 토큰 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">특정 역할의 토큰</h3>
+                                    <div class="g-conts-area">
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">특정 영역에서 반복적으로 사용되는 글자를 시멘틱 토큰으로 설정하면 다양한 화면에서 스타일의 일관성을 유지하고 유지보수가 용이하다. 시멘틱 토큰(semantic token)은 표준형 스타일의 글자 스케일에서 사용하며 heading과 body의 사이즈로 적용된다.</p>
+                                            <p class= "g-desc">표준형 스타일은 navigation과 label을 특정 역할 토큰으로 사용한다.</p>     
+                                        </div>
+                                    </div>
+                                    <!-- Navigation -->
+                                    <div class="g-conts-area">
+                                        <h4 class="con-tit">Navigation</h4>
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">Navigation은 사이트 내 이정표 역할을 하는 컴포넌트 내에서 사용한다.</p>
+                                            <div class="g-tag-wrap">
+                                                <span class="g-tag rounded">Header</span>
+                                                <span class="g-tag rounded">Main menu</span>  
+                                                <span class="g-tag rounded">Side menu</span>
+                                                <span class="g-tag rounded">In page navigation</span>
+                                            </div>
+                                            <div class="g-desc-body">
+                                                <div class="g-img-wrap">
+                                                    <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/typography_navigation_01.png" alt="Navigation 예시" /></div>
+                                                </div>
+                                            </div>
+                                            <!-- table list -->
+                                            <div class="krds-table-wrap">
+                                                <table class="tbl col data style no-border">
+                                                    <caption>
+                                                        특정 역할의 토큰 에 대한 표로 Style, Size(pc), Size(mobile), Font weight, Line height, Letter spacing, 대한 내용으로 구성되어 있으며 
+                                                        Style은 title-large, title-small, depth-medium-bold, depth-medium, depth-small-bold, depth-small구성되어있다.
+                                                    </caption>
+                                                    <colgroup>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>    
+                                                            <th scope="col">Style</th>
+                                                            <th scope="col">Size(pc)</th>
+                                                            <th scope="col">Size(mobile)</th>
+                                                            <th scope="col">Font weight</th>
+                                                            <th scope="col">Line height</th>
+                                                            <th scope="col">Letter spacing</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>  
+                                                        <tr class="bg-gray">
+                                                            <th scope="row">title-large</th>
+                                                            <td>24</td>
+                                                            <td>22</td>
+                                                            <td>700</td>
+                                                            <td>150%</td>
+                                                            <td>0px</td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <th scope="row">title-small</th>
+                                                            <td>19</td>
+                                                            <td>17</td>
+                                                            <td>700</td>
+                                                            <td>150%</td>
+                                                            <td>0px</td>
+                                                        </tr>
+                                                        <tr class="bg-gray">
+                                                            <th scope="row">depth-medium-bold</th>
+                                                            <td>17</td>
+                                                            <td>17</td>
+                                                            <td>700</td>
+                                                            <td>150%</td>
+                                                            <td>0px</td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <th scope="row">depth-medium</th>
+                                                            <td>17</td>
+                                                            <td>17</td>
+                                                            <td>400</td>
+                                                            <td>150%</td>
+                                                            <td>0px</td>
+                                                        </tr>
+                                                        <tr class="bg-gray">
+                                                            <th scope="row">depth-small-bold</th>
+                                                            <td>15</td>
+                                                            <td>15</td>
+                                                            <td>700</td>
+                                                            <td>150%</td>
+                                                            <td>0px</td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <th scope="row">depth-small</th>
+                                                            <td>15</td>
+                                                            <td>15</td>
+                                                            <td>400</td>
+                                                            <td>150%</td>
+                                                            <td>0px</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!--// table list -->
+                                        </div>
+                                    </div>
+                                    <!--// Navigation -->
+
+                                    <!-- Label -->
+                                    <div class="g-conts-area">
+                                        <h4 class="con-tit">Label</h4>
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">컴포넌트 구성 내 label, placeholder등에 사용한다.</p>
+                                            <div class="g-tag-wrap">
+                                                <span class="g-tag rounded">Button</span>
+                                                <span class="g-tag rounded">Input</span>
+                                                <span class="g-tag rounded">Check box</span>
+                                                <span class="g-tag rounded">Radio button</span>
+                                            </div>
+                                            <div class="g-desc-body">
+                                                <div class="g-img-wrap">
+                                                    <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/typography_label_01.png" alt="Label 예시" /></div>
+                                                </div>
+                                            </div>
+                                             <!-- table list -->
+                                             <div class="krds-table-wrap">
+                                                <table class="tbl col data style no-border">
+                                                    <caption>
+                                                        특정 역할의 토큰 에 대한 표로 Style, Size(pc), Size(mobile), Font weight, Line height, Letter spacing, 대한 내용으로 구성되어 있으며 
+                                                        Style은 large, medium, small, xsmall구성되어있다.
+                                                    </caption>
+                                                    <colgroup>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>    
+                                                            <th scope="col">Style</th>
+                                                            <th scope="col">Size(pc)</th>
+                                                            <th scope="col">Size(mobile)</th>
+                                                            <th scope="col">Font weight</th>
+                                                            <th scope="col">Line height</th>
+                                                            <th scope="col">Letter spacing</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>  
+                                                        <tr class="bg-gray">
+                                                            <th scope="row">large</th>
+                                                            <td>19</td>
+                                                            <td>19</td>
+                                                            <td>400</td>
+                                                            <td>150%</td>
+                                                            <td>0px</td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <th scope="row">medium</th>
+                                                            <td>17</td>
+                                                            <td>17</td>
+                                                            <td>400</td>
+                                                            <td>150%</td>
+                                                            <td>0px</td>
+                                                        </tr>
+                                                        <tr class="bg-gray">
+                                                            <th scope="row">small</th>
+                                                            <td>15</td>
+                                                            <td>15</td>
+                                                            <td>400</td>
+                                                            <td>150%</td>
+                                                            <td>0px</td>
+                                                        </tr>
+                                                        <tr class="bg-light">
+                                                            <th scope="row">xsmall</th>
+                                                            <td>13</td>
+                                                            <td>13</td>
+                                                            <td>400</td>
+                                                            <td>150%</td>
+                                                            <td>0px</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!--// table list -->
+                                        </div>
+                                    </div>
+                                    <!--// Label -->                                  
+                                </div>   
+                                <!--// 특정 역할의 토큰 -->
+
+                                <!-- 계층 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">계층</h3>
+                                    <div class="g-conts-area">
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">타이포그래피 계층(hierarchy) 구조는 display, heading, body로 구성되며, 사용자에게 정보의 중요도를 명확히 전달하는 역할을 한다. 계층 구조를 명확히 하면 정보 흐름이 자연스러워지며, 사용자는 타이틀을 중요한 정보로 인식해 효율적으로 접근할 수 있다.</p>
+                                            <p class="g-desc">타이틀은 본문보다 더 눈에 띄어야 하며, 사용자는 타이틀이 중요한 정보라는 인식을 갖는다. 계층 구조를 명확히 하면 정보의 흐름이 자연스럽고, 사용자가 중요 정보를 혼동하지 않고 접근할 수 있다.</p>                                            
+                                            <a href="./style_05.html#anchor-page-5" class="krds-btn medium text"><span class="underline">텍스트 간격 보기</span><i class="svg-icon ico-angle right"></i></a>
+                                        </div>
+                                    </div>  
+
+                                    <!-- 콘텐츠 영역 -->
+                                    <div class="g-conts-area sp-sm">
+                                        <h4 class="con-tit">콘텐츠 영역</h4>
+                                        <div class="g-desc-area">
+                                            <div class="g-img-wrap">
+                                                <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/typography_hierarchy_01.png" alt="콘텐츠 영역 예시" /></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--// 콘텐츠 영역 -->
+
+                                    <!-- 정보 구조가 깊은 경우 -->
+                                    <div class="g-conts-area">
+                                        <h4 class="con-tit">정보 구조가 깊은 경우</h4>
+                                        <div class="g-desc-area">
+                                            <div class="g-img-wrap">
+                                                <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/typography_hierarchy_02.png" alt="정보 구조가 깊은 경우 예시" /></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--// 정보 구조가 깊은 경우 -->
+
+                                    <!-- 목록이 있는 경우-->
+                                    <div class="g-conts-area">
+                                        <h4 class="con-tit">목록이 있는 경우</h4>
+                                        <div class="g-desc-area">
+                                            <div class="g-img-wrap">
+                                                <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/typography_hierarchy_03.png" alt="목록이 있는 경우 예시" /></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--// 목록이 있는 경우 -->
+
+                                    <!-- 배너에 사용되는 경우-->
+                                    <div class="g-conts-area">
+                                        <h4 class="con-tit">배너에 사용되는 경우</h4>
+                                        <div class="g-desc-area">
+                                            <div class="g-img-wrap">
+                                                <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/typography_hierarchy_04.png" alt="배너에 사용되는 경우 예시" /></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--// 배너에 사용되는 경우 -->
+                                </div>   
+                                <!--// 계층 -->
+   
+                                <!-- 글자 색상 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">글자 색상</h3>
+                                    <div class="g-conts-area">
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">글자 색상은 가독성과 접근성을 고려해 사용한다. 본문에서는 주로 그레이 계열을 유지하며, 주요 동작에는 primary, secondary, point, system 색상을 사용할 수 있다. 이때 명도 대비를 준수하여 시각적 접근성을 확보한다</p>                                            
+                                            <div class="g-desc-body">
+                                                <div class="g-column">
+                                                    <div class="g-column-item">
+                                                        <div class="g-img-wrap bg-gray">
+                                                            <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/typography_color_01.png" alt="글자 색상 AAA 등급 예시" /></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="g-column-item">
+                                                        <div class="g-img-wrap bg-gray">
+                                                            <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/typography_color_02.png" alt="글자 색상 AA 등급 예시" /></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="g-desc-body">
+                                                <!-- table list -->
+                                                <div class="krds-table-wrap">
+                                                    <table class="tbl col data">
+                                                        <caption>글자 색상에 대한 표로 등급, 큰 텍스트, 일반 텍스트, 대비율 대한 내용으로 구성되어 있으며 구조는 등급 AA, AAA 구성되어있다.</caption>
+                                                        <colgroup>
+                                                            <col>
+                                                            <col>
+                                                            <col>
+                                                            <col>
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>    
+                                                                
+                                                                <th scope="col">등급</th>
+                                                                <th scope="col">큰 텍스트</th>
+                                                                <th scope="col">일반 텍스트</th>
+                                                                <th scope="col">대비율</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>  
+                                                            <tr>
+                                                                <th scope="row">AA</th>
+                                                                <td>3:1 (매직넘버 : 40)</td>
+                                                                <td>4.5:1 (매직넘버 : 50)</td>
+                                                                <td>최소</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">AAA</th>
+                                                                <td>4.5:1 (매직넘버 : 50)</td>
+                                                                <td>7:1 (매직넘버 : 70)</td>
+                                                                <td>강화</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <!-- //table list -->
+                                            </div>
+                                            <div class="g-desc-body">
+                                                <!-- table list -->
+                                                <div class="krds-table-wrap">
+                                                    <table class="tbl col data">
+                                                        <caption>글자 색상에 대한 텍스트 크기, pt(point) 단위, px(pixel) 단위, 대비율 대한 내용으로 구성되어 있으며 구조는 텍스트 크기 큰 텍스트, 일반 텍스트 구성되어있다.</caption>
+                                                        <colgroup>
+                                                            <col>
+                                                            <col>
+                                                            <col>
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>    
+                                                                
+                                                                <th scope="col">텍스트 크기</th>
+                                                                <th scope="col">pt(point) 단위</th>
+                                                                <th scope="col">px(pixel) 단위</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>  
+                                                            <tr>
+                                                                <th scope="row">큰 텍스트</th>
+                                                                <td>18pt 이상, 굵게 표시된 경우 최소 14pt이상</td>
+                                                                <td>24px이상, 굵게 표시된 경우 최소 18.66px이상</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">일반 텍스트</th>
+                                                                <td>18pt 이하, 굵게 표시된 경우 14pt 미만</td>
+                                                                <td>24px 이하, 굵게 표시된 경우 18.66px 미만</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <!-- //table list -->
+                                            </div>
+                                            <div class="g-desc-body">
+                                                <div class="g-btn-area">
+                                                    <a href="https://www.w3.org/WAI/WCAG22/quickref/#contrast-minimum" class="krds-btn medium link" target="_blank" title="새 창 열기">
+                                                        <span class="underline">1.4.3Contrast (Minimum)-Level AA</span>
+                                                        <i class="svg-icon ico-go"></i>
+                                                    </a>
+                                                    <a href="https://www.w3.org/WAI/WCAG22/quickref/#contrast-enhanced" class="krds-btn medium link" target="_blank" title="새 창 열기">
+                                                        <span class="underline">1.4.6Contrast (Enhanced)-Level AAA</span>
+                                                        <i class="svg-icon ico-go"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <!-- disclosure -->
+                                            <div class="krds-disclosure conts-expand-area border">
+                                                <button type="button" class="btn-conts-expand">접근성 표기 1pt(point)=1.333px(pixel)</button>
+                                                <div class="expand-wrap">
+                                                    <div class="expand-in">  
+                                                        <div class="info-area"> 
+                                                            <div class="info-item">
+                                                                <div class="helper-box refer">
+                                                                    <h4 class="tit">1pt = 1.333px</h4>
+                                                                    <p>14pt = 18.66px , 18pt = 24p</p>
+                                                                </div>
+                                                            </div> 
+                                                            
+                                                            <div class="info-item">
+                                                                <ul class="krds-info-list decimal">
+                                                                    <li>pt (point): pt는 인쇄 및 타이포그래피에서 주로 사용하는 단위로, 1pt는 1/72인치이다. 주로 인쇄 매체에서 많이 사용된다.</li>
+                                                                    <li>px (pixel): px는 디지털 화면에서 사용되는 단위로, 화면 해상도에 따라 상대적인 크기가 달라진다. 1px는 모니터의 한 점을 의미하며, 디스플레이의 픽셀 밀도에 따라 시각적으로 다른 크기로 보일 수 있다.</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="info-item">
+                                                                <a href="https://sitero.co.kr/fontsize" class="krds-btn medium link" target="_blank" title="새 창 열기">
+                                                                    <span class="underline">단위변환기</span>
+                                                                    <i class="svg-icon ico-go"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- //disclosure -->
+                                        </div>
+                                    </div>
+                                    <!-- 선명한 화면 모드 명도 대비 -->
+                                    <div class="g-conts-area sp-sm">
+                                        <h4 class="con-tit">선명한 화면 모드 명도 대비</h4>
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">선명한 화면 모드에서는 본문의 가독성을 위해 15:1의 고대비 명도 대비를 준수한다.</p>
+                                            <ul class="krds-info-list decimal">
+                                                <li>본문 텍스트 : 15:1</li>
+                                                <li>헤딩, 레이블 등의 텍스트와 아이콘 : 7:1</li>
+                                                <li>시각적 보조 수단 : 4.5:1</li>
+                                            </ul>
+                                            <div class="g-desc-area">
+                                                <a href="./../style/style_02.html" class="krds-btn medium text"><span class="underline">색상에 대해 자세히 보기</span><i class="svg-icon ico-angle right"></i></a>
+                                                <a href="./../style/style_02.html" class="krds-btn medium text"><span class="underline">매직넘버 자세히 보기</span><i class="svg-icon ico-angle right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //선명한 화면 모드 명도 대비 -->
+                                </div>   
+                                <!--// 글자 색상 -->
+
+                                <!-- 사용가이드 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">사용가이드</h3>
+                                    <!-- 줄 간격 -->
+                                    <div class="g-conts-area sp-sm">
+                                        <h4 class="con-tit">줄 간격</h4>
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">줄 간격이 좁을 수록 시각적 피로를 느끼게 하며 정보 전달의 효율성이 떨어지므로 150%이상으로 설정한다.</p>
+                                            <div class="g-desc-body">
+                                                <div class="g-column">
+                                                    <div class="g-img-wrap caption-format success p-sm g-column-item">
+														<p class="caption"><span class="svg-icon ico-success-fill pure"></span>모범 사례</p>
+														<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/typography_guide_01_good.png" alt="모범 사례 예시"></div>
+													</div>
+                                                    <div class="g-img-wrap caption-format error p-sm g-column-item">
+														<p class="caption"><span class="svg-icon ico-error-fill pure"></span>피해야 할 사례</p>
+														<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/typography_guide_01_bad.png" alt="피해야 할 사례 예시"></div>
+													</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>   
+                                    <!--// 줄 간격 -->  
+                                
+                                    <div class="g-conts-area">
+                                        <h4 class="con-tit">타이틀-본문 구분</h4>
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">타이틀과 본문은 시각적 위계가 유지 될 수 있도록 한다. 대체로 본문보다 타이틀의 글자 크기를 크게 사용하거나, 타이틀과 본문이 글자 크기가 같을 경우 두께를 이용하여 중요도를 시각적으로 반영한다</p>
+                                            <div class="g-desc-body">
+                                                <div class="g-column">
+                                                    <div class="g-img-wrap caption-format success p-sm g-column-item">
+														<p class="caption"><span class="svg-icon ico-success-fill pure"></span>모범 사례</p>
+														<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/typography_guide_02_good.png" alt="모범 사례 예시"></div>
+													</div>
+                                                    <div class="g-img-wrap caption-format error p-sm g-column-item">
+														<p class="caption"><span class="svg-icon ico-error-fill pure"></span>피해야 할 사례</p>
+														<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/typography_guide_02_bad.png" alt="피해야 할 사례 예시"></div>
+													</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>   
+                                  
+                                    <div class="g-conts-area">
+                                        <h4 class="con-tit">밑줄</h4>
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">밑줄은 텍스트 링크에만 사용하며 강조하는 부분에서 사용하지 않는다. 강조 표현은 색상이나 굵기를 이용한다.</p>
+                                            <div class="g-desc-body">
+                                                <div class="g-column">
+                                                    <div class="g-img-wrap caption-format success p-sm g-column-item">
+														<p class="caption"><span class="svg-icon ico-success-fill pure"></span>모범 사례</p>
+														<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/typography_guide_03_good.png" alt="모범 사례 예시"></div>
+													</div>
+                                                    <div class="g-img-wrap caption-format error p-sm g-column-item">
+														<p class="caption"><span class="svg-icon ico-error-fill pure"></span>피해야 할 사례</p>
+														<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/typography_guide_03_bad.png" alt="피해야 할 사례 예시"></div>
+													</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>   
+
+                                    <div class="g-conts-area">
+                                        <h4 class="con-tit">자체 개발한 폰트</h4>
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">고딕 계열이 아닌 경우, 해당 폰트는 시각적 효과를 극대화할 수 있는 디스플레이나 배너에만 사용하는 것이 좋다.</p>
+                                            <div class="g-desc-body">
+                                                <div class="g-column">
+                                                    <div class="g-img-wrap caption-format success p-sm g-column-item">
+														<p class="caption"><span class="svg-icon ico-success-fill pure"></span>모범 사례</p>
+														<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/typography_guide_04_good.png" alt="모범 사례 예시"></div>
+													</div>
+                                                    <div class="g-img-wrap caption-format error p-sm g-column-item">
+														<p class="caption"><span class="svg-icon ico-error-fill pure"></span>피해야 할 사례</p>
+														<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/style/typography_guide_04_bad.png" alt="피해야 할 사례 예시"></div>
+													</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>   
+                                </div>
+                                <!--// 사용가이드 -->
+
+                                <!-- 자주 묻는 질문 -->
+                                @@include("../inc/page-faq.html")
+                                <!-- //자주 묻는 질문 -->
+
+                                <!-- 정보 변경 내역 -->
+								@@include("../inc/page-info-update-log.html")
+                                <!-- //정보 변경 내역 -->
+
+                                <!-- 컨텐츠 배너 영역 -->
+                                @@include("../inc/page-banner.html")
+                                <!--// 컨텐츠 배너 영역 -->
+                            </div>
+                            <!-- //scroll-check -->
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- //컨텐츠 영역 -->
+            </div>
+            <!-- //컨테이너 영역 -->
+
+            <!-- 푸터 영역 -->
+			<footer id="krds-footer">
+				@@include("../inc/guide-footer.html")
+			</footer>
+            <!-- //푸터 영역 -->
+        </div>
+    </body>
+</html>

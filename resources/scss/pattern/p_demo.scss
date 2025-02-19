@@ -1,0 +1,118 @@
+@import "../common/include";
+//for 중간보고
+
+//모드 설정
+$mode-setting: light;
+.demo {
+	#container {
+		> .inner {
+			&:not(.in-between) {
+				padding-top: 0;
+			}
+		}
+	}
+	.component {
+		padding: var(--krds-padding-6);
+		border: 0.2rem dashed var(--krds-#{$mode-setting}-color-border-gray-light);
+		border-radius: var(--krds-radius-large2);
+		&.initial {
+			line-height: var(--krds-line-height-none);
+		}
+	}
+	#container {
+		//max-width: 1600px;
+		margin: 0 auto;
+		padding: var(--krds-padding-8);
+		> .inner {
+			> ul {
+				display: flex;
+				//@include flex-layout($jc: center);
+				flex-wrap: wrap;
+				gap: var(--krds-gap-8);
+				width: 100%;
+				> li {
+					@include flex-layout($fd: column);
+					@include flex-size(0, 0);
+					gap: var(--krds-gap-5);
+
+					.component-wrap {
+						display: flex;
+						width: 100%;
+						gap: var(--krds-gap-5);
+					}
+				}
+			}
+		}
+
+	}
+
+	//pagenation
+	.krds-pagination {
+		margin-top: 0;
+	}
+
+	//달력
+	.calendar-wrap {
+		position: static;
+		.calendar-body {
+			.calendar-table-wrap {
+				.calendar-tbl td {
+					height: 54px;
+				}
+			}
+		}
+	}
+
+	//tab
+	.krds-tab-area {
+		gap: 0;
+	}
+	.tab {
+		&.fill {
+			.btn-tab {
+				min-width: 150px;
+			}
+		}
+	}
+
+	//accordion
+	.krds-accordion {
+		min-width: 450px;
+		&.pure {
+			border: none;
+		}
+	}
+
+	//breadcrumb
+	.krds-breadcrumb-wrap {
+		padding: 0;
+	}
+	
+	//in page navigation
+	.krds-in-page-navigation-area {
+		position: static;
+	}
+
+	//side menu
+	.krds-side-navigation {
+		padding: 0;
+	}
+
+	//structured list
+	.krds-structured-list {
+		width: 520px;
+	}
+
+	//table
+	.krds-table-wrap {
+		width: 548px;
+	}
+
+	//file upload list
+	.file-upload-area {
+		width: 100%;
+		.component {
+			width: 100%;
+		}
+	}
+}

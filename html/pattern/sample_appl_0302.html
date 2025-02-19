@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include("./inc/head.html", { "title": "서브 - 신청안내 | 신청하기 | 신청 - KRDS", })
+
+    <body>
+        <div id="wrap">
+            @@include("./inc/skip.html", {"class": "",}) @@include("./inc/header-top.html")
+
+            <!-- 헤더 영역 -->
+            <header id="krds-header">@@include("./inc/header.html")</header>
+            <!-- //헤더 영역 -->
+
+            <!-- 컨테이너 영역 -->
+            <div id="container">
+                <!-- breadcrumb -->
+                @@include("./inc/page-breadcrumb.html", { "depth": ["민원"] })
+                <!-- breadcrumb -->
+
+                <!-- 컨텐츠 영역 -->
+                <div class="inner narrow help-panel-flexible">
+                    <!-- 페이지 타이틀 영역 -->
+                    <div class="page-title-wrap">
+                        <h1 class="h-tit">
+                            주민등록표등본(초본)교부 신청
+                            <p class="krds-badge-wrap">
+                                <span class="krds-badge bg-light-primary">전자증명</span>
+                                <span class="krds-badge bg-light-primary">전자문서지갑</span>
+                                <button class="krds-btn medium icon btn-help-exec">
+                                    <span class="sr-only">도움말</span>
+                                    <i class="svg-icon ico-help"></i>
+                                </button>
+                            </p>
+                        </h1>
+                    </div>
+                    <!-- //페이지 타이틀 영역 -->
+
+                    <!-- 컨텐츠 영역 -->
+                    <div class="conts-area">
+                        <div class="conts-wrap">
+                            <!-- 상단 가이드 박스 -->
+                            <div class="txt-box outline">
+                                <h4 class="outline-tit">시작하기 전에</h4>
+                                <p class="outline-txt">인터넷 신청은 본인과 등록된 거주인만 가능하며 무료로 발급받을 수 있습니다. 본인 인증되지 않은 경우는 거주지 읍면동에 방문하거나 우편으로 신청, 발급받을 수 있으며 발급 비용이 발생합니다.</p>
+                                <div class="conts-desc-wrap">
+                                    <ul class="check-list">
+                                        <li>본인확인 필요</li>
+                                        <li>인증서 필요</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- //상단 가이드 박스 -->
+
+                            <!-- 기본 신청 정보 입력 -->
+                            <div class="txt-box bg-white">
+                                <h4 class="box-tit1">기본 신청 정보 입력</h4>
+                                <div class="box-cnt">
+                                    <!-- 발급 유형 -->
+                                    <div class="box-sec">
+                                        <h5 class="box-tit2">
+                                            발급 유형
+                                            <button class="krds-btn medium icon btn-help-exec">
+                                                <span class="sr-only">도움말</span>
+                                                <i class="svg-icon ico-help"></i>
+                                            </button>
+                                        </h5>
+                                        <div class="form-group">
+                                            <div class="form-conts">
+                                                <div class="row krds-check-area chk-column">
+                                                    <div class="krds-form-check large">
+                                                        <input type="radio" name="rdo_1" id="rdo_1-1" checked>
+                                                        <label for="rdo_1-1">온라인 발급 - 본인 출력</label>
+                                                    </div>
+                                                    <div class="krds-form-check large">
+                                                        <input type="radio" name="rdo_1" id="rdo_1-2">
+                                                        <label for="rdo_1-2">온라인 발급 - 전자지갑</label>
+                                                    </div>
+                                                    <div class="krds-form-check large">
+                                                        <input type="radio" name="rdo_1" id="rdo_1-3">
+                                                        <label for="rdo_1-3">온라인 발급 - 제3자 제출</label>
+                                                    </div>
+                                                    <div class="krds-form-check large">
+                                                        <input type="radio" name="rdo_1" id="rdo_1-4">
+                                                        <label for="rdo_1-4">등기우편</label>
+                                                    </div>
+                                                    <div class="krds-form-check large">
+                                                        <input type="radio" name="rdo_1" id="rdo_1-5">
+                                                        <label for="rdo_1-5">일반우편</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //발급 유형 -->
+
+                                    <!-- 주민등록 주소지 -->
+                                    <div class="box-sec">
+                                        <h5 class="box-tit2">
+                                            <label for="building_type-inpu2">주민등록 주소지</label>
+                                            <button class="krds-btn medium icon btn-help-exec">
+                                                <span class="sr-only">도움말</span>
+                                                <i class="svg-icon ico-help"></i>
+                                            </button>
+                                        </h5>
+                                        <div class="form-group">
+                                            <div class="form-conts">
+                                                <div class="input-group m-column">
+                                                    <input type="text" id="building_type-inpu2" class="krds-input" value="학동로11길 20-7 (플립타워)" placeholder="검색 버튼을 눌러주세요">
+                                                    <button type="button" class="krds-btn large secondary">검색</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //주민등록 주소지 -->
+                                </div>
+                            </div>
+                            <!-- //기본 신청 정보 입력 -->
+
+                            <!-- 상세 정보 입력 -->
+                            <div class="txt-box bg-white">
+                                <h4 class="box-tit1">상세 정보 입력</h4>
+                                <div class="box-cnt">
+                                    <!-- 표시할 정보 -->
+                                    <div class="box-sec">
+                                        <h5 class="box-tit2">표시할 정보</h5>
+                                        <div class="form-group full">
+                                            <div class="form-conts">
+                                                <div class="row krds-check-area chk-column">
+                                                    <div class="krds-form-check large">
+                                                        <input type="radio" name="rdo_2" id="rdo_2-1">
+                                                        <label for="rdo_2-1">기본 정보</label>
+                                                        <div class="krds-form-check-cnt">
+                                                            <p class="krds-form-check-p">과거의 주소 변동 사항을 제외한 모든 세대 구성 정보, 세대 구성원 정보, 주민등록번호 뒷자리를 포함하여 발급합니다.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="krds-form-check large">
+                                                        <input type="radio" name="rdo_2" id="rdo_2-2" checked>
+                                                        <label for="rdo_2-2">선택 정보</label>
+                                                        <div class="krds-form-check-cnt">
+                                                            <p class="krds-form-check-p">과거의 주소 변동 사항, 세대 구성 정보, 세대 구성원 정보, 주민등록번호 표시에 대한 상세 값을 설정하여 필요한 정보만 민원 신청 내역에 표시합니다.</p>
+                                                            <div class="krds-check-area chk-column">
+                                                                <div class="krds-form-check medium">
+                                                                    <input type="checkbox" name="chk_1" id="chk_1">
+                                                                    <label for="chk_1">과거 주소 변동사항</label>
+                                                                </div>
+                                                                <div class="krds-form-check medium">
+                                                                    <input type="checkbox" name="chk_1" id="chk_2">
+                                                                    <label for="chk_2">세대 구성 정보</label>
+                                                                </div>
+                                                                <div class="krds-form-check medium">
+                                                                    <input type="checkbox" name="chk_1" id="chk_3">
+                                                                    <label for="chk_3">세대 구성원 정보</label>
+                                                                </div>
+                                                                <div class="krds-form-check medium">
+                                                                    <input type="checkbox" name="chk_1" id="chk_4">
+                                                                    <label for="chk_4">주민등록번호 뒷자리</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //표시할 정보 -->
+                                </div>
+                            </div>
+                            <!-- //상세 정보 입력 -->
+                        </div>
+                    </div>
+                    <!-- //컨텐츠 영역 -->
+
+                    @@include("./inc/help-panel.html", { contents: "tab", active: "1", tab2: "type1" })
+
+                    <!-- 페이지 버튼 영역 -->
+                    <div class="page-btn-wrap both m-column">
+                        <button type="button" class="krds-btn xlarge tertiary">취소하기</button>
+                        <button type="button" class="krds-btn xlarge primary">신청하기</button>
+                    </div>
+                    <!-- //페이지 버튼 영역 -->
+                </div>
+                <!-- //컨텐츠 영역 -->
+            </div>
+            <!-- //컨테이너 영역 -->
+
+            <!-- 푸터 영역 -->
+            <footer id="krds-footer">@@include("./inc/footer.html", {"footerType": "type1",})</footer>
+            <!-- //푸터 영역 -->
+        </div>
+
+    	@@include("./inc/modal-wrap.html")
+	
+    </body>
+</html>

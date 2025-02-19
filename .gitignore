@@ -1,0 +1,40 @@
+# Node modules
+node_modules/
+
+# Build directories
+# test.html
+# test/
+dist/
+build/
+resources/css/
+!resources/css/token/
+!resources/css/plugin/
+!resources/css/code/
+
+# local env files
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.bak
+*.tmp
+.prettierrc
+
+
+# deploy
+krds-uiux/

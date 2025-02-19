@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ko">
+
+@@include("./inc/head.html", {
+	"title": "서브 - 로그인방식선택(탭타입) - KRDS",
+})
+
+<body>
+	<div id="wrap">
+		@@include("./inc/skip.html", {"class": "",})
+
+		@@include("./inc/header-top.html")
+
+		<!-- 헤더 영역 -->
+		<header id="krds-header">
+			@@include("./inc/header.html")
+		</header>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container">
+			<!-- breadcrumb -->
+			@@include("./inc/page-breadcrumb.html")
+			<!-- breadcrumb -->
+			 
+			<!-- 컨텐츠 영역 -->
+			<div class="inner narrow">
+				<!-- 페이지 타이틀 영역 -->
+				<div class="page-title-wrap">
+					@@include("./inc/page-title.html", { "title": '<span class="small-txt">국립중앙도서관 로그인</span>로그인 방식을 선택해주세요.' })
+				</div>
+				<!-- //페이지 타이틀 영역 -->
+
+				<!-- 컨텐츠 영역 -->
+				<div class="conts-area login-type-tab">
+					<div class="krds-tab-area layer">
+						<!-- tab list -->
+						<div class="tab fill full">
+							<ul role="tablist">
+								<li id="tab_login_01" role="tab" aria-selected="true" aria-controls="panel_login_01" class="active">
+									<button type="button" class="btn-tab">일반 회원 로그인 <i class="sr-only created"> 선택됨</i></button>
+								</li>
+								<li id="tab_login_02" role="tab" aria-selected="false" aria-controls="panel_login_02">
+									<button type="button" class="btn-tab">기관 회원 로그인</button>
+								</li>
+							</ul>
+						</div>
+						<!-- //tab list -->
+
+						<!-- tab contents -->
+						<div class="tab-conts-wrap">
+							<section id="panel_login_01" role="tabpanel" aria-labelledby="tab_login_01"
+								class="tab-conts active">
+								<h3 class="sr-only">일반 회원 로그인</h3>
+								<p>
+									일반 개인 회원을 위한 국립중앙도서관 통합 로그인입니다. <br class="br">
+									로그인을 하시면 보다 더 많은 정보와 서비스를 이용하실 수 있습니다.
+								</p>
+								<!-- 로그인 폼 -->
+								<div class="login-form-area type-tab">
+									<div class="login-wrap">
+										<fieldset>
+											<legend>로그인 폼</legend>
+											<div class="fieldset">
+												<div class="form-group">
+													<div class="form-tit">
+														<label for="login_id">아이디</label>
+													</div>
+													<div class="form-conts">
+														<input type="text" id="login_id" class="krds-input" autocomplete="on" placeholder="아이디를 입력하세요">
+													</div>
+												</div>
+												<div class="form-group">
+													<div class="form-tit">
+														<label for="login_pw">비밀번호</label>
+													</div>
+													<div class="form-conts btn-ico-wrap">
+														<input type="password" id="login_pw" class="krds-input" placeholder="비밀번호를 입력하세요">
+														<button type="button" class="krds-btn medium icon">
+															<span class="sr-only">입력한 비밀번호 보기</span>
+															<i class="svg-icon ico-pw-visible"></i>
+														</button>
+													</div>
+												</div>
+												<div class="form-group krds-check-area">
+													<div class="krds-form-check">
+														<input type="checkbox" name="save_id" id="save_id">
+														<label for="save_id">아이디 저장</label>
+													</div>
+												</div>
+												<div class="form-group">
+													<button type="submit" class="krds-btn large primary">로그인</button>
+												</div>
+												<div class="form-group">
+													<ul class="link-group">
+														<li><a href="#" class="krds-btn medium text">아이디 찾기</a></li>
+														<li><a href="#" class="krds-btn medium text">비밀번호 찾기</a></li>
+														<li><a href="#" class="krds-btn medium text">회원가입</a></li>
+													</ul>
+												</div>
+											</div>
+										</fieldset>
+									</div>
+
+									<div class="login-info-wrap">
+										<p class="tit">다른 로그인 방식을 찾고 계신가요?</p>
+										<div class="btn-wrap login-method">
+											<a href="#" class="krds-btn large tertiary">금융·공동인증서로 로그인하기</a>
+											<a href="#" class="krds-btn large tertiary">간편 인증으로 로그인 하기</a>
+										</div>
+										<div>
+											<!-- disclosure -->
+											<div class="krds-disclosure conts-expand-area btn-wrap no-pointer-events">
+												<button type="button" class="btn-conts-expand">디지털원패스란?</button>
+												<div class="expand-wrap"></div>
+											</div>
+											<!-- //disclosure -->
+											<!-- disclosure -->
+											<div class="krds-disclosure conts-expand-area btn-wrap no-pointer-events">
+												<button type="button" class="btn-conts-expand">간편 인증 수단 전체 목록보기</button>
+												<div class="expand-wrap"></div>
+											</div>
+											<!-- //disclosure -->
+										</div>
+									</div>
+								</div>
+								<!-- //로그인 폼 -->
+
+								<!-- 도움박스 -->
+								<div class="helper-box">
+									<p class="helper-tit">로그인에 어려움이 있으신가요?</p>
+									<div class="helper-desc-wrap">
+										<ul class="krds-info-list decimal">
+											<li>
+												로그인 <a href="#" class="krds-btn medium link"><span class="underline">관련 도움말</span></a>이나 
+												다른 사용자가 <a href="#" class="krds-btn medium link"><span class="underline">자주 찾는 질문</span></a>을 확인해보세요.
+											</li>
+											<li>02-3703-2500 (내선번호 4번)으로 전화주세요. 서비스에 로그인할 수 있도록 도와드리겠습니다.</li>
+										</ul>
+									</div>
+								</div>
+								<!-- //도움박스 -->
+							</section>
+							<section id="panel_login_02" role="tabpanel" aria-labelledby="tab_login_02" class="tab-conts">
+								<h3 class="sr-only">기관 회원 로그인</h3>
+							</section>
+						</div>
+						<!-- //tab contents -->
+					</div>
+				</div>
+				<!-- //컨텐츠 영역 -->
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+
+		<!-- 푸터 영역 -->
+		<footer id="krds-footer">
+			@@include("./inc/footer.html", {"footerType": "type1",})
+		</footer>
+		<!-- //푸터 영역 -->
+	</div>
+	
+	@@include("./inc/modal-wrap.html")
+	
+</body>
+
+</html>

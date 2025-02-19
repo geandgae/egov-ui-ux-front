@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ko">
+
+@@include("./inc/head.html", {
+	"title": "서브 - 전입신고 | 신청 - KRDS",
+})
+
+<body>
+	<div id="wrap">
+		@@include("./inc/skip.html", {"class": "",})
+
+		@@include("./inc/header-top.html")
+
+		<!-- 헤더 영역 -->
+		<header id="krds-header">
+			@@include("./inc/header.html")
+		</header>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container">
+			<!-- breadcrumb -->
+			@@include("./inc/page-breadcrumb.html", { "depth": ["민원"] })
+			<!-- breadcrumb -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="inner narrow page-step help-panel-flexible">
+				<!-- 페이지 타이틀 영역 -->
+				<div class="page-title-wrap">
+					@@include("./inc/page-title.html", { "title": "전입신고" })
+				</div>
+				<!-- //페이지 타이틀 영역 -->
+
+				<!-- 스텝 영역 -->
+				<ol class="krds-step-wrap">
+					<li class="done">
+						<span>
+							<i class="step">1단계</i>
+							<span class="step-tit">유의사항 확인</span>
+						</span>
+					</li>
+					<li class="active">
+						<span>
+							<em class="sr-only">현재단계</em>
+							<i class="step">2단계</i>
+							<span class="step-tit">신청인 정보</span>
+						</span>
+					</li>
+					<li>
+						<span>
+							<i class="step">3단계</i>
+							<span class="step-tit">이사 전 살던 곳</span>
+						</span>
+					</li>
+					<li>
+						<span>
+							<i class="step">4단계</i>
+							<span class="step-tit">이사 온 곳</span>
+						</span>
+					</li>
+					<li>
+						<span>
+							<i class="step">5단계</i>
+							<span class="step-tit">추가 신청(선택)</span>
+						</span>
+					</li>
+				</ol>
+				<!-- //스텝 영역 -->
+
+				<!-- 컨텐츠 영역 -->
+				<div class="conts-area step-type">
+					<div class="conts-wrap">
+						<div class="conts-wrap">
+							<h3 class="sec-tit">
+								<span class="step-now"><strong class="active">2단계</strong> / 5단계</span>
+								신청인정보
+							</h3>
+
+							<div>
+								<!-- 신청인 정보 -->
+								<p class="fieldset-msg">전체 항목 필수 입력 사항입니다.</p>
+								<div class="txt-box bg-white">
+									<h4 class="box-tit1">신청인 정보</h4>
+									<div class="box-cnt">
+										<div class="box-sec">
+											<div class="form-group">
+												<div class="form-tit">신청인</div>
+												<div class="form-conts">
+													<input type="text" id="name-input" class="krds-input" value="홍길동" placeholder="입력하세요" title="신청인" readonly>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="form-tit">신청인 연락처</div>
+												<div class="form-conts">
+													<input type="text" id="tel-input" class="krds-input" value="010-999-4040" placeholder="입력하세요" title="신청인 연락처">
+												</div>
+											</div>
+										</div>
+
+										<div class="box-sec">
+											<div class="box-sec">
+												<h5 class="box-tit2">통지방법</h5>
+												<div class="form-group">
+													<div class="form-conts">
+														<div class="row krds-check-area chk-column">
+															<div class="krds-form-check large">
+																<input type="radio" name="rdo_1" id="rdo_1-1" checked>
+																<label for="rdo_1-1">전자우편(E-mail)</label>
+															</div>
+															<div class="krds-form-check large">
+																<input type="radio" name="rdo_1" id="rdo_1-2">
+																<label for="rdo_1-2">문자메시지서비스(SMS)</label>
+															</div>
+															<div class="krds-form-check large">
+																<input type="radio" name="rdo_1" id="rdo_1-3">
+																<label for="rdo_1-3">문자메세지(진행상태) 및 서면(신청결과)</label>
+															</div>
+															<div class="krds-form-check large">
+																<input type="radio" name="rdo_1" id="rdo_1-4">
+																<label for="rdo_1-4">전자우편 + 문자메시지(SMS)</label>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- //신청인 정보 -->
+								</div>
+
+								<!-- 전입하는 사유 -->
+								<div class="txt-box bg-white">
+									<h4 class="box-tit1">전입하는 사유</h4>
+									<div class="form-group">
+										<div class="form-conts">
+											<div class="row krds-check-area chk-column">
+												<div class="krds-form-check large">
+													<input type="radio" name="rdo_2" id="rdo_2-1" checked>
+													<label for="rdo_2-1">직업 : 취업, 사업, 직장이전 등</label>
+												</div>
+												<div class="krds-form-check large">
+													<input type="radio" name="rdo_2" id="rdo_2-2">
+													<label for="rdo_2-2">가족 : 가족과 함께 거주, 결혼, 분가 등</label>
+												</div>
+												<div class="krds-form-check large">
+													<input type="radio" name="rdo_2" id="rdo_2-3">
+													<label for="rdo_2-3">주택 : 주택 구입, 계약 만료, 집세, 재개발 등</label>
+												</div>
+												<div class="krds-form-check large">
+													<input type="radio" name="rdo_2" id="rdo_2-4">
+													<label for="rdo_2-4">교육 : 진학, 학업, 자녀교육 등</label>
+												</div>
+												<div class="krds-form-check large">
+													<input type="radio" name="rdo_2" id="rdo_2-5">
+													<label for="rdo_2-5">주거환경 : 교통, 문화ㆍ편의시설 등</label>
+												</div>
+												<div class="krds-form-check large">
+													<input type="radio" name="rdo_2" id="rdo_2-6">
+													<label for="rdo_2-6">자연환경 : 건강, 공해, 전원생활 등</label>
+												</div>
+												<div class="krds-form-check large">
+													<input type="radio" name="rdo_2" id="rdo_2-7">
+													<label for="rdo_2-7">기타</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- ///전입하는 사유 -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //컨텐츠 영역 -->
+
+				@@include("./inc/help-panel.html", {
+					contents: "normal",
+				})
+
+				<!-- 페이지 버튼 영역 -->
+				<div class="page-btn-wrap both m-column">
+					<button type="button" class="krds-btn xlarge tertiary" onclick="history.back(-1); return false;">이전으로</button>
+					<div class="btn-wrap">
+						<button type="button" class="krds-btn xlarge tertiary">임시저장</button>
+						<button type="button" class="krds-btn xlarge primary" onclick="location.href='sample_move_process_04.html'">다음으로</button>
+					</div>
+				</div>
+				<!-- //페이지 버튼 영역 -->
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+
+		<!-- 푸터 영역 -->
+		<footer id="krds-footer">
+			@@include("./inc/footer.html", {"footerType": "type1",})
+		</footer>
+		<!-- //푸터 영역 -->
+	</div>
+	
+	@@include("./inc/modal-wrap.html")
+	
+</body>
+
+</html>

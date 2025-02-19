@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="ko">
+
+@@include("./inc/head.html", {
+	"title": "서브 - 전입신고 | 신청 - KRDS",
+})
+
+<body>
+	<div id="wrap">
+		@@include("./inc/skip.html", {"class": "",})
+
+		@@include("./inc/header-top.html")
+
+		<!-- 헤더 영역 -->
+		<header id="krds-header">
+			@@include("./inc/header.html")
+		</header>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container">
+			<!-- breadcrumb -->
+			@@include("./inc/page-breadcrumb.html", { "depth": ["민원"] })
+			<!-- breadcrumb -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="inner narrow page-step help-panel-flexible">
+				<!-- 페이지 타이틀 영역 -->
+				<div class="page-title-wrap">
+					@@include("./inc/page-title.html", { "title": "전입신고" })
+				</div>
+				<!-- //페이지 타이틀 영역 -->
+
+				<!-- 스텝 영역 -->
+				<ol class="krds-step-wrap">
+					<li class="done">
+						<span>
+							<i class="step">1단계</i>
+							<span class="step-tit">유의사항 확인</span>
+						</span>
+					</li>
+					<li class="done">
+						<span>
+							<i class="step">2단계</i>
+							<span class="step-tit">신청인 정보</span>
+						</span>
+					</li>
+					<li class="done">
+						<span>
+							<i class="step">3단계</i>
+							<span class="step-tit">이사 전 살던 곳</span>
+						</span>
+					</li>
+					<li class="active">
+						<span>
+							<em class="sr-only">현재단계</em>
+							<i class="step">4단계</i>
+							<span class="step-tit">이사 온 곳</span>
+						</span>
+					</li>
+					<li>
+						<span>
+							<i class="step">5단계</i>
+							<span class="step-tit">추가 신청(선택)</span>
+						</span>
+					</li>
+				</ol>
+				<!-- //스텝 영역 -->
+
+				<!-- 컨텐츠 영역 -->
+				<div class="conts-area step-type">
+					<div class="conts-wrap">
+						<div class="conts-wrap">
+							<h3 class="sec-tit">
+								<span class="step-now"><strong class="active">4단계</strong> / 5단계</span>
+								이사 온 곳
+							</h3>
+							<div>
+								<!-- 이사온 곳 주소입력 -->
+								<p class="fieldset-msg">전체 항목 필수 입력 사항입니다.</p>
+								<div class="txt-box bg-white">
+									<h4 class="box-tit1">이사온 곳 주소입력</h4>
+									<div class="box-cnt">
+										<!-- 기본주소 -->
+										<div class="box-sec">
+											<h5 class="box-tit2">기본주소</h5>
+											<div class="form-group">
+												<div class="form-tit">
+													<label for="addr-input1">주소</label>
+												</div>
+												<div class="form-conts">
+													<div class="input-group m-column">
+														<input type="text" id="addr-input1" class="krds-input" placeholder="검색 버튼을 눌러주세요" disabled>
+														<button type="button" class="krds-btn large secondary">검색</button>
+													</div>
+												</div>
+											</div>
+											<div class="form-group-row">
+												<div class="form-group">
+													<div class="form-tit">건축물구분</div>
+													<div class="form-conts">
+														<select class="krds-form-select" disabled="" id="addr-select">
+															<option value="">건축물 구분</option>
+															<option value="">항목2</option>
+															<option value="">항목3</option>
+															<option value="">항목4</option>
+														</select>
+													</div>
+												</div>
+												<div class="form-group">
+													<div class="form-tit">
+														<label for="addr-input2">본번</label>
+													</div>
+													<div class="form-conts">
+														<input type="text" id="addr-input2" class="krds-input" placeholder="본번" disabled="">
+													</div>
+												</div>
+												<div class="form-group">
+													<div class="form-tit">
+														<label for="addr-input3">부번</label>
+													</div>
+													<div class="form-conts">
+														<input type="text" id="addr-input3" class="krds-input" placeholder="부번" disabled="">
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="form-tit">
+													<label for="addr-input-etc">상세주소</label>
+												</div>
+												<div class="form-conts">
+													<input type="text" id="addr-input-etc" class="krds-input" placeholder="상세주소 입력">
+												</div>
+												<p class="form-hint">상세주소를 반드시 확인하시기 바랍니다. 예&#41; 101동 101호(인사동, 무궁화아파트)</p>
+											</div>
+											<div class="form-group">
+												<div class="form-tit">
+													다가구 주택여부
+												</div>
+												<div class="form-conts">
+													<div class="input-group m-column">
+														<select class="krds-form-select" title="다가구 주택여부 선택">
+															<option value="">모름</option>
+															<option value="">항목2</option>
+															<option value="">항목3</option>
+															<option value="">항목4</option>
+														</select>
+														<input type="text" id="addr-input" class="krds-input" placeholder="예) 무궁화빌라 1층 2호 " disabled title="주소 입력">
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- //기본주소 -->
+									</div>
+								</div>
+								<!-- //이사온 곳 주소입력 -->
+
+								<!-- 부가정보 -->
+								<div class="txt-box bg-white">
+									<h4 class="box-tit1">부가정보</h4>
+									<div class="box-cnt">
+										<div class="box-sec">
+											<h5 class="box-tit2">다음 중에서 해당하는 것을 선택해 주세요</h5>
+											<div class="form-group">
+												<div class="form-conts">
+													<div class="row krds-check-area chk-column">
+														<div class="krds-form-check large">
+															<input type="radio" name="rdo_1" id="rdo_1-1" checked>
+															<label for="rdo_1-1">세대주 유지</label>
+															<div class="krds-form-check-cnt">
+																<p class="krds-form-check-p">
+																	빈집으로 이사하여 세대주를 "홍길동" 으로 유지하고 이사 온 사람끼리 세대를 구성합니다.
+																</p>
+															</div>
+														</div>
+														<div class="krds-form-check large">
+															<input type="radio" name="rdo_1" id="rdo_1-2">
+															<label for="rdo_1-2">세대주변경</label>
+															<div class="krds-form-check-cnt">
+																<p class="krds-form-check-p">
+																	빈집으로 이사하여 세로운 세대주로 변경하고 이사 온 사람끼리 세대를 구성합니다.
+																</p>
+															</div>
+														</div>
+														<div class="krds-form-check large">
+															<input type="radio" name="rdo_1" id="rdo_1-3">
+															<label for="rdo_1-3">이사온곳 세대주유지</label>
+															<div class="krds-form-check-cnt">
+																<p class="krds-form-check-p">
+																	이사온 곳에 기존에 살고 있는 세대주로 세대를 구성합니다.
+																</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //부가정보 -->
+
+								<!-- 세대주 및 세대원을 확인 -->
+								<div class="txt-box bg-white">
+									<h4 class="box-tit1">세대주 및 세대원을 확인</h4>
+									<div class="box-sec">
+										<!-- table list -->
+										<div class="krds-table-wrap">
+											<table class="tbl col data">
+												<caption>
+													세대주 및 세대원에 대한 정보를 제공하는 표이며, 세대주와의 관계, 성명, 생년월일, 성별로 구성되어있으며 민원 신청인인 전출지 전 세대주,새로운 세대주,전입지 세대주로 구성되어 있음
+												</caption>
+												<colgroup>
+													<col style="width: 25%;">
+													<col style="width: 25%;">
+													<col style="width: 25%;">
+													<col>
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col">세대주와의 관계</th>
+														<th scope="col">성명</th>
+														<th scope="col">생년월일</th>
+														<th scope="col" class="text-center">성별</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>본인 (신청인)</td>
+														<td>김플립</td>
+														<td>1990년 11월 23일</td>
+														<td class="text-center">여</td>
+													</tr>
+													<tr>
+														<td>배우자</td>
+														<td>홍길동</td>
+														<td>1986년 05월 02일</td>
+														<td class="text-center">남</td>
+													</tr>
+													<tr>
+														<td>자녀</td>
+														<td>홍미영</td>
+														<td>2009년 06월 21일</td>
+														<td class="text-center">여</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<!-- //table list -->
+									</div>
+									
+								</div>
+								<!-- //세대주 및 세대원을 확인 -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //컨텐츠 영역 -->
+
+				@@include("./inc/help-panel.html", {
+					contents: "normal",
+				})
+
+				<!-- 페이지 버튼 영역 -->
+				<div class="page-btn-wrap both m-column">
+					<button type="button" class="krds-btn xlarge tertiary" onclick="history.back(-1); return false;">이전으로</button>
+					<div class="btn-wrap">
+						<button type="button" class="krds-btn xlarge tertiary">임시저장</button>
+						<button type="button" class="krds-btn xlarge primary" onclick="location.href='sample_move_process_06.html'">다음으로</button>
+					</div>
+				</div>
+				<!-- //페이지 버튼 영역 -->
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+
+		<!-- 푸터 영역 -->
+		<footer id="krds-footer">
+			@@include("./inc/footer.html", {"footerType": "type1",})
+		</footer>
+		<!-- //푸터 영역 -->
+	</div>
+	
+	@@include("./inc/modal-wrap.html")
+	
+</body>
+
+</html>

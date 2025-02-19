@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="ko">
+
+@@include("./inc/head.html", {
+	"title": "서브 - 전입신고 | 신청 - KRDS",
+})
+
+<body>
+	<div id="wrap">
+		@@include("./inc/skip.html", {"class": "",})
+
+		@@include("./inc/header-top.html")
+
+		<!-- 헤더 영역 -->
+		<header id="krds-header">
+			@@include("./inc/header.html")
+		</header>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container">
+			<!-- breadcrumb -->
+			@@include("./inc/page-breadcrumb.html", { "depth": ["민원"] })
+			<!-- breadcrumb -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="inner narrow page-step help-panel-flexible">
+				<!-- 페이지 타이틀 영역 -->
+				<div class="page-title-wrap">
+					@@include("./inc/page-title.html", { "title": "전입신고" })
+				</div>
+				<!-- //페이지 타이틀 영역 -->
+
+				<!-- 스텝 영역 -->
+				<ol class="krds-step-wrap">
+					<li class="done">
+						<span>
+							<i class="step">1단계</i>
+							<span class="step-tit">유의사항 확인</span>
+						</span>
+					</li>
+					<li class="done">
+						<span>
+							<i class="step">2단계</i>
+							<span class="step-tit">신청인 정보</span>
+						</span>
+					</li>
+					<li class="done">
+						<span>
+							<i class="step">3단계</i>
+							<span class="step-tit">이사 전 살던 곳</span>
+						</span>
+					</li>
+					<li class="done">
+						<span>
+							<i class="step">4단계</i>
+							<span class="step-tit">이사 온 곳</span>
+						</span>
+					</li>
+					<li class="active">
+						<span>
+							<em class="sr-only">현재단계</em>
+							<i class="step">5단계</i>
+							<span class="step-tit">추가 신청(선택)</span>
+						</span>
+					</li>
+				</ol>
+				<!-- //스텝 영역 -->
+
+				<!-- 컨텐츠 영역 -->
+				<div class="conts-area step-type">
+					<div class="conts-wrap">
+						<div class="conts-wrap">
+							<h3 class="sec-tit">
+								<span class="step-now"><strong class="active">5단계</strong> / 5단계</span>
+								추가 신청(선택)
+							</h3>
+							<div>
+								<!-- 추가 정보 신청 -->
+								<div class="txt-box bg-white">
+									<h4 class="box-tit1">추가 정보 신청</h4>
+									<p>전입신고와 함께 우편물 주소 이전과 초등학교 배정정보신청등을 추가로 신청하실 수 있습니다. </p>
+									<!-- 기본주소 -->
+									<div class="form-group">
+										<div class="form-conts">
+											<div class="krds-check-area chk-column">
+												<div class="krds-form-check medium">
+													<input type="checkbox" name="chk_add_app" id="chk_1">
+													<label for="chk_1">이·통장 등의 전입신고 사후확인 생략을 위한 서류 제출(선택)</label>
+												</div>
+												<div class="krds-form-check medium">
+													<input type="checkbox" name="chk_add_app" id="chk_2">
+													<label for="chk_2">우편물 주소 이전 서비스 신청(선택)</label>
+												</div>
+												<div class="krds-form-check medium">
+													<input type="checkbox" name="chk_add_app" id="chk_3">
+													<label for="chk_3">초등학교 배정정보 신청(선택)</label>
+												</div>
+												<div class="krds-form-check medium">
+													<input type="checkbox" name="chk_add_app" id="chk_4">
+													<label for="chk_4">사회적 배려 대상자를 위한 요금감면 일괄신청(선택)</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- //기본주소 -->
+								</div>
+								<!-- //추가 정보 신청 -->
+
+								<!-- 이·통장 등의 전입신고 사후확인 생략을 위한 서류 제출 -->
+								<div class="txt-box bg-white" id="chk_add_app_01" style="display: none;">
+									<h4 class="box-tit1">이·통장 등의 전입신고 사후확인 생략을 위한 서류 제출</h4>
+									<div class="box-sec">
+										<p>
+											전입신고 사항의 사후확인(이통장 등의 확인)을 생략받기 원하시는 경우, 임대차 계약서, 매매계약서 혹은 기타 전입을 확인할 수 있는 자료
+											중 하나를 첨부하여 주시기 바랍니다. 더불어, 부동산거래신고법 상 전입신고에 따른 임대차 신고 처리*를 위해, 임대차 신고가 완료되면
+											확정일자 부여가 의제됩니다.
+										</p>
+										<p>1.경기도 외 도, 관할 군 지역을 제외한 지역에 전입하고,</p>
+										<p>2.보증금 6천만원 초과 혹은 월차임 30만원을 초과 임대차 계약을 체결하였다면</p>
+										<p>
+											임대차 계약서를 첨부*하여 주시기 바라며, 향후 임대차 신고 업무 처리를 위한 담당 부서의 문의 전화에 적극 협조해주시기 바랍니다.<br>
+											*첨부하지 않더라도 전입신고가 거부되지는 않으나, 임대차 신고 처리가 어렵습니다.
+										</p>
+									</div>
+
+									<div class="krds-file-upload">
+										<!-- 파일 업로드 영역 -->
+										<div class="file-upload">
+										  <p class="txt">첨부할 파일을 여기에 끌어다 놓거나, 파일 선택 버튼을 눌러 파일을 직접 선택해주세요.</p>
+										  <div class="file-upload-btn-wrap">
+											<input type="file" name="myFile" id="fileu-upload">
+											<label for="fileu-upload">
+											  <button type="button" class="krds-btn medium"><i class="svg-icon ico-upload"></i>파일선택</button>
+											</label>
+										  </div>
+										</div>
+										<!-- //파일 업로드 영역 -->
+									</div>
+								</div>
+								<!-- //이·통장 등의 전입신고 사후확인 생략을 위한 서류 제출 -->
+
+								<!-- 우편물 주소 이전 서비스 신청 -->
+								<div class="txt-box bg-white" id="chk_add_app_02" style="display: none;">
+									<div class="box-tit-wrap">
+										<h4 class="box-tit1">우편물 주소 이전 서비스 신청</h4>
+										<button type="button" class="krds-btn medium text">
+											상세안내 <i class="svg-icon ico-link"></i>
+										</button>
+									</div>
+
+									<div class="box-cnt">
+										<div class="box-sec">
+											<p>본 서비스는 전에 살던 주소지로 배송된 우편물을 전입신고한 주소로 배달하는 서비스입니다.</p>
+											<ul class="krds-info-list decimal">
+												<li>세대주 및 세대원의 개인정보가 우체국으로 제공되므로 신청인의 동의가 필요합니다.</li>
+												<li>
+													전입신고를 통한 서비스 신청은 관내에 이사한 경우 무료(3개월)이고, 관외로 이사한 경우는 유료입니다. 연장 신청은 우체국
+													창구 또는 인터넷 우체국을 통해서 신청하시기 바랍니다.
+												</li>
+											</ul>
+										</div>
+										<div class="box-sec">
+											<h5 class="box-tit2">신청인 정보 (필수)</h5>
+											<div class="form-group">
+												<div class="form-tit">신청인</div>
+												<div class="form-conts">
+													<input type="text" id="name-input1" class="krds-input" placeholder="신청인 입력" value="홍길동" title="신청인">
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="form-tit">신청 연락처</div>
+												<div class="form-conts">
+													<input type="text" id="tel-input1" class="krds-input" placeholder="연락처 입력" value="010-999-4040" title="신청 연락처">
+												</div>
+											</div>
+
+											<div class="krds-form-check">
+												<input type="checkbox" id="chk_same">
+												<label for="chk_same">신청인 전화번호와 동일</label>
+											</div>
+										</div>
+
+										<div class="box-sec">
+											<h5 class="box-tit2">서비스를 신청하는 세대주 및 세대원을 선택해주세요.</h5>
+											<!-- table list -->
+											<div class="krds-table-wrap">
+												<table class="tbl col data">
+													<caption>
+														서비스 대상자를 선택하는 표이며, 세대주와의 관계, 성명, 생년월일, 성별로 구성되어있으며 민원 신청인인 전출지 전 세대주,새로운 세대주,전입지 세대주로 구성되어 있음
+													</caption>
+													<colgroup>
+														<col style="width: 10%;">
+														<col style="width: 22%;">
+														<col style="width: 20%;">
+														<col style="width: 30%;">
+														<col>
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col" class="text-center">
+																<div class="krds-form-check ico-only">
+																	<input type="checkbox" name="save_id" id="chk_all">
+																	<label for="chk_all">
+																		<span class="sr-only">선택</span>
+																	</label>
+																</div>
+															</th>
+															<th scope="col">세대주와의 관계</th>
+															<th scope="col">성명</th>
+															<th scope="col">생년월일</th>
+															<th scope="col" class="text-center">성별</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td class="text-center">
+																<div class="krds-form-check ico-only">
+																	<input type="checkbox" name="save_id" id="chk_1-1">
+																	<label for="chk_1-1">
+																		<span class="sr-only">선택</span>
+																	</label>
+																</div>
+															</td>
+															<td>본인 (신청인)</td>
+															<td>김플립</td>
+															<td>1990년 11월 23일</td>
+															<td class="text-center">여</td>
+														</tr>
+														<tr>
+															<td class="text-center">
+																<div class="krds-form-check ico-only">
+																	<input type="checkbox" name="save_id" id="chk_1-2">
+																	<label for="chk_1-2">
+																		<span class="sr-only">선택</span>
+																	</label>
+																</div>
+															</td>
+															<td>배우자</td>
+															<td>홍길동</td>
+															<td>1986년 05월 02일</td>
+															<td class="text-center">남</td>
+														</tr>
+														<tr>
+															<td class="text-center">
+																<div class="krds-form-check ico-only">
+																	<input type="checkbox" name="save_id" id="chk_1-3">
+																	<label for="chk_1-3">
+																		<span class="sr-only">선택</span>
+																	</label>
+																</div>
+															</td>
+															<td>자녀</td>
+															<td>홍미영</td>
+															<td>2009년 06월 21일</td>
+															<td class="text-center">여</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<!-- //table list -->
+										</div>
+									</div>
+								</div>
+								<!-- //우편물 주소 이전 서비스 신청 -->
+
+								<!-- 초등학교 배정정보 신청 -->
+								<div class="txt-box bg-white" id="chk_add_app_03" style="display: none;">
+									<h4 class="box-tit1">초등학교 배정정보 신청</h4>
+									<div class="box-sec">
+										<p>초등학교 배정에 관한 자세한 문의는 이사하는 곳 주민센터에 문의하시기 바랍니다.</p>
+										<!-- table list -->
+										<div class="krds-table-wrap">
+											<table class="tbl col data">
+												<caption>
+													서비스 대상자를 선택하는 표이며, 세대주와의 관계, 성명, 생년월일, 성별로 구성되어있으며 민원 신청인인 전출지 전 세대주,새로운 세대주,전입지 세대주로 구성되어 있음
+												</caption>
+												<colgroup>
+													<col style="width: 10%;">
+													<col style="width: 22%;">
+													<col style="width: 20%;">
+													<col style="width: 30%;">
+													<col>
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col" class="text-center">
+															<div class="krds-form-check ico-only">
+																<input type="checkbox" name="save_id" id="chk_all2">
+																<label for="chk_all2">
+																	<span class="sr-only">선택</span>
+																</label>
+															</div>
+														</th>
+														<th scope="col">세대주와의 관계</th>
+														<th scope="col">성명</th>
+														<th scope="col">생년월일</th>
+														<th scope="col" class="text-center">성별</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="text-center">
+															<div class="krds-form-check ico-only">
+																<input type="checkbox" id="chk_2-3">
+																<label for="chk_2-3">
+																	<span class="sr-only">선택</span>
+																</label>
+															</div>
+														</td>
+														<td>자녀</td>
+														<td>홍미영</td>
+														<td>2009년 06월 21일</td>
+														<td class="text-center">여</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<!-- //table list -->
+									</div>
+								</div>
+								<!-- //초등학교 배정정보 신청 -->
+
+								<!-- 사회적 배려 대상자를 위한 요금감면 일괄신청 -->
+								<div class="txt-box bg-white" id="chk_add_app_04" style="display: none;">
+									<div class="box-tit-wrap">
+										<h4 class="box-tit1">사회적 배려 대상자를 위한 요금감면 일괄신청</h4>
+										<button type="button" class="krds-btn medium text">
+											요금감면서비스 상세안내 <i class="svg-icon ico-link"></i>
+										</button>
+									</div>
+									<ul class="krds-info-list decimal">
+										<li>
+											사회적 배려 대상자에게 전기요금, TV수신료, 도시가스요금, 지역난방비의 부담완화를 위해 요금을 감면해주는 서비스 입니다.
+										</li>
+										<li>
+											요금감면 신청후 변동사실 통보의무 이행 및 부당한 요금에 대한 추가납부에 동의하여야 합니다.
+										</li>
+										<li>
+											요금감면 자격여부 확인과 서비스 신청을 위해 행정정보 공동이용 사전동의 및 요금감면기관(한국방송공사, 한국전력공사, 한국가스공사,
+											해당지역 도시가스회사, 한국지역난방공사)에 개인정보(고유식별정보 포함)를 제공하는 것에 동의합니다.<br>
+											※ 제공하는 항목:성명, 주민등록번호, 주소, 연락처, 자격정보, 고객번호 등
+										</li>
+										<li>
+											감면신청과 관련한 결정 또는 서비스 제공에 대해서는 해당기관에 직접 문의하시기 바랍니다.<br>
+											※ 전기요금/TV수신료: 한국전력공사, 도시가스요금 : 해당지역 도시가스회사, 지역난방비, 구역전기 : 한국지역난방공사
+										</li>
+									</ul>
+									<div class="agree-box">
+										<div class="form-group krds-check-area">
+											<div class="krds-form-check">
+												<input type="checkbox" name="save_id" id="chk_01">
+												<label for="chk_01">
+													요금감면 일괄신청에 대한 유의사항을 읽고 동의합니다.
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //사회적 배려 대상자를 위한 요금감면 일괄신청 -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //컨텐츠 영역 -->
+
+				@@include("./inc/help-panel.html", {
+					contents: "normal",
+				})
+
+				<!-- 페이지 버튼 영역 -->
+				<div class="page-btn-wrap both m-column">
+					<button type="button" class="krds-btn xlarge tertiary" onclick="history.back(-1); return false;">이전으로</button>
+					<div class="btn-wrap">
+						<button type="button" class="krds-btn xlarge tertiary">임시저장</button>
+						<button type="button" class="krds-btn xlarge primary" onclick="location.href='sample_move_process_07.html'">다음으로</button>
+					</div>
+				</div>
+				<!-- //페이지 버튼 영역 -->
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+
+		<!-- 푸터 영역 -->
+		<footer id="krds-footer">
+			@@include("./inc/footer.html", {"footerType": "type1",})
+		</footer>
+		<!-- //푸터 영역 -->
+	</div>
+
+	@@include("./inc/modal-wrap.html")
+
+	<script>
+		const _addChks = document.querySelectorAll("[name='chk_add_app']");
+		_addChks.forEach(($e, index) => {
+			$e.addEventListener("click", $el => {
+				const $id = document.querySelector(`#chk_add_app_0${index + 1}`);
+				($el.target.checked) ? $id.style.display = 'flex' : $id.style.display = 'none';
+			});
+		});
+	</script>
+</body>
+
+</html>

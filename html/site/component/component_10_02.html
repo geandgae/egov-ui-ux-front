@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include("../inc/head.html", { "title": "화면 크기 조정 (Resize) | 컴포넌트 - KRDS", })
+
+    <body>
+        <div id="wrap" class="g-wrap">
+            @@include("../inc/guide-header.html")
+
+            <!-- 컨테이너 영역 -->
+            <div id="container" class="krds-in-page-navigation-type">
+                <!-- 컨텐츠 영역 -->
+                <div class="inner in-between">
+                    <!-- 사이드 메뉴 -->
+                    @@include("../inc/guide-lnb.html")
+                    <!-- //사이드 메뉴 -->
+
+                    <div class="contents">
+                        <!-- breadcrumb -->
+                        @@include("../inc/page-breadcrumb.html")
+                        <!-- breadcrumb -->
+
+                        <!-- page-title -->
+                        @@include("../inc/page-title.html", { 
+							"desc" : "화면 크기 조정은 텍스트를 포함하여 화면에 표시되는 정보를 확대하거나 축소하는 데 사용되는 요소이다. <br/> 사용자에 따라 읽을 수 있는 텍스트의 크기, 조작할 수 있는 요소의 크기는 다르다. 디바이스나 사용자 에이전트가 지원하는 여러 가지 설정 기능을 활용하면 사용자가 선호하는 방식으로 콘텐츠의 표시 방식을 수정할 수 있다. 그러나 화면 크기 조정 기능을 필요로 하는 사용자는 관련 기능을 찾아 설정하는 데 어려움을 겪을 가능성이 높으므로 서비스 자체적으로 화면 크기 조정 기능을 제공하고 접근하기 쉽게 만드는 것이 중요하다." 
+						})
+                        <!-- //page-title -->
+
+                        <div class="conts-area">
+                            <!-- 탭 메뉴 -->
+                            <div class="krds-tab-area layer">
+                                <!-- tab list -->
+                                @@include("../inc/page-tab-list.html", { "list": [ { name: "개요", class: "active" }, { name: "접근성", class: "" }, { name: "코드", class: "" } ] })
+                                <!-- //tab list -->
+                                <!-- tab contents -->
+                                <div class="tab-conts-wrap">
+                                    <!-- quick link -->
+                                    @@include("../inc/page-quick-nav.html")
+                                    <!-- //quick link -->
+
+                                    <!-- tabpanelInfo01 -->
+                                    <section id="tabpanelInfo01" aria-labelledby="tabInfo01" class="tab-conts active" data-quick-nav="true">
+                                        <!-- scroll-check -->
+                                        <div class="g-description-area scroll-check">
+                                             <!-- 구조 -->
+                                             <div class="g-conts-area structure section-link">
+                                                <h3 class="sec-tit">구조</h3>
+                                                <div class="g-conts-area">
+                                                    <div class="g-img-wrap">
+                                                        <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/component/adjustfontsize_structure.png" alt="구조 예시" /></div>
+                                                    </div>
+                                                    <div class="g-img-wrap">
+                                                        <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/component/adjustfontsize_structure_02.png" alt="구조 예시이미지2" /></div>
+                                                    </div>
+                                                    <ol class="krds-info-list ordered">
+                                                        <li><span class="num">1.</span><strong>아이콘과 레이블</strong> 화면 크기 조정 옵션 목록을 실행하는 데 사용하는 버튼의 이름</li>
+                                                        <li>
+                                                            <span class="num">2. </span><strong>옵션</strong> 사용자가 선택할 수 있는 화면 크기 조정 옵션 값의 목록
+                                                            <ol class="krds-info-list ordered">
+																<li><span class="num">a.</span><strong>작게</strong> 90% 축소</li>
+																<li><span class="num">b.</span><strong>보통</strong> 100%, 기본 크기</li>
+                                                                <li><span class="num">c.</span><strong>조금 크게</strong> 110% 확대</li>
+                                                                <li><span class="num">d.</span><strong>크게</strong> 130% 확대</li>
+                                                                <li><span class="num">e.</span><strong>가장 크게</strong> 150% 확대</li>
+															</ol>
+                                                        </li>
+                                                        <li><span class="num">3.</span><strong>선택값</strong> 사용자가 옵션 목록에서 선택한 값을 보여줌</li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                            <!-- //구조 -->
+
+                                            <!-- 사용성 가이드라인 -->
+                                            <div class="g-conts-area section-link">
+                                                <h3 class="sec-tit">사용성 가이드라인</h3>
+												<div class="g-conts-area sp-sm">
+                                                    <div class="g-desc-box">
+														<p class="g-tit">옵션 레이블을 명확한 내용으로 제공한다.</p>
+														<p class="g-desc">옵션에 텍스트 레이블 없이 글자 크기만을 보여주는 아이콘만 제공되거나 확대 배율만 표시될 경우 사용자에 따라 이해가 어려울 수 있으므로 설명적인 레이블을 함께 제공해야 한다.</p>
+													</div>
+                                                    <div class="g-desc-box">
+														<p class="g-tit">옵션을 5개 이내로 제공한다.</p>
+														<p class="g-desc">서비스 특성에 따라 확대/축소 옵션값을 추가하거나 제거할 수 있다. 옵션의 개수가 많아질 수록 인지적 부담이 증가하므로 옵션 개수는 5개 이내로 제공하는 것이 바람직하다.</p>
+													</div>
+                                                    <div class="g-desc-box">
+														<p class="g-tit">반응형 레이아웃 사용을 고려한다.</p>
+														<p class="g-desc">사용자 에이전트의 확대 기능을 사용하여 화면을 400%까지 확대했을 때, 1920 x 1080 해상도의 모니터를 기준으로 뷰포트 너비가 480px로 줄어들어 모바일 레이아웃으로 전환된다.</p>
+														<p class="g-desc">DPR(Device Pixel Ratio)이 2인 고해상도 모니터일 경우, 200%로 확대되었을 때 뷰포트 너비가 480px로 줄어든다.</p>
+                                                        <p class="g-desc">따라서 화면을 확대했을 때 화면에 콘텐츠를 문제 없이 표시하기 위해서는 반응형 레이아웃을 사용하는 것이 용이하다.</p>
+                                                    </div>
+												</div>
+                                            </div>
+                                            <!-- //사용성 가이드라인 -->
+
+                                            <!-- 플랫폼에 대한 고려 사항 -->
+                                             <div class="g-conts-area section-link">
+                                                <h3 class="sec-tit">플랫폼에 대한 고려 사항</h3>
+												<div class="g-conts-area sp-sm">
+													<div class="g-desc-box">
+														<p class="g-tit">모바일 애플리케이션에서는 별도 설정 화면에서 화면 크기 조정 기능을 제공할 수 있다.</p>
+														<p class="g-desc">모바일 애플리케이션에서는 ‘화면 크기 조정’ 컴포넌트를 사용하는 대신 사용자에게 익숙한 방식의 설정 화면에서 동등한 기능을 사용할 수 있도록 제공한다.</p>
+													</div>
+												</div>
+                                            </div>
+                                            <!-- //플랫폼에 대한 고려 사항 -->
+
+
+                                            <!-- 자주 묻는 질문 -->
+                                            @@include("../inc/page-faq.html")
+                                            <!-- //자주 묻는 질문 -->
+
+                                            <!-- 정보 변경 내역 -->
+                                            @@include("../inc/page-info-update-log.html")
+                                            <!-- //정보 변경 내역 -->
+											
+											<!-- 컨텐츠 배너 영역 -->
+											@@include("../inc/page-banner.html")
+											<!--// 컨텐츠 배너 영역 -->
+                                        </div>
+                                        <!-- //scroll-check -->
+                                    </section>
+                                    <!-- //tabpanelInfo01 -->
+
+                                    <!-- tabpanelInfo02 -->
+                                    <section id="tabpanelInfo02" aria-labelledby="tabInfo02" class="tab-conts" data-quick-nav="true">
+                                        <!-- scroll-check -->
+                                        <div class="g-description-area scroll-check">
+                                            <!-- 접근성 가이드라인 -->
+                                            <div class="g-conts-area section-link">
+                                               <h3 class="sec-tit">접근성 가이드라인</h3>
+												<div class="g-conts-area sp-sm">
+													<div class="g-desc-box">
+														<p class="g-tit">화면 크기를 조정했을 때 콘텐츠가 가려지거나 기능이 손실되지 않도록 한다.</p>
+                                                        <p class="g-desc">'화면 크기 조정' 컴포넌트의 제공 목적은 사용자가 문제없이 읽을 수 있는 배율의 콘텐츠를 제공하는 것이므로 기본 크기에서 제공되는 콘텐츠, 기능은 조정된 배율의 화면에서도 문제없이 접근할 수 있어야 한다.</p>
+														<p class="g-desc">조정된 배율의 화면에서 모든 콘텐츠와 기능을 기본 배율과 동일한 방식으로 사용할 수 있도록 해야 하는 것은 아니다. 모바일 레이아웃에서 메인 메뉴가 햄버거 메뉴 형식으로 전환되는 것처럼 콘텐츠와 기능에 대한 접근 방식은 달라질 수 있으나, 내용이 변형되어서는 안 된다.</p>
+                                                        <ul class="krds-info-list decimal">
+                                                            <li>WCAG 2.1 Resize Text (AA)</li>
+                                                            <li>WCAG 2.1 Reflow (AA)</li>
+                                                        </ul>
+													</div>
+                                                    <div class="g-desc-box">
+														<p class="g-tit">화면을 확대했을 때 화면 스크롤은 단일 방향으로 유지/생성되도록 한다.</p>
+                                                        <p class="g-desc">화면을 확대하여 뷰포트 영역이 좁아졌을 때, 요소의 배열/배치가 조정되지 않아 뷰포트 영역 밖으로 배치되어 스크롤이 생성되면 콘텐츠를 읽을 때 더 많은 노력이 필요하다.</p>
+														<p class="g-desc">단, 이미지, 멀티미디어, 표와 같이 기본적으로 양방향으로 배치되는 특성을 가진 콘텐츠와 모바일 레이아웃에서는 세로, 가로 스크롤이 동시에 사용될 수 있다.</p>
+                                                        <ul class="krds-info-list decimal">
+                                                            <li>WCAG 2.1 Reflow (AA)</li>
+                                                        </ul>
+													</div>                                                    
+												</div>
+                                            </div>
+                                            <!-- //접근성 가이드라인 -->
+
+                                            <!-- 상호작용 가이드라인 -->
+                                            <div class="g-conts-area section-link">
+                                                <h3 class="sec-tit">상호작용 가이드라인</h3>
+                                                <div class="g-conts-area sp-sm">
+                                                    <h4 class="con-tit">목록 확장 및 축소</h4>
+                                                    <!-- table list -->
+                                                    <div class="krds-table-wrap">
+                                                        <table class="tbl col data">
+                                                            <caption>
+                                                                상호작용 가이드라인 목록 확장 및 축소행에 대한 표로 구분/설명으로 구성되어있으며 구분 항목은 Click, Enter, Space, Esc 로 구성되어있음
+                                                            </caption>
+                                                            <colgroup>
+                                                                <col style="width: 15%" />
+                                                                <col />
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">구분</th>
+                                                                    <th scope="col">설명</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row">Click</th>
+                                                                    <td>컨테이너를 Click 했을 때, 옵션 목록이 확장되거나 축소된다. <br/>옵션 목록이 확장된 상태에서 레이블, 컨테이너, 옵션 목록이 아닌 영역을 Click 하면 옵션 목록은 축소되어야 한다.</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Enter, Space</th>
+                                                                    <td>컨테이너에 초점이 있는 경우, 옵션 목록이 확장되거나 축소된다. </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Esc</th>
+                                                                    <td>옵션 목록을 축소하고 컨테이너로 초점이 이동해야 한다. </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- //table list -->
+                                                </div>
+                                                <div class="g-conts-area">
+                                                    <h4 class="con-tit">탐색</h4>
+                                                    <!-- table list -->
+                                                    <div class="krds-table-wrap">
+                                                        <table class="tbl col data">
+                                                            <caption>
+                                                                상호작용 가이드라인 탐색에 대한 표로 이동에 대한 표로 구분/설명으로 구성되어있으며 구분 항목은 Tab, Shift + Tab, Scroll로 구성되어있음
+                                                            </caption>
+                                                            <colgroup>
+                                                                <col style="width: 15%" />
+                                                                <col />
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">구분</th>
+                                                                    <th scope="col">설명</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row">Tab, Shift + Tab</th>
+                                                                    <td>Tab, Shift + Tab 키를 눌렀을 때 접근할 수 있어야 한다.</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Scroll</th>
+                                                                    <td>옵션 목록에 스크롤이 생성된 경우 목록이 상/하로 이동한다.</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- //table list -->
+                                                </div>
+                                                <div class="g-conts-area sp-sm">
+                                                    <h4 class="con-tit">옵션 선택</h4>
+                                                    <!-- table list -->
+                                                    <div class="krds-table-wrap">
+                                                        <table class="tbl col data">
+                                                            <caption>
+                                                                상호작용 가이드라인 옵션 선택에 대한 표로 이동에 대한 표로 구분/설명으로 구성되어있으며 구분 항목은 Click, Enter, 방향키 ↑, ↓로 구성되어있음
+                                                            </caption>
+                                                            <colgroup>
+                                                                <col style="width: 15%" />
+                                                                <col />
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">구분</th>
+                                                                    <th scope="col">설명</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row">Click</th>
+                                                                    <td>옵션 목록에서 특정 옵션을 Click 하면 해당 옵션으로 선택값이 변경된다.</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Enter</th>
+                                                                    <td>옵션에 초점이 있는 경우, 해당 옵션값이 선택된 후 목록이 축소된다.</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">방향키 ↑, ↓</th>
+                                                                    <td>컨테이너에 초점이 있고 옵션 목록이 축소된 경우, 이전/다음 옵션으로 선택값이 변경된다.</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- //table list -->
+                                                </div>
+                                            </div>
+                                            <!-- //상호작용 가이드라인 -->
+                                        </div>
+                                        <!-- //scroll-check -->
+                                    </section>
+                                    <!-- //tabpanelInfo02 -->
+
+                                    <!-- tabpanelInfo03 -->
+                                    <section id="tabpanelInfo03" aria-labelledby="tabInfo03" class="tab-conts" data-quick-nav="true">
+                                        <!-- scroll-check -->
+                                        <div class="g-description-area scroll-check">
+                                            <!-- 예시 -->
+                                            <div class="g-conts-area section-link">
+                                                <h3 class="sec-tit">예시</h3>
+												@@include("../inc/page-example.html",{ "example": [ 
+													{ title: "기본", folder: "..", file: "resize", class: "overflow-visible" }
+												]})
+                                            </div>
+                                            <!-- //예시 -->
+
+                                            <!-- 마크업 가이드 -->
+                                            <div class="g-conts-area section-link">
+                                                <h3 class="sec-tit">마크업 가이드</h3>
+                                                <!-- CSS 선택자 -->
+                                                <div class="g-conts-area sp-sm">
+                                                    <h4 class="con-tit">CSS 선택자</h4>
+                                                    <!-- table list -->
+                                                    <div class="krds-table-wrap">
+                                                        <table class="tbl col data">
+                                                            <caption>
+                                                                마크업 가이드 CSS 선택자에 대한 표로 필수 로 구성되어있으며 구분 항목은 전체영역구성되어있음
+                                                            </caption>
+                                                            <colgroup>
+                                                                <col style="width: 20%" />
+                                                                <col />
+                                                                <col style="width: 20%" />
+                                                                <col />
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col" colspan="2">필수</th>
+                                                                    <th scope="col" colspan="2">선택</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row">전체영역</th>
+                                                                    <td>.krds-drop-wrap .krds-resize</td>
+                                                                    <th scope="row">드롭다운 위치</th>
+                                                                    <td>
+                                                                        .drop-left (왼쪽 정렬)<br />
+                                                                        .drop-right (오른쪽 정렬)
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">드롭다운 메뉴 전체영역</th>
+                                                                    <td colspan="3">.drop-menu</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">드롭다운 메뉴 상단</th>
+                                                                    <td colspan="3">.drop-top</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">드롭다운 메뉴 리스트</th>
+                                                                    <td colspan="3">.drop-list</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">드롭다운 메뉴 하단</th>
+                                                                    <td colspan="3">.drop-bottom</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- //table list -->
+                                                </div>
+                                                <!--// CSS 선택자 -->
+                                            </div>
+                                            <!-- //마크업 가이드 -->
+                                        </div>
+                                        <!-- //scroll-check -->
+                                    </section>
+                                    <!-- //tabpanelInfo03 -->
+                                </div>
+                                <!-- //tab contents -->
+                            </div>
+                            <!-- //탭 메뉴 -->
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- //컨텐츠 영역 -->
+            </div>
+            <!-- //컨테이너 영역 -->
+
+            <!-- 푸터 영역 -->
+            <footer id="krds-footer">@@include("../inc/guide-footer.html")</footer>
+            <!-- //푸터 영역 -->
+        </div>
+    </body>
+</html>

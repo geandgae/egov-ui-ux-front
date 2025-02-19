@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include("../inc/head.html", { "title": "개요 | 서비스 패턴 - 방문 - KRDS", })
+
+    <body>
+        <div id="wrap" class="g-wrap">
+            @@include("../inc/guide-header.html")
+
+            <!-- 컨테이너 영역 -->
+            <div id="container">
+                <!-- 컨텐츠 영역 -->
+                <div class="inner in-between">
+                    <!-- 사이드 메뉴 -->
+                    @@include("../inc/guide-lnb.html")
+                    <!-- //사이드 메뉴 -->
+
+                    <!-- contents -->
+                    <div class="contents">
+                        <!-- breadcrumb -->
+                        @@include("../inc/page-breadcrumb.html")
+                        <!-- breadcrumb -->
+
+                        <!-- page-title -->
+                        @@include("../inc/page-title.html", { 
+							"desc" : "신청은 사용자가 서비스 제공 기관에 요구 사항을 알리기 위해 서식을 작성하는 과업으로 관련 법률에 명시된 종류의 민원 외에 사용자가 특정한 내용을 요청하는 모든 행동을 포함한다." 
+						})
+                        <!-- //page-title -->
+
+                        <div class="conts-area">
+                       
+                            <!-- scroll-check -->
+                            <div class="g-description-area scroll-check">
+								<!-- 유형 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">유형</h3>
+                                    <div class="g-conts-area sp-sm">
+                                        <h4 class="con-tit">제출</h4>
+                                        <p class="g-desc">
+                                            정해진 서식에 따라 신청서를 작성하여 제출함 <br />
+                                            예&#41; 복지 급여 신청, 전입신고, 귀국신고
+                                        </p>
+                                    </div>
+                                    <div class="g-conts-area">
+                                        <h4 class="con-tit">조회</h4>
+                                        <p class="g-desc">
+                                            자격, 문서 효력, 처분 결과 등을 확인함 <br />
+                                            예&#41; 문서 진위 확인, 세액 조회
+                                        </p>
+                                    </div>
+                                    <div class="g-conts-area">
+                                        <h4 class="con-tit">발급</h4>
+                                        <p class="g-desc">
+                                            증명 서류, 자격 번호 등을 발급함 <br />
+                                            예&#41; 주민등록 등·초본 발급, 개인통관번호 발급, 자동차 등록증 발급
+                                        </p>
+                                    </div>
+                                    <div class="g-conts-area">
+                                        <h4 class="con-tit">예약</h4>
+                                        <p class="g-desc">
+                                            일정 기간 동안의 재화 또는 서비스에 대한 이용을 신청함 <br />
+                                            예&#41; 도서 예약, 좌석 예약, 관람 예약/예매
+                                        </p>
+                                    </div>
+                                </div>
+								<!-- //유형 -->
+
+								<!-- 이용 상황별 플로 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">이용 상황별 플로(Flow)</h3>
+                                    <div class="g-img-wrap outline">
+                                        <div class="g-img-zomm"><img src="../../../resources/img/guide/contents/service/apply_flow.png" alt="이용 상황별 플로(Flow) 예시" /></div>
+                                    </div>
+                                    <div class="g-flow-wrap">
+                                        <ol class="g-flow-list">
+                                            <li class="item">
+                                                <h4 class="g-flow-tit"><strong class="g-number">1</strong>신청 대상 탐색</h4>
+                                                <ul class="g-flow-box">
+                                                    <li>
+                                                        <strong class="g-flow-stit">서비스 목록 탐색</strong>
+                                                        <p class="g-flow-dsec">디지털 서비스에서 제공 중인 신청 서비스 목록에서 필요한 신청 서비스를 발견하는 과정</p>
+                                                    </li>
+                                                    <li>
+                                                        <strong class="g-flow-stit">대상 선택하기</strong>
+                                                        <p class="g-flow-dsec">한 번에 여러 건의 서비스를 신청할 수 있어 필요한 서비스를 선택하고 일시적으로 저장하는 과정</p>
+                                                    </li>
+                                                    <li>
+                                                        <strong class="g-flow-stit">신청하기</strong>
+                                                        <p class="g-flow-dsec">선택한 서비스에 대한 신청을 시도하는 과정</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="item">
+                                                <h4 class="g-flow-tit"><strong class="g-number">2</strong>신청서 작성</h4>
+                                                <ul class="g-flow-box">
+                                                    <li>
+                                                        <strong class="g-flow-stit">단계의 진행과 탐색</strong>
+                                                        <p class="g-flow-dsec">신청서 작성과 제출, 여러 단계로 구성된 신청의 경우에는 여러 개의 신청 서식의 작성을 완료하고 이전 단계로 돌아가 작성 내용을 확인하는 과정</p>
+                                                    </li>
+                                                    <li>
+                                                        <strong class="g-flow-stit">신청 정보 입력</strong>
+                                                        <p class="g-flow-dsec">서식에서 작성을 요구하는 항목에 데이터를 입력하는 과정</p>
+                                                    </li>
+                                                    <li>
+                                                        <strong class="g-flow-stit">신청 정보 자동 입력</strong>
+                                                        <p class="g-flow-dsec">인증 과정에서 확인된 정보 또는 기존에 입력한 데이터를 활용하여 서식을 직접 작성하지 않고 정보를 입력하는 과정</p>
+                                                    </li>
+                                                    <li>
+                                                        <strong class="g-flow-stit">작성 도움말 확인</strong>
+                                                        <p class="g-flow-dsec">서식 작성에 대한 도움말을 확인하는 과정</p>
+                                                    </li>
+                                                    <li>
+                                                        <strong class="g-flow-stit">신청서 작성 매뉴얼 확인</strong>
+                                                        <p class="g-flow-dsec">간단한 작성 도움말 외에 특정 서식 작성만을 위해 만들어진 매뉴얼을 참고하는 과정</p>
+                                                    </li>
+                                                    <li>
+                                                        <strong class="g-flow-stit">서류 제출</strong>
+                                                        <p class="g-flow-dsec">신청에 필요한 증빙 서류(증명 사진, 주민등록등·초본 등)를 첨부하는 과정</p>
+                                                    </li>
+                                                    <li>
+                                                        <strong class="g-flow-stit">여러 건 신청하기</strong>
+                                                        <p class="g-flow-dsec">동일한 신청 서비스를 다양한 조건으로 변형하여 이용하거나, 여러 번의 신청을 실행하는 과정</p>
+                                                    </li>
+                                                    <li>
+                                                        <strong class="g-flow-stit">임시 저장</strong>
+                                                        <p class="g-flow-dsec">입력한 데이터를 제출 이전에 일정 기간 동안 임시로 보관하는 과정으로 사용자가 명시적으로 저장을 실행하거나 시스템이 특정 주기별로 자동으로 정보를 저장할 수 있음</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="item">
+                                                <h4 class="g-flow-tit"><strong class="g-number">3</strong>확인/확정</h4>
+                                                <ul class="g-flow-box">
+                                                    <li>
+                                                        <strong class="g-flow-stit">신청 내용 최종 확인</strong>
+                                                        <p class="g-flow-dsec">신청서를 제출하기 전에 작성한 내용이 정확한지 검토하는 과정</p>
+                                                    </li>
+                                                    <li>
+                                                        <strong class="g-flow-stit">신청서 제출 확정</strong>
+                                                        <p class="g-flow-dsec">최종 단계에서 신청 행위를 확정하는 과정</p>
+                                                    </li>
+                                                    <li>
+                                                        <strong class="g-flow-stit">신청서 작성 취소</strong>
+                                                        <p class="g-flow-dsec">최종 단계에서 신청 행위를 철회하는 과정</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="item">
+                                                <h4 class="g-flow-tit"><strong class="g-number">4</strong>신청 결과 확인</h4>
+                                                <ul class="g-flow-box">
+                                                    <li>
+                                                        <strong class="g-flow-stit">결과 화면 찾기</strong>
+                                                        <p class="g-flow-dsec">신청서의 제출 이력을 확인할 수 있는 페이지를 탐색하는 과정</p>
+                                                    </li>
+                                                    <li>
+                                                        <strong class="g-flow-stit">결과 목록 탐색</strong>
+                                                        <p class="g-flow-dsec">신청 이력을 일자별·진행 상태별로 확인하는 과정</p>
+                                                    </li>
+                                                    <li>
+                                                        <strong class="g-flow-stit">진행 상태 확인</strong>
+                                                        <p class="g-flow-dsec">신청 건에 대한 기관 또는 시스템의 처리 상황을 확인하는 과정</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+								<!-- //이용 상황별 플로 -->
+
+								<!-- 사용성 가이드라인 체크리스트 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">사용성 가이드라인 체크리스트</h3>
+                                    <div class="g-conts-area">
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">서비스 패턴의 사용성 가이드라인은 사용자 관점에서의 중요도와 만족도를 기준으로 하여 3개의 적용 수준으로 구분되어 있다. 핵심 서비스에 대한 사용자 경험의 향상을 위해서는 기본적으로 최하위 적용 수준인 필수 수준의 가이드라인을 준수해야 한다.</p>
+                                            <a href="./../utility/utility_01.html" class="krds-btn medium text underline">적용수준(서비스패턴) 가이드라인 확인 <i class="svg-icon ico-angle right"></i></a>
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="g-conts-area sp-sm">
+                                        <div class="g-desc-box" id="apply-level-filter">
+                                            <div class="g-tit-wrap">
+                                                <h4 class="g-tit">적용 수준 필터</h4>
+                                                <div class="krds-check-area">
+                                                    <div class="krds-form-check">
+                                                        <input type="checkbox" name="chk_1" id="required" />
+                                                        <label for="required">필수</label>
+                                                    </div>
+                                                    <div class="krds-form-check">
+                                                        <input type="checkbox" name="chk_1" id="advised" />
+                                                        <label for="advised">권장</label>
+                                                    </div>
+                                                    <div class="krds-form-check">
+                                                        <input type="checkbox" name="chk_1" id="excellent" />
+                                                        <label for="excellent">우수</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="g-filter">
+                                                <div class="g-filter-item">
+                                                    <div class="g-filter-tit">
+                                                        <a href="./service_04_02.html" class="krds-btn medium link">
+                                                            <span class="underline">신청 대상 탐색</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="g-filter-cont">
+                                                        <ul class="g-filter-list">
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>신청 서비스의 특성에 따른 적절한 서비스 목록 정렬 방식을 사용한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>목록을 적절한 방식으로 군집화하여 메타 데이터를 부여한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>신청 상태 정보를 명확하게 인지할 수 있도록 표현한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>미리보기/요약에 신청 가능 기한 정보를 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>제목에 공식적인 서비스 명칭을 사용한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>제목에 말줄임표를 사용하지 않는다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>미리보기/요약 텍스트는 간결하게 작성한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>상세 화면을 거치지 않고 신청 과정에 바로 접근할 수 있는 액션 버튼을 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>외부 서비스로 이동하거나 새 창을 실행하는 액션 버튼에 명확한 시각적 단서를 제공한다.</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="g-filter-item">
+                                                    <div class="g-filter-tit">
+                                                        <a href="./service_04_03.html" class="krds-btn medium link">
+                                                            <span class="underline">서비스 정보 확인</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="g-filter-cont">
+                                                        <ul class="g-filter-list">
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>본문 콘텐츠의 제목을 신청 서비스명으로 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>상세 정보 콘텐츠는 간결하며 이해하기 쉽게 작성한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>상세 정보는 정확하고 최신화된 상태로 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>서비스를 신청할 수 있는 모든 채널과 제약 사항에 대한 정보를 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>온라인으로 신청할 수 없는 상황에 대해 명확하게 인지 가능하도록 표현한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>사용자가 신청 과업을 완료하는 데 필요한 모든 서식과 서류에 대해 안내하고 빠르게 접근할 수 있는 수단을 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>신청 과정과 처리 절차에 대한 정보를 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>일반적으로 신청 과정에 소요되는 기간 정보를 절차별로 안내한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>사용자에게 도움을 줄 수 있는 다양한 부가 정보를 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>기본 정보는 한 화면에 확인 가능하도록 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>기본 정보는 첫 번째 탭에서 확인 가능하도록 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>부가 정보는 사용자가 필요에 따라 상세 내용을 확인할 수 있게 제공하는 방안을 고려한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>모든 링크는 실행하였을 때, 링크 레이블에 명시된 적절한 화면으로 이동해야 한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>목록 이동 버튼을 누르거나 사용자 에이전트에서 뒤로가기 동작을 실행하였을 때 사용자의 탐색 맥락이 유지되어야 한다.</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="g-filter-item">
+                                                    <div class="g-filter-tit">
+                                                        <a href="./service_04_04.html" class="krds-btn medium link">
+                                                            <span class="underline">유의사항/자격 확인</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="g-filter-cont">
+                                                        <ul class="g-filter-list">
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>유의 사항 및 자격 확인은 신청서 작성 과업의 가장 첫 단계로 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>신청서 작성 중간이나 최종 단계에서 작성을 중단해야 하는 상황에 대해 사용자에게 명확하게 안내한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>중요도와 계층 구조에 따라 정보를 직관적으로 인지할 수 있도록 표현한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>신청서 작성의 단계 중에 필요한 정보, 신청 완료 이후 필요한 정보는 포함하지 않는다.</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="g-filter-item">
+                                                    <div class="g-filter-tit">
+                                                        <a href="./service_04_05.html" class="krds-btn medium link">
+                                                            <span class="underline">신청서 작성</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="g-filter-cont">
+                                                        <ul class="g-filter-list">
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>한 단계 내에서의 신청 서식 섹션을 탭이나 아코디언으로 구분하지 않는다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>값의 변경이 이전에 작성한 항목 또는 이전 단계에 영향을 미치는 경우, 이전 입력 항목 또는 이전 단계에 포함시킨다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>값의 변경이 이전에 작성한 항목 또는 이전 단계에 영향을 미치는 상황에 대해 사용자에게 안내해야 한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>행정정보 공동이용 시스템을 활용하여 사용자의 구비서류 첨부를 최소화한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>여러 단계로 구성되어 있거나 작성에 시간이 걸리는 신청서 작성 과정에 임시 저장 기능을 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>입력 항목에 대한 레이블에 설명을 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>신청서 작성에 대해 도움받을 수 있는 다양한 수단을 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>도움말은 이용 맥락에 맞게 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>도움말은 정확한 내용으로 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>초기화 버튼은 다른 버튼과 명확하게 구분한다.</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="g-filter-item">
+                                                    <div class="g-filter-tit">
+                                                        <a href="./service_04_06.html" class="krds-btn medium link">
+                                                            <span class="underline">확인/확정</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="g-filter-cont">
+                                                        <ul class="g-filter-list">
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>신청 취소/철회, 제출된 신청 서식 수정이 불가능한 경우 확인·확정 단계를 포함해야 한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>작성한 내용 중 핵심 정보를 요약하여 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>취소/수정 불가한 사항에 대해 사용자에게 명확하게 안내해야 한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>행동을 확정, 취소할 수 있는 버튼을 모두 제공한다.</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="g-filter-item">
+                                                    <div class="g-filter-tit">
+                                                        <a href="./service_04_07.html" class="krds-btn medium link">
+                                                            <span class="underline">완료</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="g-filter-cont">
+                                                        <ul class="g-filter-list">
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>모든 신청 과업에는 완료 단계를 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>작성한 내용 중 핵심 정보를 요약하여 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>신청 결과를 확인할 수 있는 화면으로 연결된 링크를 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-information" data-type="excellent">우수</span>
+                                                                <span>사용자가 빈번하게 동일한 신청 서비스를 연속적으로 이용하는 경우, 같은 작업을 다시 수행할 수 있는 버튼을 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>관련된 신청 서비스 정보를 확인하거나 신청할 수 있는 링크를 제공한다.</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="g-filter-item">
+                                                    <div class="g-filter-tit">
+                                                        <a href="./service_04_08.html" class="krds-btn medium link">
+                                                            <span class="underline">신청 결과 확인</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="g-filter-cont">
+                                                        <ul class="g-filter-list">
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>신청 결과 확인 화면으로 이동하는 링크 레이블에 직관적인 명칭을 사용한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>신청 내역을 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>신청 이력을 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>신청 이력을 알기 쉽게 구조화한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>정렬 기능을 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>신청 처리 절차 및 현재 진행 상태에 대한 정보를 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>일괄 선택 기능을 제공한다.</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+								<!-- //사용성 가이드라인 체크리스트 -->
+
+                                <!-- 정보 변경 내역 -->
+								@@include("../inc/page-info-update-log.html")
+                                <!-- //정보 변경 내역 -->
+                            </div>
+                            <!-- //scroll-check -->
+                        </div>
+                        
+                    </div>
+                    <!-- //contents -->
+                </div>
+                <!-- //컨텐츠 영역 -->
+            </div>
+            <!-- //컨테이너 영역 -->
+
+            <!-- 푸터 영역 -->
+            <footer id="krds-footer">@@include("../inc/guide-footer.html")</footer>
+            <!-- //푸터 영역 -->
+        </div>
+    </body>
+</html>

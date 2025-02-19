@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include("../inc/head.html", { "title": "이용약관 | 유틸리티 - KRDS", })
+
+  <body>
+    <div id="wrap" class="g-wrap">
+      @@include("../inc/guide-header.html")  
+
+      <!-- 컨테이너 영역 -->
+      <div id="container">
+        <!-- 컨텐츠 영역 -->
+        <div class="inner in-between">
+          <!-- 사이드 메뉴 -->
+          @@include("../inc/guide-lnb.html")
+          <!-- //사이드 메뉴 -->
+
+          <div class="contents">
+            <!-- breadcrumb -->
+            @@include("../inc/page-breadcrumb.html")
+            <!-- breadcrumb -->
+
+            <!-- page-title -->
+            @@include("../inc/page-title.html" )
+            <!-- //page-title -->
+           
+            <!-- g-description-area -->
+            <div class="g-description-area" id="html">
+
+              <!-- 컨텐츠 배너 영역 -->
+              @@include("../inc/page-banner.html")
+              <!--// 컨텐츠 배너 영역 -->
+            
+            </div>
+            <!--// g-description-area -->
+          </div>
+        </div>
+        <!-- //컨텐츠 영역 -->
+      </div>
+      <!-- //컨테이너 영역 -->
+
+      <!-- 푸터 영역 -->
+      <footer id="krds-footer">@@include("../inc/guide-footer.html")</footer>
+      <!-- //푸터 영역 -->
+    </div>
+
+    <script type="module">
+      import UseGuideControl from '/resources/js/controls/use-guide-control.js';
+      new UseGuideControl('body');
+    </script>
+
+  </body>
+</html>

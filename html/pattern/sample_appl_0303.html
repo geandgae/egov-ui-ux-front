@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ko">
+
+@@include("./inc/head.html", {
+	"title": "서브 - 신청안내 | 신청하기 | 신청 - KRDS",
+})
+
+<body>
+	<div id="wrap">
+		@@include("./inc/skip.html", {"class": "",})
+
+		@@include("./inc/header-top.html")
+
+		<!-- 헤더 영역 -->
+		<header id="krds-header">
+			@@include("./inc/header.html")
+		</header>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container">
+			<!-- breadcrumb -->
+			@@include("./inc/page-breadcrumb.html", { "depth": ["민원"] })
+			<!-- breadcrumb -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="inner narrow help-panel-flexible">
+				<!-- 페이지 타이틀 영역 -->
+				<div class="page-title-wrap">
+					@@include("./inc/page-title.html", { "title": "자료신청" })
+				</div>
+				<!-- //페이지 타이틀 영역 -->
+
+				<!-- 컨텐츠 영역 -->
+				<div class="conts-area">
+					<div class="conts-wrap">
+						<!-- 상단 가이드 박스 -->
+						<div class="txt-box outline">
+							<h4 class="outline-tit">시작하기 전에</h4>
+							<ul class="check-list">
+								<li>
+									책바다 신청 자료는 개별도서관의 대출규정에 따라 신청이 거절될 수 있습니다.
+									<ul class="krds-info-list decimal">
+										<li>(예) 수험서, 훼손이 우려되는 보존 대상 자료, 비도서, 관외대출 불가자료 등</li>
+									</ul>
+								</li>
+								<li>자료신청을 통한 대출 비용은 왕복 1건당 5,540원으로 2책 이상의 자료를 동일한 도서관에서 제공 받는 경우 1책 비용만 부과합니다.</li>
+							</ul>
+							<div class="conts-desc-wrap type-disclosure">
+								<!-- disclosure -->
+								<div class="krds-disclosure conts-expand-area">
+									<button type="button" class="btn-conts-expand">자료이용 기간 및 연체료 자세히 보기</button>
+									<div class="expand-wrap">
+										<div class="expand-in">
+											<ul class="krds-info-list decimal">
+												<li>하나의 아이디로 안전하고 편리하게 여러 전자정부 서비스를 이용할 수 있는 서비스입니다.</li>
+												<li>디지털원패스 이용문의 : 1533-3713 (평일9~18시, 공휴일제외)</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- //disclosure -->
+								<!-- disclosure -->
+								<div class="krds-disclosure conts-expand-area">
+									<button type="button" class="btn-conts-expand">자료신청 절차 자세히 보기</button>
+									<div class="expand-wrap">
+										<div class="expand-in">
+											<ul class="krds-info-list decimal">
+												<li>하나의 아이디로 안전하고 편리하게 여러 전자정부 서비스를 이용할 수 있는 서비스입니다.</li>
+												<li>디지털원패스 이용문의 : 1533-3713 (평일9~18시, 공휴일제외)</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- //disclosure -->
+							</div>
+						</div>
+						<!-- //상단 가이드 박스 -->
+
+						<div class="txt-box bg-white">
+							<h4 class="box-tit1">도서 상세 정보</h4>
+							<ul class="book-info-ul">
+								<li>
+									<strong class="key">도서명</strong>
+									<div class="value">사용자의 마음을 움직이는 UX 디자인의 힘 : 경험 디자이너의 실전 리포트</div>
+								</li>
+								<li>
+									<strong class="key">저자 / 발행처 / 발행일</strong>
+									<div class="value">
+										<ul class="txt-list">
+											<li>김동후</li>
+											<li>맹그로브숲</li>
+											<li>2021</li>
+										  </ul>
+									</div>
+								</li>
+								<li>
+									<strong class="key">자료 구분</strong>
+									<div class="value">전국 공공도서관 자료</div>
+								</li>
+								<li>
+									<strong class="key">딸림자료</strong>
+									<div class="value">없음</div>
+								</li>
+							</ul>
+						</div>
+
+						<div class="txt-box bg-white">
+							<h4 class="box-tit1">신청 정보</h4>
+							<div class="box-cnt">
+								<!-- 신청 권차 -->
+								<div class="box-sec">
+									<h5 class="box-tit2">
+										신청 권차
+										<button class="krds-btn medium icon btn-help-exec">
+											<span class="sr-only">도움말</span>
+											<i class="svg-icon ico-help"></i>
+										</button>
+									</h5>
+									<div class="form-group-row">
+										<div class="form-group">
+											<div class="form-tit">권수</div>
+											<div class="form-conts">
+												<div class="input-group">
+													<input type="text" id="addr-input" class="krds-input text-right" placeholder="수량" title="수량">
+													권
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="form-tit">권수</div>
+											<div class="form-conts">
+												<div class="input-group">
+													<input type="text" id="addr-input2" class="krds-input text-right" placeholder="-" disabled title="수량">
+													권
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="form-tit">권수</div>
+											<div class="form-conts">
+												<div class="input-group">
+													<input type="text" id="addr-input3" class="krds-input text-right" placeholder="-" disabled title="수량">
+													권
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //신청 권차 -->
+
+								<!-- 딸림자료 -->
+								<div class=" box-sec">
+									<h5 class="box-tit2">딸림자료</h5>
+									<div class="form-group">
+										<div class="form-conts">
+											<div class="row krds-check-area chk-column">
+												<div class="krds-form-check large">
+													<input type="radio" name="rdo_1" id="rdo_1" checked>
+													<label for="rdo_1">해당없음</label>
+												</div>
+												<div class="krds-form-check large">
+													<input type="radio" name="rdo_1" id="rdo_2" disabled>
+													<label for="rdo_2">신청</label>
+												</div>
+												<div class="krds-form-check large">
+													<input type="radio" name="rdo_1" id="rdo_3" disabled>
+													<label for="rdo_3">미신청</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //딸림자료 -->
+
+								<!-- 신청 도서관에 남길 말 -->
+								<div class="box-sec">
+									<h5 class="box-tit2">
+										<label for="textareaid">신청 도서관에 남길 말</label>
+									</h5>
+									<div class="form-group">
+										<div class="form-conts">
+											<div class="textarea-wrap">
+												<textarea name="" id="textareaid" class="krds-input" placeholder="이름 또는 회사명을 입력해 주세요."></textarea>
+												<p class="textarea-count">
+													<span class="text-point-primary">22</span>
+													<span class="text-num">/100</span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //신청 도서관에 남길 말 -->
+							</div>
+						</div>
+
+						<div class="agree-box">
+							<div class="form-group krds-check-area">
+								<div class="krds-form-check">
+									<input type="checkbox" name="save_id" id="chk_01">
+									<label for="chk_01">
+										상세 자료 신청 내용을 확인하였습니다.
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //컨텐츠 영역 -->
+
+				@@include("./inc/help-panel.html", {
+					contents: "tab",
+					active: "1",
+					tab2: "type1"
+				})
+
+				<!-- 페이지 버튼 영역 -->
+				<div class="page-btn-wrap both m-column">
+					<button type="button" class="krds-btn xlarge tertiary">취소하기</button>
+					<button type="button" class="krds-btn xlarge primary">신청하기</button>
+				</div>
+				<!-- //페이지 버튼 영역 -->
+			</div>
+			<!-- //컨텐츠 영역 -->
+
+		</div>
+		<!-- //컨테이너 영역 -->
+
+		<!-- 푸터 영역 -->
+		<footer id="krds-footer">
+			@@include("./inc/footer.html", {"footerType": "type1",})
+		</footer>
+		<!-- //푸터 영역 -->
+	</div>
+	
+	@@include("./inc/modal-wrap.html")
+	
+</body>
+
+</html>

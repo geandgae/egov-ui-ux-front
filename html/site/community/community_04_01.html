@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include("../inc/head.html", { "title": "자료실 상세 | 소식·소통 - KRDS", })
+
+    <body>
+        <div id="wrap" class="g-wrap">
+            @@include("../inc/guide-header.html")
+
+            <!-- 컨테이너 영역 -->
+            <div id="container">
+                <!-- 컨텐츠 영역 -->
+                <div class="inner in-between">
+                    <!-- 사이드 메뉴 -->
+                    @@include("../inc/guide-lnb.html")
+                    <!-- //사이드 메뉴 -->
+
+                    <div class="contents">
+                        <!-- breadcrumb -->
+                        @@include("../inc/page-breadcrumb.html")
+                        <!-- breadcrumb -->
+
+						<div class="community-page-title line" id="title">
+							<!--<h2 class="tit">디지털정부서비스 UI/UX 가이드라인2.0 배포 안내</h2>
+							<p class="info">
+								<span class="date">2024.08.20</span>
+							</p>-->
+						</div>
+
+                        <div class="conts-area">
+                            <div class="g-description-area line" id="contents">
+								<!--<div class="g-conts-area">
+									<p>
+										디지털 정부서비스의 UI/UX 개선을 위한 새로운 가이드라인이 업데이트되었습니다. 이번 업데이트에서는 
+										디자인 토큰의 개념이 포함되어, 색상,  타이포그래피, 간격 등의 스타일 요소를 효과적으로 
+										관리할 수 있는 방법이 소개되었습니다. 
+										<br><br>
+										질문이나 피드백이 있으시면 
+										<a href="krds@pulip.com" class="krds-btn large link">
+											<span class="underline">krds@pulip.com</span> <i class="svg-icon ico-go"></i>
+										</a>
+										또는 
+										<a href="#" class="krds-btn large link">
+											<span class="underline">GitHub Discussions</span> <i class="svg-icon ico-go"></i>
+										</a>
+										으로 문의해 주시기 바랍니다.
+									</p>
+								</div>-->
+                            </div>
+
+							<div class="g-attach-file-wrap" style="display: none;" id="attach-file">
+								<div class="g-conts-area">
+									<h4 class="con-tit">첨부파일</h4>
+									<ul class="file-list" id="file-list">
+										<!--<li>
+											<p class="name">KRDS 2.0 [PDF, 17KB]</p>
+											<div class="btn-download">
+												<button type="button" class="krds-btn medium text">다운로드<i class="svg-icon ico-down"></i></button>
+											</div>
+										</li>
+										<li>
+											<p class="name">KRDS 2.0 [PDF, 17KB]</p>
+											<div class="btn-download">
+												<button type="button" class="krds-btn medium text">다운로드<i class="svg-icon ico-down"></i></button>
+											</div>
+										</li>
+										<li>
+											<p class="name">KRDS 2.0 [PDF, 17KB]</p>
+											<div class="btn-download">
+												<button type="button" class="krds-btn medium text">다운로드<i class="svg-icon ico-down"></i></button>
+											</div>
+										</li>
+										<li>
+											<p class="name">KRDS 2.0 [PDF, 17KB]</p>
+											<div class="btn-download">
+												<button type="button" class="krds-btn medium text">다운로드<i class="svg-icon ico-down"></i></button>
+											</div>
+										</li>
+										<li>
+											<p class="name">KRDS 2.0 [PDF, 17KB]</p>
+											<div class="btn-download">
+												<button type="button" class="krds-btn medium text">다운로드<i class="svg-icon ico-down"></i></button>
+											</div>
+										</li>-->
+									</ul>
+								</div>
+							</div>
+                        </div>
+
+						<div class="page-btn-wrap m-column both">
+							<a href="javascript:;" class="krds-btn xlarge tertiary" id="btn-back">목록으로 돌아가기</a>
+						</div>
+                    </div>
+                </div>
+                <!-- //컨텐츠 영역 -->
+            </div>
+            <!-- //컨테이너 영역 -->
+
+            <!-- 푸터 영역 -->
+            <footer id="krds-footer">@@include("../inc/guide-footer.html")</footer>
+            <!-- //푸터 영역 -->
+        </div>
+
+		<script type="text/stache" id="title-template">
+			<h2 class="tit">{{nttSj}}</h2>
+			<p class="info">
+				<span class="date">{{frstRegisterPnttm}}</span>
+			</p>
+		</script>
+
+		<script type="text/stache" id="file-template">
+			{{#files}}
+				<li>
+					<p class="name">{{orignlFileNm}} [{{fileExtsn}}, {{fileSize}}]</p>
+					<div class="btn-download">
+						<button type="button" class="krds-btn medium text" data-atch-file-id="{{atchFileId}}" data-file-sn="{{fileSn}}">다운로드<i class="svg-icon ico-down"></i></button>
+					</div>
+				</li>
+			{{/files}}
+		</script>
+
+		<script type="module">
+			import DataDetailControl from '/resources/js/controls/data-detail-control.js';
+			new DataDetailControl('#container');
+		</script>
+    </body>
+</html>

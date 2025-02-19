@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include("../inc/head.html", { "title": "자주하는 질문 | 커뮤니티 - KRDS", })
+
+    <body>
+        <div id="wrap" class="g-wrap">
+            @@include("../inc/guide-header.html")
+
+            <!-- 컨테이너 영역 -->
+            <div id="container">
+                <!-- 컨텐츠 영역 -->
+                <div class="inner in-between">
+                    <!-- 사이드 메뉴 -->
+                    @@include("../inc/guide-lnb.html")
+                    <!-- //사이드 메뉴 -->
+
+                    <div class="contents">
+                        <!-- breadcrumb -->
+                        @@include("../inc/page-breadcrumb.html")
+                        <!-- breadcrumb -->
+
+                        <!-- page-title -->
+                        @@include("../inc/page-title.html", { desc: "" })
+                        <!-- //page-title -->
+
+                        <!-- 검색영역 -->
+                        <div class="g-search-area" id="keyword_sch_area">
+                            <!-- 검색 입력폼 -->
+                            <fieldset>
+                                <div class="search-top-box">
+                                    <div class="form-col-group">
+                                        <div class="form-group"> 
+                                            <div class="form-tit">
+                                                <h3><label for="ntt-type">카테고리</label></h3>
+                                            </div>
+                                            <div class="sch-form-wrap">
+                                                <div class="sch-select">
+                                                    <select class="krds-form-select" title="선택" id="ntt-type">
+                                                        <option value="">전체</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-tit">
+                                                <h3><label for="search-wrd">검색어</label></h3>
+                                            </div>
+											<div class="sch-form-wrap">
+												<div class="sch-input">
+													<input type="text" id="search-wrd" class="krds-input" placeholder="키워드를 입력해주세요." title="키워드 입력">
+													<button type="button" class="krds-btn medium icon ico-search btn-exec" id="btn-search">
+														<span class="sr-only">검색</span>
+														<i class="svg-icon ico-sch"></i>
+													</button>
+												</div>
+											</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <!-- //검색 입력폼 -->
+
+							<div class="search-list-top">
+								<ul class="sch-info" aria-live="polite">
+									<li>총 <span class="point total" id="cnt">0</span>건</li>
+								</ul>
+							</div>
+
+                            <!-- search-list -->
+							<div class="krds-structured-list type3">
+								<div class="g-question">
+
+									<!-- accordion -->
+									<div class="krds-accordion" id="list"></div>
+									<!-- //accordion -->
+								</div>
+							</div>
+                            <!-- //search-list -->
+
+							<!-- no data : data 없을 시 hide 클래스 삭제 -->
+							<div class="no-data hide" id="no-data">
+								<h4 class="no-data-tit">검색어 <strong class="keyword"></strong>에 대한 검색 결과가 없습니다.</h4>
+								<div class="no-data-desc">
+									<ul class="krds-info-list decimal">
+										<li>철자나 맞춤법 오류가 있는지 확인해 주세요</li>
+										<li>여러 단어로 나누거나 다른 검색어로 검색해 주세요.</li>
+										<li>보다 일반적인 단어로 검색해 주세요.</li>
+									</ul>
+								</div>
+							</div>
+							<!-- //no data -->
+
+							<!-- 페이지네이션 영역 -->
+							@@include("../inc/page-pagination.html")
+							<!-- //페이지네이션 영역 -->
+                        </div>
+                        <!--// 검색영역 -->
+
+                        <!-- 컨텐츠 배너 영역 -->
+                        @@include("../inc/page-banner.html")
+                        <!--// 컨텐츠 배너 영역 -->
+                    </div>
+                </div>
+                <!-- //컨텐츠 영역 -->
+            </div>
+            <!-- //컨테이너 영역 -->
+
+            <!-- 푸터 영역 -->
+            <footer id="krds-footer">@@include("../inc/guide-footer.html")</footer>
+            <!-- //푸터 영역 -->
+        </div>
+
+		<script type="text/stache" id="list-template">
+			{{#items}}
+				<div class="accordion-item">
+					<div class="accordion-header">
+						<button type="button" class="btn-accordion">
+							<span class="category keyword">{{nttType}}</span>
+							<span class="title"><strong>{{nttSj}}</strong></span>
+						</button>
+					</div>
+					<div class="accordion-collapse collapse">
+						<div class="accordion-body">
+							{{{nttCn}}}
+							{{#if fileList}}
+								<div class="attached-file">
+									<strong>첨부파일</strong>
+									<ul class="attached-file-list">
+										{{#fileList}}
+											<li><button type="button" class="krds-btn medium text" data-atch-file-id="{{atchFileId}}" data-file-sn="{{fileSn}}">{{orignlFileNm}}<i class="svg-icon ico-down"></i></button></li>
+										{{/fileList}}
+									</ul>
+								</div>
+							{{/if}}
+							{{#if tagList}}
+							<div class="krds-tag-wrap medium">
+								{{#tagList}}
+									<a href="{{tagUrl}}" class="krds-btn-tag link">#{{tagNm}}</a>
+								{{/tagList}}
+							</div>
+							{{/if}}
+						</div>
+					</div>
+				</div>
+			{{/items}}
+		</script>
+
+		<script type="module">
+			import FaqListControl from '/resources/js/controls/faq-list-control.js';
+			new FaqListControl('#container');
+		</script>
+    </body>
+</html>

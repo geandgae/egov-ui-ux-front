@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include("../inc/head.html", { "title": "메인 메뉴 (Main menu) | 컴포넌트 - KRDS", })
+
+    <body>
+        <div id="wrap" class="g-wrap">
+            @@include("../inc/guide-header.html")
+
+            <!-- 컨테이너 영역 -->
+            <div id="container" class="krds-in-page-navigation-type">
+                <!-- 컨텐츠 영역 -->
+                <div class="inner in-between">
+                    <!-- 사이드 메뉴 -->
+                    @@include("../inc/guide-lnb.html")
+                    <!-- //사이드 메뉴 -->
+
+                    <div class="contents">
+                        <!-- breadcrumb -->
+                        @@include("../inc/page-breadcrumb.html")
+                        <!-- breadcrumb -->
+
+                        <!-- page-title -->
+                        @@include("../inc/page-title.html", { 
+							"desc" : "메인 메뉴는 사용자가 서비스의 정보 구조를 탐색할 때, 가장 많이 사용하는 유형의 메뉴이다. 일반적으로 헤더와 함께 거의 모든 화면에 제공되며, 사용자가 자주 방문하거나 중요도가 높은 화면으로 이동할 수 있는 링크가 포함되어 있다. 빈번하게 활용되는 사용자의 일차적인 이동 수단이기 때문에 사용하기 쉽게 설계해야 한다." 
+						})
+                        <!-- //page-title -->
+
+                        <div class="conts-area">
+                            <!-- 탭 메뉴 -->
+                            <div class="krds-tab-area layer">
+                                <!-- tab list -->
+                                @@include("../inc/page-tab-list.html", { "list": [ { name: "개요", class: "active" }, { name: "접근성", class: "" }, { name: "코드", class: "" } ] })
+                                <!-- //tab list -->
+                                <!-- tab contents -->
+                                <div class="tab-conts-wrap">
+                                    <!-- quick link -->
+                                    @@include("../inc/page-quick-nav.html")
+                                    <!-- //quick link -->
+
+                                    <!-- tabpanelInfo01 -->
+                                    <section id="tabpanelInfo01" aria-labelledby="tabInfo01" class="tab-conts active" data-quick-nav="true">
+                                        <!-- scroll-check -->
+                                        <div class="g-description-area scroll-check">
+                                            <!-- 구조 -->
+                                            <div class="g-conts-area structure section-link">
+                                                <h3 class="sec-tit">구조</h3>
+                                                <div class="g-conts-area">
+                                                    <h4 class="con-tit sm sp-lg">PC</h4>
+                                                    <div class="g-img-wrap">
+                                                        <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/component/mainmenu_structure.png" alt="PC 예시" /></div>
+                                                    </div>
+                                                    <ol class="krds-info-list ordered">
+                                                        <li>
+                                                            <span class="num">1.</span><strong>레이블</strong>
+                                                            메뉴의 이름으로 하위 수준의 메뉴가 존재하지 않는 경우 링크로 작동하며 하위 수준이 존재하는 경우에는 버튼으로 작동함
+                                                        </li>
+                                                        <li>
+                                                            <span class="num">2.</span><strong>꺾쇠 아이콘</strong>
+                                                            드롭다운 영역의 확장/축소 상태를 표시하는 아이콘
+                                                        </li>
+                                                        <li>
+                                                            <span class="num">3.</span><strong>활성화된 메뉴 식별자</strong>
+                                                            드롭다운 영역이 확장된 메뉴의 변별성을 높이기 위한 시각적 단서
+                                                        </li>
+                                                        <li>
+                                                            <span class="num">4.</span><strong>드롭다운 영역</strong>
+                                                            하위 수준의 메뉴가 제공되는 컨테이너
+                                                        </li>
+                                                        <li>
+                                                            <span class="num">5.</span><strong>제목</strong>
+                                                            드롭다운 영역의 제목으로 최하위 수준 메뉴와 바로 연결된 요소가 제목으로 제공됨
+                                                        </li>
+                                                        <li>
+                                                            <span class="num">6.</span><strong>설명</strong>
+                                                            레이블에 대한 이해를 돕기 위해 제공되는 간단한 설명 텍스트
+                                                        </li>
+                                                        <li>
+                                                            <span class="num">7.</span><strong>유틸리티 링크</strong>
+                                                            활성화된 메뉴와 관련하여 사용자가 자주 찾은 페이지, 도움이 될 만한 정보 및 링크가 제공됨
+                                                        </li>
+                                                    </ol>
+                                                </div>
+
+                                                <div class="g-conts-area sp-sm">
+                                                    <h4 class="con-tit sm sp-lg">Mobile</h4>
+                                                    <div class="g-img-wrap">
+                                                        <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/component/mainmenu_structure_02.png" alt="Mobile 예시" /></div>
+                                                    </div>
+                                                    <ol class="krds-info-list ordered">
+                                                        <li>
+                                                            <span class="num">1.</span><strong>햄버거 아이콘</strong>
+                                                            메뉴 레이어를 활성화하는 데 사용되는 아이콘 버튼
+                                                        </li>
+                                                        <li>
+                                                            <span class="num">2.</span><strong>유틸리티 링크</strong>
+                                                            화면 크기 조정, 언어 선택, 로그인, 자주 사용하는 메뉴 등의 링크가 제공됨
+                                                        </li>
+                                                        <li>
+                                                            <span class="num">3.</span><strong>섹션 탐색 버튼</strong>
+                                                            메뉴 섹션의 구성을 확인하고 탐색하는 데 사용되는 버튼. 정보 구조의 깊이에 따라 레이어 상단에 고정되거나 왼쪽에 고정하여 제공할 수 있음
+                                                        </li>
+                                                        <li>
+                                                            <span class="num">4.</span><strong>레이블</strong>
+                                                            메뉴의 이름으로 링크로 작동함
+                                                        </li>
+                                                        <li>
+                                                            <span class="num">5.</span><strong>검색어 입력 필드와 검색 버튼</strong>
+                                                            메뉴의 수가 많거나 정보 구조의 깊이가 깊은 경우 사용자의 메뉴 탐색을 돕기 위해 사용되는 부분 검색 기능
+                                                        </li>
+                                                        <li>
+                                                            <span class="num">6.</span><strong>상위 메뉴 이동 링크</strong>
+                                                            현재 표시된 하위 수준 메뉴 링크 목록에서 벗어나 기본 메뉴 레이어로 돌아가는 데 사용되는 버튼
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                            <!-- //구조 -->
+
+                                            <!-- 유형 -->
+                                            <div class="g-conts-area section-link">
+                                                <h3 class="sec-tit">유형</h3>
+												<!-- PC -->
+                                                <div class="g-conts-area sp-sm">
+                                                    <h4 class="con-tit">PC</h4>
+													<div class="g-conts-area">
+														<p class="con-tit sm">단순 링크</p>
+														<p class="g-desc">하위 수준의 메뉴가 존재하지 않는 경우에 사용한다.</p>
+														<div class="g-img-wrap pure">
+															<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/component/mainmenu_type.png" alt="단순 링크 예시" /></div>
+														</div>
+													</div>
+													<div class="g-conts-area sp-sm">
+														<p class="con-tit sm">드롭다운</p>
+														<p class="g-desc">2~3수준의 메뉴가 존재하는 경우에 사용한다.</p>
+														<div class="g-img-wrap pure">
+															<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/component/mainmenu_type_02.png" alt="드롭다운 예시" /></div>
+														</div>
+													</div>
+													<div class="g-conts-area sp-sm">
+														<p class="con-tit sm">설명이 포함된 드롭다운</p>
+														<p class="g-desc">메뉴 레이블이 어려운 용어 또는 사용자에게 익숙하지 않은 단어로 제공된 경우나 메뉴 레이블을 통해 화면에서 제공되는 콘텐츠를 파악하기 어려운 경우에 사용한다.</p>
+														<div class="g-img-wrap pure">
+															<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/component/mainmenu_type_03.png" alt="설명이 포함된 드롭다운 예시" /></div>
+														</div>
+													</div>
+                                                </div>
+												<!-- //PC -->
+
+												<!-- Mobile -->
+                                                <div class="g-conts-area">
+                                                    <h4 class="con-tit">Mobile</h4>
+													<div class="g-conts-area">
+														<p class="con-tit sm">상단 탭</p>
+														<p class="g-desc">1~2수준의 메뉴로 구성된 경우에 사용한다.</p>
+														<div class="g-img-wrap pure">
+															<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/component/mainmenu_type_04.png" alt="상단 탭 예시" /></div>
+														</div>
+													</div>
+													<div class="g-conts-area sp-sm">
+														<p class="con-tit sm">사이드 탭</p>
+														<p class="g-desc">2수준 이상의 메뉴로 구성된 경우에 사용한다.</p>
+														<div class="g-img-wrap pure">
+															<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/component/mainmenu_type_05.png" alt="사이드 탭 예시" /></div>
+														</div>
+													</div>
+													<div class="g-conts-area sp-sm">
+														<p class="con-tit sm">집중 탐색 레이어</p>
+                                                        <p class="g-desc">사용자가 주로 특정 카테고리의 메뉴만 탐색하거나 3수준 이상의 정보 구조를 가진 경우에 사용한다. 사용자가 기본 화면에서 가장 하위 수준의 메뉴를 실행했을 때 해당 메뉴의 하위 수준 메뉴 목록만 볼 수 있는 화면으로 전환된다.</p>
+														<div class="g-img-wrap pure">
+															<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/component/mainmenu_type_06.png" alt="집중 탐색 레이어 예시" /></div>
+														</div>
+													</div>
+                                                </div>
+												<!-- //Mobile -->
+                                            </div>
+                                            <!-- //유형 -->
+
+                                            <!-- 사용성 가이드라인 -->
+                                            <div class="g-conts-area section-link">
+                                                <h3 class="sec-tit">사용성 가이드라인</h3>
+												<div class="g-conts-area sp-sm">
+													<div class="g-desc-box">
+														<p class="g-tit">드롭다운 메뉴 영역 내에서 레이블은 좌측으로 정렬한다.</p>
+														<p class="g-desc">드롭다운 메뉴 영역은 본문 그리드를 기준으로 가장 왼쪽부터 하위 수준의 링크 목록이 배치되도록 표현하여 사용자가 항상 일관된 위치에서 정보를 스캔할 수 있도록 해야 한다.</p>
+													</div>
+													<div class="g-img-wrap caption-format success">
+														<p class="caption"><span class="svg-icon ico-success-fill pure"></span>모범 사례</p>
+														<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/component/mainmenu_guide_01.png" alt="드롭다운 메뉴 영역 내에서 레이블은 좌측으로 정렬한다 모범 사례 예시" /></div>
+													</div>
+													<div class="g-img-wrap caption-format error">
+														<p class="caption"><span class="svg-icon ico-error-fill pure"></span>피해야 할 사례</p>
+														<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/component/mainmenu_guide_01_02.png" alt="드롭다운 메뉴 영역 내에서 레이블은 좌측으로 정렬한다 피해야 할 사례 예시" /></div>
+													</div>
+													<div class="g-desc-box">
+														<p class="g-tit">드롭다운 영역의 최대 높이는 뷰포트를 초과하지 않도록 하고 최대 높이를 초과하는 경우에 스크롤이 생성되도록 제공한다.</p>
+														<p class="g-desc">링크 목록의 수가 많아 뷰포트 높이를 넘어가는 경우 브라우저 기본 스크롤이 아니라 드롭다운 영역 스크롤을 통해 메뉴를 탐색할 수 있도록 해야 한다. 브라우저 기본 스크롤을 통해 메뉴를 탐색하는 경우, 1수준 링크 레이블을 클릭하거나 배경 마스크를 클릭하여 메뉴를 닫는 과정에서 많은 행동이 요구되며 메뉴를 닫았을 때 본문의 중간부터 콘텐츠를 탐색하게 되는 불편을 겪을 수 있다.</p>
+													</div>
+													<div class="g-img-wrap caption-format success">
+														<p class="caption"><span class="svg-icon ico-success-fill pure"></span>모범 사례</p>
+														<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/component/mainmenu_guide_02.png" alt="드롭다운 영역의 최대 높이는 뷰포트를 초과하지 않도록 하고 최대 높이를 초과하는 경우에 스크롤이 생성되도록 제공한다 모범 사례 예시" /></div>
+													</div>
+													<div class="g-img-wrap caption-format error">
+														<p class="caption"><span class="svg-icon ico-error-fill pure"></span>피해야 할 사례</p>
+														<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/component/mainmenu_guide_02_02.png" alt="드롭다운 영역의 최대 높이는 뷰포트를 초과하지 않도록 하고 최대 높이를 초과하는 경우에 스크롤이 생성되도록 제공한다 피해야 할 사례 예시" /></div>
+													</div>
+													<div class="g-desc-box">
+														<p class="g-tit">링크의 활성화 상태, 선택 상태가 명확히 구분되도록 표현한다.</p>
+														<p class="g-desc">현재 탐색 중인 페이지가 사이트 구조상 어디에 위치하는지를 알 수 있도록 활성화된 메뉴 링크를 명확하게 구분한다.</p>
+													</div>
+													<div class="g-desc-box">
+														<p class="g-tit">드롭다운 영역에 제목을 제공한다.</p>
+														<p class="g-desc">드롭다운 영역에 제목을 제공하여 어떤 메뉴 하위의 메뉴 목록을 탐색하고 있는지를 사용자가 직관적으로 인지할 수 있도록 한다. 사이드 메뉴에 메인 화면이 존재하는 경우 제목은 링크로 사용될 수 있다.</p>
+													</div>
+													<div class="g-desc-box">
+														<p class="g-tit">링크의 개수를 최소화한다.</p>
+														<p class="g-desc">반드시 필요한 링크만 제공하여 사용자가 빠르게 메뉴를 파악할 수 있게 만들고, 선택 과정에서의 혼동을 방지해야 한다.</p>
+													</div>
+													<div class="g-desc-box">
+														<p class="g-tit">서비스 정보 구조를 적절하게 반영하여 메인 메뉴를 구성하고 최대 3수준의 메뉴를 사용한다.</p>
+														<p class="g-desc">정보 구조가 깊고 복잡한 경우, 메인 메뉴가 지나치게 간결하게 제공되면 사용자는 메인 메뉴를 통해 원하는 정보에 접근하기 어렵다.</p>
+													</div>
+													<div class="g-desc-box">
+														<p class="g-tit">링크명에 이해하기 쉬운 용어를 사용한다.</p>
+														<p class="g-desc">링크명에 전문 용어 또는 일반적인 사람들에게 익숙하지 않은 용어를 사용할 경우, 의미를 이해하기 어려워 탐색에 많은 시간이 소요되거나 원하는 페이지를 발견하지 못할 수도 있다.</p>
+													</div>
+													<div class="g-desc-box">
+														<p class="g-tit">링크는 우선순위에 따라 배치한다.</p>
+														<p class="g-desc">이용 빈도가 높고 중요한 콘텐츠로 연결된 링크일수록 좌측에 배치하여 접근과 사용이 쉽게 만든다.</p>
+													</div>
+													<div class="g-desc-box">
+														<p class="g-tit">마우스오버를 사용하여 드롭다운 목록을 확장하지 않는다. </p>
+														<p class="g-desc">일부 사용자에게는 작은 메뉴 링크 영역에 일정 시간 동안 마우스의 위치를 고정하는 상호작용이 어려울 수 있고 터치 스크린에서는 마우스오버 인터랙션은 작동하지 않는다.  이러한 상황을 고려하여 드롭다운은 클릭 또는 키보드 탐색을 통해 확장되어야 한다.</p>
+													</div>
+												</div>
+                                            </div>
+                                            <!-- //사용성 가이드라인 -->
+											 
+                                            <!-- 플랫폼에 대한 고려 사항 -->
+                                             <div class="g-conts-area section-link">
+                                                <h3 class="sec-tit">플랫폼에 대한 고려 사항</h3>
+												<div class="g-conts-area sp-sm">
+													<div class="g-desc-box">
+														<p class="g-tit">화면 너비가 충분한 경우에는 1수준 메뉴 전체를 확인할 수 있도록 표현한다.</p>
+														<p class="g-desc">모바일에서는 별도 페이지나 영역으로 메뉴를 숨기고 햄버거 아이콘을 눌러 메뉴를 확인할 수 있다.</p>
+													</div>
+													<div class="g-img-wrap caption-format success">
+														<p class="caption"><span class="svg-icon ico-success-fill pure"></span>모범 사례</p>
+														<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/component/mainmenu_platform_01.png" alt="화면 너비가 충분한 경우에는 1수준 메뉴 전체를 확인할 수 있도록 표현한다 모범 사례 예시" /></div>
+													</div>
+													<div class="g-img-wrap caption-format error">
+														<p class="caption"><span class="svg-icon ico-error-fill pure"></span>피해야 할 사례</p>
+														<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/component/mainmenu_platform_01_02.png" alt="화면 너비가 충분한 경우에는 1수준 메뉴 전체를 확인할 수 있도록 표현한다 피해야 할 사례 예시" /></div>
+													</div>
+												</div>
+                                            </div>
+                                            <!-- //플랫폼에 대한 고려 사항 -->
+
+											<!-- 자주 묻는 질문 -->
+											@@include("../inc/page-faq.html")
+											<!-- //자주 묻는 질문 -->
+
+                                            <!-- 정보 변경 내역 -->
+                                            @@include("../inc/page-info-update-log.html")
+                                            <!-- //정보 변경 내역 -->
+											
+											<!-- 컨텐츠 배너 영역 -->
+											@@include("../inc/page-banner.html")
+											<!--// 컨텐츠 배너 영역 -->
+                                        </div>
+                                        <!-- //scroll-check -->
+                                    </section>
+                                    <!-- //tabpanelInfo01 -->
+
+                                    <!-- tabpanelInfo02 -->
+                                    <section id="tabpanelInfo02" aria-labelledby="tabInfo02" class="tab-conts" data-quick-nav="true">
+                                        <!-- scroll-check -->
+                                        <div class="g-description-area scroll-check">
+                                            <!-- 접근성 가이드라인 -->
+                                            <div class="g-conts-area section-link">
+                                               <h3 class="sec-tit">접근성 가이드라인</h3>
+												<div class="g-conts-area sp-sm">
+													<div class="g-desc-box">
+														<p class="g-tit">메뉴의 컨테이너가 내비게이션 섹션임을 스크린 리더에서 인지할 수 있도록 한다.</p>
+														<p class="g-desc">메뉴의 전체 컨테이너는 &lt;nav&gt;로 감싸거나 WAI-ARIA 영역을 role="navigation"으로 지정하여 스크린 리더에서 내비게이션 요소임을 인지할 수 있도록 제공해야 한다. 내비게이션 섹션에 aria-label="메인 메뉴"를 제공하면 스크린 리더 사용자는 메인 메뉴의 역할을 보다 명확하게 인지할 수 있다.</p>
+														<ul class="krds-info-list decimal">
+															<li>KWCAG 2.2 제목 제공</li>
+															<li>WCAG 2.1 Info and Relationships</li>
+														</ul>
+													</div>
+													<div class="g-desc-box">
+														<p class="g-tit">메뉴 링크의 계층 구조를 표현한다.</p>
+														<p class="g-desc">스크린 리더 사용자가 사이트의 정보 구조를 파악하는 데 도움을 줄 수 있도록 &lt;h2&gt;~&lt;h6&gt;, &lt;ul&gt;, &lt;li&gt; 태그를 활용하여 계층 구조로 정보를 제공해야 한다.</p>
+														<ul class="krds-info-list decimal">
+															<li>KWCAG 2.2 제목 제공</li>
+															<li>WCAG 2.1 Info and Relationships (A)</li>
+														</ul>
+													</div>
+													<div class="g-desc-box">
+														<p class="g-tit">활성화된 메뉴 정보가 스크린 리더로 전달될 수 있도록 한다.</p>
+														<p class="g-desc">인디케이터가 시각적으로만 구분되는 것이 아니라 스크린 리더로도 전달될 수 있도록 WAI-ARIA aria current 속성을 제공한다. 드롭다운이 활성화된 상태에서는 aria-current="true"를, 현재 탐색 중인 페이지에 대한 링크인 경우 aria-current="page" 속성을 추가한다.</p>
+														<ul class="krds-info-list decimal">
+															<li>WCAG 2.1 Name, Role, Value (A)</li>
+														</ul>
+													</div>
+													<div class="g-desc-box">
+														<p class="g-tit">메뉴 링크는 키보드로 탐색할 수 있도록 한다.</p>
+														<p class="g-desc">메인 메뉴는 웹사이트의 주요 사이트로 접근할 수 있는 수단이므로 메뉴 링크는 반드시 키보드가 접근할 수 있도록 제공해야 한다. 사용자가 키보드를 이용하여 드롭다운을 실행하고 목록을 탐색할 수 있는지 점검해야 한다.</p>
+														<ul class="krds-info-list decimal">
+															<li>KWCAG 2.2 키보드 사용 보장</li>
+															<li>WCAG 2.1 Keyboard (A)</li>
+															<li>WCAG 2.1 No Keyboard Trap (A)</li>
+														</ul>
+													</div>
+													<div class="g-desc-box">
+														<p class="g-tit">키보드의 초점은 메뉴의 계층 순서대로 이동하도록 한다.</p>
+														<p class="g-desc">키보드를 이용하여 메뉴를 탐색하는 경우, 키보드의 탐색 위치를 표시하는 초점이 메뉴의 계층 순서에 맞게 이동되도록 제공해야 한다. 문서에 메뉴의 계층 구조를 표현하지 않거나 임의로 키보드 초점의 이동 순서를 조작하면 보조 기술 사용자는 메뉴 탐색에 혼동을 느끼게 된다.</p>
+														<ul class="krds-info-list decimal">
+															<li>KWCAG 2.2 초점 이동과 표시</li>
+															<li>WCAG 2.1 Focus Order (A)</li>
+														</ul>
+													</div>
+												</div>
+                                            </div>
+                                            <!-- //접근성 가이드라인 -->
+
+                                            <!-- 상호작용 가이드라인 -->
+                                            <div class="g-conts-area section-link">
+                                                <h3 class="sec-tit">상호작용 가이드라인</h3>
+                                                <div class="g-conts-area sp-sm">
+                                                    <h4 class="con-tit">메뉴 영역 확장 및 축소</h4>
+                                                    <!-- table list -->
+                                                    <div class="krds-table-wrap">
+                                                        <table class="tbl col data">
+                                                            <caption>
+                                                                상호작용 가이드라인 메뉴 영역 확장 및 축소 표로 이동에 대한 표로 구분/설명으로 구성되어있으며 구분 항목은 Click, Enter, Esc로 구성되어있음
+                                                            </caption>
+                                                            <colgroup>
+                                                                <col style="width: 15%" />
+                                                                <col />
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">구분</th>
+                                                                    <th scope="col">설명</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row">Click</th>
+                                                                    <td>메뉴 링크를 Click 하였을 때 하위 수준 메뉴가 펼쳐진다. 활성화된 1수준 메뉴를 다시 Click 하거나 헤더와 메인 영역을 벗어나는 화면영역을 Click 하였을 때 메뉴가 접힌다.</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Enter</th>
+                                                                    <td>메뉴 링크가 초점을 가진 상태에서 Enter 키를 눌렀을 때 하위 수준 메뉴가 펼쳐진다. 활성화된 1수준 메뉴에서 다시 Enter 키를 눌렀을 때 드롭다운 메뉴가 접힌다</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Esc</th>
+                                                                    <td>펼쳐진 드롭다운 메뉴가 모두 축소되며 펼쳐졌던 메뉴의 상위 수준에 속하는 1수준 메뉴로 초점이 이동한다.</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- //table list -->
+                                                </div>
+                                                <div class="g-conts-area">
+                                                    <h4 class="con-tit">메뉴 링크 탐색</h4>
+                                                    <!-- table list -->
+                                                    <div class="krds-table-wrap">
+                                                        <table class="tbl col data">
+                                                            <caption>
+                                                                상호작용 가이드라인 메뉴 링크 탐색에 대한 표로 구분/설명으로 구성되어있으며 구분 항목은 Tab으로 구성되어있음
+                                                            </caption>
+                                                            <colgroup>
+                                                                <col style="width: 15%" />
+                                                                <col />
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">구분</th>
+                                                                    <th scope="col">설명</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row">Tab</th>
+                                                                    <td>1수준 메뉴 링크에 순차적으로 접근한다.</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- //table list -->
+                                                </div>
+                                            </div>
+                                            <!-- //상호작용 가이드라인 -->
+                                        </div>
+                                        <!-- //scroll-check -->
+                                    </section>
+                                    <!-- //tabpanelInfo02 -->
+
+                                    <!-- tabpanelInfo03 -->
+                                    <section id="tabpanelInfo03" aria-labelledby="tabInfo03" class="tab-conts" data-quick-nav="true">
+                                        <!-- scroll-check -->
+                                        <div class="g-description-area scroll-check">
+                                            <!-- 예시 -->
+                                            <div class="g-conts-area section-link">
+                                                <h3 class="sec-tit">예시</h3>
+                                                @@include("../inc/page-example.html",{ "example": [ 
+													{ title: "PC", folder: "..", file: "main_menu_pc", "class": "ex-gnb-pc", },
+													{ title: "Mobile", folder: "..", file: "main_menu_mobile", "class": "ex-gnb-mobile", },
+												]})
+                                                <div class="g-conts-area">
+                                                    <div class="g-cont-in">
+                                                        <div class="krds-table-wrap scroll">
+                                                            <table class="tbl col data">
+                                                                <colgroup>
+                                                                    <col style="width: 15%" />
+                                                                    <col style="width: 15%" />
+                                                                    <col />
+                                                                </colgroup>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">1Depth</th>
+                                                                        <th scope="col">2Depth</th>
+                                                                        <th scope="col">File Link</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="name">레이아웃</td>
+                                                                        <td>타입1</td>
+                                                                        <td class="file">
+                                                                            <a href="../../pattern/sample_sub_01.html" target="_blank" title="새 창 열기" class="krds-btn medium text underline">html 화면 확인하기</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="name"></td>
+                                                                        <td>타입2</td>
+                                                                        <td class="file">
+                                                                            <a href="../../pattern/sample_sub_02.html" target="_blank" title="새 창 열기" class="krds-btn medium text underline">html 화면 확인하기</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- //예시 -->
+                                            <!-- 마크업 가이드 -->
+                                            <div class="g-conts-area section-link">
+                                                <h3 class="sec-tit">마크업 가이드</h3>
+                                                <!-- CSS 선택자 -->
+                                                <div class="g-conts-area sp-sm">
+                                                    <h4 class="con-tit">CSS 선택자 (PC)</h4>
+                                                    <!-- table list -->
+                                                    <div class="krds-table-wrap">
+                                                        <table class="tbl col data">
+                                                            <caption>
+                                                                마크업 가이드 CSS 선택자 (PC)에 대한 표로 필수/선택으로 구성되어있으며 필수에 대한 구분 항목은 메인메뉴 전체영역, 메인메뉴 1뎁스 버튼(선택 구분항목 선택된 메뉴,링크 메뉴),메인메뉴 2뎁스 전체영역(선택 구분항목 선택된 메뉴영역),메인메뉴 2뎁스 버튼(선택 구분항목 선택된 메뉴),메인메뉴 3뎁스 전체영역(선택 구분항목 선택된 메뉴영역,신규서비스 배너 우측 배치),메인메뉴 3뎁스 메뉴(선택 구분항목 메뉴 상세설명 있는경우) 로 구성되어있음
+                                                            </caption>
+                                                            <colgroup>
+                                                                <col style="width: 20%" />
+                                                                <col />
+                                                                <col style="width: 20%" />
+                                                                <col />
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col" colspan="2">필수</th>
+                                                                    <th scope="col" colspan="2">선택</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+																<tr>
+																	<th scope="row">메인메뉴 전체영역</th>
+																	<td colspan="3">.krds-main-menu</td>
+																</tr>
+																<tr>
+																	<th scope="row" rowspan="2">메인메뉴 1뎁스 버튼</th>
+																	<td rowspan="2">.gnb-main-trigger</td>
+																	<th scope="row">선택된 메뉴</th>
+																	<td>
+																		.active <br>
+																		[aria-expanded=true]
+																	</td>
+																</tr>
+																<tr>
+																	<th scope="row">링크 메뉴</th>
+																	<td>.is-link</td>
+																</tr>
+																<tr>
+																	<th scope="row">메인메뉴 2뎁스 전체영역</th>
+																	<td>.gnb-toggle-wrap</td>
+																	<th scope="row">선택된 메뉴영역</th>
+																	<td>.is-open</td>
+																</tr>
+																<tr>
+																	<th scope="row">메인메뉴 2뎁스 버튼</th>
+																	<td>.gnb-sub-trigger</td>
+																	<th scope="row">선택된 메뉴</th>
+																	<td>
+																		.active <br>
+																		[aria-expanded=true]
+																	</td>
+																</tr><tr>
+																	<th scope="row" rowspan="2">메인메뉴 3뎁스 전체영역</th>
+																	<td rowspan="2">.gnb-sub-list</td>
+																	<th scope="row">선택된 메뉴영역</th>
+																	<td>
+																		.active
+																	</td>
+																</tr>
+																<tr>
+																	<th scope="row">신규서비스 배너 우측 배치</th>
+																	<td colspan="3">.between</td>
+																</tr>
+																<tr>
+																	<th scope="row">메인메뉴 3뎁스 메뉴</th>
+																	<td>.gnb-sub-content &gt ul</td>
+																	<th scope="row">메뉴 상세설명 있는경우</th>
+																	<td>.type-description</td>
+																</tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- //table list -->
+                                                </div>
+                                                <!--// CSS 선택자 -->
+												
+												<!-- CSS 선택자 -->
+												<div class="g-conts-area">
+                                                    <h4 class="con-tit">CSS 선택자 (MOBILE)</h4>
+													<!-- table list -->
+													<div class="krds-table-wrap">
+														<table class="tbl col data">
+															<caption>
+																마크업 가이드 CSS 선택자 (MOBILE)에 대한 표로 필수/선택으로 구성되어있으며 필수에 대한 구분 항목은 헤더 전체영역,유틸리티 영역,로고 및 주요메뉴,메인메뉴 전체영역, 메인메뉴 1뎁스 버튼(선택 구분항목 선택된 메뉴),메인메뉴 2뎁스 전체영역,메인메뉴 2뎁스 버튼,메인메뉴 3뎁스 전체영역,메인메뉴 3뎁스 메뉴(선택 구분항목 4뎁스 있는경우),메인메뉴 4뎁스 메뉴영역(선택 구분항목 선택된 영역) 로 구성되어있음
+															</caption>
+															<colgroup>
+																<col style="width: 20%" />
+																<col />
+																<col style="width: 20%" />
+																<col />
+															</colgroup>
+															<thead>
+															<tr>
+																<th scope="col" colspan="2">필수</th>
+																<th scope="col" colspan="2">선택</th>
+															</tr>
+															</thead>
+															<tbody>
+															<tr>
+																<th scope="row">메인메뉴 전체영역</th>
+																<td colspan="3">.krds-main-menu-mobile</td>
+															</tr>
+															<tr>
+																<th scope="row">메인메뉴 1뎁스 버튼</th>
+																<td>.gnb-main-trigger</td>
+																<th scope="row">선택된 메뉴</th>
+																<td>
+																	.active <br>
+																	[aria-selected=true]
+																</td>
+															</tr>
+															<tr>
+																<th scope="row">메인메뉴 2뎁스 전체영역</th>
+																<td colspan="3">.submenu-wrap</td>
+															</tr>
+															<tr>
+																<th scope="row">메인메뉴 2뎁스 버튼</th>
+																<td colspan="3">.gnb-sub-trigger</td>
+															</tr>
+															<tr>
+																<th scope="row">메인메뉴 3뎁스 전체영역</th>
+																<td colspan="3">.depth3-wrap</td>
+															</tr>
+															<tr>
+																<th scope="row">메인메뉴 3뎁스 메뉴</th>
+																<td>.depth3-trigger</td>
+																<th scope="row">4뎁스 있는경우</th>
+																<td>.has-depth4</td>
+															</tr>
+															<tr>
+																<th scope="row">메인메뉴 4뎁스 메뉴영역</th>
+																<td>.depth4-wrap</td>
+																<th scope="row">선택된 영역</th>
+																<td>.is-open</td>
+															</tr>
+															</tbody>
+														</table>
+													</div>
+													<!-- //table list -->
+												</div>
+												<!--// CSS 선택자 -->
+
+                                                <!-- JS -->
+												<div class="g-conts-area">
+                                                    <h4 class="con-tit">JS (PC)</h4>
+													<!-- table list -->
+													<div class="krds-table-wrap">
+														<table class="tbl col data">
+															<caption>
+																마크업 가이드 JS (PC)에 대한 표로 함수/설명으로 구성되어있으며 함수에 대한 구분 항목은 krds_mainMenuPC(구분항목init(),setupMainTrigger(mainTrigger),setupSubTrigger(subTrigger),toggleMainMenu(mainTrigger),toggleSubMenu(subTrigger),closeMainMenu())로 구성되어있음
+															</caption>
+															<colgroup>
+																<col style="width: 20%" />
+																<col style="width: 30%" />
+																<col />
+															</colgroup>
+															<thead>
+															<tr>
+																<th scope="col" colspan="2">함수명</th>
+																<th scope="col">설명</th>
+															</tr>
+															</thead>
+															<tbody>
+															<tr>
+																<th scope="row" rowspan="6">krds_mainMenuPC</th>
+																<th scope="row">init()</th>
+																<td>초기화 및 주요 이벤트 실행</td>
+															</tr>
+															<tr>
+																<th scope="row">setupMainTrigger(mainTrigger)</th>
+																<td>1뎁스 메뉴 및 2뎁스 메뉴영역 기본 설정</td>
+															</tr>
+															<tr>
+																<th scope="row">setupSubTrigger(subTrigger)</th>
+																<td>2뎁스 메뉴 및 3뎁스 메뉴영역 기본 설정</td>
+															</tr>
+															<tr>
+																<th scope="row">toggleMainMenu(mainTrigger)</th>
+																<td>2뎁스 메뉴 토글 설정</td>
+															</tr>
+															<tr>
+																<th scope="row">toggleSubMenu(subTrigger)</th>
+																<td>3뎁스 메뉴 토글 설정</td>
+															</tr>
+															<tr>
+																<th scope="row">closeMainMenu()</th>
+																<td>메뉴 닫기</td>
+															</tr>
+															</tbody>
+														</table>
+													</div>
+													<!-- //table list -->
+													<!-- js code -->
+													@@include("../inc/page-code-js.html",{ "component": "krds_mainMenuPC" })
+													<!-- //js code -->
+												</div>
+												<!--// JS -->
+	
+												<!-- JS -->
+												<div class="g-conts-area">
+                                                    <h4 class="con-tit">JS (MOBILE)</h4>
+													<!-- table list -->
+													<div class="krds-table-wrap">
+														<table class="tbl col data">
+															<caption>
+																마크업 가이드 JS (MOBILE)에 대한 표로 함수명/설명으로 함수에 대한 구분 항목은 krds_mainMenuMobile(구분항목init(),openMainMenu(mobileGnb),closeMainMenu(mobileGnb),setupAnchorScroll(mobileGnb))로 구성되어있음
+															</caption>
+															<colgroup>
+																<col style="width: 20%" />
+																<col style="width: 30%" />
+																<col />
+															</colgroup>
+															<thead>
+															<tr>
+																<th scope="col" colspan="2">함수명</th>
+																<th scope="col">설명</th>
+															</tr>
+															</thead>
+															<tbody>
+															<tr>
+																<th scope="row" rowspan="4">krds_mainMenuMobile</th>
+																<th scope="row">init()</th>
+																<td>초기화 및 주요 이벤트 실행</td>
+															</tr>
+															<tr>
+																<th scope="row">openMainMenu(mobileGnb)</th>
+																<td>메뉴 열기</td>
+															</tr>
+															<tr>
+																<th scope="row">closeMainMenu(mobileGnb)</th>
+																<td>메뉴 닫기</td>
+															</tr>
+															<tr>
+																<th scope="row">setupAnchorScroll(mobileGnb)</th>
+																<td>스크롤 시 해당메뉴 활성화</td>
+															</tr>
+															</tbody>
+														</table>
+													</div>
+													<!-- //table list -->
+													<!-- js code -->
+													@@include("../inc/page-code-js.html",{ "component": "krds_mainMenuMobile"})
+													<!-- //js code -->
+												</div>
+												<!--// JS -->
+	
+												<!-- 개발 시 접근성 관련 주의사항 -->
+												<div class="g-conts-area">
+													<h4 class="con-tit">개발 시 접근성 관련 주의사항</h4>
+													<ul class="krds-info-list dash">
+														<li>키보드 탐색 시 초점이 순차적으로 이동하는지 확인한다.</li>
+														<li>하위메뉴가 있는경우 하위메뉴 열림/닫힘을 wai-aria 속성 등으로 표편해주고 있는지 확인한다.</li>
+													</ul>
+												</div>
+												<!--// 개발 시 접근성 관련 주의사항 -->
+                                            </div>
+                                            <!-- //마크업 가이드 -->
+											<!-- 컴포넌트 토큰 -->
+											<div class="g-conts-area section-link">
+												<h3 class="sec-tit">컴포넌트 토큰 (css variable)</h3>
+												<div class="g-conts-area">
+													<h4 class="con-tit">PC</h4>
+													<div class="g-code-wrap">
+														<!-- code -->
+														<div class="g-code-box">
+															<pre data-src="./variable/main_menu_pc.html" class="language-css"></pre>
+														</div>
+														<!-- //code -->
+													</div>
+												</div>
+												
+												<div class="g-conts-area">
+													<h4 class="con-tit">MOBILE</h4>
+													<div class="g-code-wrap">
+														<!-- code -->
+														<div class="g-code-box">
+															<pre data-src="./variable/main_menu_mobile.html" class="language-css"></pre>
+														</div>
+														<!-- //code -->
+													</div>
+												</div>
+												
+											</div>
+											<!-- //컴포넌트 토큰 -->
+                                        </div>
+                                        <!-- //scroll-check -->
+                                    </section>
+                                    <!-- //tabpanelInfo03 -->
+                                </div>
+                                <!-- //tab contents -->
+                            </div>
+                            <!-- //탭 메뉴 -->
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- //컨텐츠 영역 -->
+            </div>
+            <!-- //컨테이너 영역 -->
+
+            <!-- 푸터 영역 -->
+            <footer id="krds-footer">@@include("../inc/guide-footer.html")</footer>
+            <!-- //푸터 영역 -->
+        </div>
+    </body>
+</html>

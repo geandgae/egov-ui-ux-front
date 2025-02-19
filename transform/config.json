@@ -1,0 +1,13 @@
+{
+  "source": ["./tokens/transformed_tokens.json"],
+  "platforms": {
+    "scss": {
+      "transformGroup": "scss",
+      "buildPath": "./resources/scss/tokens/",
+      "files": [{
+        "destination": "_krds_tokens.scss",
+        "format": "scss/variables"
+      }]
+    }
+  }
+}

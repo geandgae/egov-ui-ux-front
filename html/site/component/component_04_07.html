@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include("../inc/head.html", { "title": "아코디언 (Accordion) | 컴포넌트 - KRDS", })
+
+    <body>
+        <div id="wrap" class="g-wrap">
+            @@include("../inc/guide-header.html")
+
+            <!-- 컨테이너 영역 -->
+            <div id="container" class="krds-in-page-navigation-type">
+                <!-- 컨텐츠 영역 -->
+                <div class="inner in-between">
+                    <!-- 사이드 메뉴 -->
+                    @@include("../inc/guide-lnb.html")
+                    <!-- //사이드 메뉴 -->
+
+                    <div class="contents">
+                        <!-- breadcrumb -->
+                        @@include("../inc/page-breadcrumb.html")
+                        <!-- breadcrumb -->
+
+                        <!-- page-title -->
+                        @@include("../inc/page-title.html", { 
+							"desc" : "아코디언은 한 페이지에서 관련 있는 여러 콘텐츠 섹션을 확인할 수 있도록 하는 컴포넌트로 콘텐츠 섹션의 헤더 목록이 수직으로 쌓여 있는 형태로 표현된다. 일반적으로 헤더 목록은 컨트롤 요소로 활용되며 사용자는 필요에 따라 헤더를 선택하여 하위 콘텐츠 섹션을 표시하거나 숨길 수 있다." 
+						})
+                        <!-- //page-title -->
+
+                        <div class="conts-area">
+                            <!-- 탭 메뉴 -->
+                            <div class="krds-tab-area layer">
+                                <!-- tab list -->
+                                @@include("../inc/page-tab-list.html", { "list": [ { name: "개요", class: "active" }, { name: "접근성", class: "" }, { name: "코드", class: "" } ] })
+                                <!-- //tab list -->
+                                <!-- tab contents -->
+                                <div class="tab-conts-wrap">
+                                    <!-- quick link -->
+                                    @@include("../inc/page-quick-nav.html")
+                                    <!-- //quick link -->
+
+                                    <!-- tabpanelInfo01 -->
+                                    <section id="tabpanelInfo01" aria-labelledby="tabInfo01" class="tab-conts active" data-quick-nav="true">
+                                        <!-- scroll-check -->
+                                        <div class="g-description-area scroll-check">
+                                            <!-- 구조 -->
+                                            <div class="g-conts-area structure section-link">
+                                                <h3 class="sec-tit">구조</h3>
+                                                <div class="g-conts-area">
+                                                    <div class="g-img-wrap">
+                                                        <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/component/accordion_structure.png" alt="구조 예시" /></div>
+                                                    </div>
+                                                    <ol class="krds-info-list ordered">
+                                                        <li>
+                                                            <span class="num">1.</span><strong>헤더</strong>
+															<ol class="krds-info-list ordered">
+																<li><span class="num">a.</span><strong>제목</strong> 패널 섹션의 콘텐츠 제목</li>
+																<li><span class="num">b.</span><strong>아이콘</strong> 패널의 펼침/접힘 상태를 나타냄</li>
+															</ol>
+                                                        </li>
+                                                        <li>
+															<span class="num">2.</span><strong>패널</strong>
+															헤더 하위에 속하는 콘텐츠 섹션
+														</li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                            <!-- //구조 -->
+
+                                            <!-- 용례 -->
+                                            <div class="g-conts-area section-link">
+                                                <h3 class="sec-tit">용례</h3>
+                                                <div class="g-conts-area sp-sm">
+                                                    <h4 class="con-tit">사용하기 적합한 경우</h4>
+                                                    <div class="g-desc-box">
+                                                        <p class="g-desc">아코디언 컴포넌트는 콘텐츠가 숨겨진 형태이므로 사용자가 콘텐츠가 있음을 인지하지 못할 가능성이 있으며, 콘텐츠를 표시하기 위해 헤더를 클릭할 것인지에 대한 의사결정 과정이 필요하기 때문에 사용자의 인지적 부담을 증가시킨다. 그러므로 다음 중 하나에 해당하고 아코디언을 사용함으로써 사용자에게 도움이 된다는 뚜렷한 증거가 없는 경우에는 가급적 아코디언 컴포넌트를 사용하지 않아야 한다.</p>
+                                                        <ul class="krds-info-list decimal">
+                                                            <li>모바일 스크린, 사이드 패널과 같이 공간이 부족하여 긴 콘텐츠를 한 번에 보여주기 어려운 경우</li>
+                                                            <li>사용자가 여러 콘텐츠 섹션 중 일부의 정보만 필요로 하는 경우</li>
+                                                            <li>사용자가 여러 콘텐츠 섹션 전체를 다 읽어야 할 만큼 중요한 정보가 아니어서 화면의 스크롤을 줄이고자 하는 경우</li>
+                                                            <li>사용자가 서로 관련된 여러 콘텐츠 섹션의 개요를 빠르게 파악하고 비교해야 하는 경우</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="g-conts-area">
+                                                    <h4 class="con-tit">사용하기 적합하지 않은 경우</h4>
+                                                    <div class="g-desc-box">
+                                                        <p class="g-desc">아코디언을 사용하기에 앞서 다른 컴포넌트나 패턴을 사용하여 콘텐츠를 제공하는 방안을 최우선으로 고려해야 한다. 콘텐츠를 적절히 구조화하여 표현하면 아코디언을 사용하지 않고도 효과적으로 정보를 전달할 수 있다.</p>
+                                                        <ul class="krds-info-list decimal">
+                                                            <li>
+                                                                사용자가 콘텐츠의 전체 또는 대부분을 반드시 확인해야 하거나 중요도가 높은 정보인 경우
+                                                                <ul class="krds-info-list dash">
+                                                                    <li>아코디언의 상호작용 방식에 익숙하지 않은 사용자도 있으며 중요한 정보를 놓칠 가능성이 높아진다.</li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                하위 또는 상위 요소로 이미 아코디언 컴포넌트가 사용되었거나 탭 패턴이 사용된 경우
+                                                                <ul class="krds-info-list dash">
+                                                                    <li>아코디언과 탭은 콘텐츠를 숨겨둔 상태에서 사용자가 콘텐츠의 표시 여부를 선택해야 하기 때문에 사용자의 인지적 부담을 더욱 증가시킬 수 있다.</li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                패널 내부 콘텐츠의 양이 많거나 복잡하여 표시되는 데 많은 시간이 걸리는 경우
+                                                                <ul class="krds-info-list dash">
+                                                                    <li>이 경우 콘텐츠를 여러 페이지에 분할하여 제공하는 것이 적합하다.</li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                콘텐츠가 매우 단순한 경우
+                                                                <ul class="krds-info-list dash">
+                                                                    <li>콘텐츠를 하나의 페이지에 제공하고 섹션의 헤딩을 명확하게 구분하는 것만으로 콘텐츠를 쉽게 인지할 수 있다. 필요한 경우 콘텐츠 상단부에 사용자가 페이지의 특정 섹션으로 이동할 수 있는 링크 목록을 제공할 수 있다.</li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </div>                                                    
+                                                </div>
+                                            </div>
+                                            <!-- 용례 -->
+
+                                            <!-- 사용성 가이드라인 -->
+                                            <div class="g-conts-area section-link">
+                                                <h3 class="sec-tit">사용성 가이드라인</h3>
+												<div class="g-conts-area sp-sm">
+													<div class="g-desc-box">
+														<p class="g-tit">아코디언의 확장 상태를 나타내는 아이콘은 항상 일관된 위치에 제공한다.</p>
+														<p class="g-desc">아코디언을 서로 관련 있는 콘텐츠 섹션의 정보를 전달하기 위한 목적으로 사용하는 경우에는 아이콘을 헤더의 끝에 배치하는 것이 바람직하다. 헤더 목록에서 텍스트가 같은 위치에서 시작될 수 있어 사용자의 안구 운동 피로도를 줄일 수 있다. 만약 콘텐츠 섹션 목록이 트리 구조로 구성되어 있다면 이러한 정보를 전달하기 위해서 아이콘을 헤더의 시작 부분에 배치할 수 있다.</p>
+													</div>
+													<div class="g-desc-box">
+														<p class="g-tit">아코디언의 확장 상태를 나타내는 아이콘은 패널이 펼쳐지거나 접히는 방향을 정확하게 반영하도록 제공한다.</p>
+														<p class="g-desc">아코디언이 접혀 있는 경우 사용자가 확장 가능한 영역이 있음을 알 수 있도록 'V' 또는 '+' 아이콘이, 펼쳐진 경우에는 '^', '-' 아이콘이 제공되어야 한다.</p>
+													</div>
+													<div class="g-img-wrap caption-format success">
+														<p class="caption"><span class="svg-icon ico-success-fill pure"></span>모범 사례</p>
+														<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/component/accordion_guide_01.png" alt="아코디언의 확장 상태를 나타내는 아이콘은 패널이 펼쳐지거나 접히는 방향을 정확하게 반영하도록 제공한다 모범 사례 예시" /></div>
+													</div>
+													<div class="g-desc-box">
+														<p class="g-tit">헤더 전체를 클릭 가능하도록 만든다.</p>
+														<p class="g-desc">상호작용이 가능한 타깃 영역이 클수록 사용자가 더 쉽게 조작할 수 있다. 사용자가 패널을 펼치거나 접기 위해 헤더 전체를 클릭할 수 있도록 구현해야 한다. 만약, 패널 내부 콘텐츠에 링크, 버튼과 같은 인터페이스가 포함되어 있다면 헤더와 패널 사이에 충분한 공간을 확보하여 사용자가 실수로 헤더를 클릭하지 않도록 해야 한다.</p>
+													</div>
+													<div class="g-img-wrap caption-format success">
+														<p class="caption"><span class="svg-icon ico-success-fill pure"></span>모범 사례</p>
+														<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/component/accordion_guide_02.png" alt="헤더 전체를 클릭 가능하도록 만든다 모범 사례 예시" /></div>
+													</div>
+													<div class="g-img-wrap caption-format error">
+														<p class="caption"><span class="svg-icon ico-error-fill pure"></span>피해야 할 사례</p>
+														<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/component/accordion_guide_02_02.png" alt="헤더 전체를 클릭 가능하도록 만든다 피해야 할 사례 예시" /></div>
+													</div>
+													<div class="g-desc-box">
+														<p class="g-tit">헤더와 패널은 서로 관련 있는 것으로 인지될 수 있게 표현한다.</p>
+														<p class="g-desc">헤더와 패널이 하나의 콘텐츠 섹션으로 인지될 수 있게 표현되어야 하며, 필요한 경우 여백, 색상, 그림자, 선을 사용할 수 있다.</p>
+													</div>
+													<div class="g-img-wrap caption-format success">
+														<p class="caption"><span class="svg-icon ico-success-fill pure"></span>모범 사례</p>
+														<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/component/accordion_guide_03.png" alt="헤더와 패널은 서로 관련 있는 것으로 인지될 수 있게 표현한다 모범 사례 예시" /></div>
+													</div>
+													<div class="g-img-wrap caption-format error">
+														<p class="caption"><span class="svg-icon ico-error-fill pure"></span>피해야 할 사례</p>
+														<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/component/accordion_guide_03_02.png" alt="헤더와 패널은 서로 관련 있는 것으로 인지될 수 있게 표현한다 피해야 할 사례 예시" /></div>
+													</div>
+													<div class="g-desc-box">
+														<p class="g-tit">패널 영역에 스크롤이 발생하지 않도록 한다.</p>
+														<p class="g-desc">패널 내부 콘텐츠가 길어져 화면의 뷰포트를 넘어가는 경우, 페이지 스크롤을 통해 콘텐츠를 탐색할 수 있어야 한다. 패널 영역에 별도의 세로, 가로 스크롤이 생성되어서는 안 된다.</p>
+													</div>
+													<div class="g-img-wrap caption-format error">
+														<p class="caption"><span class="svg-icon ico-error-fill pure"></span>피해야 할 사례</p>
+														<div class="g-img-zoom"><img src="../../../resources/img/guide/contents/component/accordion_guide_04.png" alt="패널 영역에 스크롤이 발생하지 않도록 한다 피해야 할 사례 예시" /></div>
+													</div>
+												</div>
+                                            </div>
+                                            <!-- //사용성 가이드라인 -->
+
+											<!-- 자주 묻는 질문 -->
+											@@include("../inc/page-faq.html")
+											<!-- //자주 묻는 질문 -->
+
+                                            <!-- 정보 변경 내역 -->
+                                            @@include("../inc/page-info-update-log.html")
+                                            <!-- //정보 변경 내역 -->
+											
+											<!-- 컨텐츠 배너 영역 -->
+											@@include("../inc/page-banner.html")
+											<!--// 컨텐츠 배너 영역 -->
+                                        </div>
+                                        <!-- //scroll-check -->
+                                    </section>
+                                    <!-- //tabpanelInfo01 -->
+
+                                    <!-- tabpanelInfo02 -->
+                                    <section id="tabpanelInfo02" aria-labelledby="tabInfo02" class="tab-conts" data-quick-nav="true">
+                                        <!-- scroll-check -->
+                                        <div class="g-description-area scroll-check">
+                                            <!-- 접근성 가이드라인 -->
+                                            <div class="g-conts-area section-link">
+                                               <h3 class="sec-tit">접근성 가이드라인</h3>
+												<div class="g-conts-area sp-sm">
+													<div class="g-desc-box">
+														<p class="g-tit">아코디언에 접근 가능한 제목을 제공한다.</p>
+														<p class="g-desc">아코디언 헤더 내부의 제목은 페이지의 다른 콘텐츠의 구조에 맞추어 &lt;h1&gt;~&lt;h6&gt; 태그로 마크업한다. 스크린 리더 사용자가 아코디언 목록에서 어떤 정보를 확인할 수 있는지 개요를 파악하고 필요한 정보를 빠르게 탐색하는 데 도움이 된다.</p>
+														<ul class="krds-info-list decimal">
+															<li>KWCAG 2.2 제목 제공</li>
+															<li>WCAG 2.1 Info and Relationships (A)</li>
+														</ul>
+													</div>
+													<div class="g-desc-box">
+														<p class="g-tit">아코디언의 활성화 상태 정보를 스크린 리더에서 확인할 수 있도록 한다.</p>
+														<p class="g-desc">아코디언의 확장 상태에 대한 정보를 텍스트 정보로 제공(펼치기/접기, 축소됨/확장됨)하여 스크린 리더 사용자가 컨트롤의 상태를 인지할 수 있도록 해야 한다.</p>
+														<ul class="krds-info-list decimal">
+															<li>WCAG 2.1 Name, Role, Value (A)</li>
+														</ul>
+													</div>
+													<div class="g-desc-box">
+														<p class="g-tit">헤더를 버튼 역할로 제공한다.</p>
+														<p class="g-desc">헤더를 실행하였을 때 특정 섹션이나 화면으로 이동하는 것이 아니므로 &lt;button&gt;을 사용하거나 role="button"을 사용하여 스크린 리더에서 버튼 역할임을 인지할 수 있도록 한다.</p>
+														<ul class="krds-info-list decimal">
+															<li>WCAG 2.1 Name, Role, Value (A)</li>
+														</ul>
+													</div>
+												</div>
+                                            </div>
+                                            <!-- //접근성 가이드라인 -->
+
+                                            <!-- 상호작용 가이드라인 -->
+                                            <div class="g-conts-area section-link">
+                                                <h3 class="sec-tit">상호작용 가이드라인</h3>
+                                                <div class="g-conts-area sp-sm">
+                                                    <h4 class="con-tit">헤더 목록 탐색</h4>
+                                                    <!-- table list -->
+                                                    <div class="krds-table-wrap">
+                                                        <table class="tbl col data">
+                                                            <caption>
+                                                                상호작용 가이드라인 헤더 목록 탐색에 대한 표로 구분/설명으로 구성되어있으며 구분 항목은 Tab, Shift + Tab 로 구성되어있음
+                                                            </caption>
+                                                            <colgroup>
+                                                                <col style="width: 15%" />
+                                                                <col />
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">구분</th>
+                                                                    <th scope="col">설명</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row">Tab, Shift + Tab</th>
+                                                                    <td>아코디언 목록의 헤더 버튼에 순차적으로 접근한다.</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- //table list -->
+                                                </div>
+                                                <div class="g-conts-area">
+                                                    <h4 class="con-tit">패널 확장 또는 축소</h4>
+                                                    <!-- table list -->
+                                                    <div class="krds-table-wrap">
+                                                        <table class="tbl col data">
+                                                            <caption>
+                                                                상호작용 가이드라인 패널 확장 또는 축소에 대한 표로 이동에 대한 표로 구분/설명으로 구성되어있으며 구분 항목은 Click, Enter, Space 로 구성되어있음
+                                                            </caption>
+                                                            <colgroup>
+                                                                <col style="width: 15%" />
+                                                                <col />
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">구분</th>
+                                                                    <th scope="col">설명</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row">Click</th>
+                                                                    <td>사용자가 헤더 영역 전체 또는 아이콘을 Click 하면 아코디언의 확장 상태가 변경된다.</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Enter, Space</th>
+                                                                    <td>헤더에 초점이 있는 상태에서 Enter 또는 Space 키를 누르면 아코디언의 확장 상태가 변경된다. 이때, 초점은 헤더에 유지되어야 한다.</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- //table list -->
+                                                </div>
+                                            </div>
+                                            <!-- //상호작용 가이드라인 -->
+                                        </div>
+                                        <!-- //scroll-check -->
+                                    </section>
+                                    <!-- //tabpanelInfo02 -->
+
+                                    <!-- tabpanelInfo03 -->
+                                    <section id="tabpanelInfo03" aria-labelledby="tabInfo03" class="tab-conts" data-quick-nav="true">
+                                        <!-- scroll-check -->
+                                        <div class="g-description-area scroll-check">
+                                            <!-- 예시 -->
+                                            <div class="g-conts-area section-link">
+                                                <h3 class="sec-tit">예시</h3>
+												@@include("../inc/page-example.html",{ "example": [ 
+													{ title: "기본", folder: "..", file: "accordion", class: "" },
+	                                                { title: "라인형", folder: "..", file: "accordion_line", class: "" }
+												]})
+                                            </div>
+                                            <!-- //예시 -->
+											 
+                                            <!-- 마크업 가이드 -->
+                                            <div class="g-conts-area section-link">
+                                                <h3 class="sec-tit">마크업 가이드</h3>
+                                                <!-- CSS 선택자 -->
+                                                <div class="g-conts-area sp-sm">
+                                                    <h4 class="con-tit">CSS 선택자</h4>
+                                                    <!-- table list -->
+                                                    <div class="krds-table-wrap">
+                                                        <table class="tbl col data">
+                                                            <caption>
+                                                                마크업 가이드 CSS 선택자에 대한 표로 필수/선택으로 구성되어있으며 구분 항목은 탭 전체영역, 레이어 탭, 탭 레이블 영역, 선택된 탭, 탭 패널로 구성되어있음
+                                                            </caption>
+                                                            <colgroup>
+                                                                <col style="width: 20%" />
+                                                                <col />
+                                                                <col style="width: 20%" />
+                                                                <col />
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col" colspan="2">필수</th>
+                                                                    <th scope="col" colspan="2">선택</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row">전체영역</th>
+                                                                    <td>.krds-accordion</td>
+                                                                    <th scope="row">라인 타입</th>
+                                                                    <td>.type-line</td>
+                                                                </tr>
+																<tr>
+																	<th scope="row">아코디언 그룹</th>
+																	<td>.accordion-item</td>
+																	<th scope="row">활성화</th>
+																	<td>.active</td>
+																</tr>
+                                                                <tr>
+                                                                    <th scope="row">제목 및 내용 활성화 버튼</th>
+                                                                    <td>.btn-accordion</td>
+																	<th scope="row">활성화</th>
+																	<td>.active <br> [aria-expanded="true"]</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- //table list -->
+                                                </div>
+                                                <!--// CSS 선택자 -->
+
+                                                <!-- JS -->
+                                                <div class="g-conts-area">
+                                                    <h4 class="con-tit">JS</h4>
+                                                    <!-- table list -->
+                                                    <div class="krds-table-wrap">
+                                                        <table class="tbl col data">
+                                                            <caption>
+                                                                마크업 가이드 JS에 대한 표로 함수명/설명으로 구성되어있음
+                                                            </caption>
+                                                            <colgroup>
+                                                                <col style="width: 20%" />
+                                                                <col style="width: 30%" />
+                                                                <col />
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col" colspan="2">함수명</th>
+                                                                    <th scope="col">설명</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row" rowspan="2">krds_accordion</th>
+                                                                    <th scope="row">init()</th>
+                                                                    <td>초기화 및 주요 이벤트 실행</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">setupAccordions()</th>
+                                                                    <td>아코디언 설정</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- //table list -->
+                                                    <!-- js code -->
+                                                    @@include("../inc/page-code-js.html",{ "component": "krds_accordion" })
+                                                    <!-- //js code -->
+                                                </div>
+                                                <!--// JS -->
+												<!-- 개발 시 접근성 관련 주의사항 -->
+												<div class="g-conts-area">
+													<h4 class="con-tit">개발 시 접근성 관련 주의사항</h4>
+													<ul class="krds-info-list dash">
+														<li>헤더 영역을 h태그로 제공하고 button을 사용한다.</li>
+														<li>바디영역 확장/축소를 wai-aria 속성 등으로 표편해주고 있는지 확인한다.</li>
+													</ul>
+												</div>
+												<!--// 개발 시 접근성 관련 주의사항 -->
+                                            </div>
+                                            <!-- //마크업 가이드 -->
+											<!-- 컴포넌트 토큰 -->
+											<div class="g-conts-area section-link">
+												<h3 class="sec-tit">컴포넌트 토큰 (css variable)</h3>
+												<div class="g-code-wrap">
+													<!-- code -->
+													<div class="g-code-box">
+														<pre data-src="./variable/accordion.html" class="language-css"></pre>
+													</div>
+													<!-- //code -->
+												</div>
+	
+											</div>
+											<!-- //컴포넌트 토큰 -->
+                                        </div>
+                                        <!-- //scroll-check -->
+                                    </section>
+                                    <!-- //tabpanelInfo03 -->
+                                </div>
+                                <!-- //tab contents -->
+                            </div>
+                            <!-- //탭 메뉴 -->
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- //컨텐츠 영역 -->
+            </div>
+            <!-- //컨테이너 영역 -->
+
+            <!-- 푸터 영역 -->
+            <footer id="krds-footer">@@include("../inc/guide-footer.html")</footer>
+            <!-- //푸터 영역 -->
+        </div>
+    </body>
+</html>

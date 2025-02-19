@@ -1,0 +1,9 @@
+<div class="tab fill full has-anchor">
+  <ul role="tablist">
+    @@for (var i=0; i < list.length; i++) {
+    <li id="tabInfo0`+[i+1]+`" aria-controls="tabpanelInfo0`+[i+1]+`" class="`+list[i].class+`">
+      <button type="button" class="btn-tab">`+list[i].name+`</button>
+    </li>
+    }
+  </ul>
+</div>

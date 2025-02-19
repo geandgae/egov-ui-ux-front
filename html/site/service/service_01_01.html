@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include("../inc/head.html", { "title": "개요 | 서비스 패턴 - 방문 - KRDS", })
+
+    <body>
+        <div id="wrap" class="g-wrap">
+            @@include("../inc/guide-header.html")
+
+            <!-- 컨테이너 영역 -->
+            <div id="container">
+                <!-- 컨텐츠 영역 -->
+                <div class="inner in-between">
+                    <!-- 사이드 메뉴 -->
+                    @@include("../inc/guide-lnb.html")
+                    <!-- //사이드 메뉴 -->
+
+                    <!-- contents -->
+                    <div class="contents">
+                        <!-- breadcrumb -->
+                        @@include("../inc/page-breadcrumb.html")
+                        <!-- breadcrumb -->
+
+                        <!-- page-title -->
+                        @@include("../inc/page-title.html", { 
+							"desc" : "방문은 사용자가 디지털 서비스에 접속하여 원하는 상세 정보로 연결되는 과정으로 대개 정보 구조의 가장 상위 수준인 서비스의 메인 화면에서 시작된다. 사용자와 서비스가 만나게 되는 첫 지점이므로 서비스에 대한 첫인상을 결정하는 중요한 화면이다. 대부분의 사용자는 구체적인 맥락 없이 서비스를 방문하게 되므로 명확하고 간결하게 구성되어야 한다." 
+						})
+                        <!-- //page-title -->
+
+                        <div class="conts-area">
+                            <!-- scroll-check -->
+                            <div class="g-description-area scroll-check">
+								<!-- 유형 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">유형</h3>
+                                    <div class="g-conts-area sp-sm">
+                                        <h4 class="con-tit">정책 및 서비스 정보</h4>
+                                        <p class="g-desc">
+                                            정책, 법령, 핵심 운영 서비스 정보 <br />
+                                            예&#41; 정책, 훈령, 예고, 고시
+                                        </p>
+                                    </div>
+                                    <div class="g-conts-area">
+                                        <h4 class="con-tit">기관 정보</h4>
+                                        <p class="g-desc">
+                                            기관/조직이나 장관에 대한 정보 <br />
+                                            예&#41; 공지사항, 알림, 장관 소개
+                                        </p>
+                                    </div>
+                                    <div class="g-conts-area">
+                                        <h4 class="con-tit">내비게이션</h4>
+                                        <p class="g-desc">
+                                            다른 정보나 서비스, 사이트로 이동하기 위한 링크 그룹 <br />
+                                            예&#41; 자주 찾는 서비스
+                                        </p>
+                                    </div>
+                                    <div class="g-conts-area">
+                                        <h4 class="con-tit">캠페인 및 홍보 정보</h4>
+                                        <p class="g-desc">
+                                            대개 일정 기간 동안 한시적으로 운영되는 시의성 있는 홍보 콘텐츠 <br />
+                                            예&#41; 홍보 배너, 히어로 콘텐츠
+                                        </p>
+                                    </div>
+                                    <div class="g-conts-area">
+                                        <h4 class="con-tit">긴급 알림</h4>
+                                        <p class="g-desc">
+                                            기관/조직 또는 서비스 운영에 대한 긴급 공지사항 <br />
+                                            예&#41; 서비스 중단/서버 점검 알림, 재난 알림
+                                        </p>
+                                    </div>
+                                    <div class="g-conts-area">
+                                        <h4 class="con-tit">연락처</h4>
+                                        <p class="g-desc">
+                                            서비스 운영 담당자 또는 기관의 연락처를 확인 <br />
+                                            예&#41; 대표 전화번호, 민원 전화번호, 팩스 번호, 이메일 주소
+                                        </p>
+                                    </div>
+                                </div>
+								<!-- //유형 -->
+
+								<!-- 이용 상황별 플로 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">이용 상황별 플로(Flow)</h3>
+                                    <div class="g-img-wrap outline">
+                                        <div class="g-img-zoom"><img src="../../../resources/img/guide/contents/service/visit_flow.png" alt="이용 상황별 플로(Flow) 예시" /></div>
+                                    </div>
+                                    <div class="g-flow-wrap">
+                                        <ol class="g-flow-list">
+                                            <li class="item">
+                                                <h4 class="g-flow-tit"><strong class="g-number">1</strong>정보 탐색</h4>
+                                                <ul class="g-flow-box">
+                                                    <li>
+                                                        <p class="g-flow-dsec">정책 및 서비스 정보, 기관 정보, 내비게이션, 캠페인 및 홍보, 긴급 알림, 연락처와 같은 다양한 유형의 콘텐츠에서 필요한 정보를 찾는 과정</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="item">
+                                                <h4 class="g-flow-tit"><strong class="g-number">2</strong> 정보 확인</h4>
+                                                <ul class="g-flow-box">
+                                                    <li>
+                                                        <p class="g-flow-dsec">콘텐츠의 의미를 해석하고 인지하는 과정</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="item">
+                                                <h4 class="g-flow-tit"><strong class="g-number">3</strong> 이동</h4>
+                                                <ul class="g-flow-box">
+                                                    <li>
+                                                        <p class="g-flow-dsec">탐색과 확인 과정에서 발견한 정보를 기반으로 서비스의 정보 구조를 탐색하는 과정으로 서비스 내부로 이동하거나 관련된 외부 서비스로 이동할 수 있음</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+								<!-- //이용 상황별 플로 -->
+
+								<!-- 사용성 가이드라인 체크리스트 -->
+                                <div class="g-conts-area section-link">
+                                    <h3 class="sec-tit">사용성 가이드라인 체크리스트</h3>
+                                    <div class="g-conts-area">
+                                        <div class="g-desc-area">
+                                            <p class="g-desc">서비스 패턴의 사용성 가이드라인은 사용자 관점에서의 중요도와 만족도를 기준으로 하여 3개의 적용 수준으로 구분되어 있다. 핵심 서비스에 대한 사용자 경험의 향상을 위해서는 기본적으로 최하위 적용 수준인 필수 수준의 가이드라인을 준수해야 한다.</p>
+                                            <a href="./../utility/utility_01.html" class="krds-btn medium text underline">적용수준(서비스패턴) 가이드라인 확인 <i class="svg-icon ico-angle right"></i></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="g-conts-area sp-sm">
+                                        <div class="g-desc-box" id="apply-level-filter">
+                                            <div class="g-tit-wrap">
+                                                <h4 class="g-tit">적용 수준 필터</h4>
+                                                <div class="krds-check-area">
+                                                    <div class="krds-form-check">
+                                                        <input type="checkbox" name="chk_1" id="required" />
+                                                        <label for="required">필수</label>
+                                                    </div>
+                                                    <div class="krds-form-check">
+                                                        <input type="checkbox" name="chk_1" id="advised" />
+                                                        <label for="advised">권장</label>
+                                                    </div>
+                                                    <div class="krds-form-check">
+                                                        <input type="checkbox" name="chk_1" id="excellent" />
+                                                        <label for="excellent">우수</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="g-filter">
+                                                <div class="g-filter-item">
+                                                    <div class="g-filter-tit">
+                                                        <a href="./service_01_02.html" class="krds-btn medium link">
+                                                            <span class="underline">방문</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="g-filter-cont">
+                                                        <ul class="g-filter-list">
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>다양한 콘텐츠의 구성 요소를 일관성 있게 구성한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>시급하거나 중요한 정보를 사용자가 빠르게 인지할 수 있도록 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>사용자 데이터를 기반으로 한 우선순위에 따라 콘텐츠를 배치한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>사용자 관점에서 같은 목적의 콘텐츠들은 섹션으로 모아서 구성한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>방문 목적 및 사용자 유형별로 핵심적인 정보와 서비스를 탐색할 수 있는 영역을 구성한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-information" data-type="excellent">우수</span>
+                                                                <span>로그인 기반의 개인화된 바로가기 영역을 배치한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>사용자가 정보를 빠르게 구분하고 정확하게 이동할 수 있는 방법을 제시한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-primary" data-type="required">필수</span>
+                                                                <span>최신의 정확한 정보를 제공한다.</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="krds-badge bg-secondary" data-type="advised">권장</span>
+                                                                <span>콘텐츠 및 서비스 명칭은 친숙하고 일관성이 있어야 한다.</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+								<!-- //사용성 가이드라인 체크리스트 -->
+
+                                <!-- 정보 변경 내역 -->
+								@@include("../inc/page-info-update-log.html")
+                                <!-- //정보 변경 내역 -->
+                            </div>
+                            <!-- //scroll-check -->
+                        </div>
+                        
+                    </div>
+                    <!-- //contents -->
+                </div>
+                <!-- //컨텐츠 영역 -->
+            </div>
+            <!-- //컨테이너 영역 -->
+
+            <!-- 푸터 영역 -->
+            <footer id="krds-footer">@@include("../inc/guide-footer.html")</footer>
+            <!-- //푸터 영역 -->
+        </div>
+    </body>
+</html>

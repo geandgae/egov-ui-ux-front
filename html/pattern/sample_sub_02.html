@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ko">
+
+@@include("./inc/head.html", {
+	"title": "서브 - 레이아웃 - KRDS",
+})
+
+<body>
+	<div id="wrap">
+		@@include("./inc/skip.html", {"class": 'class="type1"',})
+
+		@@include("./inc/header-top.html")
+
+		<!-- 헤더 영역 -->
+		<header id="krds-header">
+			@@include("./inc/header-type1.html")
+		</header>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container">
+			<!-- 컨텐츠 영역 -->
+			<div class="inner in-between">
+				<!-- 사이드 메뉴 -->
+				<nav class="krds-side-navigation">
+					<h2 class="lnb-tit">1Depth-title</h2>
+					<!-- lnb-list -->
+					<ul class="lnb-list">
+						<li class="lnb-item">
+							<button type="button" class="lnb-btn lnb-toggle">2Depth-menu</button>
+							<!-- lnb-submenu -->
+							<div class="lnb-submenu">
+								<ul>
+									<li class="lnb-subitem">
+										<button type="button" class="lnb-btn lnb-toggle-popup">3Depth-menu</button>
+										<!-- lnb-submenu-lv2 -->
+										<div class="lnb-submenu-lv2">
+											<button type="button" class="lnb-btn-tit">3Depth-title</button>
+											<ul>
+												<li><a href="#" class="lnb-btn">4Depth</a></li>
+												<li><a href="#" class="lnb-btn">4Depth</a></li>
+												<li><a href="#" class="lnb-btn">4Depth</a></li>
+												<li><a href="#" class="lnb-btn">4Depth</a></li>
+												<li><a href="#" class="lnb-btn">4Depth</a></li>
+											</ul>
+										</div>
+										<!-- //lnb-submenu-lv2 -->
+									</li>
+									<li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">3Depth-link</a></li>
+									<li class="lnb-subitem"><a href="./sample_sub_02.html" class="lnb-btn lnb-link">3Depth-link</a></li>
+								</ul>
+							</div>
+							<!-- //lnb-submenu -->
+						</li>
+						<li class="lnb-item">
+							<button type="button" class="lnb-btn lnb-toggle">2Depth-menu</button>
+							<!-- lnb-submenu -->
+							<div class="lnb-submenu">
+								<ul>
+									<li class="lnb-subitem">
+										<button type="button" class="lnb-btn lnb-toggle-popup">3Depth-menu</button>
+										<!-- lnb-submenu-lv2 -->
+										<div class="lnb-submenu-lv2">
+											<button type="button" class="lnb-btn-tit">3Depth-title</button>
+											<ul>
+												<li><a href="#" class="lnb-btn">4Depth</a></li>
+												<li><a href="#" class="lnb-btn">4Depth</a></li>
+												<li><a href="#" class="lnb-btn">4Depth</a></li>
+											</ul>
+										</div>
+										<!-- //lnb-submenu-lv2 -->
+									</li>
+									<li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">3Depth-link</a></li>
+									<li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">3Depth-link</a></li>
+								</ul>
+							</div>
+							<!-- //lnb-submenu -->
+						</li>
+						<li class="lnb-item">
+							<button type="button" class="lnb-btn lnb-toggle">2Depth-menu</button>
+							<!-- lnb-submenu -->
+							<div class="lnb-submenu">
+								<ul>
+									<li class="lnb-subitem">
+										<button type="button" class="lnb-btn lnb-toggle-popup">3Depth-menu</button>
+										<!-- lnb-submenu-lv2 -->
+										<div class="lnb-submenu-lv2">
+											<button type="button" class="lnb-btn-tit">3Depth-title</button>
+											<ul>
+												<li><a href="#" class="lnb-btn">4Depth</a></li>
+												<li><a href="#" class="lnb-btn">4Depth</a></li>
+												<li><a href="#" class="lnb-btn">4Depth</a></li>
+											</ul>
+										</div>
+										<!-- //lnb-submenu-lv2 -->
+									</li>
+									<li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">3Depth-link</a></li>
+									<li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">3Depth-link</a></li>
+								</ul>
+							</div>
+							<!-- //lnb-submenu -->
+						</li>
+					</ul>
+					<!-- //lnb-list -->
+				</nav>
+				<!-- //사이드 메뉴 -->
+
+				<div class="contents">
+					<!-- breadcrumb -->
+					<nav class="krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
+						<ol class="breadcrumb">
+							<li class="home"><a href="#;" class="txt">홈</a></li>
+							<li><a href="#;" class="txt">Depth</a></li>
+							<li><a href="#;" class="txt">Depth</a></li>
+							<li><a href="#;" class="txt">Depth Last</a></li>
+						</ol>
+					</nav>
+					<!-- breadcrumb -->
+					<!-- 페이지 타이틀 영역 -->
+					<div class="page-title-wrap" data-type="responsive">
+						@@include("./inc/page-title.html", { "title": "page title" })
+						<div class="krds-drop-wrap h-tit-drop">
+							<button type="button" class="h-tit drop-btn">page title</button>
+							<div class="drop-menu">
+								<div class="drop-in">
+									<ul class="drop-list">
+										<li><a href="#" class="item-link">서비스 소개</a></li>
+										<li><a href="#" class="item-link">국내에서 외국발간자료 신청</a></li>
+										<li><a href="#" class="item-link">해외에서 국내발간자료 신청</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //페이지 타이틀 영역 -->
+					컨텐츠 영역
+				</div>
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+
+		<!-- 푸터 영역 -->
+		<footer id="krds-footer">
+			@@include("./inc/footer.html", {"footerType": "type2",})
+		</footer>
+		<!-- //푸터 영역 -->
+	</div>
+	
+	@@include("./inc/modal-wrap.html")
+	
+</body>
+
+</html>
